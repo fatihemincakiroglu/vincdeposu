@@ -2,192 +2,469 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vinç Kiralama | Kiralık Vinç | Sepetli Vinç Kiralama",
+  title: {
+    default: "Vinç Deposu | İstanbul Vinç & Manlift Kiralama",
+    template: "%s | Vinç Deposu",
+  },
   description:
-    "Vinç Deposu, inşaat ve sanayi sektörlerinde profesyonel vinç kiralama ve satış hizmetleri sunar. Detaylı bilgi için: 0532 303 90 89",
+    "İstanbul'un tüm 39 ilçesinde profesyonel vinç ve manlift kiralama hizmetleri. Sepetli vinç, mobil vinç, kule vinç, makaslı & eklemli platform. 7/24: 0532 303 90 89",
+  keywords: ["vinç kiralama", "kiralık vinç", "istanbul vinç", "sepetli vinç", "mobil vinç", "manlift kiralama"],
+  metadataBase: new URL("https://vincdeposu.com.tr"),
+  openGraph: { type: "website", locale: "tr_TR", siteName: "Vinç Deposu" },
 };
 
+/* ─── VERİ ─── */
 const hizmetler = [
   { icon: "🏗️", title: "Kiralık Vinç", desc: "Her ölçekte inşaat ve sanayi projesi için kiralık vinç hizmeti.", href: "/kiralik-vinc" },
-  { icon: "🦺", title: "Operatörlü Hizmet", desc: "Sertifikalı operatörlerimizle güvenli ve profesyonel vinç operasyonu.", href: "/operatorlu-vinc-hizmeti" },
+  { icon: "🦺", title: "Kiralık Manlift", desc: "Makaslı, eklemli, örümcek ve sepetli platform kiralama.", href: "/kiralik-manlift" },
+  { icon: "👷", title: "Operatörlü Hizmet", desc: "Sertifikalı operatörlerimizle güvenli ve profesyonel vinç operasyonu.", href: "/operatorlu-vinc-hizmeti" },
   { icon: "🔧", title: "Bakım & Onarım", desc: "Vinçlerinizin uzun ömürlü kullanımı için periyodik bakım hizmeti.", href: "/vinc-bakim-ve-onarim" },
   { icon: "🚛", title: "Taşıma & Lojistik", desc: "Vinç taşıma ve lojistik süreçlerinde güvenilir çözümler.", href: "/vinc-tasima-ve-lojistik" },
   { icon: "📋", title: "Sertifikasyon", desc: "Vinç operatörleri için eğitim ve sertifikasyon programları.", href: "/vinc-sertifikasyon-ve-egitim" },
   { icon: "🚨", title: "Acil Hizmet", desc: "7/24 acil vinç hizmetleriyle her an yanınızdayız.", href: "/vinc-acil-durum-hizmetleri" },
+  { icon: "🛒", title: "Satılık Vinç", desc: "İkinci el ve sıfır vinç satışında güvenilir adresiniz.", href: "/satilik-vinc" },
 ];
 
 const vincCesitleri = [
-  { title: "Sepetli Vinç", href: "/sepetli-vinc" },
-  { title: "Mobil Vinç", href: "/mobil-vinc" },
-  { title: "Kule Vinç", href: "/kule-vinc" },
-  { title: "Ahtapot Vinç", href: "/ahtapot-vinc" },
-  { title: "Paletli Vinç", href: "/paletli-vinc" },
-  { title: "Portal Vinç", href: "/portal-vinc" },
-  { title: "Kamyon Üstü Vinç", href: "/kamyon-ustu-vinc" },
-  { title: "Raylı Vinç", href: "/rayli-vinc" },
-  { title: "Monoray Vinç", href: "/monoray-vinc" },
-  { title: "Sabit Vinç", href: "/sabit-vinc" },
-  { title: "Minik Vinç", href: "/minik-vinc" },
-  { title: "Helikopter Vinç", href: "/helikopter-vinc" },
+  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "🚛", renk: "#F59E0B" },
+  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "🏗️", renk: "#3B82F6" },
+  { title: "Kule Vinç", href: "/kule-vinc", icon: "🗼", renk: "#8B5CF6" },
+  { title: "Ahtapot Vinç", href: "/ahtapot-vinc", icon: "🐙", renk: "#EC4899" },
+  { title: "Kamyon Üstü Vinç", href: "/kamyon-ustu-vinc", icon: "🚚", renk: "#10B981" },
+  { title: "Paletli Vinç", href: "/paletli-vinc", icon: "⚙️", renk: "#F97316" },
+  { title: "Raylı Vinç", href: "/rayli-vinc", icon: "🚃", renk: "#14B8A6" },
+  { title: "Portal Vinç", href: "/portal-vinc", icon: "🌉", renk: "#6366F1" },
+  { title: "Monoray Vinç", href: "/monoray-vinc", icon: "📐", renk: "#EF4444" },
+  { title: "Sabit Vinç", href: "/sabit-vinc", icon: "🏭", renk: "#84CC16" },
+  { title: "Minik Vinç", href: "/minik-vinc", icon: "🔩", renk: "#F59E0B" },
+  { title: "Helikopter Vinç", href: "/helikopter-vinc", icon: "🚁", renk: "#06B6D4" },
+];
+
+const urunler = [
+  { title: "Makaslı Platform", href: "/makasli-platform", icon: "⬆️", desc: "Dikey erişim, geniş çalışma platformu" },
+  { title: "Eklemli Platform", href: "/eklemli-platform", icon: "🦾", desc: "Dar alanlarda engel üzeri erişim" },
+  { title: "Örümcek Platform", href: "/orumcek-platform", icon: "🕷️", desc: "Hassas zemin, dar alan uyumlu" },
+  { title: "Forklift", href: "/forklift-kiralama", icon: "🚜", desc: "Depo ve fabrika yük taşıma çözümleri" },
+  { title: "Telehandler", href: "/telehandler-kiralama", icon: "🦺", desc: "Yüksek erişimli teleskopik ekipman" },
 ];
 
 const ilceler = [
-  "Avcılar", "Bağcılar", "Bahçelievler", "Bakırköy", "Başakşehir",
-  "Bayrampaşa", "Beşiktaş", "Beykoz", "Beylikdüzü", "Beyoğlu",
-  "Büyükçekmece", "Çatalca", "Çekmeköy", "Esenler", "Esenyurt",
-  "Eyüp", "Fatih", "Kadıköy", "Kağıthane", "Kartal",
-  "Küçükçekmece", "Maltepe", "Pendik", "Sancaktepe", "Sarıyer",
-  "Silivri", "Şişli", "Sultanbeyli", "Sultangazi", "Tuzla",
-  "Ümraniye", "Üsküdar", "Zeytinburnu",
+  { ad: "Adalar", slug: "adalar" }, { ad: "Arnavutköy", slug: "arnavutkoy" },
+  { ad: "Avcılar", slug: "avcilar" }, { ad: "Bağcılar", slug: "bagcilar" },
+  { ad: "Bahçelievler", slug: "bahcelievler" }, { ad: "Bakırköy", slug: "bakirkoy" },
+  { ad: "Başakşehir", slug: "basaksehir" }, { ad: "Bayrampaşa", slug: "bayrampasa" },
+  { ad: "Beşiktaş", slug: "besiktas" }, { ad: "Beykoz", slug: "beykoz" },
+  { ad: "Beylikdüzü", slug: "beylikduzu" }, { ad: "Beyoğlu", slug: "beyoglu" },
+  { ad: "Büyükçekmece", slug: "buyukcekmece" }, { ad: "Çatalca", slug: "catalca" },
+  { ad: "Çekmeköy", slug: "cekmekoy" }, { ad: "Esenler", slug: "esenler" },
+  { ad: "Esenyurt", slug: "esenyurt" }, { ad: "Eyüpsultan", slug: "eyupsultan" },
+  { ad: "Fatih", slug: "fatih" }, { ad: "Gaziosmanpaşa", slug: "gaziosmanpasa" },
+  { ad: "Güngören", slug: "gungoren" }, { ad: "Kadıköy", slug: "kadikoy" },
+  { ad: "Kağıthane", slug: "kagithane" }, { ad: "Kartal", slug: "kartal" },
+  { ad: "Küçükçekmece", slug: "kucukcekmece" }, { ad: "Maltepe", slug: "maltepe" },
+  { ad: "Pendik", slug: "pendik" }, { ad: "Sancaktepe", slug: "sancaktepe" },
+  { ad: "Sarıyer", slug: "sariyer" }, { ad: "Silivri", slug: "silivri" },
+  { ad: "Şile", slug: "sile" }, { ad: "Şişli", slug: "sisli" },
+  { ad: "Sultanbeyli", slug: "sultanbeyli" }, { ad: "Sultangazi", slug: "sultangazi" },
+  { ad: "Tuzla", slug: "tuzla" }, { ad: "Ümraniye", slug: "umraniye" },
+  { ad: "Üsküdar", slug: "uskudar" }, { ad: "Zeytinburnu", slug: "zeytinburnu" },
+  { ad: "Eyüp", slug: "eyup" },
 ];
 
-function ilceToSlug(ilce: string) {
-  return ilce
-    .toLowerCase()
-    .replace(/ı/g, "i").replace(/ğ/g, "g").replace(/ü/g, "u")
-    .replace(/ş/g, "s").replace(/ö/g, "o").replace(/ç/g, "c")
-    .replace(/İ/g, "i");
-}
+const neden = [
+  { icon: "🏆", title: "25 Yıllık Deneyim", desc: "Sektörde çeyrek asırlık tecrübemizle binlerce projeyi başarıyla tamamladık." },
+  { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipmanlarımız kapsamlı sigorta güvencesi altındadır." },
+  { icon: "⚡", title: "Hızlı Teslimat", desc: "İstanbul'un tüm ilçelerinde aynı gün ya da ertesi gün teslimat." },
+  { icon: "🔧", title: "Bakımlı Filo", desc: "Filomuz düzenli teknik kontrollerden geçer, arıza riskini minimize ederiz." },
+  { icon: "👷", title: "Sertifikalı Operatör", desc: "Eğitimli ve belgeli operatörlerimiz iş güvenliğini en üst seviyede tutar." },
+  { icon: "📞", title: "7/24 Destek", desc: "Gece ya da gündüz, her an teknik destek ve acil müdahale hizmetindeyiz." },
+];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-yellow-400 font-semibold text-sm uppercase tracking-widest mb-4">
-            İstanbul&apos;un Güvenilir Vinç Partneri
-          </p>
-          <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-            Profesyonel<br />
-            <span className="text-yellow-400">Vinç Kiralama</span><br />
-            Hizmetleri
-          </h1>
-          <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            İstanbul&apos;un tüm ilçelerinde 7/24 kiralık vinç, manlift ve platform hizmetleri.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:05323039089"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
-            >
-              📞 0532 303 90 89
-            </a>
-            <Link
-              href="/kiralik-vinc"
-              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
-            >
-              Vinçleri İncele
-            </Link>
+      {/* ══════════════════════════════════════
+          HERO
+      ══════════════════════════════════════ */}
+      <section className="relative bg-gray-950 text-white min-h-[92vh] flex items-center overflow-hidden">
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(250,204,21,1) 1px, transparent 1px), linear-gradient(90deg, rgba(250,204,21,1) 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
+        {/* Glow blobs */}
+        <div className="absolute top-20 right-10 w-[500px] h-[500px] bg-yellow-400 opacity-[0.06] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-0 w-[400px] h-[400px] bg-yellow-500 opacity-[0.05] rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 py-20 w-full">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 rounded-full px-4 py-2 mb-8">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+                <span className="text-yellow-400 text-sm font-bold tracking-wide">İstanbul&apos;un Güvenilir Vinç Partneri</span>
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-black leading-[1.05] mb-8">
+                Profesyonel<br />
+                <span className="text-yellow-400">Vinç &</span><br />
+                <span className="text-yellow-400">Manlift</span><br />
+                Kiralama
+              </h1>
+
+              <p className="text-gray-400 text-xl mb-10 leading-relaxed max-w-lg">
+                İstanbul&apos;un 39 ilçesinde 7/24 kiralık vinç, manlift ve platform hizmetleri.
+                Sertifikalı operatör, tam sigorta, hızlı teslimat.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <a
+                  href="tel:05323039089"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-5 rounded-2xl text-lg transition text-center shadow-lg shadow-yellow-400/20"
+                >
+                  📞 0532 303 90 89
+                </a>
+                <Link
+                  href="/kiralik-vinc"
+                  className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-8 py-5 rounded-2xl text-lg transition text-center"
+                >
+                  Ürünleri Keşfet →
+                </Link>
+              </div>
+
+              {/* Mini stats row */}
+              <div className="flex gap-8 border-t border-white/10 pt-8">
+                {[
+                  { v: "39", l: "İlçe" },
+                  { v: "25+", l: "Yıl Deneyim" },
+                  { v: "1000+", l: "Müşteri" },
+                  { v: "7/24", l: "Destek" },
+                ].map((s) => (
+                  <div key={s.l}>
+                    <div className="text-2xl font-black text-yellow-400">{s.v}</div>
+                    <div className="text-gray-500 text-sm">{s.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right — big feature cards */}
+            <div className="hidden lg:grid grid-cols-2 gap-4">
+              {[
+                { icon: "🏗️", title: "Kiralık Vinç", sub: "Sepetli · Mobil · Kule", href: "/kiralik-vinc", bg: "from-yellow-500/20 to-yellow-500/5" },
+                { icon: "🦺", title: "Kiralık Manlift", sub: "Makaslı · Eklemli · Örümcek", href: "/kiralik-manlift", bg: "from-blue-500/20 to-blue-500/5" },
+                { icon: "👷", title: "Operatörlü", sub: "Sertifikalı operatör desteği", href: "/operatorlu-vinc-hizmeti", bg: "from-green-500/20 to-green-500/5" },
+                { icon: "🚨", title: "Acil Hizmet", sub: "7/24 anında müdahale", href: "/vinc-acil-durum-hizmetleri", bg: "from-red-500/20 to-red-500/5" },
+              ].map((c) => (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className={`group bg-gradient-to-br ${c.bg} border border-white/10 rounded-3xl p-6 hover:border-yellow-400/50 hover:scale-[1.02] transition-all duration-300`}
+                >
+                  <div className="text-5xl mb-4">{c.icon}</div>
+                  <div className="text-white font-black text-lg mb-1">{c.title}</div>
+                  <div className="text-gray-500 text-sm">{c.sub}</div>
+                  <div className="mt-4 text-yellow-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition">
+                    İncele →
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Hizmetler */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Hizmetlerimiz</h2>
-            <p className="text-gray-500 text-lg">İnşaat ve sanayinin her ihtiyacı için profesyonel çözümler</p>
+      {/* ══════════════════════════════════════
+          NEDEN VİNÇ DEPOSU
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            {/* Left label */}
+            <div className="lg:col-span-1">
+              <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Neden Biz?</span>
+              <h2 className="text-4xl font-black text-gray-900 mt-3 mb-6 leading-tight">
+                Farkımızı<br />Hissettiren<br />Değerler
+              </h2>
+              <p className="text-gray-500 leading-relaxed mb-8">
+                25 yılı aşkın deneyimimiz, geniş filomuz ve sertifikalı ekibimizle
+                İstanbul&apos;un en güvenilir vinç kiralama firmasıyız.
+              </p>
+              <a
+                href="tel:05323039089"
+                className="inline-block bg-gray-900 hover:bg-yellow-400 hover:text-black text-white font-black px-6 py-4 rounded-xl transition"
+              >
+                Hemen Arayın
+              </a>
+            </div>
+
+            {/* Right grid */}
+            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5">
+              {neden.map((n) => (
+                <div key={n.title} className="flex gap-4 p-5 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-md transition group">
+                  <div className="text-3xl flex-shrink-0">{n.icon}</div>
+                  <div>
+                    <h3 className="font-black text-gray-900 mb-1 group-hover:text-yellow-600 transition">{n.title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">{n.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          HİZMETLER
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Hizmetlerimiz</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Her İhtiyaca Çözüm</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              İnşaat ve sanayinin her aşamasında profesyonel vinç ve platform çözümleri.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {hizmetler.map((h) => (
               <Link
                 key={h.href}
                 href={h.href}
-                className="group border border-gray-100 rounded-2xl p-6 hover:border-yellow-400 hover:shadow-lg transition"
+                className="group bg-white border border-gray-100 rounded-3xl p-6 hover:border-yellow-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{h.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-500 transition">{h.title}</h3>
-                <p className="text-gray-500 text-sm">{h.desc}</p>
+                <div className="text-4xl mb-5">{h.icon}</div>
+                <h3 className="font-black text-gray-900 text-lg mb-2 group-hover:text-yellow-600 transition">{h.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">{h.desc}</p>
+                <span className="text-yellow-500 text-sm font-bold">Detaylar →</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Vinç Çeşitleri */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Vinç Çeşitleri</h2>
-            <p className="text-gray-500 text-lg">Projenize uygun vinç türünü seçin</p>
+      {/* ══════════════════════════════════════
+          VİNÇ ÇEŞİTLERİ
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-gray-950 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <div>
+              <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Vinç Kataloğu</span>
+              <h2 className="text-4xl font-black mt-3 mb-4">12 Farklı Vinç Tipi</h2>
+              <p className="text-gray-400 text-lg max-w-xl">
+                Projenizin ölçeğine ve ihtiyacına göre doğru vinç türünü seçin.
+              </p>
+            </div>
+            <Link
+              href="/vinc-cesitleri"
+              className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-6 py-3 rounded-xl transition whitespace-nowrap"
+            >
+              Tüm Çeşitler →
+            </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {vincCesitleri.map((v) => (
               <Link
                 key={v.href}
                 href={v.href}
-                className="bg-white border border-gray-100 rounded-xl px-4 py-5 text-center font-semibold text-gray-700 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition"
+                className="group bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-yellow-400/60 transition"
+                style={{ "--accent": v.renk } as React.CSSProperties}
               >
-                {v.title}
+                <div className="text-4xl mb-3">{v.icon}</div>
+                <div className="text-white font-bold text-sm group-hover:text-yellow-400 transition leading-tight">{v.title}</div>
               </Link>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Link href="/vinc-cesitleri" className="text-yellow-600 font-semibold hover:underline">
-              Tüm Vinç Çeşitleri →
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          ÜRÜNLER (MANLIFT & PLATFORM)
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Platform & Ekipman</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Ürün Kataloğumuz</h2>
+            <p className="text-gray-500 text-lg">
+              Makaslı platformdan forklift ve telehandler&apos;a geniş ürün yelpazemiz.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {urunler.map((u) => (
+              <Link
+                key={u.href}
+                href={u.href}
+                className="group relative bg-gray-900 text-white rounded-3xl p-7 hover:bg-yellow-400 hover:text-black transition-all duration-300 overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-x-8 -translate-y-8 group-hover:bg-black/10 transition" />
+                <div className="relative">
+                  <div className="text-5xl mb-5">{u.icon}</div>
+                  <h3 className="font-black text-lg mb-2">{u.title}</h3>
+                  <p className="text-sm opacity-60 group-hover:opacity-80 leading-relaxed">{u.desc}</p>
+                  <div className="mt-5 font-bold text-sm text-yellow-400 group-hover:text-black">İncele →</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          KİRALIK VİNÇ BANNER
+      ══════════════════════════════════════ */}
+      <section className="py-6 px-4 bg-yellow-400">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-center md:text-left">
+            <div className="text-3xl font-black text-gray-900 mb-1">Kiralık Vinç İhtiyacınız mı Var?</div>
+            <div className="text-gray-800">Uzmanlarımız doğru vinç seçiminde size yardımcı olsun.</div>
+          </div>
+          <div className="flex gap-4 flex-shrink-0">
+            <a
+              href="tel:05323039089"
+              className="bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl transition"
+            >
+              📞 Hemen Ara
+            </a>
+            <Link
+              href="/kiralik-vinc"
+              className="bg-white hover:bg-gray-100 text-gray-900 font-bold px-8 py-4 rounded-xl transition"
+            >
+              Ürünleri Gör
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Neden Biz */}
-      <section className="py-16 px-4 bg-yellow-400">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-12">Neden Vinç Deposu?</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { value: "7/24", label: "Kesintisiz Hizmet" },
-              { value: "39", label: "İlçede Hizmet" },
-              { value: "100+", label: "Vinç Çeşidi" },
-              { value: "1000+", label: "Mutlu Müşteri" },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-white rounded-2xl p-6">
-                <div className="text-4xl font-black text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-medium text-sm">{stat.label}</div>
-              </div>
-            ))}
+      {/* ══════════════════════════════════════
+          İSTANBUL HARİTASI / İLÇELER
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Hizmet Bölgeleri</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">
+              İstanbul&apos;un 39 İlçesinde Hizmet
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Bulunduğunuz ilçeye tıklayarak hizmet detaylarına ulaşın.
+            </p>
+          </div>
+
+          {/* Decorative map visual */}
+          <div className="relative bg-gray-900 rounded-3xl overflow-hidden mb-10 p-10">
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: "radial-gradient(circle at 30% 50%, rgba(250,204,21,0.8) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(59,130,246,0.5) 0%, transparent 60%)",
+              }}
+            />
+            <div className="relative text-center">
+              <div className="text-8xl mb-4">🗺️</div>
+              <div className="text-white text-2xl font-black mb-2">İstanbul&apos;un Tamamını Kapsıyoruz</div>
+              <div className="text-gray-400">Avrupa ve Anadolu yakasındaki tüm 39 ilçeye hızlı teslimat</div>
+            </div>
+          </div>
+
+          {/* Europe side */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="h-px flex-1 bg-gray-200" />
+              <span className="text-sm font-bold text-gray-500 bg-gray-50 px-4 py-1 rounded-full border border-gray-200">🌉 Avrupa Yakası</span>
+              <div className="h-px flex-1 bg-gray-200" />
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+              {ilceler.slice(0, 24).map((ilce) => (
+                <Link
+                  key={ilce.slug}
+                  href={`/${ilce.slug}-vinc-kiralama`}
+                  className="group text-center py-3 px-2 rounded-xl border border-gray-100 bg-white hover:bg-yellow-400 hover:border-yellow-400 transition"
+                >
+                  <div className="text-xs font-bold text-gray-600 group-hover:text-black leading-tight">{ilce.ad}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Anatolia side */}
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="h-px flex-1 bg-gray-200" />
+              <span className="text-sm font-bold text-gray-500 bg-gray-50 px-4 py-1 rounded-full border border-gray-200">🌉 Anadolu Yakası</span>
+              <div className="h-px flex-1 bg-gray-200" />
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+              {ilceler.slice(24).map((ilce) => (
+                <Link
+                  key={ilce.slug}
+                  href={`/${ilce.slug}-vinc-kiralama`}
+                  className="group text-center py-3 px-2 rounded-xl border border-gray-100 bg-white hover:bg-yellow-400 hover:border-yellow-400 transition"
+                >
+                  <div className="text-xs font-bold text-gray-600 group-hover:text-black leading-tight">{ilce.ad}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* İlçe Linkleri (SEO) */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black text-gray-900 mb-4">İstanbul Vinç Kiralama Bölgeleri</h2>
-            <p className="text-gray-500">İstanbul&apos;un tüm ilçelerinde vinç kiralama hizmeti veriyoruz</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-            {ilceler.map((ilce) => (
-              <Link
-                key={ilce}
-                href={`/${ilceToSlug(ilce)}-vinc-kiralama`}
-                className="text-center text-sm text-gray-600 hover:text-yellow-600 hover:underline py-1"
-              >
-                {ilce}
-              </Link>
-            ))}
-          </div>
+      {/* ══════════════════════════════════════
+          STATS BAR
+      ══════════════════════════════════════ */}
+      <section className="bg-gray-900 py-16 px-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { v: "25+", l: "Yıllık Deneyim", icon: "🏆" },
+            { v: "39", l: "İlçede Hizmet", icon: "📍" },
+            { v: "1000+", l: "Tamamlanan Proje", icon: "✅" },
+            { v: "7/24", l: "Acil Destek", icon: "📞" },
+          ].map((s) => (
+            <div key={s.l} className="border border-white/10 rounded-2xl p-6">
+              <div className="text-4xl mb-3">{s.icon}</div>
+              <div className="text-4xl font-black text-yellow-400 mb-2">{s.v}</div>
+              <div className="text-gray-400 text-sm font-medium">{s.l}</div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 px-4 bg-gray-900 text-white text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black mb-4">Hemen Teklif Alın</h2>
-          <p className="text-gray-400 mb-8">Projeniz için en uygun vinç çözümünü birlikte belirleyelim.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* ══════════════════════════════════════
+          SON CTA
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-gray-950 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05]"
+          style={{
+            backgroundImage: "radial-gradient(circle at center, rgba(250,204,21,1) 0%, transparent 70%)",
+          }}
+        />
+        <div className="relative max-w-3xl mx-auto">
+          <div className="text-7xl mb-8">🏗️</div>
+          <h2 className="text-5xl font-black mb-6 leading-tight">
+            Projeniz İçin<br />
+            <span className="text-yellow-400">Hemen Teklif Alın</span>
+          </h2>
+          <p className="text-gray-400 text-xl mb-12 leading-relaxed">
+            İnşaattan endüstriye, dış cepheden depolara — her proje için doğru vinç
+            ve platform çözümünü birlikte belirleyelim.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <a
               href="tel:05323039089"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
+              className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-12 py-5 rounded-2xl text-xl transition shadow-2xl shadow-yellow-400/20"
             >
-              📞 Hemen Ara
+              📞 0532 303 90 89
             </a>
             <Link
               href="/iletisim"
-              className="border-2 border-gray-600 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
+              className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-12 py-5 rounded-2xl text-xl transition"
             >
               Mesaj Gönder
             </Link>
