@@ -1,3 +1,5 @@
+"use client";
+
 export default function Page() {
   return (
     <main style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: "#F5F4F0", color: "#0D1B2A", margin: 0, padding: 0 }}>
