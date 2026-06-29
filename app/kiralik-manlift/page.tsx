@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Kiralık Manlift | Manlift Kiralama Fiyatları 2025",
+  title: "Kiralık Manlift Hizmetleri - Manlift Kiralama",
   description:
-    "İstanbul'da profesyonel kiralık manlift hizmetleri. Makaslı, eklemli, örümcek ve sepetli platform kiralama. 7/24 operatör desteği. Hemen teklif alın: 0532 303 90 89",
+    "Kiralık manlift ile güvenli ve hızlı çözümler sunuyoruz. Tüm yükseklikler için uygun manlift seçenekleri. Hemen ulaşın: 0532 303 90 89",
   keywords: ["kiralık manlift", "manlift kiralama", "sepetli platform", "makaslı platform", "eklemli platform"],
 };
 
