@@ -2,528 +2,591 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "İstanbul Vinç Kiralama | 7/24 Operatörlü, Hızlı ve Güvenilir Hizmet",
+  title: "İstanbul Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
   description:
-    "İstanbul'un 39 ilçesinde profesyonel vinç kiralama hizmeti. Mobil vinç, sepetli vinç, hiyap ve manlift kiralama. Sertifikalı operatörler, 7/24 hizmet: 0532 303 90 89",
+    "İstanbul vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+  keywords: ["istanbul vinç kiralama", "istanbul kiralık vinç", "vinç kiralama istanbul", "istanbul sepetli vinç", "istanbul mobil vinç kiralama"],
+};
+
+/* ─────────────────────────────────────────────
+   VERİ
+───────────────────────────────────────────── */
+
+const ilceler = {
+  avrupa: [
+    { ad: "Avcılar", slug: "avcilar", emoji: "🏙️" },
+    { ad: "Bağcılar", slug: "bagcilar", emoji: "🏗️" },
+    { ad: "Bahçelievler", slug: "bahcelievler", emoji: "🌳" },
+    { ad: "Bakırköy", slug: "bakirkoy", emoji: "🏖️" },
+    { ad: "Başakşehir", slug: "basaksehir", emoji: "🏘️" },
+    { ad: "Bayrampaşa", slug: "bayrampasa", emoji: "🏭" },
+    { ad: "Beşiktaş", slug: "besiktas", emoji: "⚓" },
+    { ad: "Beylikdüzü", slug: "beylikduzu", emoji: "🏢" },
+    { ad: "Beyoğlu", slug: "beyoglu", emoji: "🌉" },
+    { ad: "Büyükçekmece", slug: "buyukcekmece", emoji: "🌊" },
+    { ad: "Çatalca", slug: "catalca", emoji: "🌿" },
+    { ad: "Esenler", slug: "esenler", emoji: "🏙️" },
+    { ad: "Esenyurt", slug: "esenyurt", emoji: "🏗️" },
+    { ad: "Eyüpsultan", slug: "eyupsultan", emoji: "🕌" },
+    { ad: "Eyüp", slug: "eyup", emoji: "🕌" },
+    { ad: "Fatih", slug: "fatih", emoji: "🏛️" },
+    { ad: "Gaziosmanpaşa", slug: "gaziosmanpasa", emoji: "🏘️" },
+    { ad: "Güngören", slug: "gungoren", emoji: "🏙️" },
+    { ad: "Kağıthane", slug: "kagithane", emoji: "🏭" },
+    { ad: "Küçükçekmece", slug: "kucukcekmece", emoji: "🌊" },
+    { ad: "Sarıyer", slug: "sariyer", emoji: "🌲" },
+    { ad: "Silivri", slug: "silivri", emoji: "🌾" },
+    { ad: "Şişli", slug: "sisli", emoji: "🏢" },
+    { ad: "Sultangazi", slug: "sultangazi", emoji: "🏘️" },
+    { ad: "Zeytinburnu", slug: "zeytinburnu", emoji: "⚓" },
+    { ad: "Arnavutköy", slug: "arnavutkoy", emoji: "✈️" },
+    { ad: "Adalar", slug: "adalar", emoji: "🏝️" },
+    { ad: "Şile", slug: "sile", emoji: "🏖️" },
+  ],
+  anadolu: [
+    { ad: "Ataşehir", slug: "atasehir", emoji: "🏢" },
+    { ad: "Beykoz", slug: "beykoz", emoji: "🌲" },
+    { ad: "Çekmeköy", slug: "cekmekoy", emoji: "🌿" },
+    { ad: "Kadıköy", slug: "kadikoy", emoji: "🎨" },
+    { ad: "Kartal", slug: "kartal", emoji: "🏭" },
+    { ad: "Maltepe", slug: "maltepe", emoji: "🏖️" },
+    { ad: "Pendik", slug: "pendik", emoji: "⚓" },
+    { ad: "Sancaktepe", slug: "sancaktepe", emoji: "🏗️" },
+    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏘️" },
+    { ad: "Tuzla", slug: "tuzla", emoji: "🚢" },
+    { ad: "Ümraniye", slug: "umraniye", emoji: "🏙️" },
+    { ad: "Üsküdar", slug: "uskudar", emoji: "🕌" },
+  ],
 };
 
 const vincTurleri = [
   {
-    icon: "🏗️",
-    title: "Mobil Vinç Kiralama",
-    desc: "5 tondan 500 tona kadar geniş kapasite yelpazesiyle inşaat, sanayi ve lojistik projelerine çözüm.",
-    href: "/mobil-vinc-kiralama",
-    ozellikler: ["5T – 500T kapasite", "Hızlı mobilizasyon", "Operatörlü"],
-  },
-  {
     icon: "🚛",
-    title: "Sepetli Vinç Kiralama",
-    desc: "10 metreden 55 metreye teleskopik ve eklemli bom seçenekleriyle yüksekte güvenli çalışma.",
-    href: "/sepetli-vinc-kiralama",
-    ozellikler: ["10m – 55m erişim", "İzoleli sepet", "Dar alana uygun"],
+    renk: "#F59E0B",
+    renkBg: "#FEF3C7",
+    title: "Sepetli Vinç",
+    href: "/istanbul-sepetli-vinc-kiralama",
+    kapasite: "12m – 90m",
+    kullanim: "Cephe, bakım, peyzaj",
+    desc: "İstanbul'un dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
-    icon: "🚚",
-    title: "Hiyap Vinç Kiralama",
-    desc: "Kamyon üstü hiyap vinclerle konteyner taşıma, malzeme indirme ve yükleme operasyonları.",
-    href: "/hiyap-vinc-kiralama",
-    ozellikler: ["Konteyner taşıma", "Yükleme/boşaltma", "Şehir içi uygun"],
+    icon: "🏗️",
+    renk: "#3B82F6",
+    renkBg: "#DBEAFE",
+    title: "Mobil Vinç",
+    href: "/istanbul-mobil-vinc-kiralama",
+    kapasite: "25 – 500 ton",
+    kullanim: "İnşaat, sanayi, enerji",
+    desc: "İstanbul'un büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
-    icon: "🔧",
-    title: "Kule Vinç Kiralama",
-    desc: "Şantiye kurulumundan söküme kadar komple kule vinç hizmetleri. Uzun vadeli projeler için avantajlı.",
-    href: "/kule-vinc-kiralama",
-    ozellikler: ["Şantiye kurulumu", "Uzun vadeli", "Yüksek kapasite"],
+    icon: "🗼",
+    renk: "#8B5CF6",
+    renkBg: "#EDE9FE",
+    title: "Kule Vinç",
+    href: "/istanbul-kule-vinc-kiralama",
+    kapasite: "1 – 25 ton",
+    kullanim: "Uzun süreli inşaat",
+    desc: "İstanbul'daki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
+    ozellikler: ["Uzun vadeli proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
   },
   {
-    icon: "🦾",
-    title: "Manlift & Platform Kiralama",
-    desc: "Makaslı ve eklemli platformlarla iç mekan, cephe ve endüstriyel bakım çalışmaları.",
-    href: "/manlift-kiralama",
-    ozellikler: ["İç mekan uygun", "Düşük zemin baskısı", "Elektrikli model"],
+    icon: "🐙",
+    renk: "#EC4899",
+    renkBg: "#FCE7F3",
+    title: "Ahtapot Vinç",
+    href: "/istanbul-ahtapot-vinc-kiralama",
+    kapasite: "10 – 50 ton",
+    kullanim: "Dar alan, bina içi",
+    desc: "İstanbul'un tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
+    ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
   },
   {
     icon: "⚙️",
-    title: "Forklift Kiralama",
-    desc: "Depo içi taşıma ve lojistik operasyonları için LPG, elektrikli ve dizel forklift seçenekleri.",
-    href: "/forklift-kiralama",
-    ozellikler: ["LPG / Elektrikli", "Depo içi", "Çeşitli kapasite"],
+    renk: "#F97316",
+    renkBg: "#FFEDD5",
+    title: "Paletli Vinç",
+    href: "/istanbul-paletli-vinc-kiralama",
+    kapasite: "50 – 3000 ton",
+    kullanim: "Ağır sanayi, enerji",
+    desc: "İstanbul'un liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
+  },
+  {
+    icon: "🚚",
+    renk: "#10B981",
+    renkBg: "#D1FAE5",
+    title: "Kamyon Üstü Vinç",
+    href: "/istanbul-kamyon-ustu-vinc-kiralama",
+    kapasite: "3 – 50 ton",
+    kullanim: "Lojistik, nakliye",
+    desc: "İstanbul limanları, şantiyeler ve lojistik merkezlerinde kamyon kasasına monte edilen pratik vinç türü. Yük taşıma ve indirme işlemlerini araç üzerinden hızlıca gerçekleştirir.",
+    ozellikler: ["Yük taşıma + indirme", "Limanlar, şantiye", "Hızlı teslimat", "Araç üstü çalışma"],
   },
 ];
 
 const fiyatTablosu = [
-  { tur: "Sepetli Vinç (18m)", saatlik: "1.000 TL", gunluk: "6.500 TL", aylik: "95.000 TL" },
-  { tur: "Sepetli Vinç (35m)", saatlik: "1.500 TL", gunluk: "10.000 TL", aylik: "140.000 TL" },
-  { tur: "Mobil Vinç (50T)", saatlik: "2.000 TL", gunluk: "14.000 TL", aylik: "Teklif" },
-  { tur: "Mobil Vinç (200T)", saatlik: "4.500 TL", gunluk: "30.000 TL", aylik: "Teklif" },
-  { tur: "Hiyap Vinç", saatlik: "800 TL", gunluk: "5.000 TL", aylik: "70.000 TL" },
-  { tur: "Kule Vinç", saatlik: "—", gunluk: "Teklif", aylik: "Teklif" },
-  { tur: "Manlift / Makaslı", saatlik: "600 TL", gunluk: "3.500 TL", aylik: "50.000 TL" },
-  { tur: "Operatör Hizmeti", saatlik: "400 TL", gunluk: "1.800 TL", aylik: "Teklif" },
+  { tur: "18m Sepetli Vinç", saatlik: "1.500 TL", gunluk: "8.000 TL", haftalik: "45.000 TL", aylik: "Teklif" },
+  { tur: "32m Sepetli Vinç", saatlik: "2.000 TL", gunluk: "10.000 TL", haftalik: "55.000 TL", aylik: "Teklif" },
+  { tur: "53m Sepetli Vinç", saatlik: "3.000 TL", gunluk: "14.000 TL", haftalik: "75.000 TL", aylik: "Teklif" },
+  { tur: "Mobil Vinç (50t)", saatlik: "1.500 TL", gunluk: "15.000 TL", haftalik: "80.000 TL", aylik: "250.000 TL" },
+  { tur: "Mobil Vinç (100t)", saatlik: "2.000 TL", gunluk: "30.000 TL", haftalik: "150.000 TL", aylik: "500.000 TL" },
+  { tur: "Kule Vinç", saatlik: "—", gunluk: "3.000 TL", haftalik: "18.000 TL", aylik: "65.000 TL" },
+  { tur: "Paletli Vinç", saatlik: "Teklif", gunluk: "Teklif", haftalik: "Teklif", aylik: "Teklif" },
+  { tur: "Operatör (ek)", saatlik: "500 TL", gunluk: "2.000 TL", haftalik: "10.000 TL", aylik: "35.000 TL" },
 ];
 
-const avrupaIlceleri = [
-  { ad: "Arnavutköy", href: "/arnavutkoy-vinc-kiralama", desc: "Yeni gelişim bölgelerinde inşaat ve lojistik vinç desteği." },
-  { ad: "Avcılar", href: "/avcilar-vinc-kiralama", desc: "E-5 aksı boyunca hızlı mobilizasyonla vinç kiralama." },
-  { ad: "Bağcılar", href: "/bagcilar-vinc-kiralama", desc: "Yoğun sanayi ve ticaret bölgesine özel vinç çözümleri." },
-  { ad: "Bahçelievler", href: "/bahcelievler-vinc-kiralama", desc: "Konut ve ticari yapı çalışmaları için profesyonel vinç." },
-  { ad: "Bakırköy", href: "/bakirkoy-vinc-kiralama", desc: "Dar alanlara uygun kompakt vinç ve platform kiralama." },
-  { ad: "Başakşehir", href: "/basaksehir-vinc-kiralama", desc: "Büyük ölçekli konut projeleri ve OSB vinç hizmetleri." },
-  { ad: "Bayrampaşa", href: "/bayrampasa-vinc-kiralama", desc: "Sanayi ve depolama tesisleri için hiyap ve mobil vinç." },
-  { ad: "Beşiktaş", href: "/besiktas-vinc-kiralama", desc: "Tarihi ve yoğun kentsel dokuda özel vinç çözümleri." },
-  { ad: "Beylikdüzü", href: "/beylikduzu-vinc-kiralama", desc: "Hızla büyüyen konut bölgesine 7/24 vinç desteği." },
-  { ad: "Beyoğlu", href: "/beyoglu-vinc-kiralama", desc: "Tarihi yapı restorasyonu ve cephe çalışmaları için vinç." },
-  { ad: "Büyükçekmece", href: "/buyukcekekmece-vinc-kiralama", desc: "Sahil ve sanayi bölgelerinde esnek vinç kiralama." },
-  { ad: "Çatalca", href: "/catalca-vinc-kiralama", desc: "Geniş arazi ve tarım tesislerine uygun vinç hizmetleri." },
-  { ad: "Esenler", href: "/esenler-vinc-kiralama", desc: "Yoğun kentsel dönüşüm projelerine vinç ve platform desteği." },
-  { ad: "Esenyurt", href: "/esenyurt-vinc-kiralama", desc: "İstanbul'un en büyük konut bölgesinde kapsamlı vinç hizmetleri." },
-  { ad: "Eyüpsultan", href: "/eyupsultan-vinc-kiralama", desc: "Tarihi doku ve yeni gelişim alanlarında vinç çözümleri." },
-  { ad: "Fatih", href: "/fatih-vinc-kiralama", desc: "Tarihi yarımadada hassas ve deneyimli vinç operasyonları." },
-  { ad: "Gaziosmanpaşa", href: "/gaziosmanpasa-vinc-kiralama", desc: "Kentsel dönüşüm ve inşaat projelerine vinç desteği." },
-  { ad: "Güngören", href: "/gungoren-vinc-kiralama", desc: "Küçük sanayi ve konut alanlarına uygun vinç kiralama." },
-  { ad: "Kağıthane", href: "/kagithane-vinc-kiralama", desc: "Ofis ve rezidans projelerinde hızlı vinç hizmetleri." },
-  { ad: "Küçükçekmece", href: "/kucukcekekmece-vinc-kiralama", desc: "OSB ve konut bölgelerine 7/24 vinç ve hiyap hizmetleri." },
-  { ad: "Sarıyer", href: "/sariyer-vinc-kiralama", desc: "Boğaz hattı ve lüks konut projelerinde özel vinç çözümleri." },
-  { ad: "Silivri", href: "/silivri-vinc-kiralama", desc: "Büyük sanayi ve tarım tesisleri için mobil vinç kiralama." },
-  { ad: "Sultangazi", href: "/sultangazi-vinc-kiralama", desc: "Konut ve ticari yapı projelerine hızlı vinç desteği." },
-  { ad: "Şişli", href: "/sisli-vinc-kiralama", desc: "Ticari merkezde cephe, tabela ve bakım işleri için vinç." },
-  { ad: "Zeytinburnu", href: "/zeytinburnu-vinc-kiralama", desc: "Sanayi dönüşümü ve konut projelerine vinç ve platform hizmetleri." },
+const kullanımAlanlari = [
+  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "İstanbul'un yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
+  { icon: "🏭", title: "Fabrika & Sanayi", desc: "İstanbul sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
+  { icon: "⚡", title: "Enerji Projeleri", desc: "İstanbul çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
+  { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
+  { icon: "🚢", title: "Liman & Tersane", desc: "İstanbul limanlarında konteyner yükleme, tekne bakımı ve liman operasyonları." },
+  { icon: "🛣️", title: "Altyapı Projeleri", desc: "İstanbul'un köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
+  { icon: "📡", title: "Telekom & Anten", desc: "İstanbul genelinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
+  { icon: "🌳", title: "Peyzaj & Park", desc: "İstanbul park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
 ];
 
-const anadoluIlceleri = [
-  { ad: "Adalar", href: "/adalar-vinc-kiralama", desc: "Ada koşullarına uygun kompakt ve hafif vinç çözümleri." },
-  { ad: "Ataşehir", href: "/atasehir-vinc-kiralama", desc: "Finans merkezi ve rezidans projelerinde profesyonel vinç." },
-  { ad: "Beykoz", href: "/beykoz-vinc-kiralama", desc: "Boğaz kıyısı ve ormanlık alanda özel vinç operasyonları." },
-  { ad: "Çekmeköy", href: "/cekmekoy-vinc-kiralama", desc: "Yeni gelişim bölgelerinde inşaat vinç ve platform hizmetleri." },
-  { ad: "Kadıköy", href: "/kadikoy-vinc-kiralama", desc: "Yoğun kentsel dokuda hassas ve hızlı vinç kiralama." },
-  { ad: "Kartal", href: "/kartal-vinc-kiralama", desc: "Sanayi ve konut dönüşüm projelerine kapsamlı vinç desteği." },
-  { ad: "Maltepe", href: "/maltepe-vinc-kiralama", desc: "Sahil projelerinde ve konut alanlarında güvenli vinç hizmetleri." },
-  { ad: "Pendik", href: "/pendik-vinc-kiralama", desc: "Havalimanı bölgesi ve tersane yakınında 7/24 vinç kiralama." },
-  { ad: "Sancaktepe", href: "/sancaktepe-vinc-kiralama", desc: "OSB ve sanayi tesislerine ağır mobil vinç hizmetleri." },
-  { ad: "Sultanbeyli", href: "/sultanbeyli-vinc-kiralama", desc: "Konut ve kentsel dönüşüm projelerine hızlı vinç desteği." },
-  { ad: "Şile", href: "/sile-vinc-kiralama", desc: "Geniş arazili projeler için esnek mobil vinç kiralama." },
-  { ad: "Tuzla", href: "/tuzla-vinc-kiralama", desc: "Tersane, liman ve sanayi tesisleri için ağır vinç çözümleri." },
-  { ad: "Ümraniye", href: "/umraniye-vinc-kiralama", desc: "Teknoloji vadisi ve ofis projelerinde güvenilir vinç hizmetleri." },
-  { ad: "Üsküdar", href: "/uskudar-vinc-kiralama", desc: "Tarihi yapı ve konut projelerinde deneyimli vinç operasyonları." },
+const adimlar = [
+  { no: "01", icon: "📞", title: "Arayın veya WhatsApp Yazın", desc: "İstanbul'daki projenizi, yükün ağırlığını, çalışma yüksekliğini ve süreyi belirtin." },
+  { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "İstanbul uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
+  { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
+  { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
+  { no: "05", icon: "🚛", title: "Vinç İstanbul'a Teslim Edilir", desc: "Belirlenen tarihte İstanbul'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
-const avantajlar = [
-  { icon: "🏅", title: "Sertifikalı Operatörler", desc: "Tüm operatörlerimiz TS EN 13000 belgeli ve periyodik eğitim sertifikalıdır." },
-  { icon: "🛡️", title: "Tam Sigorta Kapsamı", desc: "Ekipman ve sorumluluk sigortası ile iş yerinde tam güvence sağlanır." },
-  { icon: "⚡", title: "30–60 Dk. Mobilizasyon", desc: "İstanbul genelinde acil çağrılarda en kısa sürede sahadayız." },
-  { icon: "🔍", title: "Ücretsiz Saha Analizi", desc: "Projenize başlamadan önce uzman ekibimiz ücretsiz keşif yapar." },
-  { icon: "📋", title: "Şeffaf Sözleşme", desc: "Net fiyatlar, açık kapsam ve gizli maliyet olmayan kiralama sözleşmesi." },
-  { icon: "🔧", title: "7/24 Teknik Destek", desc: "Saha operasyonu süresince teknik ekibimiz her an ulaşılabilir." },
+const neden = [
+  { icon: "🏆", title: "25 Yıllık İstanbul Deneyimi", desc: "İstanbul'da çeyrek asır, 1000+ başarıyla tamamlanan proje." },
+  { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipman ve operasyonlar kapsamlı sigorta güvencesinde." },
+  { icon: "⚡", title: "Aynı Gün Teslimat", desc: "İstanbul genelinde stok garantisiyle acil taleplerde aynı gün vinç sahada." },
+  { icon: "👷", title: "Sertifikalı Operatör", desc: "MEB onaylı belgeli, ISG eğitimli operatörler." },
+  { icon: "🔧", title: "Bakımlı Filo", desc: "Her ekipman periyodik bakımdan geçer, arıza riski minimumda." },
+  { icon: "📞", title: "7/24 Destek", desc: "Gece, hafta sonu, resmi tatil dahil her an ulaşabilirsiniz." },
 ];
 
 const sss = [
   {
-    soru: "İstanbul'da vinç kiralama fiyatları nasıl belirlenir?",
-    cevap: "Vinç tipi ve kapasitesi, kiralama süresi (saatlik/günlük/aylık), çalışma lokasyonu, nakliye mesafesi ve operatör hizmeti gerekliliği fiyatı etkileyen başlıca faktörlerdir. Kesin fiyat için ücretsiz keşif hizmetimizden yararlanabilirsiniz.",
+    s: "İstanbul'da vinç kiralama fiyatları nasıl belirleniyor?",
+    c: "İstanbul'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
-    soru: "Operatörlü vinç kiralama nedir, farkı ne?",
-    cevap: "Operatörlü kiralama; sertifikalı ve deneyimli bir operatörün ekipmanı sizin adınıza kullandığı hizmettir. İş güvenliği sorumluluğu firmamızda kalır, iş verimi artar ve kaza riski minimize edilir.",
+    s: "İstanbul'un her ilçesine hizmet veriyor musunuz?",
+    c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
   },
   {
-    soru: "İstanbul'un her ilçesine hizmet veriyor musunuz?",
-    cevap: "Evet, Avrupa Yakası'ndaki 25 ilçe ve Anadolu Yakası'ndaki 14 ilçe dahil İstanbul'un tüm 39 ilçesinde aktif kadromuzla hizmet sunuyoruz. Acil çağrılarda 30–60 dakika içinde sahada oluyoruz.",
+    s: "İstanbul trafiğinde vinç ulaşımı nasıl sağlanıyor?",
+    c: "İstanbul trafiğine hakim ekibimiz, vinç sevkiyatlarını gece saatlerinde veya yoğunluğu az olan güzergahlarda planlayarak maksimum hız sağlar. Büyük ekipmanlar için belediye izinlerini de biz alıyoruz.",
   },
   {
-    soru: "Hangi belge ve sigortalar sunuluyor?",
-    cevap: "Tüm ekipmanlarımız periyodik bakım ve TS EN standartlarına uygun sertifikalara sahiptir. Kiralama kapsamında ekipman sigortası ve üçüncü şahıs sorumluluk sigortası sağlanmaktadır.",
+    s: "Operatörsüz vinç kiralayabilir miyim?",
+    c: "Teknik olarak mümkün olsa da yasal düzenlemeler gereği belgeli operatör zorunludur. Operatörsüz kullanım iş güvenliği ihlali oluşturur ve yaptırım gerektirir.",
   },
   {
-    soru: "Minimum kiralama süresi ne kadardır?",
-    cevap: "Saatlik, yarım günlük, günlük, haftalık ve aylık kiralama seçenekleri mevcuttur. Minimum süre ekipman tipine göre değişmekle birlikte çoğu model için 4 saatlik kiralama yapılabilmektedir.",
+    s: "Minimum kiralama süresi ne kadar?",
+    c: "Sepetli vinçte minimum yarım gün (4 saat), mobil ve kule vinçte minimum 1 tam gün uygulanmaktadır.",
   },
+  {
+    s: "Fiyata ne dahil, ne değil?",
+    c: "Standart fiyata vinç, operatör ve sigorta dahildir. İstanbul içi nakliye belirli sınırlar dahilinde ücretsizdir; şehir dışı nakliye, gece çalışması ve özel izin ücretleri ayrıca yansıtılır.",
+  },
+  {
+    s: "Uzun dönem kiralama daha mı ucuz?",
+    c: "Evet. Aylık ve üzeri kiralamalarda günlük fiyata göre %20–35 indirim uygulanmaktadır. Büyük İstanbul projeleri için özel paket fiyatları da sunulmaktadır.",
+  },
+  {
+    s: "İstanbul dışına da hizmet veriyor musunuz?",
+    c: "Trakya, Marmara ve çevre illere hizmet verilmektedir. İstanbul dışı nakliye bedeli ayrıca hesaplanır.",
+  },
+];
+
+const istatistikler = [
+  { v: "39", l: "İlçede Hizmet", icon: "📍" },
+  { v: "25+", l: "Yıllık Deneyim", icon: "🏆" },
+  { v: "1000+", l: "Tamamlanan Proje", icon: "✅" },
+  { v: "90 dk", l: "Acil Yanıt Süresi", icon: "⚡" },
+  { v: "50+", l: "Belgeli Operatör", icon: "👷" },
+  { v: "7/24", l: "Destek Hattı", icon: "📞" },
 ];
 
 export default function IstanbulVincKiralamaPage() {
   return (
-    <div className="bg-white">
+    <>
+      {/* ══════════════════════════════════════
+          HERO
+      ══════════════════════════════════════ */}
+      <section className="relative bg-gray-950 text-white min-h-[90vh] flex items-center overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(250,204,21,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(250,204,21,0.8) 1px, transparent 1px)",
+            backgroundSize: "70px 70px",
+          }}
+        />
+        <div className="absolute top-10 right-0 w-[600px] h-[600px] bg-yellow-400 opacity-[0.05] rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500 opacity-[0.04] rounded-full blur-3xl pointer-events-none" />
 
-      {/* ── Hero ── */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-yellow-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-yellow-400 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-yellow-300 rounded-full blur-3xl" />
-        </div>
-        <div className="relative max-w-6xl mx-auto px-4 py-24">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🏗️ İstanbul Vinç Kiralama Rehberi 2026
-            </div>
-            <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              İstanbul Vinç Kiralama<br />
-              <span className="text-yellow-400">7/24 Operatörlü Hizmet</span>
-            </h1>
-            <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-              İstanbul&apos;un 39 ilçesinde mobil vinç, sepetli vinç, hiyap ve manlift kiralama.
-              Sertifikalı operatörler, sigortalı ekipmanlar ve 30–60 dakika mobilizasyon garantisi.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:05323039089"
-                className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
-              >
-                📞 Hemen Teklif Al
-              </a>
-              <a
-                href="#vinc-turleri"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
-              >
-                Vinç Türlerini İncele ↓
-              </a>
-            </div>
+        <div className="relative max-w-7xl mx-auto px-4 py-20 w-full">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-gray-500 text-sm mb-10">
+            <a href="/" className="hover:text-yellow-400 transition">Ana Sayfa</a>
+            <span>›</span>
+            <span className="text-gray-300">İstanbul Vinç Kiralama</span>
           </div>
-        </div>
 
-        {/* İstatistikler */}
-        <div className="relative border-t border-white/10">
-          <div className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { sayi: "39", birim: "İlçe", acik: "Tüm İstanbul" },
-              { sayi: "500T", birim: "Kapasite", acik: "Maksimum yük" },
-              { sayi: "55m", birim: "Erişim", acik: "Sepetli vinçte" },
-              { sayi: "7/24", birim: "Hizmet", acik: "Acil çağrı hattı" },
-            ].map((s) => (
-              <div key={s.birim}>
-                <div className="text-3xl font-black text-yellow-400">{s.sayi}</div>
-                <div className="text-white font-bold">{s.birim}</div>
-                <div className="text-gray-400 text-sm">{s.acik}</div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Sol */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 rounded-full px-4 py-2 mb-8">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+                <span className="text-yellow-400 text-sm font-bold tracking-wide">İstanbul&apos;un 39 İlçesinde 7/24</span>
               </div>
-            ))}
+
+              <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
+                İstanbul<br />
+                <span className="text-yellow-400">Vinç</span><br />
+                Kiralama
+              </h1>
+
+              <p className="text-gray-400 text-xl mb-10 leading-relaxed">
+                İstanbul&apos;un tüm 39 ilçesinde sepetli, mobil, kule, paletli ve daha fazlası.
+                Sertifikalı operatör, tam sigorta ve aynı gün teslimat ile İstanbul genelinde
+                profesyonel vinç kiralama hizmeti.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <a
+                  href="tel:05323039089"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-5 rounded-2xl text-lg transition text-center shadow-lg shadow-yellow-400/20"
+                >
+                  📞 0532 303 90 89
+                </a>
+                <a
+                  href="#vinc-turleri"
+                  className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-8 py-5 rounded-2xl text-lg transition text-center"
+                >
+                  Vinç Türlerini Keşfet ↓
+                </a>
+              </div>
+
+              {/* Mini istatistikler */}
+              <div className="grid grid-cols-3 gap-5 border-t border-white/10 pt-8">
+                {[
+                  { v: "39", l: "İlçe" },
+                  { v: "25+", l: "Yıl Deneyim" },
+                  { v: "7/24", l: "Destek" },
+                ].map((s) => (
+                  <div key={s.l}>
+                    <div className="text-3xl font-black text-yellow-400">{s.v}</div>
+                    <div className="text-gray-500 text-sm">{s.l}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Sağ — Vinç türü grid */}
+            <div className="hidden lg:grid grid-cols-2 gap-4">
+              {vincTurleri.slice(0, 6).map((v) => (
+                <Link
+                  key={v.href}
+                  href={v.href}
+                  className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 hover:border-yellow-400/40 transition"
+                >
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl mb-3"
+                    style={{ background: v.renk + "25" }}
+                  >
+                    {v.icon}
+                  </div>
+                  <div className="text-white font-bold text-sm group-hover:text-yellow-400 transition mb-1">{v.title}</div>
+                  <div className="text-gray-500 text-xs">{v.kapasite}</div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── H2-1: Nasıl Çalışır? ── */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Süreç</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">İstanbul&apos;da Kiralık Vinç Hizmeti Nasıl Çalışır?</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Talebi aldığımız andan ekipman sahadayken tamamlanana kadar her adımı biz yönetiyoruz.
-              Siz yalnızca projenize odaklanın.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { no: "01", title: "Talep & Keşif", desc: "Bizi arayın veya form doldurun. Uzman ekibimiz sahayı ücretsiz değerlendirir, doğru ekipmanı belirler." },
-              { no: "02", title: "Teklif & Sözleşme", desc: "Proje kapsamına göre net fiyat teklifi sunulur. Gizli maliyet olmayan şeffaf sözleşme imzalanır." },
-              { no: "03", title: "Mobilizasyon", desc: "Acil çağrılarda 30–60 dakika, standart planlamada mutabık kalınan saatte ekipman sahada olur." },
-              { no: "04", title: "Operasyon", desc: "Sertifikalı operatörümüz güvenlik prosedürlerine uyarak çalışmayı yürütür, alanı denetler." },
-              { no: "05", title: "Teknik Destek", desc: "Operasyon süresince 7/24 teknik destek hattımız aktiftir. Herhangi bir sorunla anında ilgilenilir." },
-              { no: "06", title: "Teslim & Kapanış", desc: "İş tamamlandığında ekipman teslim alınır, alan temizlenir ve iş kapanış tutanağı hazırlanır." },
-            ].map((a) => (
-              <div key={a.no} className="relative p-6 border border-gray-100 rounded-2xl hover:border-yellow-300 hover:shadow-lg transition group bg-white">
-                <div className="text-5xl font-black text-yellow-400/20 group-hover:text-yellow-400/40 transition mb-4 leading-none">
-                  {a.no}
-                </div>
-                <h3 className="text-gray-900 font-bold text-lg mb-2">{a.title}</h3>
-                <p className="text-gray-500 text-sm">{a.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* ══════════════════════════════════════
+          İSTATİSTİK BARI
+      ══════════════════════════════════════ */}
+      <section className="bg-gray-900 py-10 px-4 border-y border-white/5">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 text-center">
+          {istatistikler.map((s) => (
+            <div key={s.l}>
+              <div className="text-2xl mb-1">{s.icon}</div>
+              <div className="text-2xl font-black text-yellow-400">{s.v}</div>
+              <div className="text-gray-500 text-xs mt-0.5">{s.l}</div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ── H2-2: Vinç Türleri ── */}
-      <section id="vinc-turleri" className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Ekipman</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">Mobil Vinç, Sepetli Vinç ve Hiyap Kiralama Seçenekleri</h2>
+      {/* ══════════════════════════════════════
+          VİNÇ TÜRLERİ
+      ══════════════════════════════════════ */}
+      <section id="vinc-turleri" className="py-24 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Ürün Kataloğu</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">İstanbul Vinç Kiralama Türleri</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Her proje farklıdır. Çalışma yüksekliğinize, zemin koşulunuza ve taşıma kapasitenize
-              göre en uygun ekipmanı birlikte belirleyelim.
+              İstanbul projenizin ölçeğine ve ihtiyacına göre doğru vinç türünü seçin. Uzmanımız en uygun seçeneği belirler.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className="space-y-6">
             {vincTurleri.map((v) => (
-              <Link
-                key={v.title}
-                href={v.href}
-                className="group p-6 bg-white border border-gray-100 rounded-2xl hover:border-yellow-300 hover:shadow-lg transition block"
+              <div
+                key={v.href}
+                className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="text-4xl mb-4">{v.icon}</div>
-                <h3 className="text-gray-900 font-bold text-xl mb-2 group-hover:text-yellow-600 transition">{v.title}</h3>
-                <p className="text-gray-500 text-sm mb-4 leading-relaxed">{v.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {v.ozellikler.map((o) => (
-                    <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-semibold px-3 py-1 rounded-full border border-yellow-200">
-                      {o}
-                    </span>
-                  ))}
+                <div
+                  className="px-8 py-6 flex flex-col md:flex-row md:items-center justify-between gap-5"
+                  style={{ background: `linear-gradient(135deg, ${v.renk}15 0%, ${v.renk}04 100%)`, borderBottom: `2px solid ${v.renk}25` }}
+                >
+                  <div className="flex items-center gap-5">
+                    <div
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
+                      style={{ background: v.renkBg, border: `2px solid ${v.renk}40` }}
+                    >
+                      {v.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-gray-900 mb-1">İstanbul {v.title} Kiralama</h3>
+                      <div className="flex flex-wrap gap-3 text-sm">
+                        <span className="flex items-center gap-1 text-gray-500">
+                          <span>⚖️</span> Kapasite: <strong className="text-gray-800">{v.kapasite}</strong>
+                        </span>
+                        <span className="flex items-center gap-1 text-gray-500">
+                          <span>🔨</span> Kullanım: <strong className="text-gray-800">{v.kullanim}</strong>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <Link
+                    href={v.href}
+                    className="inline-flex items-center gap-2 font-bold px-5 py-3 rounded-xl transition text-sm whitespace-nowrap flex-shrink-0 text-white hover:opacity-90"
+                    style={{ background: v.renk }}
+                  >
+                    Detaylı Bilgi →
+                  </Link>
                 </div>
-              </Link>
+
+                <div className="p-8 grid md:grid-cols-3 gap-8">
+                  <div className="md:col-span-2">
+                    <p className="text-gray-600 leading-relaxed mb-5">{v.desc}</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {v.ozellikler.map((o) => (
+                        <div key={o} className="flex items-center gap-2.5">
+                          <div
+                            className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
+                            style={{ background: v.renk }}
+                          >
+                            ✓
+                          </div>
+                          <span className="text-gray-700 text-sm">{o}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div
+                    className="rounded-2xl p-5 text-center flex flex-col items-center justify-center gap-3"
+                    style={{ background: v.renkBg, border: `1px solid ${v.renk}30` }}
+                  >
+                    <div className="text-4xl">{v.icon}</div>
+                    <div className="font-black text-gray-900">{v.title}</div>
+                    <div className="text-sm text-gray-600">{v.kapasite}</div>
+                    <a
+                      href="tel:05323039089"
+                      className="mt-2 w-full text-center text-sm font-bold py-2.5 rounded-xl text-white transition hover:opacity-90"
+                      style={{ background: v.renk }}
+                    >
+                      📞 Fiyat Al
+                    </a>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
-
-          {/* H3 Alt Başlıklar */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">🔭 Teleskopik ve Eklemli Vinç Modelleri</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Teleskopik bom vincler geniş açık alanlarda doğrusal erişim sağlarken, eklemli (articulated)
-                modeller engellerin üzerinden atlayarak dar çalışma bölgelerine ulaşır. İstanbul&apos;un yoğun
-                kentsel dokusunda her ikisine de ihtiyaç duyulabilir; uzmanlarımız projenize en uygun
-                konfigürasyonu ücretsiz keşifte belirler.
-              </p>
-            </div>
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">📏 10 Metreden 55 Metreye Sepetli Vinç Seçenekleri</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Filomuzda 10m kompakt izcilerden 55m teleskopik araç üstü modellere kadar geniş bir
-                yükseklik aralığı mevcuttur. Cephe boyama, çatı onarımı, aydınlatma bakımı ve ağaç
-                budama gibi farklı iş türleri için doğru yüksekliği ve bom tipini belirliyoruz.
-              </p>
-            </div>
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">⚖️ 5 Tondan 500 Tona Mobil Vinç Kapasiteleri</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Küçük ölçekli malzeme kaldırma operasyonlarından ağır endüstriyel ekipman montajına
-                kadar her kapasite için doğru mobil vinç filomuzda yer alıyor. Kaldırma kapasitesi
-                hesabında yük ağırlığına ek olarak çalışma yarıçapı ve bom açısı da değerlendirilir.
-              </p>
-            </div>
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">🏙️ İstanbul Şehir İçi Dar Alanlarda Vinç Kullanımı</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Tarihi yarımada, Beyoğlu ve Kadıköy gibi yoğun ilçelerde sokak genişlikleri ve çevre
-                yapılar önemli kısıtlar oluşturur. İzci sepetli vinçler ve kompakt mobil vinçler bu
-                alanlara özel çözümler sunar; trafik koordinasyonu ve izin süreçleri için de destek sağlıyoruz.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* ── H2-3 & H2-4: Yakalar ── */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Avrupa Yakası</p>
-            <h2 className="text-3xl font-black text-gray-900 mb-4">İstanbul Avrupa Yakası Vinç Kiralama Hizmetleri</h2>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              Esenyurt&apos;tan Sarıyer&apos;e, Silivri&apos;den Fatih&apos;e Avrupa Yakası&apos;nın 25 ilçesinde aktif ekiplerimizle
-              hizmet sunuyoruz. TEM ve E-5 aksındaki stratejik konumumuz sayesinde herhangi bir noktaya
-              en kısa sürede ulaşıyor, büyük ölçekli inşaat projelerinden acil tek operasyonlara kadar
-              her ihtiyacı karşılıyoruz.
-            </p>
-            <div className="space-y-2">
-              {[
-                "Kentsel dönüşüm projelerinde kule ve mobil vinç desteği",
-                "OSB ve sanayi bölgelerinde ağır kaldırma operasyonları",
-                "Tarihi yapı restorasyon ve cephe çalışmaları",
-                "Konut projelerinde sepetli vinç ve manlift kiralama",
-              ].map((m) => (
-                <div key={m} className="flex gap-3 items-start bg-gray-50 rounded-xl p-3">
-                  <span className="text-yellow-600 font-bold shrink-0">●</span>
-                  <p className="text-gray-700 text-sm">{m}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Anadolu Yakası</p>
-            <h2 className="text-3xl font-black text-gray-900 mb-4">İstanbul Anadolu Yakası Vinç Kiralama Hizmetleri</h2>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              Kartal&apos;dan Beykoz&apos;a, Tuzla&apos;dan Üsküdar&apos;a Anadolu Yakası&apos;nın 14 ilçesinde kesintisiz hizmet.
-              Pendik ve Tuzla&apos;daki tersane ve liman projelerinden Ataşehir&apos;deki ofis kulelerine, Şile&apos;nin
-              geniş arazilerinden Kadıköy&apos;ün yoğun kentsel dokusuna kadar her projeye uygun ekipman
-              ve operatörle yanınızdayız.
-            </p>
-            <div className="space-y-2">
-              {[
-                "Tersane ve liman projelerinde ağır mobil vinç hizmetleri",
-                "Finans ve teknoloji merkezi projelerine kule vinç desteği",
-                "Sahil projeleri için özel vinç ve platform çözümleri",
-                "OSB ve lojistik merkezlerde hiyap ve forklift kiralama",
-              ].map((m) => (
-                <div key={m} className="flex gap-3 items-start bg-gray-50 rounded-xl p-3">
-                  <span className="text-yellow-600 font-bold shrink-0">●</span>
-                  <p className="text-gray-700 text-sm">{m}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── H2-5: Fiyatlar ── */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
+      {/* ══════════════════════════════════════
+          FİYAT TABLOSU
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Fiyatlandırma</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">Saatlik, Günlük ve Aylık Vinç Kiralama Fiyatları</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Aşağıdaki fiyatlar 2026 yılı referans ücretleri olup nakliye, ek süre ve özel koşullar
-              fiyatı etkileyebilir. Kesin teklif için bizi arayın.
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Fiyatlandırma</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">İstanbul Vinç Kiralama Fiyat Listesi</h2>
+            <p className="text-gray-500 text-lg">
+              Aşağıdaki fiyatlar yol gösterici niteliktedir. İstanbul projenize özel teklif için arayın.
             </p>
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-100">
+
+          <div className="overflow-x-auto rounded-3xl border border-gray-200 shadow-sm">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-900 text-white">
-                  <th className="text-left px-6 py-4 font-bold rounded-tl-2xl">Vinç Türü</th>
-                  <th className="text-center px-6 py-4 font-bold">Saatlik</th>
-                  <th className="text-center px-6 py-4 font-bold">Günlük</th>
-                  <th className="text-center px-6 py-4 font-bold rounded-tr-2xl">Aylık</th>
+                  <th className="text-left px-6 py-5 font-black text-base">Vinç / Hizmet</th>
+                  <th className="text-center px-5 py-5 font-bold">Saatlik</th>
+                  <th className="text-center px-5 py-5 font-bold">Günlük</th>
+                  <th className="text-center px-5 py-5 font-bold">Haftalık</th>
+                  <th className="text-center px-5 py-5 font-bold">Aylık</th>
                 </tr>
               </thead>
               <tbody>
                 {fiyatTablosu.map((r, i) => (
-                  <tr key={r.tur} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                    <td className="px-6 py-4 font-semibold text-gray-900">{r.tur}</td>
-                    <td className="px-6 py-4 text-center text-gray-700">{r.saatlik}</td>
-                    <td className="px-6 py-4 text-center text-gray-700">{r.gunluk}</td>
-                    <td className="px-6 py-4 text-center text-gray-700">{r.aylik}</td>
+                  <tr
+                    key={r.tur}
+                    className={`border-b border-gray-100 hover:bg-yellow-50 transition ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}
+                  >
+                    <td className="px-6 py-4 font-bold text-gray-900">{r.tur}</td>
+                    <td className="px-5 py-4 text-center text-gray-700">{r.saatlik}</td>
+                    <td className="px-5 py-4 text-center text-gray-700 font-medium">{r.gunluk}</td>
+                    <td className="px-5 py-4 text-center text-gray-700">{r.haftalik}</td>
+                    <td className="px-5 py-4 text-center font-bold text-yellow-600">{r.aylik}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          {/* H3: Ek ekipmanlar */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🔩 Kule Vinç Kiralama ve Şantiye Kurulumu</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Uzun vadeli şantiyeler için kule vinç kurulumu, operasyon ve demontaj hizmetinin tamamı
-                tek sözleşmeyle sunulur. Kurulum süresi ve maliyeti vinç tipine ve şantiye koşullarına göre ayrıca planlanır.
-              </p>
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-5 flex gap-3">
+              <span className="text-2xl">💡</span>
+              <div>
+                <div className="font-bold text-gray-900 text-sm mb-1">Fiyata dahil</div>
+                <div className="text-gray-600 text-xs leading-relaxed">Vinç, sertifikalı operatör ve sigorta standartta dahildir.</div>
+              </div>
             </div>
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏭 Forklift Kiralama ve Depo İçi Taşıma Çözümleri</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                1.5T&apos;dan 10T&apos;a LPG, elektrikli ve dizel forklift seçenekleriyle depo, üretim tesisi ve
-                açık saha operasyonlarına hızlı çözüm. Günlük ve aylık kiralama planları mevcuttur.
-              </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-5 flex gap-3">
+              <span className="text-2xl">📦</span>
+              <div>
+                <div className="font-bold text-gray-900 text-sm mb-1">Ek ücretler</div>
+                <div className="text-gray-600 text-xs leading-relaxed">İstanbul dışı nakliye, gece mesaisi ve özel izin ayrıca fiyatlandırılır.</div>
+              </div>
             </div>
-            <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🛗 Manlift ve Makaslı Platform Kiralama</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Elektrikli makaslı platformlar iç mekanda sessiz ve düşük zemin basıncıyla çalışır.
-                Eklemli manliftler ise dış cephe ve yüksek tavanlı endüstriyel alanlar için idealdir.
-              </p>
+            <div className="bg-green-50 border border-green-200 rounded-2xl p-5 flex gap-3">
+              <span className="text-2xl">📅</span>
+              <div>
+                <div className="font-bold text-gray-900 text-sm mb-1">Uzun dönem indirim</div>
+                <div className="text-gray-600 text-xs leading-relaxed">Aylık kiralama anlaşmalarında %20–35 indirim uygulanmaktadır.</div>
+              </div>
             </div>
+          </div>
+
+          <div className="mt-6 text-center text-xs text-gray-400">
+            * Tüm fiyatlar KDV hariç olup piyasa koşullarına göre değişkenlik gösterebilir. İstanbul projenize özel kesin fiyat için teklif alınız.
           </div>
         </div>
       </section>
 
-      {/* ── H2-6: Operatörlü Avantajlar ── */}
-      <section className="py-20 px-4 bg-yellow-400">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-yellow-800 font-semibold text-sm uppercase tracking-wider mb-3">Neden Operatörlü?</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">Operatörlü Vinç Kiralama Avantajları</h2>
-            <p className="text-gray-800 text-lg max-w-2xl mx-auto">
-              Operatörsüz kiralama ilk bakışta daha ucuz görünse de iş güvenliği sorumluluğu,
-              verim kaybı ve olası hasar maliyetleri göz önüne alındığında operatörlü seçenek
-              çok daha avantajlıdır.
+      {/* ══════════════════════════════════════
+          KULLANIM ALANLARI
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-gray-950 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Nerede Kullanılır?</span>
+            <h2 className="text-4xl font-black mt-3 mb-4">İstanbul Vinç Kiralama Kullanım Alanları</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              İnşaattan enerjiye, limanlardan telekomünikasyona — İstanbul&apos;da vinç gereken her yerde yanınızdayız.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {avantajlar.map((a) => (
-              <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-yellow-200">
-                <div className="text-3xl shrink-0">{a.icon}</div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
-                  <p className="text-gray-500 text-sm">{a.desc}</p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {kullanımAlanlari.map((k) => (
+              <div
+                key={k.title}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-yellow-400/30 transition group"
+              >
+                <div className="text-4xl mb-4">{k.icon}</div>
+                <h4 className="text-white font-black mb-2 group-hover:text-yellow-400 transition">{k.title}</h4>
+                <p className="text-gray-500 text-sm leading-relaxed">{k.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          SÜREÇ
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Nasıl Çalışır?</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">6 Adımda İstanbul Vinç Kiralama</h2>
+            <p className="text-gray-500 text-lg">Telefon etmekten sahaya teslimata, her adım kolay ve şeffaf.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+            {adimlar.map((a, i) => (
+              <div key={a.no} className="text-center relative">
+                {i < adimlar.length - 1 && (
+                  <div className="hidden lg:block absolute top-8 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] h-0.5 bg-gradient-to-r from-yellow-400/40 to-yellow-400/10" />
+                )}
+                <div className="w-16 h-16 bg-yellow-400/10 border-2 border-yellow-400/30 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
+                  {a.icon}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── H2-7: Fiyatı Etkileyen Faktörler ── */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Bilgi</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">İstanbul&apos;da Vinç Kiralamayı Etkileyen Faktörler</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-            {[
-              "Vinç tipi ve kaldırma kapasitesi",
-              "Çalışma yüksekliği ve bom uzunluğu",
-              "Kiralama süresi (saatlik / günlük / aylık)",
-              "İstanbul içi nakliye mesafesi ve trafik koşulları",
-              "Operatör hizmeti gerekliliği",
-              "Zemin ve erişim koşulları (dar sokak, eğimli arazi vb.)",
-              "Sezon ve talep yoğunluğu",
-              "Sigorta kapsamı ve sözleşme süresi",
-            ].map((f) => (
-              <div key={f} className="flex gap-3 items-start bg-gray-50 rounded-xl p-4">
-                <span className="text-yellow-600 font-bold text-lg shrink-0">●</span>
-                <p className="text-gray-700 text-sm">{f}</p>
+                <div className="text-yellow-500 text-xs font-black tracking-widest mb-2">{a.no}</div>
+                <h4 className="text-gray-900 font-black text-sm mb-2">{a.title}</h4>
+                <p className="text-gray-500 text-xs leading-relaxed">{a.desc}</p>
               </div>
             ))}
           </div>
 
-          {/* H3 çift blok */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">🏷️ Dış Cephe, Tabela Montajı ve Bakım İşleri İçin Vinç</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Bina dış cephesi boyama, ısı yalıtımı, tabela ve klima montajı ile çatı bakım
-                çalışmalarında sepetli vinç veya manlift kullanımı hem güvenliği artırır hem de
-                iskele kurulum maliyetini ortadan kaldırır. Saatlik kiralama seçeneğiyle küçük
-                işler için ekonomik çözüm sunulur.
-              </p>
-            </div>
-            <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 text-lg mb-2">🚢 Konteyner Taşımacılığı ve Hiyap Vinç Hizmetleri</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Hiyap vincler kamyon şasisi üzerine entegre edilerek yükleme ve boşaltma işlemlerini
-                tek araçla çözer. İstanbul limanları, lojistik depolar ve dar şantiye girişlerinde
-                konteyner, makine ve ağır malzeme taşımacılığında tercih edilen en esnek çözümdür.
-              </p>
-            </div>
+          <div className="text-center mt-14">
+            <a
+              href="tel:05323039089"
+              className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-black px-10 py-5 rounded-2xl text-lg transition shadow-lg shadow-yellow-400/20"
+            >
+              📞 Hemen Başlayın — 0532 303 90 89
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ── H2-8: Sertifika & Sigorta ── */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* ══════════════════════════════════════
+          NEDEN BİZ
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
             <div>
-              <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Güvence</p>
-              <h2 className="text-4xl font-black text-gray-900 mb-4">Sertifikalı ve Sigortalı Vinç Kiralama Hizmeti</h2>
-              <p className="text-gray-500 text-lg leading-relaxed mb-6">
-                İş güvenliği mevzuatı kapsamında vinç operasyonları sertifikalı personel ve sigortalı
-                ekipman zorunluluğu içerir. Tüm süreçlerimiz TS EN standartlarına ve İSG mevzuatına
-                tam uyumludur.
+              <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Neden Biz?</span>
+              <h2 className="text-4xl font-black text-gray-900 mt-3 mb-6 leading-tight">
+                İstanbul&apos;un<br />Tercih Ettiği<br />Vinç Kiralama Firması
+              </h2>
+              <p className="text-gray-500 leading-relaxed mb-8">
+                İstanbul&apos;da 25 yılı aşkın deneyim, geniş ve bakımlı filomuz, sertifikalı
+                operatörlerimiz ve 7/24 destek hattımızla İstanbul vinç kiralama sektöründe fark yaratıyoruz.
               </p>
-              <div className="p-6 bg-white border border-gray-100 rounded-2xl">
-                <h3 className="font-bold text-gray-900 mb-3">📋 İstanbul&apos;da Vinç Kiralama Sözleşmesi ve Sigorta Kapsamı</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  Kiralama sözleşmemiz; ekipman teslim ve iade koşullarını, operasyon sınırlarını,
-                  sorumluluk paylaşımını ve sigorta kapsamını açıkça belirtir. Üçüncü şahıs sorumluluk
-                  sigortası ve ekipman hasarı sigortası standart olarak dahildir. Proje özeline göre
-                  ek teminat seçenekleri de sunulabilir.
-                </p>
-              </div>
+              <a
+                href="tel:05323039089"
+                className="inline-block bg-gray-900 hover:bg-yellow-400 hover:text-black text-white font-black px-6 py-4 rounded-xl transition"
+              >
+                Hemen Arayın
+              </a>
             </div>
-            <div className="space-y-3">
-              {[
-                "TS EN 13000 standardına uygun vinç operatörü belgeleri",
-                "Periyodik bakım ve muayene sertifikaları güncel tutulmaktadır",
-                "Ekipman ve üçüncü şahıs sorumluluk sigortası standart dahildir",
-                "Hava koşulları rüzgar hız limitlerinde çalışma durdurulur",
-                "Kaldırma kapasitesi hiçbir koşulda aşılmamaktadır",
-                "Çalışma alanında emniyet şeridi ve uyarı levhaları zorunlu tutulur",
-                "Yüksekte çalışma ve kişisel koruyucu ekipman standartlarına uyum",
-              ].map((k) => (
-                <div key={k} className="flex gap-3 items-start bg-white border border-gray-100 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
-                  <p className="text-gray-700 text-sm">{k}</p>
+
+            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5">
+              {neden.map((n) => (
+                <div
+                  key={n.title}
+                  className="flex gap-4 p-5 rounded-2xl border border-gray-100 bg-white hover:border-yellow-300 hover:shadow-md transition group"
+                >
+                  <div className="text-3xl flex-shrink-0">{n.icon}</div>
+                  <div>
+                    <h4 className="font-black text-gray-900 mb-1 group-hover:text-yellow-600 transition">{n.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{n.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -531,95 +594,99 @@ export default function IstanbulVincKiralamaPage() {
         </div>
       </section>
 
-      {/* ── H2-9: Sektörler ── */}
-      <section className="py-20 px-4 bg-white">
+      {/* ══════════════════════════════════════
+          SSS
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Sektörler</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">İnşaat, Sanayi ve Lojistik Projelerinde Vinç Çözümleri</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Farklı sektörlerin farklı ihtiyaçları vardır. Deneyimli ekibimiz her sektöre
-              özel operasyon planı hazırlar.
-            </p>
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">SSS</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">İstanbul Vinç Kiralama Sık Sorulan Sorular</h2>
+            <p className="text-gray-500 text-lg">İstanbul vinç kiralama hakkında en çok merak edilenler.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: "🏗️",
-                title: "İnşaat Sektörü",
-                desc: "Temel kazıdan çatı montajına; kolon demiri bağlamadan prefabrik panel yerleştirmeye kadar her inşaat aşamasında mobil ve kule vinç hizmetleri sunuyoruz. Şantiye kurulumundan ekipman demobasına komple proje yönetimi.",
-                h3: "Ücretsiz Keşif ve Saha Analizi Hizmeti",
-                h3desc: "Şantiyenize gelmeden önce zemin etüdü, erişim analizi ve vinç konumlama planı hazırlanır. Bu ücretsiz hizmet operasyon güvenliğini ve verimliliğini doğrudan artırır.",
-              },
-              {
-                icon: "🏭",
-                title: "Sanayi ve Üretim",
-                desc: "Fabrika içi makine yerleşim değişikliği, üretim hattı kurulumu ve ağır ekipman bakım-onarım operasyonlarında yüksek kapasiteli mobil vinçlerle destek. Planlı ve acil müdahale seçenekleri mevcuttur.",
-                h3: "30–60 Dakikada Mobilizasyon: İstanbul Hız Garantisi",
-                h3desc: "İstanbul genelindeki stratejik ekip konumlandırmamız sayesinde acil çağrılarda 30 dakika, standart taleplerde ise sözleşmede belirlenen sürede sahadayız. Üretim durması maliyetini minimize ediyoruz.",
-              },
-              {
-                icon: "🚛",
-                title: "Lojistik ve Depolama",
-                desc: "Depo reyonu kurulumu, konteyner istifleme, ağır palet kaldırma ve taşıma operasyonlarında forklift, hiyap ve makaslı platform kombinasyonlarıyla entegre lojistik çözümler.",
-                h3: null,
-                h3desc: null,
-              },
-              {
-                icon: "⚡",
-                title: "Enerji ve Altyapı",
-                desc: "Elektrik direk ve hat çalışmaları, baz istasyonu kurulumu, güneş paneli montajı ve rüzgar türbini bakımında izoleli sepetli vinçler ve yüksek erişimli platformlarla güvenli operasyonlar.",
-                h3: null,
-                h3desc: null,
-              },
-            ].map((s) => (
-              <div key={s.title} className="p-6 border border-gray-100 rounded-2xl hover:border-yellow-300 hover:shadow-lg transition">
-                <div className="text-3xl mb-3">{s.icon}</div>
-                <h3 className="font-bold text-gray-900 text-xl mb-2">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{s.desc}</p>
-                {s.h3 && (
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <h3 className="font-bold text-gray-800 text-sm mb-1">💡 {s.h3}</h3>
-                    <p className="text-gray-500 text-xs leading-relaxed">{s.h3desc}</p>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {sss.map((item, i) => (
+              <div
+                key={i}
+                className="border border-gray-200 rounded-2xl p-6 hover:border-yellow-300 transition"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 bg-yellow-400 rounded-xl flex items-center justify-center text-black font-black text-sm flex-shrink-0 mt-0.5">
+                    S{i + 1}
                   </div>
-                )}
+                  <div>
+                    <div className="font-black text-gray-900 mb-2">{item.s}</div>
+                    <div className="text-gray-600 text-sm leading-relaxed">{item.c}</div>
+                  </div>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 p-8 bg-yellow-400 rounded-3xl text-center">
+            <div className="text-2xl font-black text-gray-900 mb-2">İstanbul vinç kiralama hakkında başka sorunuz mu var?</div>
+            <p className="text-gray-800 mb-6">Uzmanlarımız 7/24 hatta, hemen yanıt alın.</p>
+            <a
+              href="tel:05323039089"
+              className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl transition"
+            >
+              📞 0532 303 90 89 — Hemen Ara
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ── H2-10: 39 İlçe ── */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Hizmet Bölgeleri</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">İstanbul&apos;un 39 İlçesinde Vinç Kiralama Hizmetleri</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Bulunduğunuz ilçeye özel fiyat ve ekipman bilgisi için ilçenizi seçin.
+      {/* ══════════════════════════════════════
+          İLÇELER — AVRUPA + ANADOLU
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-gray-950 text-white" id="ilceler">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Hizmet Bölgeleri</span>
+            <h2 className="text-4xl font-black mt-3 mb-4">İstanbul Vinç Kiralama — 39 İlçede Hizmet</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Bulunduğunuz ilçeye tıklayarak bölgeye özel İstanbul vinç kiralama hizmet sayfasına ulaşın.
             </p>
+          </div>
+
+          {/* Dekoratif harita */}
+          <div className="relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden mb-14 p-10 text-center">
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: "radial-gradient(circle at 30% 50%, rgba(250,204,21,0.5) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(59,130,246,0.4) 0%, transparent 60%)",
+              }}
+            />
+            <div className="relative">
+              <div className="text-7xl mb-4">🗺️</div>
+              <div className="text-white text-2xl font-black mb-2">İstanbul — Avrupa + Anadolu Yakası</div>
+              <div className="text-gray-400">Boğazın her iki yakasında, tüm İstanbul&apos;da aynı gün vinç kiralama hizmeti</div>
+            </div>
           </div>
 
           {/* Avrupa Yakası */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">🌉</span>
-              <h3 className="text-xl font-black text-gray-900">Avrupa Yakası — 25 İlçe</h3>
+              <div className="h-px flex-1 bg-white/10" />
+              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2">
+                <span>🌉</span>
+                <span className="text-white font-bold text-sm">Avrupa Yakası</span>
+                <span className="text-gray-500 text-xs">({ilceler.avrupa.length} ilçe)</span>
+              </div>
+              <div className="h-px flex-1 bg-white/10" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {avrupaIlceleri.map((ilce) => (
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3">
+              {ilceler.avrupa.map((ilce) => (
                 <Link
-                  key={ilce.href}
-                  href={ilce.href}
-                  className="group flex items-start gap-3 p-4 bg-white border border-gray-100 rounded-2xl hover:border-yellow-300 hover:shadow-md transition"
+                  key={ilce.slug}
+                  href={`/${ilce.slug}-vinc-kiralama`}
+                  className="group bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-yellow-400 hover:border-yellow-400 transition"
                 >
-                  <span className="text-yellow-500 font-bold shrink-0 mt-0.5">📍</span>
-                  <div>
-                    <div className="font-bold text-gray-900 group-hover:text-yellow-600 transition text-sm">
-                      {ilce.ad} Vinç Kiralama
-                    </div>
-                    <div className="text-gray-500 text-xs mt-0.5 leading-relaxed">{ilce.desc}</div>
-                  </div>
+                  <div className="text-xl mb-1">{ilce.emoji}</div>
+                  <div className="text-white text-xs font-bold group-hover:text-black leading-tight">{ilce.ad}</div>
+                  <div className="text-gray-600 text-[10px] group-hover:text-gray-900 mt-0.5">Vinç Kiralama</div>
                 </Link>
               ))}
             </div>
@@ -628,23 +695,25 @@ export default function IstanbulVincKiralamaPage() {
           {/* Anadolu Yakası */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">🌁</span>
-              <h3 className="text-xl font-black text-gray-900">Anadolu Yakası — 14 İlçe</h3>
+              <div className="h-px flex-1 bg-white/10" />
+              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2">
+                <span>🌉</span>
+                <span className="text-white font-bold text-sm">Anadolu Yakası</span>
+                <span className="text-gray-500 text-xs">({ilceler.anadolu.length} ilçe)</span>
+              </div>
+              <div className="h-px flex-1 bg-white/10" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {anadoluIlceleri.map((ilce) => (
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3">
+              {ilceler.anadolu.map((ilce) => (
                 <Link
-                  key={ilce.href}
-                  href={ilce.href}
-                  className="group flex items-start gap-3 p-4 bg-white border border-gray-100 rounded-2xl hover:border-yellow-300 hover:shadow-md transition"
+                  key={ilce.slug}
+                  href={`/${ilce.slug}-vinc-kiralama`}
+                  className="group bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-yellow-400 hover:border-yellow-400 transition"
                 >
-                  <span className="text-yellow-500 font-bold shrink-0 mt-0.5">📍</span>
-                  <div>
-                    <div className="font-bold text-gray-900 group-hover:text-yellow-600 transition text-sm">
-                      {ilce.ad} Vinç Kiralama
-                    </div>
-                    <div className="text-gray-500 text-xs mt-0.5 leading-relaxed">{ilce.desc}</div>
-                  </div>
+                  <div className="text-xl mb-1">{ilce.emoji}</div>
+                  <div className="text-white text-xs font-bold group-hover:text-black leading-tight">{ilce.ad}</div>
+                  <div className="text-gray-600 text-[10px] group-hover:text-gray-900 mt-0.5">Vinç Kiralama</div>
                 </Link>
               ))}
             </div>
@@ -652,52 +721,72 @@ export default function IstanbulVincKiralamaPage() {
         </div>
       </section>
 
-      {/* ── SSS ── */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">SSS</p>
-            <h2 className="text-4xl font-black text-gray-900 mb-4">İstanbul Vinç Kiralama Hakkında Sıkça Sorulan Sorular</h2>
+      {/* ══════════════════════════════════════
+          DİĞER HİZMETLER
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Diğer Hizmetler</span>
+            <h2 className="text-3xl font-black text-gray-900 mt-3">İstanbul Vinç Kiralama ile Birlikte</h2>
           </div>
-          <div className="space-y-4">
-            {sss.map((s, i) => (
-              <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
-              </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { icon: "👷", title: "Operatörlü Hizmet", desc: "Sertifikalı operatör ile tam hizmet paketi.", href: "/operatorlu-vinc-hizmeti", renk: "#10B981" },
+              { icon: "🔧", title: "Bakım & Onarım", desc: "Vinci arızalandığında saha servisi.", href: "/vinc-bakim-ve-onarim", renk: "#3B82F6" },
+              { icon: "🚨", title: "Acil Hizmet", desc: "7/24 acil vinç ihtiyaçlarınız için.", href: "/vinc-acil-durum-hizmetleri", renk: "#EF4444" },
+              { icon: "🚛", title: "Taşıma & Lojistik", desc: "Vinç nakliye ve şantiye kurulumu.", href: "/vinc-tasima-ve-lojistik", renk: "#14B8A6" },
+            ].map((h) => (
+              <Link
+                key={h.href}
+                href={h.href}
+                className="group bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 hover:shadow-md transition"
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"
+                  style={{ background: h.renk + "20" }}
+                >
+                  {h.icon}
+                </div>
+                <h4 className="font-black text-gray-900 mb-2 group-hover:text-yellow-600 transition">{h.title}</h4>
+                <p className="text-gray-500 text-sm leading-relaxed mb-3">{h.desc}</p>
+                <span className="text-sm font-bold" style={{ color: h.renk }}>İncele →</span>
+              </Link>
             ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-16 px-4 bg-gray-900 text-white text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-black mb-4">İstanbul&apos;da Vinç Kiralamanın En Hızlı Yolu</h2>
-          <p className="text-gray-400 mb-8 text-lg">
-            7/24 hizmetinizdeyiz. Hemen arayın, projenize en uygun vinci birlikte belirleyelim.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* ══════════════════════════════════════
+          SON CTA
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-yellow-400">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div className="text-center lg:text-left">
+            <div className="text-4xl font-black text-gray-900 mb-3">
+              İstanbul&apos;da kiralık vinç ihtiyacınız mı var?
+            </div>
+            <div className="text-gray-800 text-lg">
+              Projenizi anlatın, İstanbul&apos;un doğru vinci hemen belirleyelim.
+            </div>
+          </div>
+          <div className="flex gap-4 flex-shrink-0">
             <a
               href="tel:05323039089"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
+              className="bg-gray-900 hover:bg-gray-800 text-white font-black px-10 py-5 rounded-2xl transition text-lg"
             >
-              📞 0532 303 90 89
+              📞 Hemen Ara
             </a>
             <Link
               href="/iletisim"
-              className="border-2 border-gray-600 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
+              className="bg-white hover:bg-gray-100 text-gray-900 font-bold px-10 py-5 rounded-2xl transition text-lg"
             >
-              Mesaj Gönder
+              Teklif Al →
             </Link>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
