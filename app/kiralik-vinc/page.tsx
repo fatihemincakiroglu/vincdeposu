@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Kiralık Vinç | Vinç Kiralama Hizmetleri",
+  title: "Kiralık Vinç Fiyatları ve Günlük Kiralık Vinç - Vinç Kiralama",
   description:
-    "İstanbul'da profesyonel kiralık vinç hizmetleri. Mobil vinç, sepetli vinç, paletli vinç ve daha fazlası. 7/24 hizmet: 0532 303 90 89",
+    "Kiralık vinç fiyatları ve günlük kiralık vinç seçenekleri için en uygun çözümleri sunuyoruz. İhtiyacınıza uygun vinç kiralama hizmetleri için iletişime geçin!",
 };
 
 const vincTurleri = [
