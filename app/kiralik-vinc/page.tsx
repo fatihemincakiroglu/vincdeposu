@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kiralik-vinc",
   },
-  title: "Kiralık Vinç | Vinç Kiralama Hizmetleri",
+  title: { absolute: "Kiralık Vinç Fiyatları ve Günlük Kiralık Vinç - Vinç Kiralama" },
   description:
     "İstanbul'da profesyonel kiralık vinç hizmetleri. Mobil vinç, sepetli vinç, paletli vinç ve daha fazlası. 7/24 hizmet: 0532 303 90 89",
 };

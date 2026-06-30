@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kadikoy-vinc-kiralama",
   },
-  title: "Kadıköy Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Kadıköy Vinç Kiralama ve Kadıköy Kiralık Vinç" },
   description:
     "Kadıköy vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["kadikoy vinç kiralama", "kadikoy kiralık vinç", "vinç kiralama kadikoy", "kadikoy sepetli vinç", "kadikoy mobil vinç kiralama"],

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/pendik-vinc-kiralama",
   },
-  title: "Pendik Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Pendik Vinç Kiralama ve Pendik Kiralık Vinç" },
   description:
     "Pendik vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["pendik vinç kiralama", "pendik kiralık vinç", "vinç kiralama pendik", "pendik sepetli vinç", "pendik mobil vinç kiralama"],

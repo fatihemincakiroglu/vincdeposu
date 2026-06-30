@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/fatih-vinc-kiralama",
   },
-  title: "Fatih Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Fatih Vinç Kiralama ve Fatih Kiralık Vinç" },
   description:
     "Fatih vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["fatih vinç kiralama", "fatih kiralık vinç", "vinç kiralama fatih", "fatih sepetli vinç", "fatih mobil vinç kiralama"],

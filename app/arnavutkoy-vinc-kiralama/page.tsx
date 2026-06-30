@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Arnavutkoy Vinc Kiralama",
+  title: { absolute: "Arnavutköy Vinç Kiralama ve Arnavutköy Kiralık Vinç" },
   alternates: {
     canonical: "/arnavutkoy-vinc-kiralama",
   },

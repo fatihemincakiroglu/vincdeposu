@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/esenler-vinc-kiralama",
   },
-  title: "Esenler Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Esenler Vinç Kiralama ve Esenler Kiralık Vinç" },
   description:
     "Esenler vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["esenler vinç kiralama", "esenler kiralık vinç", "vinç kiralama esenler", "esenler sepetli vinç", "esenler mobil vinç kiralama"],

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/bayrampasa-vinc-kiralama",
   },
-  title: "Bayrampaşa Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Bayrampaşa Vinç Kiralama ve Bayrampaşa Kiralık Vinç" },
   description:
     "Bayrampaşa vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["bayrampasa vinç kiralama", "bayrampasa kiralık vinç", "vinç kiralama bayrampasa", "bayrampasa sepetli vinç", "bayrampasa mobil vinç kiralama"],

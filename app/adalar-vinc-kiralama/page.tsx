@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Adalar Vinc Kiralama",
+  title: { absolute: "Adalar Vinç Kiralama ve Adalar Kiralık Vinç" },
   alternates: {
     canonical: "/adalar-vinc-kiralama",
   },

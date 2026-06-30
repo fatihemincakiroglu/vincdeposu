@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/gaziosmanpasa-vinc-kiralama",
   },
-  title: "Gaziosmanpaşa Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Gaziosmanpaşa Vinç Kiralama ve Gaziosmanpaşa Kiralık Vinç" },
   description:
     "Gaziosmanpaşa vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["gaziosmanpasa vinç kiralama", "gaziosmanpasa kiralık vinç", "vinç kiralama gaziosmanpasa", "gaziosmanpasa sepetli vinç", "gaziosmanpasa mobil vinç kiralama"],

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/basaksehir-vinc-kiralama",
   },
-  title: "Başakşehir Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Başakşehir Vinç Kiralama ve Başakşehir Kiralık Vinç" },
   description:
     "Başakşehir vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["basaksehir vinç kiralama", "basaksehir kiralık vinç", "vinç kiralama basaksehir", "basaksehir sepetli vinç", "basaksehir mobil vinç kiralama"],

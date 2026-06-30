@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/zeytinburnu-vinc-kiralama",
   },
-  title: "Zeytinburnu Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Zeytinburnu Vinç Kiralama ve Zeytinburnu Kiralık Vinç" },
   description:
     "Zeytinburnu vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["zeytinburnu vinç kiralama", "zeytinburnu kiralık vinç", "vinç kiralama zeytinburnu", "zeytinburnu sepetli vinç", "zeytinburnu mobil vinç kiralama"],

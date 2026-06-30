@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/sile-vinc-kiralama",
   },
-  title: "Şile Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Şile Vinç Kiralama ve Şile Kiralık Vinç" },
   description:
     "Şile vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["sile vinç kiralama", "sile kiralık vinç", "vinç kiralama sile", "sile sepetli vinç", "sile mobil vinç kiralama"],

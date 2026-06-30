@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/umraniye-vinc-kiralama",
   },
-  title: "Ümraniye Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Ümraniye Vinç Kiralama ve Ümraniye Kiralık Vinç" },
   description:
     "Ümraniye vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["umraniye vinç kiralama", "umraniye kiralık vinç", "vinç kiralama umraniye", "umraniye sepetli vinç", "umraniye mobil vinç kiralama"],

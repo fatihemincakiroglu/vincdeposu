@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/gungoren-vinc-kiralama",
   },
-  title: "Güngören Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Güngören Vinç Kiralama ve Güngören Kiralık Vinç" },
   description:
     "Güngören vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["gungoren vinç kiralama", "gungoren kiralık vinç", "vinç kiralama gungoren", "gungoren sepetli vinç", "gungoren mobil vinç kiralama"],

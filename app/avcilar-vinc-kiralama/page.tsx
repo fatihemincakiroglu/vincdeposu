@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/avcilar-vinc-kiralama",
   },
-  title: "Avcılar Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Avcılar Vinç Kiralama ve Avcılar Kiralık Vinç" },
   description:
     "Avcılar vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["avcılar vinç kiralama", "avcılar kiralık vinç", "vinç kiralama avcılar", "avcılar sepetli vinç", "avcılar mobil vinç kiralama"],

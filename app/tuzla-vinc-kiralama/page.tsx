@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/tuzla-vinc-kiralama",
   },
-  title: "Tuzla Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Tuzla Vinç Kiralama ve Tuzla Kiralık Vinç" },
   description:
     "Tuzla vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["tuzla vinç kiralama", "tuzla kiralık vinç", "vinç kiralama tuzla", "tuzla sepetli vinç", "tuzla mobil vinç kiralama"],

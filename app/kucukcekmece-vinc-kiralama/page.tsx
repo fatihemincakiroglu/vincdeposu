@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kucukcekmece-vinc-kiralama",
   },
-  title: "Küçükçekmece Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Küçükçekmece Vinç Kiralama ve Küçükçekmece Kiralık Vinç" },
   description:
     "Küçükçekmece vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["kucukcekmece vinç kiralama", "kucukcekmece kiralık vinç", "vinç kiralama kucukcekmece", "kucukcekmece sepetli vinç", "kucukcekmece mobil vinç kiralama"],

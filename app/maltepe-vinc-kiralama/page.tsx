@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/maltepe-vinc-kiralama",
   },
-  title: "Maltepe Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Maltepe Vinç Kiralama ve Maltepe Kiralık Vinç" },
   description:
     "Maltepe vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["maltepe vinç kiralama", "maltepe kiralık vinç", "vinç kiralama maltepe", "maltepe sepetli vinç", "maltepe mobil vinç kiralama"],

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/catalca-vinc-kiralama",
   },
-  title: "Çatalca Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Çatalca Vinç Kiralama ve Çatalca Kiralık Vinç" },
   description:
     "Çatalca vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["catalca vinç kiralama", "catalca kiralık vinç", "vinç kiralama catalca", "catalca sepetli vinç", "catalca mobil vinç kiralama"],

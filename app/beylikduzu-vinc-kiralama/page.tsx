@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/beylikduzu-vinc-kiralama",
   },
-  title: "Beylikdüzü Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Beylikdüzü Vinç Kiralama ve Beylikdüzü Kiralık Vinç" },
   description:
     "Beylikdüzü vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["beylikduzu vinç kiralama", "beylikduzu kiralık vinç", "vinç kiralama beylikduzu", "beylikduzu sepetli vinç", "beylikduzu mobil vinç kiralama"],

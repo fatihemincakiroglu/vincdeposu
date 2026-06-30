@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    default: "Vinç Deposu | İstanbul Vinç & Manlift Kiralama",
+    default: "Vinç Kiralama | Kiralık Vinç | Sepetli Vinç Kiralama",
     template: "%s | Vinç Deposu",
   },
   description:

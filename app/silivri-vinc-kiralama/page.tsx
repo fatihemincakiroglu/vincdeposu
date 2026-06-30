@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/silivri-vinc-kiralama",
   },
-  title: "Silivri Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Silivri Vinç Kiralama ve Silivri Kiralık Vinç" },
   description:
     "Silivri vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["silivri vinç kiralama", "silivri kiralık vinç", "vinç kiralama silivri", "silivri sepetli vinç", "silivri mobil vinç kiralama"],

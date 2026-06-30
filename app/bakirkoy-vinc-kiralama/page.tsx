@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/bakirkoy-vinc-kiralama",
   },
-  title: "Bakırköy Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
+  title: { absolute: "Bakırköy Vinç Kiralama ve Bakırköy Kiralık Vinç" },
   description:
     "Bakırköy vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["bakirkoy vinç kiralama", "bakirkoy kiralık vinç", "vinç kiralama bakirkoy", "bakirkoy sepetli vinç", "bakirkoy mobil vinç kiralama"],
