@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "/kiralik-vinc",
   },
-  title: { absolute: "Kiralık Vinç Fiyatları ve Günlük Kiralık Vinç - Vinç Kiralama" },
+  title: { absolute: "Kiralık Vinç Fiyatları 2025 | Günlük ve Aylık Vinç Kiralama" },
   description:
-    "İstanbul'da profesyonel kiralık vinç hizmetleri. Mobil vinç, sepetli vinç, paletli vinç ve daha fazlası. 7/24 hizmet: 0532 303 90 89",
+    "İstanbul'un 39 ilçesinde kiralık vinç hizmeti: mobil vinç, sepetli vinç, kule vinç ve paletli vinç. Sertifikalı operatör, 7/24 destek. Hemen arayın: 0532 303 90 89",
+  keywords: ["kiralık vinç", "vinç kiralama", "kiralık vinç fiyatları", "günlük vinç kiralama", "istanbul kiralık vinç"],
 };
 
 const vincTurleri = [
@@ -71,12 +73,32 @@ const fiyatTablosu = [
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "İnşaat", desc: "Yüksek katlı yapı inşaatı ve temel işleri" },
-  { icon: "🏭", title: "Sanayi", desc: "Fabrika makine montajı ve taşıma" },
-  { icon: "⚓", title: "Liman", desc: "Konteyner ve yük boşaltma operasyonları" },
-  { icon: "💨", title: "Enerji", desc: "Rüzgar türbini kurulum ve bakımı" },
-  { icon: "🛣️", title: "Altyapı", desc: "Köprü, yol ve tünel projeleri" },
-  { icon: "🏠", title: "Cephe", desc: "Bina dış cephe bakım ve onarımı" },
+  { icon: "🏗️", title: "İnşaat", desc: "Yüksek katlı yapı inşaatında kolon, kalıp ve prefabrik eleman montajı; temel kazısı sırasında malzeme taşıma işleri." },
+  { icon: "🏭", title: "Sanayi", desc: "Fabrika içi ağır makine montajı, üretim hattı kurulumu ve büyük ekipmanların güvenli şekilde yerleştirilmesi." },
+  { icon: "⚓", title: "Liman", desc: "Konteyner indirme-bindirme, gemi bakım operasyonları ve liman sahasındaki yük taşıma işlemleri." },
+  { icon: "💨", title: "Enerji", desc: "Rüzgar türbini kanat ve göbek montajı, trafo merkezi kurulumu ve solar panel sahası çalışmaları." },
+  { icon: "🛣️", title: "Altyapı", desc: "Köprü ayağı montajı, menfez ve tünel çalışmaları ile karayolu üst yapı projelerindeki ağır eleman taşımaları." },
+  { icon: "🏠", title: "Cephe", desc: "Bina dış cephe boya, mantolama, cam değişimi ve cephe aydınlatma sistemlerinin kurulum-bakım işleri." },
+];
+
+const vincSecimRehberi = [
+  { baslik: "Yük Ağırlığını Belirleyin", aciklama: "Taşınacak veya kaldırılacak malzemenin tam ağırlığını net olarak hesaplayın. Vinç kapasitesi her zaman güvenlik payıyla birlikte değerlendirilir; yükün maksimum kapasitenin üzerine çıkması kesinlikle önerilmez." },
+  { baslik: "Çalışma Yüksekliğini Ölçün", aciklama: "Sepetli vinç ve mobil vinçlerde erişilmesi gereken maksimum yükseklik, bom uzunluğu hesabının temelidir. Bina yüksekliği, çekme mesafesi ve önündeki engeller birlikte değerlendirilmelidir." },
+  { baslik: "Çalışma Alanını Kontrol Edin", aciklama: "Dar sokak veya kısıtlı şantiye alanında ahtapot vinç ya da kompakt sepetli vinç modelleri daha uygundur. Açık ve geniş alanlarda mobil veya paletli vinç tercih edilebilir." },
+  { baslik: "Zemin Taşıma Kapasitesini Değerlendirin", aciklama: "Vinç ve yükün toplam ağırlığını taşıyacak zemin sağlam olmalıdır. Yumuşak zeminlerde paletli vinç ya da ek plaka/takoz desteği gerekebilir." },
+  { baslik: "Kiralama Süresini Planlayın", aciklama: "Tek seferlik kısa işler için günlük kiralama, uzun süreli şantiye projeleri için aylık kiralama daha ekonomiktir. Süre uzadıkça birim fiyat genellikle düşer." },
+  { baslik: "Operatör İhtiyacını Netleştirin", aciklama: "Yasal düzenlemeler gereği vinç kullanımı sertifikalı operatör gerektirir. Kiralama bedeline operatör dahil olup olmadığını teklif aşamasında kontrol edin." },
+];
+
+const galeri = [
+  { src: "/images/mobil-vinc-yuksek-bina-istanbul.jpg", alt: "İstanbul'da yüksek katlı bina cephesinde çalışan mobil vinç" },
+  { src: "/images/sepetli-vinc-cephe-calismasi.jpg", alt: "Sepetli vinç ile yüksek bina cephe çalışması" },
+  { src: "/images/vinc-minare-restorasyon-istanbul.jpg", alt: "Cami minaresinde vinç ile restorasyon çalışması" },
+  { src: "/images/express-vinc-kamyon-sahada.jpg", alt: "Kiralık vinç kamyonu şantiye sahasında" },
+  { src: "/images/sepetli-vinc-sepet-detay.jpg", alt: "Sepetli vinç personel sepeti detay görünümü" },
+  { src: "/images/vinc-kiralama-santiye-calismasi.jpg", alt: "İstanbul'da şantiyede vinç kiralama çalışması" },
+  { src: "/images/vinc-cephe-montaj-calismasi.jpg", alt: "Bina cephesinde vinç ile montaj çalışması" },
+  { src: "/images/vinc-cami-ic-mekan-calismasi.jpg", alt: "Cami iç mekanında kiralık vinç ile yapılan çalışma" },
 ];
 
 const adimlar = [
@@ -118,11 +140,47 @@ const sss = [
     soru: "Vinç kiralama hizmeti nasıl alınır?",
     cevap: "0532 303 90 89 numaralı hattımızı arayarak veya iletişim formunu doldurarak projenize özel teklif alabilirsiniz.",
   },
+  {
+    soru: "Vinç kapasitesi nasıl hesaplanır?",
+    cevap: "Vinç kapasitesi, kaldırılacak yükün ağırlığı ile bumun erişeceği mesafenin çarpımına göre ton-metre olarak hesaplanır. Bum uzadıkça vincin taşıyabileceği yük miktarı azalır.",
+  },
+  {
+    soru: "Dar sokaklarda hangi vinç türü kullanılır?",
+    cevap: "Dar sokak ve kısıtlı alanlarda ahtapot vinç veya kompakt sepetli vinç modelleri, manevra kabiliyeti sayesinde en uygun çözümü sunar.",
+  },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: sss.map((s) => ({
+    "@type": "Question",
+    name: s.soru,
+    acceptedAnswer: { "@type": "Answer", text: s.cevap },
+  })),
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Kiralık Vinç Hizmeti",
+  provider: { "@type": "LocalBusiness", name: "Vinç Deposu", telephone: "+905323039089" },
+  areaServed: { "@type": "City", name: "İstanbul" },
+  description:
+    "Mobil vinç, sepetli vinç, kule vinç, paletli vinç ve daha fazlası için günlük ve aylık kiralık vinç hizmeti.",
+};
 
 export default function KiralikVincPage() {
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
 
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-yellow-900 text-white overflow-hidden">
@@ -178,6 +236,24 @@ export default function KiralikVincPage() {
         </div>
       </section>
 
+      {/* Giriş Metni */}
+      <section className="py-14 px-4 bg-white border-b border-gray-100">
+        <div className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed space-y-4">
+          <p>
+            <strong className="text-gray-900">Kiralık vinç</strong> arayışınızda doğru adrestesiniz. Vinç Deposu olarak
+            İstanbul&apos;un 39 ilçesinde mobil vinç, sepetli vinç, kule vinç, paletli vinç ve ahtapot vinç
+            kiralama hizmeti sunuyoruz. İnşaat, sanayi, cephe bakımı ve cami/minare restorasyonu gibi
+            farklı sektörlerden binlerce projede, sertifikalı operatörlerimiz ve tam sigortalı ekipmanlarımızla
+            yer aldık.
+          </p>
+          <p>
+            Kiralık vinç fiyatları; vinç tipi, kapasite, kiralama süresi ve çalışma lokasyonuna göre değişir.
+            Aşağıda vinç türlerini, güncel fiyat aralıklarını, doğru vinç seçimi için pratik bir rehberi ve
+            sahadan gerçek çalışma görsellerini bulabilirsiniz.
+          </p>
+        </div>
+      </section>
+
       {/* Vinç Türleri */}
       <section id="vinc-turleri" className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -220,6 +296,72 @@ export default function KiralikVincPage() {
                     </Link>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vinç Seçim Rehberi */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Pratik Rehber</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Doğru Vinç Nasıl Seçilir?</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              Kiralık vinç seçerken dikkat etmeniz gereken 6 temel kriter.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {vincSecimRehberi.map((v, i) => (
+              <div key={v.baslik} className="flex gap-4 bg-white p-6 rounded-2xl border border-gray-100">
+                <div className="text-2xl font-black text-yellow-400 shrink-0">{i + 1}</div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-1">{v.baslik}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{v.aciklama}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 bg-white rounded-2xl border border-gray-100 p-8">
+            <h3 className="text-xl font-black text-gray-900 mb-3">Vinç Kapasitesi ve Bom Uzunluğu Nasıl Hesaplanır?</h3>
+            <p className="text-gray-600 leading-relaxed mb-3">
+              Vinç kapasitesi, kaldırma anındaki yük ağırlığı ile bumun (bom) ulaştığı mesafenin çarpımına göre
+              değişen ton-metre değeriyle ifade edilir. Örneğin 50 tonluk bir mobil vinç, bumu kısa tutulduğunda
+              tam kapasiteyle çalışabilirken, bum uzadıkça kaldırabileceği yük miktarı azalır. Bu nedenle sadece
+              &quot;kaç ton&quot; sorusu yeterli değildir; çalışma mesafesi ve yüksekliği de kapasite hesabına dahil edilmelidir.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Sepetli vinçlerde belirleyici unsur ise metre cinsinden erişim yüksekliğidir. 18 metrelik bir sepetli
+              vinç düşük katlı cephe işleri için yeterliyken, 53 metreye kadar çıkan modeller yüksek gökdelen
+              projelerinde tercih edilir. Vinç Deposu uzmanları, projenizin teknik bilgilerini değerlendirerek
+              size en uygun kapasite ve bom uzunluğuna sahip vinci ücretsiz olarak önerir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sahadan Kareler */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Referanslarımız</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Sahadan Kareler</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              İstanbul&apos;da gerçekleştirdiğimiz kiralık vinç projelerinden kareler.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {galeri.map((g) => (
+              <div key={g.src} className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-gray-100">
+                <Image
+                  src={g.src}
+                  alt={g.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition duration-300"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
               </div>
             ))}
           </div>

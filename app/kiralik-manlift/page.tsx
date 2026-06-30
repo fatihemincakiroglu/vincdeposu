@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   alternates: {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   },
   title: "Kiralık Manlift | Manlift Kiralama Fiyatları 2025",
   description:
-    "İstanbul'da profesyonel kiralık manlift hizmetleri. Makaslı, eklemli, örümcek ve sepetli platform kiralama. 7/24 operatör desteği. Hemen teklif alın: 0532 303 90 89",
+    "İstanbul'da kiralık manlift hizmeti: makaslı, eklemli, örümcek ve sepetli platform kiralama. 7/24 operatör desteği. Hemen teklif alın: 0532 303 90 89",
   keywords: ["kiralık manlift", "manlift kiralama", "sepetli platform", "makaslı platform", "eklemli platform"],
 };
 
@@ -128,9 +129,63 @@ const ilgiliUrunler = [
   { title: "Operatörlü Hizmet", href: "/operatorlu-vinc-hizmeti", icon: "👷" },
 ];
 
+const galeri = [
+  { src: "/images/eklemli-platform-stadyum-cephe.jpg", alt: "Eklemli platform ile stadyum cephe çalışması" },
+  { src: "/images/eklemli-platform-yan-gorunum.jpg", alt: "Eklemli platform (manlift) yan görünüm" },
+  { src: "/images/orumcek-platform-spxs32.jpg", alt: "Örümcek platform SPXS32 model manlift" },
+  { src: "/images/manlift-platform-cephe-montaj.jpg", alt: "Manlift platform ile cephe montaj çalışması" },
+];
+
+const manliftRehberi = [
+  {
+    baslik: "Çalışma Yüksekliğini Belirleyin",
+    aciklama: "Erişmeniz gereken maksimum yüksekliği net olarak ölçün. Makaslı platformlar genellikle 30 metreye, eklemli platformlar ise engellerin üzerinden geçerek 40 metreye kadar erişim sağlar.",
+  },
+  {
+    baslik: "Zemin Tipini Değerlendirin",
+    aciklama: "İç mekan ve düz beton zeminlerde makaslı platform idealdir. Hassas veya eğimli zeminlerde örümcek platformun hafif ayak sistemi zarar vermeden çalışır.",
+  },
+  {
+    baslik: "Engel ve Erişim Açısını Kontrol Edin",
+    aciklama: "Boru hattı, çatı çıkıntısı veya farklı kotlardaki engellerin üzerinden çalışma gerekiyorsa mafsallı yapısı sayesinde eklemli platform en uygun seçimdir.",
+  },
+  {
+    baslik: "Kapalı veya Açık Alan Ayrımı Yapın",
+    aciklama: "Kapalı mekanlarda elektrikli, emisyonsuz modeller; açık şantiye alanlarında ise dizel motorlu manlift modelleri tercih edilir.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: sorular.map((s) => ({
+    "@type": "Question",
+    name: s.soru,
+    acceptedAnswer: { "@type": "Answer", text: s.cevap },
+  })),
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Kiralık Manlift Hizmeti",
+  provider: { "@type": "LocalBusiness", name: "Vinç Deposu", telephone: "+905323039089" },
+  areaServed: { "@type": "City", name: "İstanbul" },
+  description:
+    "Makaslı platform, eklemli platform, örümcek platform ve sepetli platform kiralama hizmeti.",
+};
+
 export default function KiralikManliftPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* ── HERO ── */}
       <section className="relative bg-gray-950 text-white overflow-hidden">
         {/* decorative grid */}
@@ -239,6 +294,30 @@ export default function KiralikManliftPage() {
                   </div>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SAHADAN KARELER ── */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Referanslarımız</span>
+            <h2 className="text-3xl font-black text-gray-900 mt-2 mb-4">Sahadan Kareler</h2>
+            <p className="text-gray-500">İstanbul&apos;da gerçekleştirdiğimiz manlift kiralama projelerinden kareler.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {galeri.map((g) => (
+              <div key={g.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-200">
+                <Image
+                  src={g.src}
+                  alt={g.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition duration-300"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -371,6 +450,35 @@ export default function KiralikManliftPage() {
         </div>
       </section>
 
+      {/* ── DOĞRU PLATFORM SEÇİMİ ── */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Pratik Rehber</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Doğru Manlift Nasıl Seçilir?</h2>
+            <p className="text-gray-500 text-lg">Kiralık manlift seçerken dikkat etmeniz gereken 4 temel kriter.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {manliftRehberi.map((m, i) => (
+              <div key={m.baslik} className="flex gap-4 bg-white p-6 rounded-2xl border border-gray-100">
+                <div className="text-2xl font-black text-yellow-400 shrink-0">{i + 1}</div>
+                <div>
+                  <h3 className="font-bold text-gray-900 mb-1">{m.baslik}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{m.aciklama}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Vinç ihtiyacınız da varsa{" "}
+            <Link href="/kiralik-vinc" className="text-yellow-600 font-semibold hover:underline">
+              kiralık vinç sayfamızı
+            </Link>{" "}
+            inceleyebilirsiniz.
+          </p>
+        </div>
+      </section>
+
       {/* ── GÜVENLİK ── */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="max-w-6xl mx-auto">
@@ -454,12 +562,13 @@ export default function KiralikManliftPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
             {ilceler.map((ilce) => (
-              <div
+              <Link
                 key={ilce}
-                className="text-center text-sm font-medium text-gray-600 py-2 px-2 rounded-lg border border-transparent hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-100 transition cursor-default"
+                href={`/${ilceToSlug(ilce)}-vinc-kiralama`}
+                className="text-center text-sm font-medium text-gray-600 py-2 px-2 rounded-lg border border-transparent hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-100 transition"
               >
                 {ilce}
-              </div>
+              </Link>
             ))}
           </div>
         </div>

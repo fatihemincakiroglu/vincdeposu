@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   alternates: {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   },
   title: "Vinç Kiralama | İstanbul'un 39 İlçesinde 7/24 Hizmet — Vinç Deposu",
   description:
-    "İstanbul'un tüm 39 ilçesinde profesyonel vinç kiralama hizmeti. Sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "İstanbul'un 39 ilçesinde profesyonel vinç kiralama. Sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["vinç kiralama", "kiralık vinç", "istanbul vinç kiralama", "sepetli vinç kiralama", "mobil vinç kiralama"],
 };
 
@@ -215,9 +216,69 @@ const istatistikler = [
   { v: "7/24", l: "Destek Hattı", icon: "📞" },
 ];
 
+const galeri = [
+  { src: "/images/vinc-kiralama-santiye-cephe.jpg", alt: "Zebra desenli vinç ile şantiye cephe çalışması" },
+  { src: "/images/vinc-kiralama-anit-saha-calismasi.jpg", alt: "Vinç Deposu ekipmanı ile anıt sahasında çalışma" },
+  { src: "/images/vinc-kiralama-gece-calismasi.jpg", alt: "Gece saatlerinde minarede vinç ile çalışma" },
+  { src: "/images/sepetli-vinc-platform-gokyuzu.jpg", alt: "Sepetli vinç platformları gökyüzünde çalışma anı" },
+  { src: "/images/vinc-cami-avize-montaji.jpg", alt: "Cami içinde avize montajı için vinç kullanımı" },
+  { src: "/images/vinc-cami-avlu-restorasyon.jpg", alt: "Cami avlusunda minare restorasyonu için vinç çalışması" },
+];
+
+const bilgiRehberi = [
+  {
+    baslik: "Vinç Tipini Doğru Belirleyin",
+    icerik:
+      "Çalışma yüksekliği, yük ağırlığı ve alanın genişliği vinç tipini belirleyen temel kriterlerdir. Dar sokaklarda ahtapot veya kompakt sepetli vinç, açık şantiye alanlarında mobil veya paletli vinç, uzun süreli yüksek katlı projelerde ise kule vinç tercih edilir.",
+  },
+  {
+    baslik: "Zemin ve Erişim Koşullarını Kontrol Edin",
+    icerik:
+      "Vinç ve yükün toplam ağırlığını taşıyacak sağlam bir zemin gerekir. Şantiyeye giriş yolunun genişliği, tepe gerilimi olan kablolar ve çalışma alanındaki sabit engeller önceden değerlendirilmelidir.",
+  },
+  {
+    baslik: "Sertifikalı Operatör Şart",
+    icerik:
+      "Türkiye'de vinç operasyonları yasal olarak sertifikalı operatör gerektirir. Vinç Deposu'nun tüm kiralama paketlerinde MEB onaylı, ISG eğitimli operatörler standart olarak yer alır.",
+  },
+  {
+    baslik: "Sigorta Kapsamını Sorun",
+    icerik:
+      "Olası hasar ve iş kazalarına karşı ekipmanın ve operasyonun sigorta kapsamında olup olmadığını teklif aşamasında netleştirin. Vinç Deposu'nda tüm ekipmanlar tam sigortalıdır.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: sss.map((s) => ({
+    "@type": "Question",
+    name: s.s,
+    acceptedAnswer: { "@type": "Answer", text: s.c },
+  })),
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Vinç Kiralama",
+  provider: { "@type": "LocalBusiness", name: "Vinç Deposu", telephone: "+905323039089" },
+  areaServed: { "@type": "City", name: "İstanbul" },
+  description:
+    "İstanbul'un 39 ilçesinde sepetli, mobil, kule, paletli ve kamyon üstü vinç kiralama hizmeti.",
+};
+
 export default function VincKiralamaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* ══════════════════════════════════════
           HERO
       ══════════════════════════════════════ */}
@@ -490,6 +551,32 @@ export default function VincKiralamaPage() {
       </section>
 
       {/* ══════════════════════════════════════
+          SAHADAN KARELER
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Referanslarımız</span>
+            <h2 className="text-3xl font-black text-gray-900 mt-3">Sahadan Kareler</h2>
+            <p className="text-gray-500 text-lg mt-2">İstanbul&apos;da gerçekleştirdiğimiz vinç kiralama projelerinden kareler.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {galeri.map((g) => (
+              <div key={g.src} className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-gray-200">
+                <Image
+                  src={g.src}
+                  alt={g.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition duration-300"
+                  sizes="(max-width: 768px) 50vw, 16vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
           KULLANIM ALANLARI
       ══════════════════════════════════════ */}
       <section className="py-24 px-4 bg-gray-950 text-white">
@@ -552,6 +639,36 @@ export default function VincKiralamaPage() {
               📞 Hemen Başlayın — 0532 303 90 89
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          BİLGİ REHBERİ
+      ══════════════════════════════════════ */}
+      <section className="py-24 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Bilmeniz Gerekenler</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Vinç Kiralarken Dikkat Edilmesi Gerekenler</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              Doğru vinci seçmek, projenizin güvenliğini ve bütçesini doğrudan etkiler.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {bilgiRehberi.map((b) => (
+              <div key={b.baslik} className="bg-white rounded-2xl border border-gray-200 p-6">
+                <h3 className="font-black text-gray-900 mb-2">{b.baslik}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{b.icerik}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Vinç türleri, kapasite hesaplama ve fiyatlar hakkında daha detaylı bilgi için{" "}
+            <Link href="/kiralik-vinc" className="text-yellow-600 font-semibold hover:underline">
+              kiralık vinç rehberimizi
+            </Link>{" "}
+            inceleyebilirsiniz.
+          </p>
         </div>
       </section>
 

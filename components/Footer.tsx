@@ -103,7 +103,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-2">
               <span>📍</span>
-              <span>İstanbul, Türkiye</span>
+              <span>İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, 34490 Başakşehir/İstanbul</span>
             </li>
           </ul>
 
@@ -122,7 +122,7 @@ export default function Footer() {
         <a
           href="https://fatihemincakiroglu.com/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           className="hover:text-yellow-400 transition"
         >
           Fatih Emin Çakıroğlu

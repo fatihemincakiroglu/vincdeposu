@@ -33,6 +33,49 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Express Vinç Hizmetleri ve Nak. Ltd. Şti.",
+  alternateName: "Vinç Deposu",
+  image: "https://vincdeposu.com.tr/icon.png",
+  url: "https://vincdeposu.com.tr",
+  telephone: "+905323039089",
+  priceRange: "₺₺",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112",
+    addressLocality: "Başakşehir",
+    addressRegion: "İstanbul",
+    postalCode: "34490",
+    addressCountry: "TR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 41.070444315593925,
+    longitude: 28.803315476427326,
+  },
+  areaServed: {
+    "@type": "City",
+    name: "İstanbul",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "15:00",
+    },
+  ],
+  sameAs: [],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -41,7 +84,10 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        <base href="https://vincdeposu.com.tr/" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body className={inter.className}>
         <Header />
