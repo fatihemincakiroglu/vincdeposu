@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   alternates: {
@@ -174,6 +175,22 @@ export default function KiralikMobilVincPage() {
                 <div className="text-gray-400 text-sm mt-1">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sahadan Kareler */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative aspect-[16/9] sm:aspect-[20/9] rounded-2xl overflow-hidden border border-gray-100">
+            <Image
+              src="/images/mobil-vinc-yuksek-bina-istanbul.jpg"
+              alt="İstanbul'da yüksek katlı bina cephesinde çalışan mobil vinç"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 80vw"
+              priority
+            />
           </div>
         </div>
       </section>

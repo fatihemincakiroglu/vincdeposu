@@ -41,7 +41,7 @@ export default function Footer() {
             VİNÇ<span className="text-yellow-400">DEPOSU</span>
           </h3>
           <p className="text-sm text-gray-400 leading-relaxed mb-4">
-            İstanbul'un tüm ilçelerinde profesyonel vinç kiralama ve satış hizmetleri sunuyoruz. 7/24 hizmet anlayışıyla yanınızdayız.
+            İstanbul&apos;un tüm ilçelerinde profesyonel vinç kiralama ve satış hizmetleri sunuyoruz. 7/24 hizmet anlayışıyla yanınızdayız.
           </p>
           <a
             href="tel:05323039089"
@@ -103,7 +103,25 @@ export default function Footer() {
             </li>
             <li className="flex gap-2">
               <span>📍</span>
-              <span>İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, 34490 Başakşehir/İstanbul</span>
+              <a
+                href="https://maps.app.goo.gl/JXCzUwRJANU6cKvZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400 transition"
+              >
+                İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, 34490 Başakşehir/İstanbul
+              </a>
+            </li>
+            <li className="flex gap-2 items-center">
+              <span>📷</span>
+              <a
+                href="https://www.instagram.com/expressplatform/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400 transition"
+              >
+                @expressplatform
+              </a>
             </li>
           </ul>
 

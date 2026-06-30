@@ -295,13 +295,6 @@ export default function VincKiralamaPage() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500 opacity-[0.04] rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 py-20 w-full">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-gray-500 text-sm mb-10">
-            <a href="/" className="hover:text-yellow-400 transition">Ana Sayfa</a>
-            <span>›</span>
-            <span className="text-gray-300">Vinç Kiralama</span>
-          </div>
-
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Sol */}
             <div>
@@ -403,7 +396,7 @@ export default function VincKiralamaPage() {
           </div>
 
           <div className="space-y-6">
-            {vincTurleri.map((v, i) => (
+            {vincTurleri.map((v) => (
               <div
                 key={v.href}
                 className="bg-white rounded-3xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"

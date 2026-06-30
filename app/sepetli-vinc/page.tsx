@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   alternates: {
@@ -175,6 +176,21 @@ export default function KiralikSepetliVincPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Sahadan Kareler */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { src: "/images/sepetli-vinc-cephe-calismasi.jpg", alt: "Sepetli vinç ile yüksek bina cephe çalışması" },
+            { src: "/images/sepetli-vinc-platform-gokyuzu.jpg", alt: "Sepetli vinç platformları gökyüzünde çalışma anı" },
+            { src: "/images/sepetli-vinc-sepet-detay.jpg", alt: "Sepetli vinç personel sepeti detay görünümü" },
+          ].map((g) => (
+            <div key={g.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-gray-100">
+              <Image src={g.src} alt={g.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+            </div>
+          ))}
         </div>
       </section>
 

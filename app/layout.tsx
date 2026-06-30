@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     siteName: "Vinç Deposu",
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vinç Deposu - İstanbul Vinç ve Manlift Kiralama",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vinç Deposu | İstanbul Vinç Kiralama",
+    description:
+      "İstanbul'un 39 ilçesinde kiralık vinç ve manlift hizmeti. 7/24: 0532 303 90 89",
+    images: ["/images/og-default.jpg"],
   },
 };
 
@@ -73,7 +89,10 @@ const organizationSchema = {
       closes: "15:00",
     },
   ],
-  sameAs: [],
+  sameAs: [
+    "https://www.instagram.com/expressplatform/",
+    "https://maps.app.goo.gl/JXCzUwRJANU6cKvZ9",
+  ],
 };
 
 export default function RootLayout({
@@ -91,6 +110,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Header />
+        <Breadcrumbs />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />

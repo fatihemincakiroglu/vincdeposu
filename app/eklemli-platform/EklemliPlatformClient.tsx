@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Page() {
   return (
     <main style={{ fontFamily: "'Segoe UI', Arial, sans-serif", background: "#F5F4F0", color: "#0D1B2A", margin: 0, padding: 0 }}>
@@ -77,6 +79,30 @@ export default function Page() {
         </div>
       </div>
 
+      {/* ── SAHADAN KARELER ── */}
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px 0" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+          <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
+            <Image
+              src="/images/eklemli-platform-stadyum-cephe.jpg"
+              alt="Eklemli platform ile stadyum cephe çalışması"
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
+            <Image
+              src="/images/eklemli-platform-yan-gorunum.jpg"
+              alt="Eklemli platform (manlift) yan görünüm"
+              fill
+              style={{ objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* ── CONTENT WRAPPER ── */}
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
 
@@ -150,7 +176,7 @@ export default function Page() {
               <div style={{ fontSize: 28, marginBottom: 12 }}>↕️</div>
               <h3 style={h3CardStyle}>Boom Lift ile Farkı</h3>
               <p style={cardTextStyle}>
-                "Boom lift" hem teleskopik hem eklemli platformları kapsayan genel bir terimdir.
+                &quot;Boom lift&quot; hem teleskopik hem eklemli platformları kapsayan genel bir terimdir.
                 Teleskopik (düz kollu) modeller yalnızca yukarı-ileri hareket ederken, eklemli
                 (mafsallı) modeller engel aşarak yatay uzanabilir. Eklemli tipler kapalı alanlarda
                 ve engelli ortamlarda belirgin şekilde avantajlıdır.
@@ -200,7 +226,7 @@ export default function Page() {
               </p>
               <ul style={listStyle}>
                 <li>4WD zemin hakimiyeti</li>
-                <li>43 m'ye kadar çalışma yüksekliği</li>
+                <li>43 m&apos;ye kadar çalışma yüksekliği</li>
                 <li>Yüksek yük kapasitesi</li>
                 <li>Uzun süreli şantiye kullanımına uygun</li>
               </ul>
