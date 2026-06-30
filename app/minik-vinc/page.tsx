@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/minik-vinc",
+  },
   title: "Minik Vinç | Kompakt Elektrikli Vinç Sistemleri ve Fiyatları",
   description:
     "Minik vinç nedir, modelleri nelerdir, fiyatları ne kadar? Zincirli, halatlı ve akülü minik vinç seçenekleri, teknik özellikler ve montaj hizmetleri. 7/24 hizmet: 0532 303 90 89",

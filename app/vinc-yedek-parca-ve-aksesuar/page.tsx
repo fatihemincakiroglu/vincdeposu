@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vinc-yedek-parca-ve-aksesuar",
+  },
   title: "Vinç Yedek Parça ve Aksesuar | Orijinal Parçalar, Hızlı Teslimat",
   description:
     "Orijinal vinç yedek parçaları ve aksesuarları. Halat, kumanda, makara, kanca ve daha fazlası. Goliath, Warn, Ironman uyumlu parçalar. Hızlı kargo: 0532 303 90 89",

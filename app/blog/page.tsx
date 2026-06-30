@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog",
+  },
   title: "Blog | Vinç ve Kaldırma Ekipmanları Rehberi",
   description:
     "Vinç kiralama, iş güvenliği, ekipman seçimi ve sektör haberleri hakkında uzman makaleler. Vinç Deposu Blog.",

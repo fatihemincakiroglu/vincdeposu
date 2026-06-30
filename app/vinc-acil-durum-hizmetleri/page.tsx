@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vinc-acil-durum-hizmetleri",
+  },
   title: "Vinç Acil Durum Hizmetleri | 7/24 Hızlı Müdahale ve Kurtarma",
   description:
     "7/24 acil vinç hizmeti. Kaza sonrası araç kurtarma, enkaz kaldırma, ağır yük taşıma ve endüstriyel acil müdahale. Sertifikalı operatörler: 0532 303 90 89",

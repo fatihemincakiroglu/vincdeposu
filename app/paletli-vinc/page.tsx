@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/paletli-vinc",
+  },
   title: "Paletli Vinç: Özellikleri, Kullanım Alanları ve Fiyatları (2026)",
   description:
     "Paletli vinç nedir, çeşitleri nelerdir, kaç ton kaldırır? Kiralama ve satın alma rehberi, fiyat tablosu, marka karşılaştırması ve SSS. 0532 303 90 89",

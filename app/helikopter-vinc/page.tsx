@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/helikopter-vinc",
+  },
   title: "Helikopter Vinç | Fiyatları, Modelleri ve Kiralama",
   description:
     "Profesyonel helikopter vinç hizmetleri. Kurtarma, inşaat, yangın söndürme ve enerji hattı projeleri için havadan yük taşıma çözümleri. 7/24 hizmet: 0532 303 90 89",

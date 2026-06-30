@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vinc-cesitleri",
+  },
   title: "Vinç Çeşitleri | 12 Farklı Vinç Tipi ve Kullanım Alanları",
   description:
     "Sepetli vinçten kule vince, ahtapot vinçten paletli vince kadar 12 farklı vinç çeşidini kapasite, yükseklik ve kullanım alanına göre karşılaştırın. Projenize en uygun vinci birlikte belirleyelim.",

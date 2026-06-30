@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/ahtapot-vinc",
+  },
   title: "Ahtapot Vinç Kiralama | Kiralık Ahtapot Vinç Hizmetleri",
   description:
     "İstanbul'da profesyonel kiralık ahtapot vinç hizmeti. Dar alan, bina içi, cam ve panel taşıma projeleri. 7/24 hizmet: 0532 303 90 89",

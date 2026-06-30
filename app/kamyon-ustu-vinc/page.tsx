@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/kamyon-ustu-vinc",
+  },
   title: "Kamyon Üstü Vinç Kiralama | Kiralık Kamyon Üstü Vinç Hizmetleri",
   description:
     "İstanbul'da profesyonel kiralık kamyon üstü vinç hizmeti. Hidrolik ve operatörlü modeller. Nakliye, inşaat ve lojistik projeleri için 7/24 hizmet: 0532 303 90 89",

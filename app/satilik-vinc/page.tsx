@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/satilik-vinc",
+  },
   title: "Satılık Vinç | Yeni ve İkinci El Vinç Modelleri",
   description:
     "Mobil vinç, kule vinç, köprülü vinç ve portal vinç dahil tüm vinç türlerinde sıfır ve ikinci el satılık modeller. Liebherr, Tadano, Grove, Terex markaları. 7/24 hizmet: 0532 303 90 89",

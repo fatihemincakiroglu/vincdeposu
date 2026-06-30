@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/urunler",
+  },
   title: "Ürünler | Platform, Forklift ve Telehandler Kiralama",
   description:
     "Makaslı platform, eklemli platform, örümcek platform, forklift ve telehandler kiralama hizmetleri. Çalışma yüksekliği, zemin ve kullanım alanına göre doğru ekipmanı seçin.",

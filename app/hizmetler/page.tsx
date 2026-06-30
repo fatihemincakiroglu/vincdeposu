@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/hizmetler",
+  },
   title: "Hizmetler | Vinç Deposu — Satış, Bakım, Operatör, Eğitim ve Daha Fazlası",
   description:
     "Vinç Deposu'nun 7 ana hizmet kategorisi: Satılık vinç, bakım & onarım, operatörlü hizmet, sertifikasyon, yedek parça, acil müdahale ve taşıma lojistik. 7/24: 0532 303 90 89",

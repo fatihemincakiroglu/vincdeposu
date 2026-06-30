@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/forklift-kiralama",
+  },
   title: "Forklift Kiralama | Kiralık Forklift Hizmetleri – Günlük, Aylık, Uzun Dönem",
   description:
     "Türkiye genelinde profesyonel forklift kiralama hizmetleri. Elektrikli, dizel ve LPG forklift seçenekleri. Operatörlü kiralama, günlük & aylık fiyatlar. 7/24 hizmet: 0532 303 90 89",

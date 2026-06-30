@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/mobil-vinc",
+  },
   title: "Mobil Vinç Kiralama | Kiralık Mobil Vinç Hizmetleri",
   description:
     "İstanbul'da profesyonel kiralık mobil vinç hizmeti. Paletli ve lastikli mobil vinç modelleri, her tonajda çözüm. 7/24 hizmet: 0532 303 90 89",

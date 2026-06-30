@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/kule-vinc",
+  },
   title: "Kule Vinç Kiralama | Kiralık Kule Vinç Hizmetleri",
   description:
     "Türkiye genelinde profesyonel kule vinç kiralama hizmetleri. Sabit, tırmanıcı ve yürüyen kule vinç seçenekleri. Operatörlü kiralama, montaj-demontaj dahil. 7/24 hizmet: 0532 303 90 89",

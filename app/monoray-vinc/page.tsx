@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/monoray-vinc",
+  },
   title: "Monoray Vinç Sistemleri – Güvenli, Verimli ve Uzun Ömürlü Çözümler",
   description:
     "Monoray vinç nedir, modelleri, teknik özellikleri, sektörel kullanım alanları, CE standartları ve montaj gereksinimleri. Detaylı rehber ve fiyat bilgisi: 0532 303 90 89",

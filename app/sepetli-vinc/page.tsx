@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/sepetli-vinc",
+  },
   title: "Sepetli Vinç Kiralama | Kiralık Sepetli Vinç Hizmetleri",
   description:
     "İstanbul'da profesyonel kiralık sepetli vinç hizmetleri. Araç üstü, paletli ve izci sepetli vinç modelleri. 7/24 hizmet: 0532 303 90 89",

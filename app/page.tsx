@@ -2,12 +2,15 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
   title: {
-    default: "Vinç Kiralama | Kiralık Vinç | Sepetli Vinç Kiralama",
+    default: "Vinç Deposu | İstanbul Vinç & Manlift Kiralama",
     template: "%s | Vinç Deposu",
   },
   description:
-    "Vinç Deposu, inşaat ve sanayi sektörlerinde profesyonel vinç kiralama ve satış hizmetleri sunar. Detaylı bilgi için: 0532 303 90 89",
+    "İstanbul'un tüm 39 ilçesinde profesyonel vinç ve manlift kiralama hizmetleri. Sepetli vinç, mobil vinç, kule vinç, makaslı & eklemli platform. 7/24: 0532 303 90 89",
   keywords: ["vinç kiralama", "kiralık vinç", "istanbul vinç", "sepetli vinç", "mobil vinç", "manlift kiralama"],
   metadataBase: new URL("https://vincdeposu.com.tr"),
   openGraph: { type: "website", locale: "tr_TR", siteName: "Vinç Deposu" },

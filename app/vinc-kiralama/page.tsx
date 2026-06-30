@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Vinç Kiralama | Günlük Vinç Kiralama Fiyatları",
+  alternates: {
+    canonical: "/vinc-kiralama",
+  },
+  title: "Vinç Kiralama | İstanbul'un 39 İlçesinde 7/24 Hizmet — Vinç Deposu",
   description:
-    "Vinç kiralama hizmetlerinde güvenilir ve ekonomik çözümler! Günlük vinç kiralama fiyatları ve uygun seçenekler için hemen bize ulaşın.",
+    "İstanbul'un tüm 39 ilçesinde profesyonel vinç kiralama hizmeti. Sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
   keywords: ["vinç kiralama", "kiralık vinç", "istanbul vinç kiralama", "sepetli vinç kiralama", "mobil vinç kiralama"],
 };
 

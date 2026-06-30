@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/bahcelievler-vinc-kiralama",
+  },
   title: "Bahçelievler Vinç Kiralama | 39 İlçede 7/24 Hizmet — Vinç Deposu",
   description:
     "Bahçelievler vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",

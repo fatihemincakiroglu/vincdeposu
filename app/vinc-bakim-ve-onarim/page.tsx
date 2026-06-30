@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vinc-bakim-ve-onarim",
+  },
   title: "Vinç Bakım ve Onarım Hizmetleri | Periyodik Bakım & Arıza Müdahale",
   description:
     "Köprülü, portal, konsol ve mobil vinçler için periyodik bakım, arıza tespiti, yedek parça ve güvenlik muayenesi hizmetleri. 7/24 teknik destek: 0532 303 90 89",

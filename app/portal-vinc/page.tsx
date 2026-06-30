@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/portal-vinc",
+  },
   title: "Portal Vinç: Özellikleri, Kullanım Alanları ve Fiyatları (2026)",
   description:
     "Portal vinç nedir, çeşitleri nelerdir, fiyatları ne kadar? Tam portal, yarı portal, tekerlekli ve raylı portal vinç sistemleri hakkında kapsamlı rehber. 7/24 hizmet: 0532 303 90 89",

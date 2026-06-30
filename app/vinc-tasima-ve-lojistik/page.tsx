@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vinc-tasima-ve-lojistik",
+  },
   title: "Vinç Taşıma ve Lojistik Hizmetleri | Ağır Yük, Güvenli Teslimat",
   description:
     "Profesyonel vinçli taşımacılık ve lojistik hizmetleri. Ağır yük, makine taşıma, konteyner operasyonları ve proje kargo. Türkiye geneli hizmet: 0532 303 90 89",

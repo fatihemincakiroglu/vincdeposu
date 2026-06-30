@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/rayli-vinc",
+  },
   title: "Raylı Vinç: Özellikleri, Kullanım Alanları ve Fiyatları (2026)",
   description:
     "Raylı vinç nedir, çeşitleri nelerdir? Köprülü, portal, konsol raylı vinç modelleri, teknik özellikler, kapasite, kurulum, kiralama ve satış fiyatları. 0532 303 90 89",

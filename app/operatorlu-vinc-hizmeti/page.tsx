@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/operatorlu-vinc-hizmeti",
+  },
   title: "Operatörlü Vinç Hizmeti | Sertifikalı Operatörlerle Güvenli Kiralama",
   description:
     "İstanbul ve çevre illerde profesyonel operatörlü vinç hizmeti. Mobil, teleskopik, paletli ve köprülü vinç ile inşaat, sanayi ve lojistik projeleri için 7/24 destek: 0532 303 90 89",

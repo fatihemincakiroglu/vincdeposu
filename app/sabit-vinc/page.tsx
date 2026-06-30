@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/sabit-vinc",
+  },
   title: "Sabit Vinç | Kolon, Duvar ve Zemin Tipi Sabit Vinç Sistemleri",
   description:
     "Sabit vinç modelleri, kapasite seçenekleri, fiyatları ve montaj süreci. 125 kg – 5 ton kapasite aralığında kolon, duvar ve zemin tipi sabit vinç çözümleri. 0532 303 90 89",

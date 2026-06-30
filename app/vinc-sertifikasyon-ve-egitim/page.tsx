@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/vinc-sertifikasyon-ve-egitim",
+  },
   title: "Vinç Sertifikasyon ve Eğitim Hizmetleri | Operatör Belgelendirme",
   description:
     "Vinç operatörlüğü sertifikaları, teknik eğitimler, İSG ve kalite yönetim sistemleri. G ve H sınıfı belgelendirme, ISO 9001, ISO 45001 ve sektöre özel eğitim programları. 0532 303 90 89",

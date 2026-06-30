@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/orumcek-platform",
+  },
   title: "Örümcek Platform Kiralama | Kiralık Örümcek Platform Hizmetleri",
   description:
     "İstanbul'da profesyonel kiralık örümcek platform hizmetleri. Akülü, dizel ve izci örümcek platform modelleri. 7/24 hizmet: 0532 303 90 89",
