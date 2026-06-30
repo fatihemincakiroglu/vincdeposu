@@ -64,7 +64,6 @@ export default function Footer() {
               { label: "Referanslar", href: "/referans" },
               { label: "Blog", href: "/blog" },
               { label: "İletişim", href: "/iletisim" },
-              { label: "Kariyer", href: "/kariyer" },
               { label: "SSS", href: "/sik-sorulan-sorular" },
             ].map((link) => (
               <li key={link.href}>
@@ -113,7 +112,6 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/gizlilik-politikasi" className="hover:text-yellow-400 transition">Gizlilik Politikası</Link></li>
               <li><Link href="/kalite-politikamiz" className="hover:text-yellow-400 transition">Kalite Politikamız</Link></li>
-              <li><Link href="/misyon-vizyon" className="hover:text-yellow-400 transition">Misyon & Vizyon</Link></li>
             </ul>
           </div>
         </div>

@@ -3,18 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  {
-    label: "Kurumsal",
-    href: "/kurumsal",
-    children: [
-      { label: "Hakkımızda", href: "/hakkimizda" },
-      { label: "Misyon & Vizyon", href: "/misyon-vizyon" },
-      { label: "Yönetim Kurulu", href: "/yonetim-kurulu" },
-      { label: "Sosyal Sorumluluk", href: "/sosyal-sorumluluk" },
-      { label: "Basın ve Medya", href: "/basin-ve-medya" },
-      { label: "Kariyer", href: "/kariyer" },
-    ],
-  },
   { label: "Kiralık Vinç", href: "/kiralik-vinc" },
   { label: "Kiralık Manlift", href: "/kiralik-manlift" },
   {
