@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "Fatih Emin Çakıroğlu" }],
+  creator: "Fatih Emin Çakıroğlu",
+  publisher: "Fatih Emin Çakıroğlu",
   openGraph: {
     type: "website",
     locale: "tr_TR",
