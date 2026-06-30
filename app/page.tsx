@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -81,6 +82,14 @@ const neden = [
   { icon: "🔧", title: "Bakımlı Filo", desc: "Filomuz düzenli teknik kontrollerden geçer, arıza riskini minimize ederiz." },
   { icon: "👷", title: "Sertifikalı Operatör", desc: "Eğitimli ve belgeli operatörlerimiz iş güvenliğini en üst seviyede tutar." },
   { icon: "📞", title: "7/24 Destek", desc: "Gece ya da gündüz, her an teknik destek ve acil müdahale hizmetindeyiz." },
+];
+
+const galeri = [
+  { src: "/images/vinc-kiralama-gece-calismasi.jpg", alt: "Gece saatlerinde minarede vinç ile çalışma", buyuk: true },
+  { src: "/images/vinc-cami-ic-mekan-calismasi.jpg", alt: "Cami iç mekanında kiralık vinç ile yapılan çalışma" },
+  { src: "/images/orumcek-platform-spxs32.jpg", alt: "Örümcek platform SPXS32 model manlift" },
+  { src: "/images/eklemli-platform-stadyum-cephe.jpg", alt: "Eklemli platform ile stadyum cephe çalışması" },
+  { src: "/images/sepetli-vinc-platform-gokyuzu.jpg", alt: "Sepetli vinç platformları gökyüzünde çalışma anı" },
 ];
 
 export default function HomePage() {
@@ -217,6 +226,48 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          SAHADAN KARELER
+      ══════════════════════════════════════ */}
+      <section className="py-20 px-4 bg-gray-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Sözden Çok İş</span>
+            <h2 className="text-4xl font-black text-white mt-3 mb-4">Sahadan Kareler</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              İstanbul&apos;un dört bir yanında, cami restorasyonundan gökdelen cephesine kadar
+              gerçekleştirdiğimiz projelerden kareler.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:auto-rows-[160px]">
+            {galeri.map((g) => (
+              <div
+                key={g.src}
+                className={`relative rounded-3xl overflow-hidden border border-white/10 group ${
+                  g.buyuk ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square md:aspect-auto"
+                }`}
+              >
+                <Image
+                  src={g.src}
+                  alt={g.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition duration-500"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/referans" className="text-yellow-400 font-semibold hover:underline">
+              Referanslarımızı görün →
+            </Link>
           </div>
         </div>
       </section>
