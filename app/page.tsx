@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import IlceGrid from "@/components/IlceGrid";
 
 export const metadata: Metadata = {
   alternates: {
@@ -50,29 +51,6 @@ const urunler = [
   { title: "Örümcek Platform", href: "/orumcek-platform", icon: "🕷️", desc: "Hassas zemin, dar alan uyumlu" },
   { title: "Forklift", href: "/forklift-kiralama", icon: "🚜", desc: "Depo ve fabrika yük taşıma çözümleri" },
   { title: "Telehandler", href: "/telehandler-kiralama", icon: "🦺", desc: "Yüksek erişimli teleskopik ekipman" },
-];
-
-const ilceler = [
-  { ad: "Adalar", slug: "adalar" }, { ad: "Arnavutköy", slug: "arnavutkoy" },
-  { ad: "Avcılar", slug: "avcilar" }, { ad: "Bağcılar", slug: "bagcilar" },
-  { ad: "Bahçelievler", slug: "bahcelievler" }, { ad: "Bakırköy", slug: "bakirkoy" },
-  { ad: "Başakşehir", slug: "basaksehir" }, { ad: "Bayrampaşa", slug: "bayrampasa" },
-  { ad: "Beşiktaş", slug: "besiktas" }, { ad: "Beykoz", slug: "beykoz" },
-  { ad: "Beylikdüzü", slug: "beylikduzu" }, { ad: "Beyoğlu", slug: "beyoglu" },
-  { ad: "Büyükçekmece", slug: "buyukcekmece" }, { ad: "Çatalca", slug: "catalca" },
-  { ad: "Çekmeköy", slug: "cekmekoy" }, { ad: "Esenler", slug: "esenler" },
-  { ad: "Esenyurt", slug: "esenyurt" }, { ad: "Eyüpsultan", slug: "eyupsultan" },
-  { ad: "Fatih", slug: "fatih" }, { ad: "Gaziosmanpaşa", slug: "gaziosmanpasa" },
-  { ad: "Güngören", slug: "gungoren" }, { ad: "Kadıköy", slug: "kadikoy" },
-  { ad: "Kağıthane", slug: "kagithane" }, { ad: "Kartal", slug: "kartal" },
-  { ad: "Küçükçekmece", slug: "kucukcekmece" }, { ad: "Maltepe", slug: "maltepe" },
-  { ad: "Pendik", slug: "pendik" }, { ad: "Sancaktepe", slug: "sancaktepe" },
-  { ad: "Sarıyer", slug: "sariyer" }, { ad: "Silivri", slug: "silivri" },
-  { ad: "Şile", slug: "sile" }, { ad: "Şişli", slug: "sisli" },
-  { ad: "Sultanbeyli", slug: "sultanbeyli" }, { ad: "Sultangazi", slug: "sultangazi" },
-  { ad: "Tuzla", slug: "tuzla" }, { ad: "Ümraniye", slug: "umraniye" },
-  { ad: "Üsküdar", slug: "uskudar" }, { ad: "Zeytinburnu", slug: "zeytinburnu" },
-  { ad: "Eyüp", slug: "eyup" },
 ];
 
 const neden = [
@@ -249,7 +227,7 @@ export default function HomePage() {
               <div
                 key={g.src}
                 className={`relative rounded-3xl overflow-hidden border border-white/10 group ${
-                  g.buyuk ? "col-span-2 row-span-2 aspect-square md:aspect-auto" : "aspect-square md:aspect-auto"
+                  g.buyuk ? "col-span-2 md:row-span-2 aspect-square md:aspect-auto" : "aspect-square md:aspect-auto"
                 }`}
               >
                 <Image
@@ -401,74 +379,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════
           İSTANBUL HARİTASI / İLÇELER
       ══════════════════════════════════════ */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Hizmet Bölgeleri</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">
-              İstanbul&apos;un 39 İlçesinde Hizmet
-            </h2>
-            <p className="text-gray-500 text-lg">
-              Bulunduğunuz ilçeye tıklayarak hizmet detaylarına ulaşın.
-            </p>
-          </div>
-
-          {/* Decorative map visual */}
-          <div className="relative bg-gray-900 rounded-3xl overflow-hidden mb-10 p-10">
-            <div
-              className="absolute inset-0 opacity-10"
-              style={{
-                backgroundImage: "radial-gradient(circle at 30% 50%, rgba(250,204,21,0.8) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(59,130,246,0.5) 0%, transparent 60%)",
-              }}
-            />
-            <div className="relative text-center">
-              <div className="text-8xl mb-4">🗺️</div>
-              <div className="text-white text-2xl font-black mb-2">İstanbul&apos;un Tamamını Kapsıyoruz</div>
-              <div className="text-gray-400">Avrupa ve Anadolu yakasındaki tüm 39 ilçeye hızlı teslimat</div>
-            </div>
-          </div>
-
-          {/* Europe side */}
-          <div className="mb-8">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="h-px flex-1 bg-gray-200" />
-              <span className="text-sm font-bold text-gray-500 bg-gray-50 px-4 py-1 rounded-full border border-gray-200">🌉 Avrupa Yakası</span>
-              <div className="h-px flex-1 bg-gray-200" />
-            </div>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
-              {ilceler.slice(0, 24).map((ilce) => (
-                <Link
-                  key={ilce.slug}
-                  href={`/${ilce.slug}-vinc-kiralama`}
-                  className="group text-center py-3 px-2 rounded-xl border border-gray-100 bg-white hover:bg-yellow-400 hover:border-yellow-400 transition"
-                >
-                  <div className="text-xs font-bold text-gray-600 group-hover:text-black leading-tight">{ilce.ad}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Anatolia side */}
-          <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="h-px flex-1 bg-gray-200" />
-              <span className="text-sm font-bold text-gray-500 bg-gray-50 px-4 py-1 rounded-full border border-gray-200">🌉 Anadolu Yakası</span>
-              <div className="h-px flex-1 bg-gray-200" />
-            </div>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
-              {ilceler.slice(24).map((ilce) => (
-                <Link
-                  key={ilce.slug}
-                  href={`/${ilce.slug}-vinc-kiralama`}
-                  className="group text-center py-3 px-2 rounded-xl border border-gray-100 bg-white hover:bg-yellow-400 hover:border-yellow-400 transition"
-                >
-                  <div className="text-xs font-bold text-gray-600 group-hover:text-black leading-tight">{ilce.ad}</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <IlceGrid />
 
       {/* ══════════════════════════════════════
           STATS BAR

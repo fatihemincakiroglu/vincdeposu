@@ -4,12 +4,12 @@ import IlceGrid from "@/components/IlceGrid";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "/fatih-vinc-kiralama",
+    canonical: "/atasehir-vinc-kiralama",
   },
-  title: { absolute: "Fatih Vinç Kiralama ve Fatih Kiralık Vinç" },
+  title: { absolute: "Ataşehir Vinç Kiralama ve Ataşehir Kiralık Vinç" },
   description:
-    "Fatih vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Fatih kiralık vinç seçenekleri için hemen bize ulaşın!",
-  keywords: ["fatih vinç kiralama", "fatih kiralık vinç", "vinç kiralama fatih", "fatih sepetli vinç", "fatih mobil vinç kiralama"],
+    "Ataşehir vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Ataşehir kiralık vinç seçenekleri için hemen bize ulaşın!",
+  keywords: ["avcılar vinç kiralama", "avcılar kiralık vinç", "vinç kiralama avcılar", "avcılar sepetli vinç", "avcılar mobil vinç kiralama"],
 };
 
 /* ─────────────────────────────────────────────
@@ -24,9 +24,9 @@ const vincTurleri = [
     title: "Sepetli Vinç",
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
-    kullanim: "Cephe, bakım, peyzaj",
-    desc: "Fatih'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
-    ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
+    kullanim: "Cam cephe, ofis kulesi bakımı",
+    desc: "Ataşehir'in finans merkezindeki cam cepheli ofis kulelerinin temizlik, bakım ve tadilat işlerinde yüksek erişimli sepetli vinçlerimiz tercih edilir.",
+    ozellikler: ["Cam cephe bakımı", "Yüksek erişim", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
     icon: "🏗️",
@@ -35,9 +35,9 @@ const vincTurleri = [
     title: "Mobil Vinç",
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
-    kullanim: "İnşaat, sanayi, enerji",
-    desc: "Fatih'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
-    ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
+    kullanim: "Ofis kulesi, rezidans inşaatı",
+    desc: "Ataşehir'in geniş ve düzenli cadde yapısında hızlı mobilizasyon sağlayan mobil vinçlerimiz, kurumsal ofis ve rezidans projelerinde yaygın kullanılır.",
+    ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Geniş cadde uyumu", "Farklı bom uzunlukları"],
   },
   {
     icon: "🗼",
@@ -46,31 +46,31 @@ const vincTurleri = [
     title: "Kule Vinç",
     href: "/kule-vinc",
     kapasite: "1 – 25 ton",
-    kullanim: "Uzun süreli inşaat",
-    desc: "Fatih'daki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
-    ozellikler: ["Uzun vadeli proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
+    kullanim: "Yüksek katlı kule inşaatı",
+    desc: "Ataşehir'deki çok katlı ofis kulesi ve rezidans projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü.",
+    ozellikler: ["Yüksek katlı proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
   },
   {
-    icon: "🐙",
-    renk: "#EC4899",
-    renkBg: "#FCE7F3",
-    title: "Ahtapot Vinç",
-    href: "/ahtapot-vinc",
-    kapasite: "10 – 50 ton",
-    kullanim: "Dar alan, bina içi",
-    desc: "Fatih'ın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
-    ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
+    icon: "🦾",
+    renk: "#14B8A6",
+    renkBg: "#CCFBF1",
+    title: "Eklemli Platform",
+    href: "/eklemli-platform",
+    kapasite: "10m – 43m",
+    kullanim: "Ofis içi, otopark, atrium",
+    desc: "Plaza ve AVM gibi yapıların atrium, otopark ve iç mekan bakım çalışmalarında engelleri aşarak erişim sağlayan eklemli platformlar.",
+    ozellikler: ["İç mekan erişimi", "Engel aşma kabiliyeti", "Akülü-sessiz modeller", "Otopark uyumlu"],
   },
   {
-    icon: "⚙️",
-    renk: "#F97316",
-    renkBg: "#FFEDD5",
-    title: "Paletli Vinç",
-    href: "/paletli-vinc",
-    kapasite: "50 – 3000 ton",
-    kullanim: "Ağır sanayi, enerji",
-    desc: "Fatih'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
-    ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
+    icon: "⬆️",
+    renk: "#F59E0B",
+    renkBg: "#FEF3C7",
+    title: "Makaslı Platform",
+    href: "/makasli-platform",
+    kapasite: "4m – 18m",
+    kullanim: "Plaza lobisi, geniş ofis katı",
+    desc: "Plaza lobileri ve geniş ofis katlarında aydınlatma, tavan ve tesisat işlerinde stabil ve geniş çalışma alanı sunan makaslı platformlar.",
+    ozellikler: ["Geniş platform", "Lobi/ofis uyumlu", "Çok kişili çalışma", "Düz zemin idealdir"],
   },
   {
     icon: "🚚",
@@ -79,9 +79,9 @@ const vincTurleri = [
     title: "Kamyon Üstü Vinç",
     href: "/kamyon-ustu-vinc",
     kapasite: "3 – 50 ton",
-    kullanim: "Lojistik, nakliye",
-    desc: "Fatih ve çevre liman, şantiyeler ve lojistik merkezlerinde kamyon kasasına monte edilen pratik vinç türü. Yük taşıma ve indirme işlemlerini araç üzerinden hızlıca gerçekleştirir.",
-    ozellikler: ["Yük taşıma + indirme", "Limanlar, şantiye", "Hızlı teslimat", "Araç üstü çalışma"],
+    kullanim: "Ofis taşıma, malzeme indirme",
+    desc: "Kurumsal ofis taşımalarında ve plaza giriş/çıkışlarında yük indirme-bindirme işlemlerini hızlandıran pratik araç üstü vinç çözümü.",
+    ozellikler: ["Yük taşıma + indirme", "Plaza/ofis uyumu", "Hızlı teslimat", "Araç üstü çalışma"],
   },
 ];
 
@@ -90,36 +90,34 @@ const fiyatTablosu = [
   { tur: "32m Sepetli Vinç", saatlik: "2.000 TL", gunluk: "10.000 TL", haftalik: "55.000 TL", aylik: "Teklif" },
   { tur: "53m Sepetli Vinç", saatlik: "3.000 TL", gunluk: "14.000 TL", haftalik: "75.000 TL", aylik: "Teklif" },
   { tur: "Mobil Vinç (50t)", saatlik: "1.500 TL", gunluk: "15.000 TL", haftalik: "80.000 TL", aylik: "250.000 TL" },
-  { tur: "Mobil Vinç (100t)", saatlik: "2.000 TL", gunluk: "30.000 TL", haftalik: "150.000 TL", aylik: "500.000 TL" },
   { tur: "Kule Vinç", saatlik: "—", gunluk: "3.000 TL", haftalik: "18.000 TL", aylik: "65.000 TL" },
-  { tur: "Paletli Vinç", saatlik: "Teklif", gunluk: "Teklif", haftalik: "Teklif", aylik: "Teklif" },
+  { tur: "Eklemli Platform", saatlik: "Teklif", gunluk: "9.000 TL", haftalik: "48.000 TL", aylik: "Teklif" },
+  { tur: "Makaslı Platform", saatlik: "Teklif", gunluk: "7.000 TL", haftalik: "40.000 TL", aylik: "Teklif" },
   { tur: "Operatör (ek)", saatlik: "500 TL", gunluk: "2.000 TL", haftalik: "10.000 TL", aylik: "35.000 TL" },
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Fatih'ın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
-  { icon: "🏭", title: "Fabrika & Sanayi", desc: "Fatih sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
-  { icon: "⚡", title: "Enerji Projeleri", desc: "Fatih çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
-  { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
-  { icon: "🚢", title: "Liman & Tersane", desc: "Fatih ve çevresindeki limanlarda konteyner yükleme, tekne bakımı ve liman operasyonları." },
-  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Fatih'ın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
-  { icon: "📡", title: "Telekom & Anten", desc: "Fatih ve çevresinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
-  { icon: "🌳", title: "Peyzaj & Park", desc: "Fatih park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
+  { icon: "🏢", title: "Ofis Kulesi Cephe Bakımı", desc: "Finans merkezindeki banka ve şirket genel müdürlük binalarının cam cephe temizliği ve bakımı." },
+  { icon: "🏙️", title: "Rezidans İnşaatı", desc: "Ataşehir'in yüksek katlı konut/rezidans projelerinde kaba inşaat ve cephe montaj işleri." },
+  { icon: "🛒", title: "AVM & Plaza Operasyonları", desc: "Alışveriş merkezleri ve plazalarda tabela, aydınlatma ve iç mekan bakım çalışmaları." },
+  { icon: "🅿️", title: "Otopark & Atrium", desc: "Kapalı otopark ve atrium alanlarında tesisat, aydınlatma ve tavan işleri için kompakt ekipman." },
+  { icon: "📡", title: "Kurumsal Altyapı", desc: "Şirket merkezlerinde jeneratör, klima santrali ve çatı ekipmanı taşıma-yerleştirme." },
+  { icon: "🛣️", title: "TEM Otoyolu Çevresi", desc: "TEM Otoyolu'na yakın lojistik ve ticari yapı projelerinde ağır ekipman desteği." },
 ];
 
 const adimlar = [
   { no: "01", icon: "📞", title: "Arayın veya WhatsApp Yazın", desc: "Projenizi, yükün ağırlığını, çalışma yüksekliğini ve süreyi belirtin." },
-  { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
+  { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bina/plaza yönetimi gereksinimlerini analiz eder." },
   { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
   { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
-  { no: "05", icon: "🚛", title: "Vinç Fatih'a Teslim Edilir", desc: "Belirlenen tarihte Fatih'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "05", icon: "🚛", title: "Vinç Ataşehir'e Teslim Edilir", desc: "Belirlenen tarihte Ataşehir'deki plaza veya şantiyenize kurulum ekibi ile ulaşırız." },
   { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
 const neden = [
-  { icon: "🏆", title: "25 Yıllık Fatih Deneyimi", desc: "Fatih'da çeyrek asır, 1000+ başarıyla tamamlanan proje." },
+  { icon: "🏆", title: "25 Yıllık Deneyim", desc: "Sektörde çeyrek asır, 1000+ başarıyla tamamlanan proje." },
   { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipman ve operasyonlar kapsamlı sigorta güvencesinde." },
-  { icon: "⚡", title: "Aynı Gün Teslimat", desc: "Fatih ve çevresinde stok garantisiyle acil taleplerde aynı gün vinç sahada." },
+  { icon: "🏢", title: "Plaza & Kurumsal Bina Deneyimi", desc: "Bina yönetimi prosedürlerine uygun, düzenli ofis/plaza müşterilerinden referanslı hizmet." },
   { icon: "👷", title: "Sertifikalı Operatör", desc: "MEB onaylı belgeli, ISG eğitimli operatörler." },
   { icon: "🔧", title: "Bakımlı Filo", desc: "Her ekipman periyodik bakımdan geçer, arıza riski minimumda." },
   { icon: "📞", title: "7/24 Destek", desc: "Gece, hafta sonu, resmi tatil dahil her an ulaşabilirsiniz." },
@@ -127,16 +125,20 @@ const neden = [
 
 const sss = [
   {
-    s: "Fatih'da vinç kiralama fiyatları nasıl belirleniyor?",
-    c: "Fatih'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
+    s: "Ataşehir'de vinç kiralama fiyatları nasıl belirleniyor?",
+    c: "Ataşehir'de vinç kiralama fiyatı; seçilen vinç türü ve kapasitesi, çalışma yüksekliği (özellikle yüksek katlı ofis kuleleri için), kiralama süresi ve operatör ihtiyacına göre değişir.",
   },
   {
-    s: "Fatih'ın her ilçesine hizmet veriyor musunuz?",
-    c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
+    s: "Plaza ve ofis binalarında çalışma izni süreci nasıl işliyor?",
+    c: "Bina yönetimi veya site yönetiminin gerektirdiği güvenlik ve çalışma izni süreçlerini sizinle koordineli şekilde yönetiyoruz; gerekli evrak ve sigorta belgelerini önceden hazırlıyoruz.",
   },
   {
-    s: "Fatih trafiğinde vinç ulaşımı nasıl sağlanıyor?",
-    c: "Fatih trafiğine hakim ekibimiz, vinç sevkiyatlarını gece saatlerinde veya yoğunluğu az olan güzergahlarda planlayarak maksimum hız sağlar. Büyük ekipmanlar için belediye izinlerini de biz alıyoruz.",
+    s: "Cam cephe binalarda hangi vinç türü kullanılıyor?",
+    c: "Yüksek katlı cam cephe binalarda genellikle 32-53 metre erişimli sepetli vinçler kullanılır; bina yüksekliği ve cephe açısına göre uygun model belirlenir.",
+  },
+  {
+    s: "Hafta sonu veya mesai dışında çalışma yapılıyor mu?",
+    c: "Evet. Plaza ve ofis binalarının çalışma saatlerini etkilememek için hafta sonu veya akşam saatlerinde operasyon planlaması yapılabilir.",
   },
   {
     s: "Operatörsüz vinç kiralayabilir miyim?",
@@ -148,15 +150,11 @@ const sss = [
   },
   {
     s: "Fiyata ne dahil, ne değil?",
-    c: "Standart fiyata vinç, operatör ve sigorta dahildir. Fatih içi nakliye belirli sınırlar dahilinde ücretsizdir; şehir dışı nakliye, gece çalışması ve özel izin ücretleri ayrıca yansıtılır.",
+    c: "Standart fiyata vinç, operatör ve sigorta dahildir. Şehir dışı nakliye, gece çalışması ve özel izin ücretleri ayrıca yansıtılır.",
   },
   {
     s: "Uzun dönem kiralama daha mı ucuz?",
-    c: "Evet. Aylık ve üzeri kiralamalarda günlük fiyata göre %20–35 indirim uygulanmaktadır. Büyük Fatih projeleri için özel paket fiyatları da sunulmaktadır.",
-  },
-  {
-    s: "Fatih dışına da hizmet veriyor musunuz?",
-    c: "Trakya, Marmara ve çevre illere hizmet verilmektedir. Fatih dışı nakliye bedeli ayrıca hesaplanır.",
+    c: "Evet. Aylık ve üzeri kiralamalarda günlük fiyata göre %20–35 indirim uygulanmaktadır. Kurumsal müşteriler için çerçeve anlaşma seçenekleri de sunulmaktadır.",
   },
 ];
 
@@ -169,7 +167,8 @@ const istatistikler = [
   { v: "7/24", l: "Destek Hattı", icon: "📞" },
 ];
 
-export default function FatihVincKiralamaPage() {
+
+export default function AtasehirVincKiralamaPage() {
   return (
     <>
       {/* ══════════════════════════════════════
@@ -194,19 +193,19 @@ export default function FatihVincKiralamaPage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 rounded-full px-4 py-2 mb-8">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                <span className="text-yellow-400 text-sm font-bold tracking-wide">Fatih Bölgesinde 7/24</span>
+                <span className="text-yellow-400 text-sm font-bold tracking-wide">Ataşehir Bölgesinde 7/24</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
-                Fatih<br />
+                Ataşehir<br />
                 <span className="text-yellow-400">Vinç</span><br />
                 Kiralama
               </h1>
 
               <p className="text-gray-400 text-xl mb-10 leading-relaxed">
-                Fatih ve çevresinde sepetli, mobil, kule, paletli vinç ve daha fazlası.
-                Sertifikalı operatör, tam sigorta ve aynı gün teslimatla profesyonel
-                vinç kiralama hizmeti sunuyoruz.
+                Ataşehir ve çevresinde sepetli vinç, mobil vinç, kule vinç, makaslı ve eklemli
+                platform seçenekleriyle hizmet veriyoruz. Sertifikalı operatör, tam sigorta ve
+                aynı gün teslimatla profesyonel vinç kiralama hizmeti sunuyoruz.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -284,7 +283,7 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Ürün Kataloğu</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Fatih Vinç Kiralama Türleri</h2>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Ataşehir Vinç Kiralama Türleri</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Projenizin ölçeğine ve ihtiyacına göre doğru vinç türünü seçin. Uzmanımız en uygun seçeneği belirler.
             </p>
@@ -308,7 +307,7 @@ export default function FatihVincKiralamaPage() {
                       {v.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-black text-gray-900 mb-1">Fatih {v.title} Kiralama</h3>
+                      <h3 className="text-xl font-black text-gray-900 mb-1">Ataşehir {v.title} Kiralama</h3>
                       <div className="flex flex-wrap gap-3 text-sm">
                         <span className="flex items-center gap-1 text-gray-500">
                           <span>⚖️</span> Kapasite: <strong className="text-gray-800">{v.kapasite}</strong>
@@ -374,7 +373,7 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Fiyatlandırma</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Fatih Vinç Kiralama Fiyat Listesi</h2>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Ataşehir Vinç Kiralama Fiyat Listesi</h2>
             <p className="text-gray-500 text-lg">
               Aşağıdaki fiyatlar yol gösterici niteliktedir. Projenize özel teklif için arayın.
             </p>
@@ -420,7 +419,7 @@ export default function FatihVincKiralamaPage() {
               <span className="text-2xl">📦</span>
               <div>
                 <div className="font-bold text-gray-900 text-sm mb-1">Ek ücretler</div>
-                <div className="text-gray-600 text-xs leading-relaxed">Fatih dışı nakliye, gece mesaisi ve özel izin ayrıca fiyatlandırılır.</div>
+                <div className="text-gray-600 text-xs leading-relaxed">Ataşehir dışı nakliye, gece mesaisi ve özel izin ayrıca fiyatlandırılır.</div>
               </div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-2xl p-5 flex gap-3">
@@ -445,9 +444,9 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Nerede Kullanılır?</span>
-            <h2 className="text-4xl font-black mt-3 mb-4">Fatih Vinç Kiralama Kullanım Alanları</h2>
+            <h2 className="text-4xl font-black mt-3 mb-4">Ataşehir Vinç Kiralama Kullanım Alanları</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              İnşaattan enerjiye, limanlardan telekomünikasyona — Fatih&apos;da vinç gereken her yerde yanınızdayız.
+              Ofis kulelerinden plazalara, rezidanslardan AVM&apos;lere — Ataşehir&apos;de vinç gereken her yerde yanınızdayız.
             </p>
           </div>
 
@@ -473,7 +472,7 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Nasıl Çalışır?</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">6 Adımda Fatih Vinç Kiralama</h2>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">6 Adımda Ataşehir Vinç Kiralama</h2>
             <p className="text-gray-500 text-lg">Telefon etmekten sahaya teslimata, her adım kolay ve şeffaf.</p>
           </div>
 
@@ -513,11 +512,11 @@ export default function FatihVincKiralamaPage() {
             <div>
               <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Neden Biz?</span>
               <h2 className="text-4xl font-black text-gray-900 mt-3 mb-6 leading-tight">
-                Fatih Bölgesinin<br />Tercih Ettiği<br />Vinç Kiralama Firması
+                Ataşehir Bölgesinin<br />Tercih Ettiği<br />Vinç Kiralama Firması
               </h2>
               <p className="text-gray-500 leading-relaxed mb-8">
-                Fatih&apos;da 25 yılı aşkın deneyim, geniş ve bakımlı filomuz, sertifikalı
-                operatörlerimiz ve 7/24 destek hattımızla Fatih vinç kiralama sektöründe fark yaratıyoruz.
+                Ataşehir&apos;de 25 yılı aşkın deneyim, geniş ve bakımlı filomuz, sertifikalı
+                operatörlerimiz ve 7/24 destek hattımızla Ataşehir vinç kiralama sektöründe fark yaratıyoruz.
               </p>
               <a
                 href="tel:05323039089"
@@ -552,8 +551,8 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">SSS</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Fatih Vinç Kiralama Sık Sorulan Sorular</h2>
-            <p className="text-gray-500 text-lg">Fatih vinç kiralama hakkında en çok merak edilenler.</p>
+            <h2 className="text-4xl font-black text-gray-900 mt-3 mb-4">Ataşehir Vinç Kiralama Sık Sorulan Sorular</h2>
+            <p className="text-gray-500 text-lg">Ataşehir vinç kiralama hakkında en çok merak edilenler.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5">
@@ -576,7 +575,7 @@ export default function FatihVincKiralamaPage() {
           </div>
 
           <div className="mt-10 p-8 bg-yellow-400 rounded-3xl text-center">
-            <div className="text-2xl font-black text-gray-900 mb-2">Fatih vinç kiralama hakkında başka sorunuz mu var?</div>
+            <div className="text-2xl font-black text-gray-900 mb-2">Ataşehir vinç kiralama hakkında başka sorunuz mu var?</div>
             <p className="text-gray-800 mb-6">Uzmanlarımız 7/24 hatta, hemen yanıt alın.</p>
             <a
               href="tel:05323039089"
@@ -588,7 +587,7 @@ export default function FatihVincKiralamaPage() {
         </div>
       </section>
 
-      <IlceGrid aktifSlug="fatih" />
+      <IlceGrid aktifSlug="atasehir" />
 
       {/* ══════════════════════════════════════
           DİĞER HİZMETLER
@@ -597,7 +596,7 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Diğer Hizmetler</span>
-            <h2 className="text-3xl font-black text-gray-900 mt-3">Fatih Vinç Kiralama ile Birlikte</h2>
+            <h2 className="text-3xl font-black text-gray-900 mt-3">Ataşehir Vinç Kiralama ile Birlikte</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -634,7 +633,7 @@ export default function FatihVincKiralamaPage() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="text-center lg:text-left">
             <div className="text-4xl font-black text-gray-900 mb-3">
-              Fatih&apos;da kiralık vinç ihtiyacınız mı var?
+              Ataşehir&apos;de kiralık vinç ihtiyacınız mı var?
             </div>
             <div className="text-gray-800 text-lg">
               Projenizi anlatın, projeniz için doğru vinci hemen belirleyelim.

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import IlceGrid from "@/components/IlceGrid";
 
 export const metadata: Metadata = {
   alternates: {
@@ -15,53 +16,6 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────
    VERİ
 ───────────────────────────────────────────── */
-
-const ilceler = {
-  avrupa: [
-    { ad: "Avcılar", slug: "avcilar", emoji: "🏙️" },
-    { ad: "Bağcılar", slug: "bagcilar", emoji: "🏗️" },
-    { ad: "Bahçelievler", slug: "bahcelievler", emoji: "🌳" },
-    { ad: "Bakırköy", slug: "bakirkoy", emoji: "🏖️" },
-    { ad: "Başakşehir", slug: "basaksehir", emoji: "🏘️" },
-    { ad: "Bayrampaşa", slug: "bayrampasa", emoji: "🏭" },
-    { ad: "Beşiktaş", slug: "besiktas", emoji: "⚓" },
-    { ad: "Beylikdüzü", slug: "beylikduzu", emoji: "🏢" },
-    { ad: "Beyoğlu", slug: "beyoglu", emoji: "🌉" },
-    { ad: "Büyükçekmece", slug: "buyukcekmece", emoji: "🌊" },
-    { ad: "Çatalca", slug: "catalca", emoji: "🌿" },
-    { ad: "Esenler", slug: "esenler", emoji: "🏙️" },
-    { ad: "Esenyurt", slug: "esenyurt", emoji: "🏗️" },
-    { ad: "Eyüpsultan", slug: "eyupsultan", emoji: "🕌" },
-    { ad: "Eyüp", slug: "eyup", emoji: "🕌" },
-    { ad: "Fatih", slug: "fatih", emoji: "🏛️" },
-    { ad: "Gaziosmanpaşa", slug: "gaziosmanpasa", emoji: "🏘️" },
-    { ad: "Güngören", slug: "gungoren", emoji: "🏙️" },
-    { ad: "Kağıthane", slug: "kagithane", emoji: "🏭" },
-    { ad: "Küçükçekmece", slug: "kucukcekmece", emoji: "🌊" },
-    { ad: "Sarıyer", slug: "sariyer", emoji: "🌲" },
-    { ad: "Silivri", slug: "silivri", emoji: "🌾" },
-    { ad: "Şişli", slug: "sisli", emoji: "🏢" },
-    { ad: "Sultangazi", slug: "sultangazi", emoji: "🏘️" },
-    { ad: "Zeytinburnu", slug: "zeytinburnu", emoji: "⚓" },
-    { ad: "Arnavutköy", slug: "arnavutkoy", emoji: "✈️" },
-    { ad: "Adalar", slug: "adalar", emoji: "🏝️" },
-    { ad: "Şile", slug: "sile", emoji: "🏖️" },
-  ],
-  anadolu: [
-    { ad: "Ataşehir", slug: "atasehir", emoji: "🏢" },
-    { ad: "Beykoz", slug: "beykoz", emoji: "🌲" },
-    { ad: "Çekmeköy", slug: "cekmekoy", emoji: "🌿" },
-    { ad: "Kadıköy", slug: "kadikoy", emoji: "🎨" },
-    { ad: "Kartal", slug: "kartal", emoji: "🏭" },
-    { ad: "Maltepe", slug: "maltepe", emoji: "🏖️" },
-    { ad: "Pendik", slug: "pendik", emoji: "⚓" },
-    { ad: "Sancaktepe", slug: "sancaktepe", emoji: "🏗️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏘️" },
-    { ad: "Tuzla", slug: "tuzla", emoji: "🚢" },
-    { ad: "Ümraniye", slug: "umraniye", emoji: "🏙️" },
-    { ad: "Üsküdar", slug: "uskudar", emoji: "🕌" },
-  ],
-};
 
 const vincTurleri = [
   {
@@ -300,7 +254,7 @@ export default function VincKiralamaPage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 rounded-full px-4 py-2 mb-8">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                <span className="text-yellow-400 text-sm font-bold tracking-wide">İstanbul&apos;un 39 İlçesinde 7/24</span>
+                <span className="text-yellow-400 text-sm font-bold tracking-wide">İstanbul Bölgesinde 7/24</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
@@ -749,89 +703,7 @@ export default function VincKiralamaPage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          İLÇELER — AVRUPA + ANADOLU
-      ══════════════════════════════════════ */}
-      <section className="py-24 px-4 bg-gray-950 text-white" id="ilceler">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Hizmet Bölgeleri</span>
-            <h2 className="text-4xl font-black mt-3 mb-4">İstanbul&apos;un 39 İlçesinde Vinç Kiralama</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Bulunduğunuz ilçeye tıklayarak bölgeye özel hizmet sayfasına ulaşın.
-            </p>
-          </div>
-
-          {/* Dekoratif harita */}
-          <div className="relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden mb-14 p-10 text-center">
-            <div
-              className="absolute inset-0 opacity-20"
-              style={{
-                backgroundImage: "radial-gradient(circle at 30% 50%, rgba(250,204,21,0.5) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(59,130,246,0.4) 0%, transparent 60%)",
-              }}
-            />
-            <div className="relative">
-              <div className="text-7xl mb-4">🗺️</div>
-              <div className="text-white text-2xl font-black mb-2">Avrupa + Anadolu Yakası</div>
-              <div className="text-gray-400">Boğazın her iki yakasında, tüm İstanbul&apos;da aynı gün hizmet</div>
-            </div>
-          </div>
-
-          {/* Avrupa Yakası */}
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px flex-1 bg-white/10" />
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2">
-                <span>🌉</span>
-                <span className="text-white font-bold text-sm">Avrupa Yakası</span>
-                <span className="text-gray-500 text-xs">({ilceler.avrupa.length} ilçe)</span>
-              </div>
-              <div className="h-px flex-1 bg-white/10" />
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3">
-              {ilceler.avrupa.map((ilce) => (
-                <Link
-                  key={ilce.slug}
-                  href={`/${ilce.slug}-vinc-kiralama`}
-                  className="group bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-yellow-400 hover:border-yellow-400 transition"
-                >
-                  <div className="text-xl mb-1">{ilce.emoji}</div>
-                  <div className="text-white text-xs font-bold group-hover:text-black leading-tight">{ilce.ad}</div>
-                  <div className="text-gray-600 text-[10px] group-hover:text-gray-900 mt-0.5">Vinç Kiralama</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Anadolu Yakası */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px flex-1 bg-white/10" />
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2">
-                <span>🌉</span>
-                <span className="text-white font-bold text-sm">Anadolu Yakası</span>
-                <span className="text-gray-500 text-xs">({ilceler.anadolu.length} ilçe)</span>
-              </div>
-              <div className="h-px flex-1 bg-white/10" />
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3">
-              {ilceler.anadolu.map((ilce) => (
-                <Link
-                  key={ilce.slug}
-                  href={`/${ilce.slug}-vinc-kiralama`}
-                  className="group bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-yellow-400 hover:border-yellow-400 transition"
-                >
-                  <div className="text-xl mb-1">{ilce.emoji}</div>
-                  <div className="text-white text-xs font-bold group-hover:text-black leading-tight">{ilce.ad}</div>
-                  <div className="text-gray-600 text-[10px] group-hover:text-gray-900 mt-0.5">Vinç Kiralama</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <IlceGrid />
 
       {/* ══════════════════════════════════════
           DİĞER HİZMETLER

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import IlceGrid from "@/components/IlceGrid";
 
 export const metadata: Metadata = {
   alternates: {
@@ -14,53 +15,6 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────
    VERİ
 ───────────────────────────────────────────── */
-
-const ilceler = {
-  avrupa: [
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏙️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏗️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌳" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏖️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏘️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏭" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "⚓" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏢" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌉" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌊" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌿" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏙️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏗️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🕌" },
-    { ad: "Eyüp", slug: "eyup", emoji: "🕌" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏛️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏘️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏙️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏭" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌊" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌲" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌾" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏢" },
-    { ad: "Sultangazi", slug: "sultangazi", emoji: "🏘️" },
-    { ad: "Zeytinburnu", slug: "zeytinburnu", emoji: "⚓" },
-    { ad: "Arnavutköy", slug: "arnavutkoy", emoji: "✈️" },
-    { ad: "Adalar", slug: "adalar", emoji: "🏝️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏖️" },
-  ],
-  anadolu: [
-    { ad: "Ataşehir", slug: "atasehir", emoji: "🏢" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌲" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🌿" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🎨" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏭" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏖️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "⚓" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏗️" },
-    { ad: "Sultanbeyli", slug: "sultanbeyli", emoji: "🏘️" },
-    { ad: "Tuzla", slug: "tuzla", emoji: "🚢" },
-    { ad: "Ümraniye", slug: "umraniye", emoji: "🏙️" },
-    { ad: "Üsküdar", slug: "uskudar", emoji: "🕌" },
-  ],
-};
 
 const vincTurleri = [
   {
@@ -234,19 +188,13 @@ export default function SultanbeyliVincKiralamaPage() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500 opacity-[0.04] rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 py-20 w-full">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-gray-500 text-sm mb-10">
-            <a href="/" className="hover:text-yellow-400 transition">Ana Sayfa</a>
-            <span>›</span>
-            <span className="text-gray-300">Sultanbeyli Vinç Kiralama</span>
-          </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Sol */}
             <div>
               <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/30 rounded-full px-4 py-2 mb-8">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                <span className="text-yellow-400 text-sm font-bold tracking-wide">Sultanbeyli&apos;un 39 İlçesinde 7/24</span>
+                <span className="text-yellow-400 text-sm font-bold tracking-wide">Sultanbeyli Bölgesinde 7/24</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
@@ -256,9 +204,9 @@ export default function SultanbeyliVincKiralamaPage() {
               </h1>
 
               <p className="text-gray-400 text-xl mb-10 leading-relaxed">
-                Sultanbeyli&apos;un tüm 39 ilçesinde sepetli, mobil, kule, paletli ve daha fazlası.
-                Sertifikalı operatör, tam sigorta ve aynı gün teslimat ile Sultanbeyli ve çevresinde
-                profesyonel vinç kiralama hizmeti.
+                Sultanbeyli ve çevresinde sepetli, mobil, kule, paletli vinç ve daha fazlası.
+                Sertifikalı operatör, tam sigorta ve aynı gün teslimatla profesyonel
+                vinç kiralama hizmeti sunuyoruz.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -565,7 +513,7 @@ export default function SultanbeyliVincKiralamaPage() {
             <div>
               <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Neden Biz?</span>
               <h2 className="text-4xl font-black text-gray-900 mt-3 mb-6 leading-tight">
-                Sultanbeyli&apos;un<br />Tercih Ettiği<br />Vinç Kiralama Firması
+                Sultanbeyli Bölgesinin<br />Tercih Ettiği<br />Vinç Kiralama Firması
               </h2>
               <p className="text-gray-500 leading-relaxed mb-8">
                 Sultanbeyli&apos;da 25 yılı aşkın deneyim, geniş ve bakımlı filomuz, sertifikalı
@@ -640,89 +588,7 @@ export default function SultanbeyliVincKiralamaPage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          İLÇELER — AVRUPA + ANADOLU
-      ══════════════════════════════════════ */}
-      <section className="py-24 px-4 bg-gray-950 text-white" id="ilceler">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-yellow-400 font-bold text-sm uppercase tracking-widest">Hizmet Bölgeleri</span>
-            <h2 className="text-4xl font-black mt-3 mb-4">Sultanbeyli Vinç Kiralama — 39 İlçede Hizmet</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Bulunduğunuz ilçeye tıklayarak bölgeye özel Sultanbeyli vinç kiralama hizmet sayfasına ulaşın.
-            </p>
-          </div>
-
-          {/* Dekoratif harita */}
-          <div className="relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden mb-14 p-10 text-center">
-            <div
-              className="absolute inset-0 opacity-20"
-              style={{
-                backgroundImage: "radial-gradient(circle at 30% 50%, rgba(250,204,21,0.5) 0%, transparent 60%), radial-gradient(circle at 70% 50%, rgba(59,130,246,0.4) 0%, transparent 60%)",
-              }}
-            />
-            <div className="relative">
-              <div className="text-7xl mb-4">🗺️</div>
-              <div className="text-white text-2xl font-black mb-2">Sultanbeyli — Avrupa + Anadolu Yakası</div>
-              <div className="text-gray-400">Boğazın her iki yakasında, tüm Sultanbeyli&apos;da aynı gün vinç kiralama hizmeti</div>
-            </div>
-          </div>
-
-          {/* Avrupa Yakası */}
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px flex-1 bg-white/10" />
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2">
-                <span>🌉</span>
-                <span className="text-white font-bold text-sm">Avrupa Yakası</span>
-                <span className="text-gray-500 text-xs">({ilceler.avrupa.length} ilçe)</span>
-              </div>
-              <div className="h-px flex-1 bg-white/10" />
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3">
-              {ilceler.avrupa.map((ilce) => (
-                <Link
-                  key={ilce.slug}
-                  href={`/${ilce.slug}-vinc-kiralama`}
-                  className="group bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-yellow-400 hover:border-yellow-400 transition"
-                >
-                  <div className="text-xl mb-1">{ilce.emoji}</div>
-                  <div className="text-white text-xs font-bold group-hover:text-black leading-tight">{ilce.ad}</div>
-                  <div className="text-gray-600 text-[10px] group-hover:text-gray-900 mt-0.5">Vinç Kiralama</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Anadolu Yakası */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px flex-1 bg-white/10" />
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2">
-                <span>🌉</span>
-                <span className="text-white font-bold text-sm">Anadolu Yakası</span>
-                <span className="text-gray-500 text-xs">({ilceler.anadolu.length} ilçe)</span>
-              </div>
-              <div className="h-px flex-1 bg-white/10" />
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3">
-              {ilceler.anadolu.map((ilce) => (
-                <Link
-                  key={ilce.slug}
-                  href={`/${ilce.slug}-vinc-kiralama`}
-                  className="group bg-white/5 border border-white/10 rounded-xl p-3 text-center hover:bg-yellow-400 hover:border-yellow-400 transition"
-                >
-                  <div className="text-xl mb-1">{ilce.emoji}</div>
-                  <div className="text-white text-xs font-bold group-hover:text-black leading-tight">{ilce.ad}</div>
-                  <div className="text-gray-600 text-[10px] group-hover:text-gray-900 mt-0.5">Vinç Kiralama</div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <IlceGrid aktifSlug="sultanbeyli" />
 
       {/* ══════════════════════════════════════
           DİĞER HİZMETLER
@@ -771,7 +637,7 @@ export default function SultanbeyliVincKiralamaPage() {
               Sultanbeyli&apos;da kiralık vinç ihtiyacınız mı var?
             </div>
             <div className="text-gray-800 text-lg">
-              Projenizi anlatın, Sultanbeyli&apos;un doğru vinci hemen belirleyelim.
+              Projenizi anlatın, projeniz için doğru vinci hemen belirleyelim.
             </div>
           </div>
           <div className="flex gap-4 flex-shrink-0">

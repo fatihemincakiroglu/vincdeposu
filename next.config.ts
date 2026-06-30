@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       { source: "/sosyal-sorumluluk", destination: "/", permanent: true },
       { source: "/basin-ve-medya", destination: "/", permanent: true },
       { source: "/kariyer", destination: "/", permanent: true },
+      // Eyüp ilçesi 2019'da Eyüpsultan olarak yeniden adlandırıldı; aynı ilçe için
+      // iki ayrı sayfa (duplicate content) oluşmaması için tek canonical sayfaya yönlendiriyoruz.
+      { source: "/eyup-vinc-kiralama", destination: "/eyupsultan-vinc-kiralama", permanent: true },
     ];
   },
 };

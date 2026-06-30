@@ -344,12 +344,6 @@ export default function HizmetlerPage() {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500 opacity-[0.04] rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 pt-24 pb-16">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-gray-500 text-sm mb-10">
-            <a href="/" className="hover:text-yellow-400 transition">Ana Sayfa</a>
-            <span>›</span>
-            <span className="text-gray-300">Hizmetler</span>
-          </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>

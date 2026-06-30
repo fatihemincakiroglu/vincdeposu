@@ -1,6 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { tumIlceler } from "@/lib/districts";
+
+const ilceMenuOgeleri = tumIlceler.map((ilce) => ({
+  label: ilce.ad,
+  href: `/${ilce.slug}-vinc-kiralama`,
+}));
 
 const navLinks = [
   { label: "Kiralık Vinç", href: "/kiralik-vinc" },
@@ -52,45 +58,7 @@ const navLinks = [
     href: "/vinc-kiralama",
     children: [
       { label: "İstanbul", href: "/istanbul-vinc-kiralama" },
-      { label: "Avcılar", href: "/avcilar-vinc-kiralama" },
-      { label: "Bağcılar", href: "/bagcilar-vinc-kiralama" },
-      { label: "Bahçelievler", href: "/bahcelievler-vinc-kiralama" },
-      { label: "Bakırköy", href: "/bakirkoy-vinc-kiralama" },
-      { label: "Başakşehir", href: "/basaksehir-vinc-kiralama" },
-      { label: "Bayrampaşa", href: "/bayrampasa-vinc-kiralama" },
-      { label: "Beşiktaş", href: "/besiktas-vinc-kiralama" },
-      { label: "Beykoz", href: "/beykoz-vinc-kiralama" },
-      { label: "Beylikdüzü", href: "/beylikduzu-vinc-kiralama" },
-      { label: "Beyoğlu", href: "/beyoglu-vinc-kiralama" },
-      { label: "Büyükçekmece", href: "/buyukcekmece-vinc-kiralama" },
-      { label: "Çatalca", href: "/catalca-vinc-kiralama" },
-      { label: "Çekmeköy", href: "/cekmekoy-vinc-kiralama" },
-      { label: "Esenler", href: "/esenler-vinc-kiralama" },
-      { label: "Esenyurt", href: "/esenyurt-vinc-kiralama" },
-      { label: "Eyüp", href: "/eyup-vinc-kiralama" },
-      { label: "Eyüpsultan", href: "/eyupsultan-vinc-kiralama" },
-      { label: "Fatih", href: "/fatih-vinc-kiralama" },
-      { label: "Gaziosmanpaşa", href: "/gaziosmanpasa-vinc-kiralama" },
-      { label: "Güngören", href: "/gungoren-vinc-kiralama" },
-      { label: "Kadıköy", href: "/kadikoy-vinc-kiralama" },
-      { label: "Kağıthane", href: "/kagithane-vinc-kiralama" },
-      { label: "Kartal", href: "/kartal-vinc-kiralama" },
-      { label: "Küçükçekmece", href: "/kucukcekmece-vinc-kiralama" },
-      { label: "Maltepe", href: "/maltepe-vinc-kiralama" },
-      { label: "Pendik", href: "/pendik-vinc-kiralama" },
-      { label: "Sancaktepe", href: "/sancaktepe-vinc-kiralama" },
-      { label: "Sarıyer", href: "/sariyer-vinc-kiralama" },
-      { label: "Silivri", href: "/silivri-vinc-kiralama" },
-      { label: "Şişli", href: "/sisli-vinc-kiralama" },
-      { label: "Sultanbeyli", href: "/sultanbeyli-vinc-kiralama" },
-      { label: "Sultangazi", href: "/sultangazi-vinc-kiralama" },
-      { label: "Tuzla", href: "/tuzla-vinc-kiralama" },
-      { label: "Ümraniye", href: "/umraniye-vinc-kiralama" },
-      { label: "Üsküdar", href: "/uskudar-vinc-kiralama" },
-      { label: "Zeytinburnu", href: "/zeytinburnu-vinc-kiralama" },
-      { label: "Arnavutköy", href: "/arnavutkoy-vinc-kiralama" },
-      { label: "Adalar", href: "/adalar-vinc-kiralama" },
-      { label: "Şile", href: "/sile-vinc-kiralama" },
+      ...ilceMenuOgeleri,
     ],
   },
   { label: "Blog", href: "/blog" },

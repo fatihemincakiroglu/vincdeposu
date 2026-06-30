@@ -81,7 +81,7 @@ export default function Page() {
 
       {/* ── SAHADAN KARELER ── */}
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
           <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
             <Image
               src="/images/eklemli-platform-stadyum-cephe.jpg"
@@ -162,7 +162,7 @@ export default function Page() {
         <section style={{ padding: "56px 0" }}>
           <SectionEyebrow>Tanım</SectionEyebrow>
           <h2 style={h2Style}>Eklemli Platform Nedir? Boom Lift ile Farkı</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, marginTop: 32 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 32, marginTop: 32 }}>
             <div style={cardStyle}>
               <div style={{ fontSize: 28, marginBottom: 12 }}>🦾</div>
               <h3 style={h3CardStyle}>Eklemli Platform</h3>
@@ -192,7 +192,7 @@ export default function Page() {
           <SectionEyebrow>Ürünler</SectionEyebrow>
           <h2 style={h2Style}>Eklemli Platform Çeşitleri: Akülü ve Dizel Modeller</h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 36 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, marginTop: 36 }}>
 
             {/* Akülü */}
             <div style={{ ...cardStyle, borderLeft: "4px solid #3a8a3a" }}>
@@ -283,7 +283,7 @@ export default function Page() {
         <section style={{ padding: "56px 0" }}>
           <SectionEyebrow>Neden Kiralama?</SectionEyebrow>
           <h2 style={h2Style}>Eklemli Platform Kiralama Avantajları – Neden Satın Almak Yerine Kiralamalısınız?</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 36 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))", gap: 16, marginTop: 36 }}>
             {[
               ["Düşük Sermaye Bağlama", "Satın alma maliyeti 500.000 ₺ ile 3.000.000 ₺ arasında değişen bu ekipmanlarda kiralama, sabit yatırım gerektirmez."],
               ["Bakım ve Servis Dahil", "Periyodik bakım, yedek parça ve teknik servis kiralama paketine dahil olduğundan ekstra maliyet oluşmaz."],
@@ -313,7 +313,7 @@ export default function Page() {
             Yanlış platform seçimi hem verimlilik kaybına hem de güvenlik riskine yol açar.
             Aşağıdaki üç faktörü değerlendirerek doğru modeli belirleyin.
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginTop: 36 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20, marginTop: 36 }}>
             {[
               {
                 step: "01", label: "Çalışma Yüksekliği",
@@ -401,7 +401,7 @@ export default function Page() {
         <section style={{ padding: "56px 0" }}>
           <SectionEyebrow>Güvenlik</SectionEyebrow>
           <h3 style={{ ...h2Style, fontSize: 22 }}>Eklemli Platformlarda İş Güvenliği ve Operatör Sertifikası Gereksinimleri</h3>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 28 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, marginTop: 28 }}>
             <div style={{ padding: "28px", background: "#fff3e0", borderLeft: "4px solid #F5A623" }}>
               <div style={{ fontWeight: 800, fontSize: 16, marginBottom: 12, color: "#0D1B2A" }}>Yasal Zorunluluklar</div>
               <ul style={listStyle}>
