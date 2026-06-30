@@ -119,6 +119,14 @@ export default function Footer() {
 
       {/* Alt bar */}
       <div className="border-t border-gray-800 py-4 px-4 text-center text-sm text-gray-500">
+        <a
+          href="https://fatihemincakiroglu.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-yellow-400 transition"
+        >
+          Fatih Emin Çakıroğlu
+        </a>{" "}
         © {new Date().getFullYear()} Vinç Deposu. Tüm hakları saklıdır.
       </div>
     </footer>
