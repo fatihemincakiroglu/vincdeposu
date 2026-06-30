@@ -86,7 +86,7 @@ export default function IletisimPage() {
               </div>
             </a>
             <a
-              href="mailto:info@vincdeposu.com"
+              href="mailto:info@vincdeposu.com.tr"
               className="flex items-center gap-4 px-8 py-6 hover:bg-white/5 transition group"
             >
               <div className="w-12 h-12 rounded-xl bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xl shrink-0">
@@ -94,7 +94,7 @@ export default function IletisimPage() {
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">E-posta</div>
-                <div className="font-bold text-white text-lg leading-tight">info@vincdeposu.com</div>
+                <div className="font-bold text-white text-lg leading-tight">info@vincdeposu.com.tr</div>
                 <div className="text-gray-400 text-sm">En geç 2 saat içinde yanıt</div>
               </div>
             </a>
@@ -105,7 +105,7 @@ export default function IletisimPage() {
               <div>
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Adres</div>
                 <div className="font-bold text-white text-lg leading-tight">Express Vinç Hizmetleri</div>
-                <div className="text-gray-400 text-sm">İstanbul, Türkiye</div>
+                <div className="text-gray-400 text-sm">İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, 34490 Başakşehir/İstanbul</div>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function IletisimPage() {
               <div className="flex items-center gap-4 p-5 border-b border-gray-100">
                 <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0">✉️</div>
                 <div>
-                  <div className="font-bold text-gray-900 text-sm">info@vincdeposu.com</div>
+                  <div className="font-bold text-gray-900 text-sm">info@vincdeposu.com.tr</div>
                   <div className="text-gray-500 text-xs">E-posta ile iletişim</div>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function IletisimPage() {
                 <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0">📍</div>
                 <div>
                   <div className="font-bold text-gray-900 text-sm">Express Vinç Hizmetleri ve Nak. Ltd. Şti.</div>
-                  <div className="text-gray-500 text-xs">İstanbul, Türkiye</div>
+                  <div className="text-gray-500 text-xs">İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, 34490 Başakşehir/İstanbul</div>
                 </div>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function IletisimPage() {
                 className="w-full h-52 grayscale brightness-75 contrast-110 border-none block"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent px-4 py-3 text-white text-sm font-semibold flex items-center gap-2">
-                <span>📍</span> Express Vinç Hizmetleri — İstanbul
+                <span>📍</span> İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, Başakşehir/İstanbul
               </div>
             </div>
           </div>
@@ -391,7 +391,7 @@ export default function IletisimPage() {
               📞 0532 303 90 89
             </a>
             <a
-              href="mailto:info@vincdeposu.com"
+              href="mailto:info@vincdeposu.com.tr"
               className="border-2 border-gray-600 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
             >
               ✉️ E-posta Gönder
