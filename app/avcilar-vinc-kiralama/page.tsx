@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Avcılar Vinç Kiralama ve Avcılar Kiralık Vinç" },
   description:
-    "Avcılar vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Avcılar vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Avcılar kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["avcılar vinç kiralama", "avcılar kiralık vinç", "vinç kiralama avcılar", "avcılar sepetli vinç", "avcılar mobil vinç kiralama"],
 };
 

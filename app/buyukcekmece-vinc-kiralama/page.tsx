@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Büyükçekmece Vinç Kiralama ve Büyükçekmece Kiralık Vinç" },
   description:
-    "Büyükçekmece vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Büyükçekmece vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Büyükçekmece kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["buyukcekmece vinç kiralama", "buyukcekmece kiralık vinç", "vinç kiralama buyukcekmece", "buyukcekmece sepetli vinç", "buyukcekmece mobil vinç kiralama"],
 };
 

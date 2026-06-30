@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Fatih Vinç Kiralama ve Fatih Kiralık Vinç" },
   description:
-    "Fatih vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Fatih vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Fatih kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["fatih vinç kiralama", "fatih kiralık vinç", "vinç kiralama fatih", "fatih sepetli vinç", "fatih mobil vinç kiralama"],
 };
 

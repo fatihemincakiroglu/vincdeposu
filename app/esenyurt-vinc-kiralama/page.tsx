@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Esenyurt Vinç Kiralama ve Esenyurt Kiralık Vinç" },
   description:
-    "Esenyurt vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Esenyurt vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Esenyurt kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["esenyurt vinç kiralama", "esenyurt kiralık vinç", "vinç kiralama esenyurt", "esenyurt sepetli vinç", "esenyurt mobil vinç kiralama"],
 };
 

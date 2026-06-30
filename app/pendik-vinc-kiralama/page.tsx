@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Pendik Vinç Kiralama ve Pendik Kiralık Vinç" },
   description:
-    "Pendik vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Pendik vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Pendik kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["pendik vinç kiralama", "pendik kiralık vinç", "vinç kiralama pendik", "pendik sepetli vinç", "pendik mobil vinç kiralama"],
 };
 

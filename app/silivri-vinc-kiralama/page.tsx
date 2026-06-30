@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Silivri Vinç Kiralama ve Silivri Kiralık Vinç" },
   description:
-    "Silivri vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Silivri vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Silivri kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["silivri vinç kiralama", "silivri kiralık vinç", "vinç kiralama silivri", "silivri sepetli vinç", "silivri mobil vinç kiralama"],
 };
 

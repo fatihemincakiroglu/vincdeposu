@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Üsküdar Vinç Kiralama ve Üsküdar Kiralık Vinç" },
   description:
-    "Üsküdar vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Üsküdar vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Üsküdar kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["uskudar vinç kiralama", "uskudar kiralık vinç", "vinç kiralama uskudar", "uskudar sepetli vinç", "uskudar mobil vinç kiralama"],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Küçükçekmece Vinç Kiralama ve Küçükçekmece Kiralık Vinç" },
   description:
-    "Küçükçekmece vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Küçükçekmece vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Küçükçekmece kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["kucukcekmece vinç kiralama", "kucukcekmece kiralık vinç", "vinç kiralama kucukcekmece", "kucukcekmece sepetli vinç", "kucukcekmece mobil vinç kiralama"],
 };
 

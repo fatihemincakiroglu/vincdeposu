@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Beylikdüzü Vinç Kiralama ve Beylikdüzü Kiralık Vinç" },
   description:
-    "Beylikdüzü vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Beylikdüzü vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Beylikdüzü kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["beylikduzu vinç kiralama", "beylikduzu kiralık vinç", "vinç kiralama beylikduzu", "beylikduzu sepetli vinç", "beylikduzu mobil vinç kiralama"],
 };
 

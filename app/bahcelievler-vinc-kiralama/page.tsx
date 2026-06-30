@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Bahçelievler Vinç Kiralama ve Bahçelievler Kiralık Vinç" },
   description:
-    "Bahçelievler vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Bahçelievler vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Bahçelievler kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["bahcelievler vinç kiralama", "bahcelievler kiralık vinç", "vinç kiralama bahcelievler", "bahcelievler sepetli vinç", "bahcelievler mobil vinç kiralama"],
 };
 

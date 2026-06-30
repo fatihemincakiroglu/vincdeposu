@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Çekmeköy Vinç Kiralama ve Çekmeköy Kiralık Vinç" },
   description:
-    "Çekmeköy vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Çekmeköy vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Çekmeköy kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["cekmekoy vinç kiralama", "cekmekoy kiralık vinç", "vinç kiralama cekmekoy", "cekmekoy sepetli vinç", "cekmekoy mobil vinç kiralama"],
 };
 

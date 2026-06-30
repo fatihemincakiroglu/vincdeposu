@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Maltepe Vinç Kiralama ve Maltepe Kiralık Vinç" },
   description:
-    "Maltepe vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Maltepe vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Maltepe kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["maltepe vinç kiralama", "maltepe kiralık vinç", "vinç kiralama maltepe", "maltepe sepetli vinç", "maltepe mobil vinç kiralama"],
 };
 

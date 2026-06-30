@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Tuzla Vinç Kiralama ve Tuzla Kiralık Vinç" },
   description:
-    "Tuzla vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Tuzla vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Tuzla kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["tuzla vinç kiralama", "tuzla kiralık vinç", "vinç kiralama tuzla", "tuzla sepetli vinç", "tuzla mobil vinç kiralama"],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Sarıyer Vinç Kiralama ve Sarıyer Kiralık Vinç" },
   description:
-    "Sarıyer vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Sarıyer vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Sarıyer kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["sariyer vinç kiralama", "sariyer kiralık vinç", "vinç kiralama sariyer", "sariyer sepetli vinç", "sariyer mobil vinç kiralama"],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Ümraniye Vinç Kiralama ve Ümraniye Kiralık Vinç" },
   description:
-    "Ümraniye vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Ümraniye vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Ümraniye kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["umraniye vinç kiralama", "umraniye kiralık vinç", "vinç kiralama umraniye", "umraniye sepetli vinç", "umraniye mobil vinç kiralama"],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Beyoğlu Vinç Kiralama ve Beyoğlu Kiralık Vinç" },
   description:
-    "Beyoğlu vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Beyoğlu vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Beyoğlu kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["beyoglu vinç kiralama", "beyoglu kiralık vinç", "vinç kiralama beyoglu", "beyoglu sepetli vinç", "beyoglu mobil vinç kiralama"],
 };
 

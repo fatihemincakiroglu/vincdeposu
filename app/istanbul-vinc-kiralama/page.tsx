@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "İstanbul Vinç Kiralama ve İstanbul Kiralık Vinç" },
   description:
-    "İstanbul vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "İstanbul vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık İstanbul kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["istanbul vinç kiralama", "istanbul kiralık vinç", "vinç kiralama istanbul", "istanbul sepetli vinç", "istanbul mobil vinç kiralama"],
 };
 

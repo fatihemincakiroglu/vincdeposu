@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Bağcılar Vinç Kiralama ve Bağcılar Kiralık Vinç" },
   description:
-    "Bağcılar vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Bağcılar vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Bağcılar kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["bagcilar vinç kiralama", "bagcilar kiralık vinç", "vinç kiralama bagcilar", "bagcilar sepetli vinç", "bagcilar mobil vinç kiralama"],
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Şile Vinç Kiralama ve Şile Kiralık Vinç" },
   description:
-    "Şile vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Şile vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Şile kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["sile vinç kiralama", "sile kiralık vinç", "vinç kiralama sile", "sile sepetli vinç", "sile mobil vinç kiralama"],
 };
 

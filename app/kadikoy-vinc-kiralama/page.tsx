@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Kadıköy Vinç Kiralama ve Kadıköy Kiralık Vinç" },
   description:
-    "Kadıköy vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Kadıköy vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Kadıköy kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["kadikoy vinç kiralama", "kadikoy kiralık vinç", "vinç kiralama kadikoy", "kadikoy sepetli vinç", "kadikoy mobil vinç kiralama"],
 };
 

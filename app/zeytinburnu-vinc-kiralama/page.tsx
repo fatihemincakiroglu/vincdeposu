@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Zeytinburnu Vinç Kiralama ve Zeytinburnu Kiralık Vinç" },
   description:
-    "Zeytinburnu vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Zeytinburnu vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Zeytinburnu kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["zeytinburnu vinç kiralama", "zeytinburnu kiralık vinç", "vinç kiralama zeytinburnu", "zeytinburnu sepetli vinç", "zeytinburnu mobil vinç kiralama"],
 };
 

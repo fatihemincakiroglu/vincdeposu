@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Gaziosmanpaşa Vinç Kiralama ve Gaziosmanpaşa Kiralık Vinç" },
   description:
-    "Gaziosmanpaşa vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Gaziosmanpaşa vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Gaziosmanpaşa kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["gaziosmanpasa vinç kiralama", "gaziosmanpasa kiralık vinç", "vinç kiralama gaziosmanpasa", "gaziosmanpasa sepetli vinç", "gaziosmanpasa mobil vinç kiralama"],
 };
 

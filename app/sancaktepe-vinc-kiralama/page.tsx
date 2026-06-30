@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Sancaktepe Vinç Kiralama ve Sancaktepe Kiralık Vinç" },
   description:
-    "Sancaktepe vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Sancaktepe vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Sancaktepe kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["sancaktepe vinç kiralama", "sancaktepe kiralık vinç", "vinç kiralama sancaktepe", "sancaktepe sepetli vinç", "sancaktepe mobil vinç kiralama"],
 };
 

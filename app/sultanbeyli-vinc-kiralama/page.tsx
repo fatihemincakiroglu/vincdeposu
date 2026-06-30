@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Sultanbeyli Vinç Kiralama ve Sultanbeyli Kiralık Vinç" },
   description:
-    "Sultanbeyli vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Sultanbeyli vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Sultanbeyli kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["sultanbeyli vinç kiralama", "sultanbeyli kiralık vinç", "vinç kiralama sultanbeyli", "sultanbeyli sepetli vinç", "sultanbeyli mobil vinç kiralama"],
 };
 

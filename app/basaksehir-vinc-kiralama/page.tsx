@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Başakşehir Vinç Kiralama ve Başakşehir Kiralık Vinç" },
   description:
-    "Başakşehir vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Başakşehir vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Başakşehir kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["basaksehir vinç kiralama", "basaksehir kiralık vinç", "vinç kiralama basaksehir", "basaksehir sepetli vinç", "basaksehir mobil vinç kiralama"],
 };
 

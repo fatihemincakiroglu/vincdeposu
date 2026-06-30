@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   },
   title: { absolute: "Eyüpsultan Vinç Kiralama ve Eyüpsultan Kiralık Vinç" },
   description:
-    "Eyüpsultan vinç kiralama hizmetinde lider firma. 39 ilçede sepetli, mobil, kule, paletli vinç ve manlift. Sertifikalı operatör, tam sigorta. 7/24: 0532 303 90 89",
+    "Eyüpsultan vinç kiralama hizmetleri ile güvenli ve profesyonel çözümler sunuyoruz. Günlük, aylık Eyüpsultan kiralık vinç seçenekleri için hemen bize ulaşın!",
   keywords: ["eyupsultan vinç kiralama", "eyupsultan kiralık vinç", "vinç kiralama eyupsultan", "eyupsultan sepetli vinç", "eyupsultan mobil vinç kiralama"],
 };
 
