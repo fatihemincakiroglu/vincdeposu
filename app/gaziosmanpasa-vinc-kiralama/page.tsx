@@ -198,8 +198,8 @@ export default function GaziosmanpaşaVincKiralamaPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
-                Gaziosmanpaşa<br />
-                <span className="text-yellow-400">Vinç</span><br />
+                Gaziosmanpaşa<br />{" "}
+                <span className="text-yellow-400">Vinç</span><br />{" "}
                 Kiralama
               </h1>
 

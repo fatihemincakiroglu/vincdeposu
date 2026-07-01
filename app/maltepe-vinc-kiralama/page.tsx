@@ -198,8 +198,8 @@ export default function MaltepeVincKiralamaPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
-                Maltepe<br />
-                <span className="text-yellow-400">Vinç</span><br />
+                Maltepe<br />{" "}
+                <span className="text-yellow-400">Vinç</span><br />{" "}
                 Kiralama
               </h1>
 

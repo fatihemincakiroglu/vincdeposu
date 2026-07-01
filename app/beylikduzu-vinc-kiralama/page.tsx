@@ -198,8 +198,8 @@ export default function BeylikdüzüVincKiralamaPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
-                Beylikdüzü<br />
-                <span className="text-yellow-400">Vinç</span><br />
+                Beylikdüzü<br />{" "}
+                <span className="text-yellow-400">Vinç</span><br />{" "}
                 Kiralama
               </h1>
 

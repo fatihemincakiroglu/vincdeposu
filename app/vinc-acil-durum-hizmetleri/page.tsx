@@ -212,7 +212,7 @@ export default function VincAcilDurumPage() {
               🚨 7/24 Acil Vinç Müdahale Hattı
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Vinç Acil Durum<br />
+              Vinç Acil Durum<br />{" "}
               <span className="text-yellow-400">Hizmetleri</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">

@@ -97,7 +97,7 @@ export default function VincBakimVeOnarimPage() {
               🔧 Bakım ve Onarım Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Vinç Bakım ve<br />
+              Vinç Bakım ve<br />{" "}
               <span className="text-yellow-400">Onarım Hizmetleri</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">

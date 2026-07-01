@@ -137,7 +137,7 @@ export default function KiralikSepetliVincPage() {
               🏗️ Sepetli Vinç Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Sepetli Vinç Kiralama<br />
+              Sepetli Vinç Kiralama<br />{" "}
               <span className="text-yellow-400">Hizmetleri</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">

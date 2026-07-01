@@ -258,8 +258,8 @@ export default function VincKiralamaPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
-                Kiralık<br />
-                <span className="text-yellow-400">Vinç</span><br />
+                Vinç<br />{" "}
+                <span className="text-yellow-400">Kiralama</span><br />{" "}
                 Hizmetleri
               </h1>
 

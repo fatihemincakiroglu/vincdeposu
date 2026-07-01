@@ -241,8 +241,8 @@ export default function MinikVincPage() {
                 ⛓️ Minik Vinç Rehberi 2026
               </div>
               <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-                Minik Vinç:<br />
-                <span className="text-yellow-400">Kompakt Güç,</span><br />
+                Minik Vinç:<br />{" "}
+                <span className="text-yellow-400">Kompakt Güç,</span><br />{" "}
                 Büyük Kolaylık
               </h1>
               <p className="text-gray-300 text-xl mb-8 leading-relaxed">

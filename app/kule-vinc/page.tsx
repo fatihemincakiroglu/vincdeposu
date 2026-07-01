@@ -214,7 +214,7 @@ export default function KuleVincKiralamaPage() {
               Kule Vinç Kiralama{" "}
               <span className="text-yellow-400">|</span>{" "}
               Kiralık Kule Vinç Hizmetleri
-              <br />
+              <br />{" "}
               <span className="text-3xl lg:text-4xl text-gray-300 font-bold">
                 Montaj, Operatör ve Teknik Destek Dahil
               </span>

@@ -100,9 +100,9 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-5xl md:text-7xl font-black leading-[1.05] mb-8">
-                Profesyonel<br />
-                <span className="text-yellow-400">Vinç &</span><br />
-                <span className="text-yellow-400">Manlift</span><br />
+                Profesyonel<br />{" "}
+                <span className="text-yellow-400">Vinç &</span><br />{" "}
+                <span className="text-yellow-400">Manlift</span><br />{" "}
                 Kiralama
               </h1>
 

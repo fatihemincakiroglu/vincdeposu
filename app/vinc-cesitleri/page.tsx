@@ -595,7 +595,7 @@ export default function VincCesitleriPage() {
             <span className="text-yellow-400 text-sm font-bold tracking-wide">Vinç Kataloğu</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-6 max-w-3xl">
-            12 Vinç Çeşidi,<br />
+            12 Vinç Çeşidi,<br />{" "}
             <span className="text-yellow-400">Tek Doğru Seçim</span>
           </h1>
           <p className="text-gray-400 text-xl leading-relaxed max-w-2xl mb-10">

@@ -326,7 +326,7 @@ export default function UrunlerPage() {
             <span className="text-yellow-400 text-sm font-bold tracking-wide">Ürün Kataloğu</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-6 max-w-3xl">
-            Platform & İş Makinesi<br />
+            Platform & İş Makinesi<br />{" "}
             <span className="text-yellow-400">Kiralama Çözümleri</span>
           </h1>
           <p className="text-gray-400 text-xl leading-relaxed max-w-2xl mb-10">

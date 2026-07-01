@@ -210,7 +210,7 @@ export default function RayliVincPage() {
               🏗️ Raylı Vinç Sistemleri Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Raylı Vinç: Özellikleri,<br />
+              Raylı Vinç: Özellikleri,<br />{" "}
               Kullanım Alanları ve <span className="text-yellow-400">Fiyatları</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">

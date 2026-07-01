@@ -353,8 +353,8 @@ export default function HizmetlerPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black leading-[1.05] mb-8">
-                Vinç&apos;te<br />
-                <span className="text-yellow-400">Her Şey</span><br />
+                Vinç&apos;te<br />{" "}
+                <span className="text-yellow-400">Her Şey</span><br />{" "}
                 Bir Adreste
               </h1>
 

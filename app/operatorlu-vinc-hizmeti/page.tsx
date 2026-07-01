@@ -88,7 +88,7 @@ export default function OperatorluVincHizmetiPage() {
               👷 Operatörlü Vinç Hizmeti 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Operatörlü Vinç<br />
+              Operatörlü Vinç<br />{" "}
               <span className="text-yellow-400">Hizmetleri</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">

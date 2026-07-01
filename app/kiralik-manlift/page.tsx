@@ -208,7 +208,7 @@ export default function KiralikManliftPage() {
                 İstanbul • 7/24 Hizmet
               </span>
               <h1 className="text-5xl md:text-6xl font-black leading-tight mb-6">
-                Kiralık<br />
+                Kiralık<br />{" "}
                 <span className="text-yellow-400">Manlift</span>
               </h1>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">

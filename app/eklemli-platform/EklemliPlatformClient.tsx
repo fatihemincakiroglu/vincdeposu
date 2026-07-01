@@ -33,7 +33,7 @@ export default function Page() {
             letterSpacing: "-1px", margin: "0 0 24px",
             textTransform: "uppercase",
           }}>
-            Eklemli Platform Kiralama<br />
+            Eklemli Platform Kiralama<br />{" "}
             <span style={{ color: "#F5A623" }}>Kiralık Eklemli Platform</span> Hizmetleri
           </h1>
           <p style={{ fontSize: 18, color: "#c8d4e0", maxWidth: 600, lineHeight: 1.7, margin: "0 0 36px" }}>

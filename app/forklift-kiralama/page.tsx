@@ -215,7 +215,7 @@ export default function ForkliftKiralamaPage() {
               Forklift Kiralama{" "}
               <span className="text-yellow-400">|</span>{" "}
               Kiralık Forklift Hizmetleri
-              <br />
+              <br />{" "}
               <span className="text-3xl lg:text-4xl text-gray-300 font-bold">
                 Günlük, Aylık, Uzun Dönem
               </span>

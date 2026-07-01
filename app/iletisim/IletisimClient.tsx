@@ -45,7 +45,7 @@ export default function IletisimPage() {
               📞 7/24 Hizmetinizdeyiz
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Bize<br />
+              Bize<br />{" "}
               <span className="text-yellow-400">Ulaşın</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">

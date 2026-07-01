@@ -89,7 +89,7 @@ export default function Page() {
           </span>
 
           <h1 className="text-4xl md:text-5xl font-black uppercase leading-tight tracking-tight mb-6">
-            Makaslı Platform Kiralama<br />
+            Makaslı Platform Kiralama<br />{" "}
             <span className="text-[#F5A623]">Kiralık Makaslı Platform</span> Hizmetleri
           </h1>
 
