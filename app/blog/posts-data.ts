@@ -96,7 +96,7 @@ export const posts: BlogPost[] = [
     slug: "insaat-sektorunde-vinc-teknolojileri-2024",
     category: "Sektör Haberleri",
     categoryColor: "#10b981",
-    title: "2024-2025 İnşaat Sektöründe Vinç Teknolojileri: Trendler ve Yenilikler",
+    title: "2024-2026 İnşaat Sektöründe Vinç Teknolojileri: Trendler ve Yenilikler",
     excerpt:
       "Elektrikli vinçler, uzaktan kontrol sistemleri ve IoT entegrasyonu — modern inşaat projelerinde verimliliği artıran teknolojik gelişmelere genel bakış.",
     author: "Emre Şahin",

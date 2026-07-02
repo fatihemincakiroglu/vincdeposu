@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kiralik-vinc",
   },
-  title: { absolute: "Kiralık Vinç Fiyatları 2025 | Günlük ve Aylık Vinç Kiralama" },
+  title: { absolute: "Kiralık Vinç Fiyatları 2026 | Günlük ve Aylık Vinç Kiralama" },
   description:
     "İstanbul'un 39 ilçesinde kiralık vinç hizmeti: mobil vinç, sepetli vinç, kule vinç ve paletli vinç. Sertifikalı operatör, 7/24 destek. Hemen arayın: 0532 303 90 89",
   keywords: ["kiralık vinç", "vinç kiralama", "kiralık vinç fiyatları", "günlük vinç kiralama", "istanbul kiralık vinç"],

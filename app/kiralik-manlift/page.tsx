@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/kiralik-manlift",
   },
-  title: "Kiralık Manlift | Manlift Kiralama Fiyatları 2025",
+  title: "Kiralık Manlift | Manlift Kiralama Fiyatları 2026",
   description:
     "İstanbul'da kiralık manlift hizmeti: makaslı, eklemli, örümcek ve sepetli platform kiralama. 7/24 operatör desteği. Hemen teklif alın: 0532 303 90 89",
   keywords: ["kiralık manlift", "manlift kiralama", "sepetli platform", "makaslı platform", "eklemli platform"],
