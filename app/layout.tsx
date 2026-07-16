@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "ShIL8OkYLkQs5Z_t3PVjpnP6jtlsh-yR3Nn8uSbdAlM",
+  },
   authors: [{ name: "Fatih Emin Çakıroğlu" }],
   creator: "Fatih Emin Çakıroğlu",
   publisher: "Fatih Emin Çakıroğlu",

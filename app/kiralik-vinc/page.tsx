@@ -376,6 +376,19 @@ export default function KiralikVincPage() {
             <h2 className="text-4xl font-black text-gray-900 mb-4">Kullanım Alanları</h2>
             <p className="text-gray-500 text-lg">Kiralık vinçler hangi projelerde kullanılır?</p>
           </div>
+          <div className="max-w-3xl mx-auto text-gray-600 leading-relaxed space-y-4 mb-12">
+            <p>
+              Kiralık vinçler özellikle inşaat sektöründe yaygın olarak kullanılmakla birlikte, farklı alanlarda da
+              tercih edilmektedir. Bununla birlikte, endüstriyel tesislerde makine montajı ve taşınması işlemlerinde
+              sıklıkla kullanılır. Ayrıca, liman operasyonları, rüzgar türbini kurulumları ve altyapı projelerinde de
+              kiralık vinçlerden yararlanılır.
+            </p>
+            <p>
+              Sepetli vinç kiralama hizmetleri, özellikle bina dış cephe çalışmaları ve yüksek noktalarda bakım-onarım
+              işlemleri için tercih edilir. Bunun yanı sıra, mobil vinç kiralama seçeneği, şehir içi projelerde
+              esneklik sağlar ve kısa süreli işler için ideal bir çözüm sunar.
+            </p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
@@ -426,6 +439,38 @@ export default function KiralikVincPage() {
           <p className="text-gray-500 text-sm text-center mt-4">
             * Fiyatlar KDV hariç olup lokasyon ve proje detaylarına göre değişebilir.
           </p>
+          <div className="mt-10 text-gray-300 leading-relaxed space-y-4">
+            <p>
+              2026 yılında vinç kiralama fiyatları, hizmet süresi ve vinç türüne göre önemli farklılıklar
+              göstermektedir. Saatlik vinç kiralama ücretleri 700 TL ile 2000 TL arasında değişmektedir. Fiyatları
+              etkileyen temel faktörler arasında vinç tipi, hizmet süresi ve ekstra hizmetler bulunmaktadır.
+            </p>
+            <p>
+              Günlük vinç kiralama fiyatları, vinç türüne ve kapasitesine bağlı olarak geniş bir aralıkta seyreder.
+              Sepetli vinçler için günlük fiyatlar 5.000 TL ile 50.000 TL arasında değişmektedir. Bununla birlikte,
+              mobil vinçlerin günlük kiralama bedelleri 15.000 TL ile 30.000 TL arasındadır. Ayrıca, operatör hizmeti
+              için ek olarak 500 TL ile 5.000 TL arasında bir ücret talep edilmektedir.
+            </p>
+            <p>
+              Uzun vadeli projelerde aylık kiralama seçeneği daha ekonomik bir çözüm sunmaktadır. Mobil vinçler için
+              aylık kiralama bedelleri 250.000 TL ile 500.000 TL arasında değişmektedir. Özellikle sepetli vinçlerde
+              aylık kiralama, günlük kiralamalara kıyasla önemli maliyet avantajları sağlar.
+            </p>
+            <p>
+              Bölgesel olarak İstanbul&apos;da sepetli vinç kiralaması için saatlik ücretler 1.500 TL ile 2.500 TL
+              arasında değişirken, günlük fiyatlar 8.000 TL ile 12.000 TL aralığındadır. Örneğin Halkalı, Kayaşehir ve
+              İkitelli bölgelerinde 35 tonluk çift kırma vinç için günlük 750 TL, 80 tonluk çift kırma vinç için 1200
+              TL ücret alınmaktadır. Diğer yandan Esenyurt, Avcılar ve Beylikdüzü bölgelerinde mobil vinç kiralama
+              bedeli günlük 2500 TL civarındadır. Buna ek olarak şehir merkezine yakın ve erişimi kolay çalışma
+              alanlarında fiyatlar daha uygun olabilmektedir.
+            </p>
+            <p>
+              Vinç kiralama sürecinde fiyat odaklı olmak yerine, firmanın kurumsallığı ve hizmet kalitesi öncelikli
+              olarak değerlendirilmelidir. Bununla birlikte teknik destek, bakım hizmetleri ve müşteri desteği gibi
+              faktörler de göz önünde bulundurulmalıdır. Özellikle uzun süreli projelerde, kiralama süresinin uzaması
+              birim maliyeti düşürmektedir.
+            </p>
+          </div>
           <div className="text-center mt-8">
             <a
               href="tel:05323039089"
@@ -456,6 +501,23 @@ export default function KiralikVincPage() {
               </div>
             ))}
           </div>
+          <div className="mt-12 max-w-3xl mx-auto text-gray-600 leading-relaxed space-y-4">
+            <p>
+              Profesyonel bir vinç kiralama sürecini başarıyla yönetmek için sistematik bir yaklaşım gerekir.
+              Öncelikle taşınacak yükün ağırlığı ve şekli net olarak belirlenmelidir. Bunun yanında çalışma alanının
+              genişliği ve erişim noktaları dikkatle değerlendirilmelidir.
+            </p>
+            <p>
+              Vinç kiralamadan önce, çevre güvenlik tedbirlerinin ve emniyet sahalarının oluşturulması önemlidir.
+              Ayrıca kiralama sözleşmesinde sigorta kapsamı, güvenlik standartları ve teslimat şartları gibi kritik
+              noktaların açıkça belirtilmesi gerekir.
+            </p>
+            <p>
+              Kiralama sürecinde sözleşme şartları dikkatle incelenmelidir. Sözleşmede kiralanan vincin özellikleri,
+              bakım periyotları, kiralama süresi ve ödeme koşulları açıkça belirtilmelidir. Profesyonel firmalar,
+              müşterilerine detaylı sözleşme sunarak hem kendilerini hem de müşterilerini güvence altına alır.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -480,6 +542,92 @@ export default function KiralikVincPage() {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="mt-12 text-gray-800 leading-relaxed space-y-4">
+            <p>
+              Vinç operatörünün tecrübesi, hem iş güvenliği hem de verimlilik açısından büyük önem taşır. Bununla
+              birlikte operatörler, vinç kullanımı öncesinde tüm güvenlik ekipmanlarını kontrol etmeli ve çalışma
+              süresince iş güvenliği protokollerine sıkı bir şekilde uymalıdır.
+            </p>
+            <p>
+              Kiralama sürecinde yetki belgesi olan firmalar tercih edilmelidir çünkü kaçak ve amatör çalışan
+              firmaların sayısı, yetkilendirilmiş firmaların sayısından fazladır. Sonuç olarak doğru firma seçimi ve
+              güvenlik önlemlerine uyum, projenin başarısı için temel faktörlerdir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vinç Kiralamanın Avantajları */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Neden Kiralama?</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Vinç Kiralamanın Avantajları</h2>
+          </div>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>
+              Sektörde 25 yıllık deneyime sahip firmalar, vinç kiralama hizmetlerinde önemli avantajlar sunmaktadır.
+              Maliyet tasarrufu, vinç kiralamanın en önemli faydalarından biridir çünkü satın alma, bakım ve sigorta
+              gibi ek masraflardan kurtulmanızı sağlar.
+            </p>
+            <p>
+              Vinç kiralama hizmetleri, projelere özel çözümler sunar. Özellikle eğitimli ve sertifikalı operatörler,
+              ekipmanların güvenli kullanımını sağlar. Bununla birlikte kiralama firmaları, en son teknolojiye sahip
+              vinçlerle donatılmıştır ve bu da projelerde üst düzey performans elde etmenizi sağlar.
+            </p>
+            <p>
+              Ayrıca vinç kiralama, yükleme ve boşaltma işlemlerinin hızlı bir şekilde tamamlanmasını sağlar. Kaliteli
+              hizmet sunan firmalar, vinçlerin düzenli bakımını yapar ve güvenlik sertifikalarının güncel olmasını
+              sağlar.
+            </p>
+            <p>
+              Vinç kiralama hizmetleri, inşaat sektöründen endüstriyel tesislere kadar geniş bir yelpazede
+              kullanılmaktadır. Bunun yanı sıra enerji, madencilik ve lojistik sektörlerinde de tercih edilmektedir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Günlük Vinç Kiralama */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Kısa Süreli Çözüm</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Günlük Vinç Kiralama</h2>
+          </div>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>
+              Kısa süreli projeler için günlük vinç kiralama hizmeti, işletmelere esneklik ve maliyet avantajı sağlar.
+              Özellikle şehir içi projelerde, yük kaldırma ve taşıma işlemlerinde tercih edilen bu hizmet, operatör
+              desteğiyle birlikte sunulmaktadır.
+            </p>
+            <p>
+              Günlük vinç kiralama hizmetinde, vinç türüne göre fiyatlandırma yapılır. Örneğin, 18 metrelik sepetli
+              vinç için günlük çalışma ücreti 1.750 TL iken, 53 metrelik sepetli vinç için bu ücret 12.000 TL&apos;ye
+              kadar çıkabilmektedir. Buna ek olarak vinç operatörü ücreti, yakıt maliyeti ve bakım masrafları gibi
+              ekstra ücretler de sözleşmede belirtilmelidir.
+            </p>
+            <p>
+              Ayrıca günlük vinç kiralama, işletmeleri yüksek maliyetli ekipman satın alma zorunluluğundan kurtarır.
+              Bunun yanı sıra kiralama firmaları, ekipmanların düzenli bakımını ve onarımını üstlenir, bu da kiralayan
+              firmanın ek masraflardan tasarruf etmesini sağlar.
+            </p>
+            <p>
+              Günlük vinç kiralama fiyatları, projenin karmaşıklığı, yükün ağırlığı ve taşınacak mesafe gibi
+              faktörlere bağlı olarak değişiklik gösterir. Dahası projenin yapılacağı konum da fiyatları etkileyen
+              önemli bir unsurdur.
+            </p>
+            <p>
+              Kiralama süreci genellikle hızlı ve pratiktir, bu da projelerin zamanında başlamasına ve tamamlanmasına
+              yardımcı olur. Üstelik kiralık vinçler modern ve bakımlı olduğundan, işlerin daha güvenli ve verimli
+              yapılmasını sağlar.
+            </p>
+            <p>
+              Sonuç olarak günlük vinç kiralama, inşaat ve lojistik sektöründe maliyetleri düşürmek, verimliliği
+              artırmak ve güvenliği sağlamak için ideal bir çözümdür. Doğru vinç kiralama firması seçimi ve sürecin
+              iyi yönetilmesi, projelerin başarılı bir şekilde tamamlanmasını sağlar.
+            </p>
           </div>
         </div>
       </section>
