@@ -15,8 +15,8 @@ export interface BlogPost {
 }
 
 export const categories = [
-  { label: "Tümü", slug: "tumu", count: 15 },
-  { label: "Vinç Kiralama", slug: "vinc-kiralama", count: 6 },
+  { label: "Tümü", slug: "tumu", count: 16 },
+  { label: "Vinç Kiralama", slug: "vinc-kiralama", count: 7 },
   { label: "İş Güvenliği", slug: "is-guvenligi", count: 3 },
   { label: "Ekipman Rehberi", slug: "ekipman-rehberi", count: 3 },
   { label: "Sektör Haberleri", slug: "sektor-haberleri", count: 2 },
@@ -40,6 +40,19 @@ export const featuredPost: BlogPost = {
 };
 
 export const posts: BlogPost[] = [
+  {
+    slug: "kiralik-vinc-fiyatlari",
+    category: "Vinç Kiralama",
+    categoryColor: "#3b82f6",
+    title: "Kiralık Vinç Fiyatları 2026: Kapsamlı Rehber ve Fiyat Tablosu",
+    excerpt:
+      "2026 güncel kiralık vinç fiyatları: mobil, paletli, kule ve örümcek vinç fiyat tabloları, şehir ve sektör karşılaştırmaları, ekstra maliyetler, sık yapılan hatalar ve uygun fiyat için ipuçları.",
+    author: "Vinç Deposu Uzman Ekibi",
+    date: "16 Temmuz 2026",
+    readTime: "15 dk",
+    image: "🏷️",
+    tags: ["Kiralık Vinç Fiyatları", "Fiyat Rehberi", "2026"],
+  },
   {
     slug: "vinc-kiralama-fiyatlari",
     category: "Vinç Kiralama",
