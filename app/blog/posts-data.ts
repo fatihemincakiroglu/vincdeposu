@@ -15,8 +15,8 @@ export interface BlogPost {
 }
 
 export const categories = [
-  { label: "Tümü", slug: "tumu", count: 13 },
-  { label: "Vinç Kiralama", slug: "vinc-kiralama", count: 4 },
+  { label: "Tümü", slug: "tumu", count: 14 },
+  { label: "Vinç Kiralama", slug: "vinc-kiralama", count: 5 },
   { label: "İş Güvenliği", slug: "is-guvenligi", count: 3 },
   { label: "Ekipman Rehberi", slug: "ekipman-rehberi", count: 3 },
   { label: "Sektör Haberleri", slug: "sektor-haberleri", count: 2 },
@@ -40,6 +40,19 @@ export const featuredPost: BlogPost = {
 };
 
 export const posts: BlogPost[] = [
+  {
+    slug: "gunluk-vinc-kiralama-fiyatlari",
+    category: "Vinç Kiralama",
+    categoryColor: "#3b82f6",
+    title: "Günlük Vinç Kiralama Fiyatları 2026: Detaylı Rehber ve Fiyat Tablosu",
+    excerpt:
+      "2026 güncel günlük vinç kiralama fiyatları: mobil, paletli, kule ve örümcek vinç için şehir şehir fiyat tabloları, fiyatı etkileyen faktörler, ekstra maliyetler ve tasarruf ipuçları.",
+    author: "Vinç Deposu Uzman Ekibi",
+    date: "16 Temmuz 2026",
+    readTime: "14 dk",
+    image: "💰",
+    tags: ["Günlük Vinç Kiralama", "Fiyat Rehberi", "2026"],
+  },
   {
     slug: "is-guvenligi-vinc-operasyonlarinda-temel-kurallar",
     category: "İş Güvenliği",
