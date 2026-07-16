@@ -15,8 +15,8 @@ export interface BlogPost {
 }
 
 export const categories = [
-  { label: "Tümü", slug: "tumu", count: 14 },
-  { label: "Vinç Kiralama", slug: "vinc-kiralama", count: 5 },
+  { label: "Tümü", slug: "tumu", count: 15 },
+  { label: "Vinç Kiralama", slug: "vinc-kiralama", count: 6 },
   { label: "İş Güvenliği", slug: "is-guvenligi", count: 3 },
   { label: "Ekipman Rehberi", slug: "ekipman-rehberi", count: 3 },
   { label: "Sektör Haberleri", slug: "sektor-haberleri", count: 2 },
@@ -40,6 +40,19 @@ export const featuredPost: BlogPost = {
 };
 
 export const posts: BlogPost[] = [
+  {
+    slug: "vinc-kiralama-fiyatlari",
+    category: "Vinç Kiralama",
+    categoryColor: "#3b82f6",
+    title: "Vinç Kiralama Fiyatları 2026: Saatlik, Günlük ve Aylık Güncel Fiyat Listesi",
+    excerpt:
+      "2026 güncel vinç kiralama fiyatları: saatlik, günlük, haftalık ve aylık tarifeler, vinç tiplerine ve şehirlere göre karşılaştırmalı tablolar, fiyatı etkileyen faktörler ve tasarruf önerileri.",
+    author: "Vinç Deposu Uzman Ekibi",
+    date: "16 Temmuz 2026",
+    readTime: "15 dk",
+    image: "🏗️",
+    tags: ["Vinç Kiralama Fiyatları", "Fiyat Listesi", "2026"],
+  },
   {
     slug: "gunluk-vinc-kiralama-fiyatlari",
     category: "Vinç Kiralama",
