@@ -354,7 +354,7 @@ export default function KiralikManliftPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Güncel Fiyatlar</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Kiralık Manlift Fiyatları 2025</h2>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Kiralık Manlift Fiyatları 2026</h2>
             <p className="text-gray-500 text-lg">
               Fiyatlar platform türü, yükseklik ve kiralama süresine göre değişmektedir.
             </p>

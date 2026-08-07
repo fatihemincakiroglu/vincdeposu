@@ -802,7 +802,7 @@ export default function PaletliVincPage() {
             <p className="text-gray-300 leading-relaxed mb-5">
               Paletli vinçler karayolunda bağımsız hareket edemediğinden şantiyeler arası nakliye özel lowboy TIR
               araçları gerektirmektedir. 100 ton altı modeller genellikle 2–3 araçla, 300 ton üzeri modeller
-              ise 10'dan fazla araçla taşınır; nakliye rota planlaması ve olası yol izni maliyetleri de hesaba
+              ise 10&apos;dan fazla araçla taşınır; nakliye rota planlaması ve olası yol izni maliyetleri de hesaba
               katılmalıdır.
             </p>
             <div className="grid md:grid-cols-3 gap-4">

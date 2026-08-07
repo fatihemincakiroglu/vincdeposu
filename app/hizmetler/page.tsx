@@ -442,7 +442,7 @@ export default function HizmetlerPage() {
           </div>
 
           <div className="space-y-10">
-            {hizmetler.map((h, idx) => (
+            {hizmetler.map((h) => (
               <div
                 key={h.id}
                 id={h.id}
