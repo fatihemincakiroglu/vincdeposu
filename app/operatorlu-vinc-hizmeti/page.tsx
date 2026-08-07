@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -85,7 +86,7 @@ export default function OperatorluVincHizmetiPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              👷 Operatörlü Vinç Hizmeti 2026
+              Operatörlü Vinç Hizmeti 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Operatörlü Vinç<br />{" "}
@@ -100,14 +101,13 @@ export default function OperatorluVincHizmetiPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#kiralama-secenekleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Hizmetleri İncele ↓
-              </a>
+                Hizmetleri İncele               </a>
             </div>
           </div>
         </div>
@@ -172,15 +172,15 @@ export default function OperatorluVincHizmetiPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🎯 Doğru Ekipman Seçimi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Doğru Ekipman Seçimi</h3>
               <p className="text-gray-500 text-sm">Projenize en uygun vinç tipi ve kapasitesi tarafımızca belirlenir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">👷 Deneyimli Operatör</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Deneyimli Operatör</h3>
               <p className="text-gray-500 text-sm">Sertifikalı operatörler güvenli ve verimli bir çalışma süreci sağlar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📊 Şeffaf Maliyet</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Şeffaf Maliyet</h3>
               <p className="text-gray-500 text-sm">Saatlik, günlük veya proje bazlı net fiyatlandırma ile sürpriz maliyet yaşanmaz.</p>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function OperatorluVincHizmetiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {kiralamaSecenekleri.map((k) => (
               <div key={k.title} className="bg-gray-50 p-8 rounded-2xl">
-                <div className="text-3xl mb-3">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-8 h-8 mb-3" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{k.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{k.desc}</p>
               </div>
@@ -226,7 +226,7 @@ export default function OperatorluVincHizmetiPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Fiyat Teklifi Alın
+              Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function OperatorluVincHizmetiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {insaatProjeleri.map((i) => (
               <div key={i.title} className="bg-white p-8 rounded-2xl border border-gray-100">
-                <div className="text-3xl mb-3">{i.icon}</div>
+                <VincIcon name={i.icon} className="w-8 h-8 mb-3" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{i.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{i.desc}</p>
               </div>
@@ -267,7 +267,7 @@ export default function OperatorluVincHizmetiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sanayiTesisleri.map((s) => (
               <div key={s.title} className="bg-gray-50 p-8 rounded-2xl">
-                <div className="text-3xl mb-3">{s.icon}</div>
+                <VincIcon name={s.icon} className="w-8 h-8 mb-3" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
               </div>
@@ -286,7 +286,7 @@ export default function OperatorluVincHizmetiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sertifikaliOperatorler.map((s) => (
               <div key={s.title} className="bg-white/70 p-8 rounded-2xl">
-                <div className="text-3xl mb-3">{s.icon}</div>
+                <VincIcon name={s.icon} className="w-8 h-8 mb-3" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{s.title}</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">{s.desc}</p>
               </div>
@@ -323,7 +323,7 @@ export default function OperatorluVincHizmetiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {lojistikSektoru.map((l) => (
               <div key={l.title} className="bg-gray-50 p-8 rounded-2xl">
-                <div className="text-3xl mb-3">{l.icon}</div>
+                <VincIcon name={l.icon} className="w-8 h-8 mb-3" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{l.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{l.desc}</p>
               </div>
@@ -345,7 +345,7 @@ export default function OperatorluVincHizmetiPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {acilHizmet.map((a) => (
               <div key={a.title} className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-yellow-400/50 transition">
-                <div className="text-3xl mb-3">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 mb-3" />
                 <h3 className="text-xl font-bold text-white mb-3">{a.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{a.desc}</p>
               </div>
@@ -401,15 +401,14 @@ export default function OperatorluVincHizmetiPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -426,7 +425,7 @@ export default function OperatorluVincHizmetiPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -210,7 +211,7 @@ export default function VincYedekParcaPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🔧 Vinç Yedek Parça ve Aksesuar Rehberi 2026
+              Vinç Yedek Parça ve Aksesuar Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Vinç Yedek Parça ve<br />{" "}
@@ -225,14 +226,13 @@ export default function VincYedekParcaPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Sipariş Ver
+                Hemen Sipariş Ver
               </a>
               <a
                 href="#parca-kategorileri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Parça Kategorilerini İncele ↓
-              </a>
+                Parça Kategorilerini İncele               </a>
             </div>
           </div>
         </div>
@@ -300,7 +300,7 @@ export default function VincYedekParcaPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -320,15 +320,15 @@ export default function VincYedekParcaPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📋 Marka Uyumluluğu</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Marka Uyumluluğu</h3>
               <p className="text-gray-500 text-sm">Parçanın vinç marka ve modeline göre seçilmesi doğru çalışma için zorunludur.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏋️ Kapasite ve Yük Değeri</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Kapasite ve Yük Değeri</h3>
               <p className="text-gray-500 text-sm">Halat, kanca ve makara seçiminde mutlaka vinç çekiş kapasitesiyle eşleşen ürün kullanın.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏅 Sertifika ve Belge</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Sertifika ve Belge</h3>
               <p className="text-gray-500 text-sm">CE, SGS veya üretici onaylı ürünler seçin; belgesiz parçalar güvenlik riski oluşturabilir.</p>
             </div>
           </div>
@@ -352,7 +352,7 @@ export default function VincYedekParcaPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -360,7 +360,7 @@ export default function VincYedekParcaPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -373,8 +373,7 @@ export default function VincYedekParcaPage() {
                       href={v.href}
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </Link>
                   </div>
                 </div>
               </div>
@@ -384,7 +383,7 @@ export default function VincYedekParcaPage() {
           {/* Halat ve Kumanda Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🔗 Vinç Kumanda Sistemleri ve Uzaktan Kumandalar</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Vinç Kumanda Sistemleri ve Uzaktan Kumandalar</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Arıza yapan ya da hasar gören vinç kumandalarını değiştirmek için orijinal ve evrensel
                 uyumlu kumanda setleri stokta mevcuttur. Kablolu ve kablosuz seçenekler, tüm popüler
@@ -392,7 +391,7 @@ export default function VincYedekParcaPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⚙️ Vinç Tambur ve Dişli Yedek Parçaları</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Vinç Tambur ve Dişli Yedek Parçaları</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Tambur, dişli kutusu ve mil yedek parçaları vinç performansının sürdürülmesi açısından
                 kritik öneme sahiptir. Marka uyumlu orijinal parçalar ve muadil seçenekler için
@@ -414,7 +413,7 @@ export default function VincYedekParcaPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -426,7 +425,7 @@ export default function VincYedekParcaPage() {
           {/* Off-Road / Sanayi Alt Bölüm */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🛻 Sentetik ve Çelik Halat Seçenekleri</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Sentetik ve Çelik Halat Seçenekleri</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Off-road tutkunları ve profesyonel kurtarma ekipleri için hem sentetik hem de çelik
                 halat alternatifleri mevcuttur. Araç tipine, kullanım sıklığına ve bütçeye göre doğru
@@ -434,7 +433,7 @@ export default function VincYedekParcaPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏭 Vinç Güvenlik Ekipmanları</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Vinç Güvenlik Ekipmanları</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Ağır sanayi ve inşaat sektörü için sertifikalı vinç güvenlik ekipmanları; kilit
                 mekanizmalı kancalar, yük göstergeli halatlar ve acil durdurma sistemleri toplu
@@ -460,7 +459,7 @@ export default function VincYedekParcaPage() {
               { icon: "🔄", title: "Kolay İade", desc: "Yanlış parça siparişi veya uyumsuzluk durumunda sorunsuz iade ve değişim imkânı." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -503,7 +502,7 @@ export default function VincYedekParcaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {h3Bolumler.map((b) => (
               <div key={b.id} id={b.id} className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2 text-lg">{b.icon} {b.baslik}</h3>
+                <h3 className="font-bold text-gray-900 mb-2 text-lg">{b.baslik}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{b.icerik}</p>
               </div>
             ))}
@@ -527,7 +526,6 @@ export default function VincYedekParcaPage() {
             <div className="space-y-3">
               {garantiBilgileri.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -546,15 +544,14 @@ export default function VincYedekParcaPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -571,7 +568,7 @@ export default function VincYedekParcaPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

@@ -27,11 +27,11 @@ export const featuredPost: BlogPost = {
   ...{
   slug: "istanbul-vinc-kiralama-rehberi-2024",
   category: "Vinç Kiralama",
-  title: "İstanbul'da Vinç Kiralama: Fiyatlar, Türler ve Seçim Kriterleri (2024 Rehberi)",
+  title: "İstanbul'da Vinç Kiralama: Fiyatlar, Türler ve Seçim Kriterleri (2026 Rehberi)",
   excerpt:
     "İstanbul'da inşaat, taşıma veya sanayi projeleriniz için doğru vinci nasıl seçersiniz? Sepetli vinçten kule vince, fiyat aralıklarından operatör gereksinimlerine kadar bilmeniz gereken her şey bu kapsamlı rehberde.",
   author: "Vinç Deposu Uzman Ekibi",
-  date: "12 Haziran 2025",
+  date: "12 Haziran 2026",
   readTime: "9 dk",
   image: "🏗️",
   tags: ["Vinç Kiralama", "İstanbul", "Fiyat Rehberi"],
@@ -87,7 +87,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Yüksekte çalışma, ağır yük taşıma ve vinç operasyonlarında iş kazalarının önüne geçmek için uyulması zorunlu temel güvenlik kuralları.",
     author: "Ahmet Karabulut",
-    date: "5 Haziran 2025",
+    date: "5 Haziran 2026",
     readTime: "7 dk",
     image: "⚠️",
     tags: ["İş Güvenliği", "Operatör", "Yönetmelik"],
@@ -100,7 +100,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Her projenin farklı ihtiyacı var. Yükseklik, alan, zemin ve yük kapasitesine göre hangi ekipmanın daha verimli olduğunu karşılaştırmalı tabloyla inceleyin.",
     author: "Mehmet Demir",
-    date: "28 Mayıs 2025",
+    date: "28 Mayıs 2026",
     readTime: "6 dk",
     image: "🔧",
     tags: ["Ekipman Seçimi", "Sepetli Vinç", "Platform"],
@@ -113,7 +113,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Kapasite, operatör dahil fiyatlandırma, sigorta şartları ve sözleşme detayları — kiralama öncesi mutlaka netleştirmeniz gereken konular.",
     author: "Fatma Yıldız",
-    date: "20 Mayıs 2025",
+    date: "20 Mayıs 2026",
     readTime: "5 dk",
     image: "🚛",
     tags: ["Mobil Vinç", "Kiralama", "Sözleşme"],
@@ -126,7 +126,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "İnşaat projelerinin vazgeçilmezi kule vinçlerin kurulum aşamaları, sertifikasyon zorunlulukları ve dönemsel bakım programları hakkında detaylı bilgi.",
     author: "Vinç Deposu Uzman Ekibi",
-    date: "14 Mayıs 2025",
+    date: "14 Mayıs 2026",
     readTime: "8 dk",
     image: "🏢",
     tags: ["Kule Vinç", "Kurulum", "Bakım"],
@@ -135,11 +135,11 @@ export const posts: BlogPost[] = [
     slug: "insaat-sektorunde-vinc-teknolojileri-2024",
     category: "Sektör Haberleri",
     categoryColor: "#10b981",
-    title: "2024-2026 İnşaat Sektöründe Vinç Teknolojileri: Trendler ve Yenilikler",
+    title: "2026 İnşaat Sektöründe Vinç Teknolojileri: Trendler ve Yenilikler",
     excerpt:
       "Elektrikli vinçler, uzaktan kontrol sistemleri ve IoT entegrasyonu — modern inşaat projelerinde verimliliği artıran teknolojik gelişmelere genel bakış.",
     author: "Emre Şahin",
-    date: "7 Mayıs 2025",
+    date: "7 Mayıs 2026",
     readTime: "6 dk",
     image: "⚡",
     tags: ["Teknoloji", "Elektrikli Vinç", "İnovasyon"],
@@ -152,7 +152,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Depo, şantiye ve tarım alanlarında forklift ile teleskopik yükleyicinin güçlü ve zayıf yanlarını yan yana karşılaştırdık. Projenize göre karar verin.",
     author: "Kemal Arslan",
-    date: "30 Nisan 2025",
+    date: "30 Nisan 2026",
     readTime: "5 dk",
     image: "🚜",
     tags: ["Forklift", "Telehandler", "Karşılaştırma"],
@@ -165,7 +165,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Şehir merkezleri, tarihi yapılar ve zorlu arazi koşulları için tasarlanan ahtapot vinçlerin teknik özellikleri ve kullanım senaryoları.",
     author: "Serkan Polat",
-    date: "22 Nisan 2025",
+    date: "22 Nisan 2026",
     readTime: "4 dk",
     image: "🐙",
     tags: ["Ahtapot Vinç", "Dar Alan", "Kentsel"],
@@ -178,7 +178,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Türkiye'de vinç operatörü olmak için gereken eğitimler, MEB onaylı sertifika programları ve sınav süreçleri hakkında adım adım rehber.",
     author: "Zeynep Kaya",
-    date: "15 Nisan 2025",
+    date: "15 Nisan 2026",
     readTime: "7 dk",
     image: "📋",
     tags: ["Sertifikasyon", "Operatör Belgesi", "Eğitim"],
@@ -191,7 +191,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Kanal İstanbul, 3. havalimanı genişlemesi ve kentsel dönüşüm projeleri — bu devasa altyapı hamleleri vinç talebini nasıl şekillendiriyor?",
     author: "Vinç Deposu Uzman Ekibi",
-    date: "8 Nisan 2025",
+    date: "8 Nisan 2026",
     readTime: "6 dk",
     image: "🌉",
     tags: ["İstanbul", "Mega Proje", "Talep"],
@@ -204,7 +204,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "500 ton kapasiteye kadar ulaşabilen paletli vinçlerde yük hesaplama, zemin taşıma kapasitesi ve emniyet faktörü nasıl belirlenir?",
     author: "Mustafa Çelik",
-    date: "1 Nisan 2025",
+    date: "1 Nisan 2026",
     readTime: "8 dk",
     image: "⚓",
     tags: ["Paletli Vinç", "Ağır Yük", "Kapasite"],
@@ -217,7 +217,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Neden aynı vinç farklı fiyatlara kiralanır? Kapasite, süre, operatör, mesafe, sigorta ve sezon gibi değişkenlerin fiyata yansıması.",
     author: "Fatma Yıldız",
-    date: "24 Mart 2025",
+    date: "24 Mart 2026",
     readTime: "5 dk",
     image: "💰",
     tags: ["Fiyatlandırma", "Vinç Kiralama", "Maliyet"],
@@ -230,7 +230,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Emniyet kemeri, baret, güvenlik ayakkabısı ve düşme engelleyici sistemler — yüksek riskli çalışma ortamlarında zorunlu ekipmanlar.",
     author: "Ahmet Karabulut",
-    date: "17 Mart 2025",
+    date: "17 Mart 2026",
     readTime: "6 dk",
     image: "🦺",
     tags: ["KKD", "Yüksekte Çalışma", "Güvenlik"],
@@ -243,7 +243,7 @@ export const posts: BlogPost[] = [
     excerpt:
       "Dağlık araziler, tarihi yapılar ve normal ekipmanların erişemediği noktalarda helikopter vinçlerin kullanım alanları ve operasyonel gereksinimleri.",
     author: "Serkan Polat",
-    date: "10 Mart 2025",
+    date: "10 Mart 2026",
     readTime: "5 dk",
     image: "🚁",
     tags: ["Helikopter Vinç", "Özel Operasyon", "Ulaşılmaz Alan"],

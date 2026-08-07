@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { categories, featuredPost, posts } from "./posts-data";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -114,10 +115,10 @@ export default function BlogPage() {
           {/* Öne Çıkan Yazı */}
           <section className="featured-section">
             <div className="section-label">
-              <span className="label-icon">★</span> Öne Çıkan Yazı
+              Öne Çıkan Yazı
             </div>
             <article className="featured-card">
-              <div className="featured-emoji" aria-hidden="true">{featuredPost.image}</div>
+              <VincIcon name={featuredPost.image} className="w-16 h-16 text-yellow-400" />
               <div className="featured-body">
                 <div className="featured-meta">
                   <span className="post-category post-category--blue">{featuredPost.category}</span>
@@ -137,8 +138,7 @@ export default function BlogPage() {
                     ))}
                   </div>
                   <Link href={`/blog/${featuredPost.slug}`} className="read-more-btn">
-                    Devamını Oku →
-                  </Link>
+                    Devamını Oku                   </Link>
                 </div>
               </div>
             </article>
@@ -147,7 +147,7 @@ export default function BlogPage() {
           {/* Karşılaştırma Tablosu */}
           <section className="compare-section">
             <div className="section-label">
-              <span className="label-icon">⚖️</span> Hızlı Karşılaştırma
+              Hızlı Karşılaştırma
             </div>
             <div className="compare-card">
               <h3 className="compare-title">Hangi Vinç Türü Sizin İçin Uygun?</h3>
@@ -164,35 +164,35 @@ export default function BlogPage() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><span className="tc-emoji">🏗️</span> Sepetli Vinç</td>
+                      <td>Sepetli Vinç</td>
                       <td>500 kg</td>
                       <td>12–80 m</td>
                       <td>Cephe, elektrik, bakım</td>
                       <td className="price-cell">500–1.500</td>
                     </tr>
                     <tr>
-                      <td><span className="tc-emoji">🚛</span> Mobil Vinç</td>
+                      <td>Mobil Vinç</td>
                       <td>50–500 t</td>
                       <td>30–100 m</td>
                       <td>Endüstriyel montaj</td>
                       <td className="price-cell">3.000–10.000</td>
                     </tr>
                     <tr>
-                      <td><span className="tc-emoji">🏢</span> Kule Vinç</td>
+                      <td>Kule Vinç</td>
                       <td>6–25 t</td>
                       <td>40–200 m</td>
                       <td>Uzun dönem inşaat</td>
                       <td className="price-cell">2.500–8.000</td>
                     </tr>
                     <tr>
-                      <td><span className="tc-emoji">🐙</span> Ahtapot Vinç</td>
+                      <td>Ahtapot Vinç</td>
                       <td>1–5 t</td>
                       <td>20–40 m</td>
                       <td>Dar alan, şehir merkezi</td>
                       <td className="price-cell">800–2.000</td>
                     </tr>
                     <tr>
-                      <td><span className="tc-emoji">⚓</span> Paletli Vinç</td>
+                      <td>Paletli Vinç</td>
                       <td>100 t–1.500 t</td>
                       <td>60–150 m</td>
                       <td>Petrokimya, enerji</td>
@@ -208,12 +208,12 @@ export default function BlogPage() {
           {/* Blog Listesi */}
           <section>
             <div className="section-label">
-              <span className="label-icon">📰</span> Son Yazılar
+              Son Yazılar
             </div>
             <div className="post-grid">
               {posts.map((post) => (
                 <article key={post.slug} className="post-card">
-                  <div className="post-emoji" aria-hidden="true">{post.image}</div>
+                  <VincIcon name={post.image} className="w-10 h-10 text-yellow-500" />
                   <div className="post-body">
                     <div className="post-meta">
                       <span
@@ -230,7 +230,7 @@ export default function BlogPage() {
                     </h3>
                     <p className="post-excerpt">{post.excerpt}</p>
                     <div className="post-footer">
-                      <span className="post-author">✍ {post.author}</span>
+                      <span className="post-author">{post.author}</span>
                       <span className="post-date-sm">{post.date}</span>
                     </div>
                     <div className="post-tags">
@@ -259,11 +259,11 @@ export default function BlogPage() {
 
           {/* Teklif Widget */}
           <div className="sidebar-card sidebar-cta">
-            <div className="cta-icon">🏗️</div>
+            <div className="cta-icon"></div>
             <h3 className="cta-title">Ücretsiz Fiyat Teklifi</h3>
             <p className="cta-desc">Projeniz için en uygun vinci belirleyelim. 30 dakika içinde geri dönüyoruz.</p>
             <Link href="/iletisim" className="cta-btn">Hemen Teklif Al</Link>
-            <a href="tel:05323039089" className="cta-phone">📞 0532 303 90 89</a>
+            <a href="tel:05323039089" className="cta-phone">0532 303 90 89</a>
           </div>
 
           {/* Popüler Yazılar */}
@@ -294,21 +294,18 @@ export default function BlogPage() {
             <h3 className="sidebar-title">7/24 Destek Hattı</h3>
             <div className="contact-items">
               <div className="contact-item">
-                <span className="ci-icon">📞</span>
                 <div>
                   <div className="ci-label">Telefon</div>
                   <a href="tel:05323039089" className="ci-val">0532 303 90 89</a>
                 </div>
               </div>
               <div className="contact-item">
-                <span className="ci-icon">📧</span>
                 <div>
                   <div className="ci-label">E-posta</div>
                   <a href="mailto:info@vincdeposu.com.tr" className="ci-val">info@vincdeposu.com.tr</a>
                 </div>
               </div>
               <div className="contact-item">
-                <span className="ci-icon">📍</span>
                 <div>
                   <div className="ci-label">Bölge</div>
                   <span className="ci-val">İstanbul & Tüm Türkiye</span>
@@ -324,7 +321,7 @@ export default function BlogPage() {
         <div className="container">
           <div className="faq-header">
             <div className="section-label">
-              <span className="label-icon">❓</span> Sık Sorulan Sorular
+              Sık Sorulan Sorular
             </div>
             <h2 className="faq-title">Vinç Kiralama Hakkında En Çok Merak Edilenler</h2>
             <p className="faq-sub">Aşağıda bulamadığınız soruları <Link href="/sik-sorulan-sorular">SSS sayfamızdan</Link> veya iletişim hattımızdan sorabilirsiniz.</p>

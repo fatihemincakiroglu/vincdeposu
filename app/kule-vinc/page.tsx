@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -100,21 +101,21 @@ const avantajlar = [
 ];
 
 const kullanimAlanlariInsaat = [
-  { sector: "🏘️ Konut Projeleri", durum: "Çok katlı site ve apartman inşaatları" },
-  { sector: "🏬 Ticari Yapılar", durum: "AVM, ofis ve plaza inşaat süreçleri" },
-  { sector: "🏭 Endüstriyel Tesisler", durum: "Fabrika ve depo yapım projeleri" },
-  { sector: "🏨 Otel & Turizm Yapıları", durum: "Büyük ölçekli konaklama tesisleri" },
-  { sector: "🏛️ Kamu Yapıları", durum: "Hastane, okul ve resmi bina inşaatları" },
-  { sector: "🏗️ Gökdelen Projeleri", durum: "Yüksek katlı yapı inşaat süreçleri" },
+  { sector: "Konut Projeleri", durum: "Çok katlı site ve apartman inşaatları" },
+  { sector: "Ticari Yapılar", durum: "AVM, ofis ve plaza inşaat süreçleri" },
+  { sector: "Endüstriyel Tesisler", durum: "Fabrika ve depo yapım projeleri" },
+  { sector: "Otel & Turizm Yapıları", durum: "Büyük ölçekli konaklama tesisleri" },
+  { sector: "Kamu Yapıları", durum: "Hastane, okul ve resmi bina inşaatları" },
+  { sector: "Gökdelen Projeleri", durum: "Yüksek katlı yapı inşaat süreçleri" },
 ];
 
 const kullanimAlanlariAltyapi = [
-  { sector: "🌉 Köprü İnşaatları", durum: "Ayak ve gövde montaj operasyonları" },
-  { sector: "🛤️ Demiryolu Projeleri", durum: "Viyadük ve istasyon yapım süreçleri" },
-  { sector: "⚡ Enerji Tesisleri", durum: "Santral ve trafo merkezi kurulumları" },
-  { sector: "🌊 Liman & Baraj Projeleri", durum: "Ağır yapı elemanı montajı" },
-  { sector: "🛣️ Otoyol & Viyadük", durum: "Prefabrik eleman taşıma ve montaj" },
-  { sector: "🏗️ Toplu Konut Altyapısı", durum: "Geniş alanlı yapı grubu projeleri" },
+  { sector: "Köprü İnşaatları", durum: "Ayak ve gövde montaj operasyonları" },
+  { sector: "Demiryolu Projeleri", durum: "Viyadük ve istasyon yapım süreçleri" },
+  { sector: "Enerji Tesisleri", durum: "Santral ve trafo merkezi kurulumları" },
+  { sector: "Liman & Baraj Projeleri", durum: "Ağır yapı elemanı montajı" },
+  { sector: "Otoyol & Viyadük", durum: "Prefabrik eleman taşıma ve montaj" },
+  { sector: "Toplu Konut Altyapısı", durum: "Geniş alanlı yapı grubu projeleri" },
 ];
 
 const dogruKuleVinc = [
@@ -199,8 +200,8 @@ export default function KuleVincKiralamaPage() {
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 text-9xl">🏗️</div>
-          <div className="absolute bottom-10 right-10 text-9xl">🏢</div>
+          <div className="absolute top-20 left-10 text-9xl"></div>
+          <div className="absolute bottom-10 right-10 text-9xl"></div>
         </div>
         <div className="relative max-w-6xl mx-auto">
           <div className="max-w-3xl">
@@ -229,13 +230,13 @@ export default function KuleVincKiralamaPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 0532 303 90 89
+                0532 303 90 89
               </a>
               <a
                 href="#fiyatlar"
                 className="inline-flex items-center justify-center gap-2 border-2 border-gray-600 hover:border-yellow-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                💰 Fiyat Tablosuna Git
+                Fiyat Tablosuna Git
               </a>
             </div>
           </div>
@@ -275,23 +276,23 @@ export default function KuleVincKiralamaPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8">
-              <div className="text-3xl mb-4">🏗️</div>
+              <div className="text-3xl mb-4"></div>
               <h3 className="font-black text-gray-900 mb-3 text-lg">Kule Vinç</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex gap-2"><span className="text-blue-500 font-bold">✓</span> Sabit montaj, yüksek kaldırma noktası</li>
-                <li className="flex gap-2"><span className="text-blue-500 font-bold">✓</span> Uzun süreli ve çok katlı projeler için ideal</li>
-                <li className="flex gap-2"><span className="text-blue-500 font-bold">✓</span> Geniş çalışma yarıçapı ve yükseklik avantajı</li>
-                <li className="flex gap-2"><span className="text-blue-500 font-bold">✓</span> Montaj-demontaj süreci gerektirir</li>
+                <li className="flex gap-2">Sabit montaj, yüksek kaldırma noktası</li>
+                <li className="flex gap-2">Uzun süreli ve çok katlı projeler için ideal</li>
+                <li className="flex gap-2">Geniş çalışma yarıçapı ve yükseklik avantajı</li>
+                <li className="flex gap-2">Montaj-demontaj süreci gerektirir</li>
               </ul>
             </div>
             <div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-8">
-              <div className="text-3xl mb-4">🚛</div>
+              <div className="text-3xl mb-4"></div>
               <h3 className="font-black text-gray-900 mb-3 text-lg">Mobil Vinç</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex gap-2"><span className="text-gray-500 font-bold">✓</span> Kendi tekerlekleri ile hareket eder</li>
-                <li className="flex gap-2"><span className="text-gray-500 font-bold">✓</span> Kısa süreli ve noktasal kaldırma işleri için ideal</li>
-                <li className="flex gap-2"><span className="text-gray-500 font-bold">✓</span> Kurulum gerektirmez, hızlı konuşlanır</li>
-                <li className="flex gap-2"><span className="text-gray-500 font-bold">✓</span> Yükseklik ve süreklilik açısından sınırlıdır</li>
+                <li className="flex gap-2">Kendi tekerlekleri ile hareket eder</li>
+                <li className="flex gap-2">Kısa süreli ve noktasal kaldırma işleri için ideal</li>
+                <li className="flex gap-2">Kurulum gerektirmez, hızlı konuşlanır</li>
+                <li className="flex gap-2">Yükseklik ve süreklilik açısından sınırlıdır</li>
               </ul>
             </div>
           </div>
@@ -318,18 +319,18 @@ export default function KuleVincKiralamaPage() {
                 className={`border-2 rounded-2xl p-8 hover:shadow-xl transition group ${f.renk}`}
               >
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 ${f.iconBg}`}>
-                  {f.icon}
+                  <VincIcon name={f.icon} className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 mb-3">{f.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{f.desc}</p>
                 <div className="flex items-center gap-4 mb-5 text-sm text-gray-500">
-                  <span>⚖️ {f.kapasite}</span>
-                  <span>📅 {f.sure}</span>
+                  <span>{f.kapasite}</span>
+                  <span>{f.sure}</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {f.ozellikler.map((o) => (
                     <li key={o} className="flex items-center gap-2 text-sm text-gray-700">
-                      <span className="text-green-500 font-bold">✓</span> {o}
+                      {o}
                     </li>
                   ))}
                 </ul>
@@ -337,8 +338,7 @@ export default function KuleVincKiralamaPage() {
                   href="tel:05323039089"
                   className="block text-center bg-gray-900 hover:bg-yellow-400 hover:text-black text-white font-bold py-3 rounded-xl text-sm transition"
                 >
-                  Teklif Al →
-                </a>
+                  Teklif Al                 </a>
               </div>
             ))}
           </div>
@@ -350,7 +350,7 @@ export default function KuleVincKiralamaPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
-              🏗️ H3: Alt Başlık
+              H3: Alt Başlık
             </div>
             <h3 className="text-3xl font-black text-gray-900 mb-4">
               Sabit Kule Vinç Kiralama
@@ -371,25 +371,24 @@ export default function KuleVincKiralamaPage() {
                 "Geniş çalışma yarıçapı ile tüm şantiyeye erişim",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
-                  <span className="text-blue-500 font-bold mt-0.5 shrink-0">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
-            <div className="text-6xl text-center mb-6">🏗️🏘️</div>
+            <div className="text-6xl text-center mb-6"></div>
             <h4 className="font-black text-gray-900 text-lg mb-4 text-center">
               Hangi Projelerde Kullanılır?
             </h4>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "🏘️ Konut siteleri",
-                "🏬 Ticari binalar",
-                "🏭 Fabrika inşaatları",
-                "🏨 Otel projeleri",
-                "🏛️ Kamu yapıları",
-                "🏗️ Orta katlı bloklar",
+                "Konut siteleri",
+                "Ticari binalar",
+                "Fabrika inşaatları",
+                "Otel projeleri",
+                "Kamu yapıları",
+                "Orta katlı bloklar",
               ].map((item) => (
                 <div key={item} className="bg-blue-50 rounded-lg px-3 py-2 text-xs text-gray-700 font-medium">
                   {item}
@@ -404,7 +403,7 @@ export default function KuleVincKiralamaPage() {
       <section className="py-20 px-4 bg-white" id="tirmanici">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 bg-orange-50 rounded-2xl p-8 border border-orange-100">
-            <div className="text-6xl text-center mb-6">🏢🏗️</div>
+            <div className="text-6xl text-center mb-6"></div>
             <h4 className="font-black text-gray-900 text-lg mb-4 text-center">
               Tırmanıcı Kule Vincin Güçlü Olduğu Alanlar
             </h4>
@@ -427,7 +426,7 @@ export default function KuleVincKiralamaPage() {
           </div>
           <div className="order-1 md:order-2">
             <div className="inline-block bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
-              🏢 H3: Alt Başlık
+              H3: Alt Başlık
             </div>
             <h3 className="text-3xl font-black text-gray-900 mb-4">
               Tırmanıcı Kule Vinç Kiralama – Yüksek Katlı Yapılar İçin
@@ -448,7 +447,6 @@ export default function KuleVincKiralamaPage() {
                 "Gökdelen ve yüksek konut projelerine özel mühendislik",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
-                  <span className="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -489,7 +487,7 @@ export default function KuleVincKiralamaPage() {
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl p-6 border border-yellow-200 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <VincIcon name={item.icon} className="w-10 h-10 mb-4" />
                 <h4 className="font-black text-gray-900 mb-2">{item.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -571,7 +569,7 @@ export default function KuleVincKiralamaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {avantajlar.map((a) => (
               <div key={a.title} className="bg-white/70 hover:bg-white rounded-2xl p-6 transition">
-                <div className="text-3xl mb-4">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 mb-4" />
                 <h3 className="font-black text-gray-900 mb-2">{a.title}</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">{a.desc}</p>
               </div>
@@ -596,7 +594,7 @@ export default function KuleVincKiralamaPage() {
             {dogruKuleVinc.map((item, i) => (
               <div key={i} className="border-2 border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="text-3xl">{item.icon}</div>
+                  <VincIcon name={item.icon} className="w-8 h-8" />
                   <div className="text-yellow-500 font-black text-4xl opacity-30">{String(i + 1).padStart(2, "0")}</div>
                 </div>
                 <h3 className="font-black text-gray-900 mb-2">{item.soru}</h3>
@@ -610,7 +608,7 @@ export default function KuleVincKiralamaPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Uzmanımızla Konuşun
+              Uzmanımızla Konuşun
             </a>
           </div>
         </div>
@@ -661,7 +659,7 @@ export default function KuleVincKiralamaPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -682,7 +680,7 @@ export default function KuleVincKiralamaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {fiyatEtkenleri.map((item) => (
               <div key={item.title} className="border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 hover:shadow-md transition">
-                <div className="text-3xl mb-4">{item.icon}</div>
+                <VincIcon name={item.icon} className="w-8 h-8 mb-4" />
                 <h4 className="font-black text-gray-900 mb-2">{item.title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -712,7 +710,7 @@ export default function KuleVincKiralamaPage() {
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 items-start">
                   <div className="w-10 h-10 bg-yellow-400/20 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    {item.icon}
+                    <VincIcon name={item.icon} className="w-5 h-5 text-yellow-600" />
                   </div>
                   <div>
                     <div className="font-bold text-white">{item.title}</div>
@@ -742,7 +740,7 @@ export default function KuleVincKiralamaPage() {
                   ].map((r) => (
                     <tr key={r.kriter} className="border-b border-gray-700/50">
                       <td className="py-3 text-gray-400">{r.kriter}</td>
-                      <td className="py-3 text-center text-green-400">✓ {r.operatorlu}</td>
+                      <td className="py-3 text-center text-green-400">{r.operatorlu}</td>
                       <td className="py-3 text-center text-gray-400">{r.operatorsuz}</td>
                     </tr>
                   ))}
@@ -754,7 +752,7 @@ export default function KuleVincKiralamaPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl transition text-sm"
               >
-                📞 Operatörlü Fiyat Al
+                Operatörlü Fiyat Al
               </a>
             </div>
           </div>
@@ -804,7 +802,6 @@ export default function KuleVincKiralamaPage() {
             <div className="space-y-3">
               {guvenlikKurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-gray-800/60 border border-gray-700 rounded-xl p-4">
-                  <span className="text-green-400 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-300 text-sm">{kural}</p>
                 </div>
               ))}
@@ -825,7 +822,7 @@ export default function KuleVincKiralamaPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -847,7 +844,7 @@ export default function KuleVincKiralamaPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   title: "Kalite Politikamız",
@@ -92,7 +93,7 @@ export default function KalitePolitikamizPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ilkeler.map((i) => (
               <div key={i.baslik} className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-yellow-300 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">{i.icon}</div>
+                <VincIcon name={i.icon} className="w-10 h-10 mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{i.baslik}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{i.aciklama}</p>
               </div>
@@ -111,7 +112,6 @@ export default function KalitePolitikamizPage() {
           <div className="space-y-3">
             {taahhutler.map((t) => (
               <div key={t} className="flex gap-3 items-start bg-gray-50 rounded-xl p-4">
-                <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                 <p className="text-gray-700 text-sm">{t}</p>
               </div>
             ))}
@@ -129,7 +129,7 @@ export default function KalitePolitikamizPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

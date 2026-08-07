@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -209,7 +210,7 @@ export default function VincAcilDurumPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-400/30 text-red-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🚨 7/24 Acil Vinç Müdahale Hattı
+              7/24 Acil Vinç Müdahale Hattı
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Vinç Acil Durum<br />{" "}
@@ -224,14 +225,13 @@ export default function VincAcilDurumPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                🚨 Acil Hattı Ara: 0532 303 90 89
+                Acil Hattı Ara: 0532 303 90 89
               </a>
               <a
                 href="#hizmet-kategorileri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Hizmetleri İncele ↓
-              </a>
+                Hizmetleri İncele               </a>
             </div>
           </div>
         </div>
@@ -295,7 +295,7 @@ export default function VincAcilDurumPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Acil Teklif Alın
+              Acil Teklif Alın
             </a>
           </div>
         </div>
@@ -317,15 +317,15 @@ export default function VincAcilDurumPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⏱️ Hız</h3>
+              <h3 className="font-bold text-gray-900 mb-2">⏱Hız</h3>
               <p className="text-gray-500 text-sm">Her dakika kritik olduğunda ortalama 30-60 dakika içinde sahada oluyoruz.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🛡️ Güvenlik</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Güvenlik</h3>
               <p className="text-gray-500 text-sm">Sertifikalı operatörler ve risk protokolleriyle ikincil kazaların önüne geçilir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📋 Dokümantasyon</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Dokümantasyon</h3>
               <p className="text-gray-500 text-sm">Sigorta ve resmi süreçler için eksiksiz operasyon raporu ve fotoğraflı belgeleme.</p>
             </div>
           </div>
@@ -349,7 +349,7 @@ export default function VincAcilDurumPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -357,7 +357,7 @@ export default function VincAcilDurumPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -370,8 +370,7 @@ export default function VincAcilDurumPage() {
                       href={v.href}
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </Link>
                   </div>
                 </div>
               </div>
@@ -381,7 +380,7 @@ export default function VincAcilDurumPage() {
           {/* Alt Bölüm */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ İnşaat Kazaları İçin Hızlı Vinç Desteği</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">İnşaat Kazaları İçin Hızlı Vinç Desteği</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Şantiye ortamında iş makinesi devrilmesi, yapı elemanı düşmesi veya iskele kazası
                 gibi durumlarda hızlı vinç desteği hayati önem taşır. Ekibimiz inşaat sahası
@@ -389,7 +388,7 @@ export default function VincAcilDurumPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ Acil Vinç Kiralama ve Ekipman Temini</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Acil Vinç Kiralama ve Ekipman Temini</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Kendi ekibinizle müdahale etmek istediğinizde operatörlü veya operatörsüz acil
                 vinç kiralama seçeneği de sunuyoruz. Kapasite ve zemin koşullarına göre en uygun
@@ -411,7 +410,7 @@ export default function VincAcilDurumPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {mudahaleAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -422,7 +421,7 @@ export default function VincAcilDurumPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🛣️ Sertifikalı Operatörlerle Güvenli Acil Müdahale</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Sertifikalı Operatörlerle Güvenli Acil Müdahale</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Her acil operasyonda görev alan operatörlerimiz İş Sağlığı ve Güvenliği mevzuatı
                 kapsamında sertifikalıdır. Kritik karar noktalarında doğru değerlendirme yaparak
@@ -430,7 +429,7 @@ export default function VincAcilDurumPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⚓ Liman ve Nakliyat Acil Kurtarma Hizmetleri</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Liman ve Nakliyat Acil Kurtarma Hizmetleri</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Liman sahasında konteyner devrilmesi veya yük kayması ciddi operasyonel ve
                 güvenlik riski oluşturur. Liman yetkilisi ve gümrük koordinasyonuyla
@@ -473,7 +472,7 @@ export default function VincAcilDurumPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {h3Bolumler.map((b) => (
               <div key={b.id} id={b.id} className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2 text-lg">{b.icon} {b.baslik}</h3>
+                <h3 className="font-bold text-gray-900 mb-2 text-lg">{b.baslik}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{b.icerik}</p>
               </div>
             ))}
@@ -497,7 +496,6 @@ export default function VincAcilDurumPage() {
             <div className="space-y-3">
               {guvenlikProtokolleri.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -516,15 +514,14 @@ export default function VincAcilDurumPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -541,7 +538,7 @@ export default function VincAcilDurumPage() {
               href="tel:05323039089"
               className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              🚨 0532 303 90 89 – ACİL HAT
+              0532 303 90 89 – ACİL HAT
             </a>
             <Link
               href="/iletisim"

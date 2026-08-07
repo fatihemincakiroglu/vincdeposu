@@ -99,7 +99,7 @@ export default function ReferansPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

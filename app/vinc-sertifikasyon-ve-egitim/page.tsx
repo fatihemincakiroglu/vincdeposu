@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -124,7 +125,7 @@ export default function VincSertifikasyonVeEgitimPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🎓 Sertifikasyon ve Eğitim 2026
+              Sertifikasyon ve Eğitim 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Sertifikasyon ve<br />{" "}
@@ -139,14 +140,13 @@ export default function VincSertifikasyonVeEgitimPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Eğitim Programı İçin Arayın
+                Eğitim Programı İçin Arayın
               </a>
               <a
                 href="#kategoriler"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Kategorileri İncele ↓
-              </a>
+                Kategorileri İncele               </a>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function VincSertifikasyonVeEgitimPage() {
                 className="relative p-6 bg-white rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-lg transition group"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{k.icon}</div>
+                  <VincIcon name={k.icon} className="w-10 h-10" />
                   <div className="text-3xl font-black text-yellow-400/20 group-hover:text-yellow-400/40 transition leading-none">
                     {k.no}
                   </div>
@@ -269,7 +269,6 @@ export default function VincSertifikasyonVeEgitimPage() {
                 "Düzenli güncellenen eğitim içerikleri",
               ].map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -288,15 +287,14 @@ export default function VincSertifikasyonVeEgitimPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -313,7 +311,7 @@ export default function VincSertifikasyonVeEgitimPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

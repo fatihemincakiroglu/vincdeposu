@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -94,7 +95,7 @@ export default function VincBakimVeOnarimPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🔧 Bakım ve Onarım Rehberi 2026
+              Bakım ve Onarım Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Vinç Bakım ve<br />{" "}
@@ -109,14 +110,13 @@ export default function VincBakimVeOnarimPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#periyodik-bakim"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Hizmetleri İncele ↓
-              </a>
+                Hizmetleri İncele               </a>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {periyodikBakim.map((p) => (
               <div key={p.title} className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-lg transition">
-                <div className="text-3xl mb-3">{p.icon}</div>
+                <VincIcon name={p.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{p.title}</h3>
                 <p className="text-gray-500 text-sm">{p.desc}</p>
               </div>
@@ -198,7 +198,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {arizaTespiti.map((a) => (
               <div key={a.title} className="bg-gray-50 p-6 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-3xl mb-3">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2 group-hover:text-yellow-700">{a.title}</h3>
                 <p className="text-gray-500 text-sm">{a.desc}</p>
               </div>
@@ -220,7 +220,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {vincTurleriBakim.map((v) => (
               <div key={v.title} className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-lg transition">
-                <div className="text-3xl mb-3">{v.icon}</div>
+                <VincIcon name={v.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{v.title}</h3>
                 <p className="text-gray-500 text-sm">{v.desc}</p>
               </div>
@@ -242,7 +242,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {bilesenServisi.map((b) => (
               <div key={b.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl">
-                <div className="text-3xl shrink-0">{b.icon}</div>
+                <VincIcon name={b.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{b.title}</h3>
                   <p className="text-gray-500 text-sm">{b.desc}</p>
@@ -266,7 +266,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {guvenlikMuayenesi.map((g) => (
               <div key={g.title} className="bg-white/70 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">{g.icon}</div>
+                <VincIcon name={g.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{g.title}</h3>
                 <p className="text-gray-700 text-sm">{g.desc}</p>
               </div>
@@ -285,7 +285,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {yedekParca.map((y) => (
               <div key={y.title} className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-lg transition">
-                <div className="text-3xl mb-3">{y.icon}</div>
+                <VincIcon name={y.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{y.title}</h3>
                 <p className="text-gray-500 text-sm">{y.desc}</p>
               </div>
@@ -307,7 +307,7 @@ export default function VincBakimVeOnarimPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {servisAnlasmalari.map((s) => (
               <div key={s.title} className="bg-gray-800 p-6 rounded-2xl border border-gray-700 hover:border-yellow-400/50 transition">
-                <div className="text-3xl mb-3">{s.icon}</div>
+                <VincIcon name={s.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-white mb-2">{s.title}</h3>
                 <p className="text-gray-400 text-sm">{s.desc}</p>
               </div>
@@ -318,7 +318,7 @@ export default function VincBakimVeOnarimPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Servis Anlaşması İçin Teklif Alın
+              Servis Anlaşması İçin Teklif Alın
             </a>
           </div>
         </div>
@@ -334,15 +334,14 @@ export default function VincBakimVeOnarimPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -359,7 +358,7 @@ export default function VincBakimVeOnarimPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

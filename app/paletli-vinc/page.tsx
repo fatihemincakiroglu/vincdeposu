@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -217,7 +218,7 @@ const teknikOzellikler = [
 const markalar = [
   {
     marka: "Liebherr",
-    mensei: "🇩🇪 Almanya",
+    mensei: "Almanya",
     populerModel: "LR 1300, LR 1750, LR 11000",
     kapasite: "100 – 3.000 ton",
     avantaj: "Üstün teknoloji, Litronic kontrol sistemi, geniş servis ağı",
@@ -225,7 +226,7 @@ const markalar = [
   },
   {
     marka: "Tadano",
-    mensei: "🇯🇵 Japonya",
+    mensei: "Japonya",
     populerModel: "GCC-3000, CC 3800-1, AC 700-3",
     kapasite: "50 – 3.000 ton",
     avantaj: "Güvenilirlik, yakıt verimliliği, compact tasarım",
@@ -233,7 +234,7 @@ const markalar = [
   },
   {
     marka: "Manitowoc",
-    mensei: "🇺🇸 ABD",
+    mensei: "ABD",
     populerModel: "MLC650, MLC300, 2250",
     kapasite: "150 – 2.500 ton",
     avantaj: "VPC (Variable Position Counterweight) teknolojisi, yüksek kapasite",
@@ -329,7 +330,7 @@ export default function PaletliVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🏗️ Paletli Vinç Rehberi 2026
+              Paletli Vinç Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Paletli Vinç:<br />{" "}
@@ -344,14 +345,13 @@ export default function PaletliVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Teklif Al: 0532 303 90 89
+                Teklif Al: 0532 303 90 89
               </a>
               <a
                 href="#vinc-cesitleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Vinç Çeşitlerini Gör ↓
-              </a>
+                Vinç Çeşitlerini Gör               </a>
             </div>
           </div>
         </div>
@@ -408,7 +408,7 @@ export default function PaletliVincPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-4 left-4 text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
-                📸 Lattice boom paletli vinç – saha uygulaması
+                Lattice boom paletli vinç – saha uygulaması
               </div>
             </div>
           </div>
@@ -436,7 +436,7 @@ export default function PaletliVincPage() {
                     {v.etiket}
                   </span>
                 )}
-                <div className="text-4xl mb-4">{v.icon}</div>
+                <VincIcon name={v.icon} className="w-10 h-10 mb-4" />
                 <h3 className="text-gray-900 font-bold text-lg mb-2">{v.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">{v.desc}</p>
                 <div className="space-y-1 mb-4 text-sm">
@@ -458,8 +458,7 @@ export default function PaletliVincPage() {
                   href={v.href}
                   className="mt-auto inline-flex items-center justify-center gap-2 border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 text-gray-700 font-semibold px-4 py-2 rounded-xl text-sm transition"
                 >
-                  Detaylı İncele →
-                </Link>
+                  Detaylı İncele                 </Link>
               </div>
             ))}
           </div>
@@ -477,7 +476,7 @@ export default function PaletliVincPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Küçük Tonaj */}
             <div className="bg-yellow-50 border border-yellow-200 rounded-3xl p-8">
-              <div className="text-4xl mb-4">⚙️</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-black text-gray-900 mb-3">Küçük Tonajlı Paletli Vinçler (25–100 ton)</h3>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Kompakt gövdeleriyle fabrika içleri, tünel projeleri ve dar şantiyeler için idealdir. Paletli
@@ -496,7 +495,7 @@ export default function PaletliVincPage() {
 
             {/* Ağır Tonaj */}
             <div className="bg-gray-900 rounded-3xl p-8 text-white">
-              <div className="text-4xl mb-4">🏗️</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-black mb-3">Ağır Tonajlı Paletli Vinçler (100 ton ve üzeri)</h3>
               <p className="text-gray-300 leading-relaxed mb-5">
                 Büyük inşaat projeleri, enerji santralleri ve petrokimya tesislerinin olmazmazı olan ağır
@@ -533,20 +532,20 @@ export default function PaletliVincPage() {
               <thead>
                 <tr className="bg-gray-900 text-white">
                   <th className="text-left px-6 py-4 font-bold">Özellik</th>
-                  <th className="text-center px-6 py-4 font-bold">🏗️ Paletli Vinç</th>
-                  <th className="text-center px-6 py-4 font-bold">🚛 Tekerlekli Vinç</th>
+                  <th className="text-center px-6 py-4 font-bold">Paletli Vinç</th>
+                  <th className="text-center px-6 py-4 font-bold">Tekerlekli Vinç</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Zemin Basıncı", "✅ Düşük (geniş palet tabanı)", "⚠️ Yüksek (tekerlekten nokta yükü)"],
-                  ["Kapasite Aralığı", "✅ 25 ton – 3.000+ ton", "⚠️ 25 ton – 1.200 ton"],
-                  ["Zemin Uyumu", "✅ Çamur, kaya, gevşek zemin", "⚠️ Sert ve düz zemin gerekir"],
-                  ["Kendi Kendine Hareket", "❌ Karayolunda hareket edemez", "✅ Karayolunda seyredebilir"],
-                  ["Nakliye Kolaylığı", "❌ Lowboy TIR + parçalı taşıma", "✅ Kendi başına seyahat"],
-                  ["Uzun Süreli Operasyon", "✅ İdeal (sabit pozisyon)", "⚠️ Sınırlı süre"],
-                  ["Kurulum Süresi", "⚠️ Uzun (bom montajı)", "✅ Kısa (hızlı hazırlık)"],
-                  ["Maliyet (günlük)", "⚠️ Daha yüksek", "✅ Nispeten düşük"],
+                  ["Zemin Basıncı", "Düşük (geniş palet tabanı)", "Yüksek (tekerlekten nokta yükü)"],
+                  ["Kapasite Aralığı", "25 ton – 3.000+ ton", "25 ton – 1.200 ton"],
+                  ["Zemin Uyumu", "Çamur, kaya, gevşek zemin", "Sert ve düz zemin gerekir"],
+                  ["Kendi Kendine Hareket", "Karayolunda hareket edemez", "Karayolunda seyredebilir"],
+                  ["Nakliye Kolaylığı", "Lowboy TIR + parçalı taşıma", "Kendi başına seyahat"],
+                  ["Uzun Süreli Operasyon", "İdeal (sabit pozisyon)", "Sınırlı süre"],
+                  ["Kurulum Süresi", "Uzun (bom montajı)", "Kısa (hızlı hazırlık)"],
+                  ["Maliyet (günlük)", "Daha yüksek", "Nispeten düşük"],
                 ].map(([ozellik, paletli, tekerlekli]) => (
                   <tr key={ozellik} className="border-t border-gray-100 hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold text-gray-700">{ozellik}</td>
@@ -574,7 +573,7 @@ export default function PaletliVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 hover:border-yellow-200 border border-transparent transition">
-                <div className="text-4xl mb-3">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{k.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{k.desc}</p>
               </div>
@@ -603,7 +602,7 @@ export default function PaletliVincPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   {["Köprü ve viyadük kirişi yerleştirme", "Prefabrik beton panel montajı", "Çelik çatı konstrüksiyon kurulumu", "Tünel borusu ve kazık montajı"].map((m) => (
-                    <li key={m} className="flex gap-2"><span className="text-yellow-600">✓</span>{m}</li>
+                    <li key={m} className="flex gap-2">{m}</li>
                   ))}
                 </ul>
               </div>
@@ -655,7 +654,7 @@ export default function PaletliVincPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   {["Reaktör ve destilasyon kolonu montajı", "LNG tankı kurulumu", "Trafo ve jeneratör yerleştirme", "Boru köprüsü ve raf sistemi kurulumu"].map((m) => (
-                    <li key={m} className="flex gap-2"><span className="text-yellow-600">✓</span>{m}</li>
+                    <li key={m} className="flex gap-2">{m}</li>
                   ))}
                 </ul>
               </div>
@@ -788,7 +787,6 @@ export default function PaletliVincPage() {
                   "Periyodik kontrol ve bakım dahil edilebilir",
                 ].map((f) => (
                   <div key={f} className="flex gap-3 items-start bg-gray-50 rounded-xl p-4">
-                    <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                     <p className="text-gray-700 text-sm">{f}</p>
                   </div>
                 ))}
@@ -802,7 +800,7 @@ export default function PaletliVincPage() {
             <p className="text-gray-300 leading-relaxed mb-5">
               Paletli vinçler karayolunda bağımsız hareket edemediğinden şantiyeler arası nakliye özel lowboy TIR
               araçları gerektirmektedir. 100 ton altı modeller genellikle 2–3 araçla, 300 ton üzeri modeller
-              ise 10'dan fazla araçla taşınır; nakliye rota planlaması ve olası yol izni maliyetleri de hesaba
+              ise 10&apos;dan fazla araçla taşınır; nakliye rota planlaması ve olası yol izni maliyetleri de hesaba
               katılmalıdır.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
@@ -899,7 +897,7 @@ export default function PaletliVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ikinciElDikkat.map((d) => (
               <div key={d.baslik} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:bg-yellow-50 transition">
-                <div className="text-3xl mb-3">{d.icon}</div>
+                <VincIcon name={d.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{d.baslik}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{d.aciklama}</p>
               </div>
@@ -968,7 +966,6 @@ export default function PaletliVincPage() {
               <div className="space-y-3">
                 {guvenlikStandartlari.map((g) => (
                   <div key={g} className="flex gap-3 items-start bg-white/5 rounded-xl p-4">
-                    <span className="text-green-400 font-bold text-lg shrink-0">✓</span>
                     <p className="text-gray-300 text-sm">{g}</p>
                   </div>
                 ))}
@@ -994,7 +991,7 @@ export default function PaletliVincPage() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="bg-black/60 text-white text-sm font-medium px-4 py-2 rounded-full">
-                    🛡️ Periyodik muayene ve sertifikasyon
+                    Periyodik muayene ve sertifikasyon
                   </span>
                 </div>
               </div>
@@ -1013,7 +1010,7 @@ export default function PaletliVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -1034,7 +1031,7 @@ export default function PaletliVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

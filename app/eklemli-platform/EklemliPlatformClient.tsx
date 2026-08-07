@@ -46,8 +46,7 @@ export default function Page() {
               fontWeight: 800, fontSize: 15, textDecoration: "none", letterSpacing: 0.5,
               display: "inline-block",
             }}>
-              Fiyat Teklifi Al →
-            </a>
+              Fiyat Teklifi Al             </a>
             <a href="#secim-rehberi" style={{
               background: "transparent", color: "#fff", padding: "14px 32px",
               fontWeight: 600, fontSize: 15, textDecoration: "none", letterSpacing: 0.5,
@@ -164,7 +163,7 @@ export default function Page() {
           <h2 style={h2Style}>Eklemli Platform Nedir? Boom Lift ile Farkı</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 32, marginTop: 32 }}>
             <div style={cardStyle}>
-              <div style={{ fontSize: 28, marginBottom: 12 }}>🦾</div>
+              <div style={{ fontSize: 28, marginBottom: 12 }}></div>
               <h3 style={h3CardStyle}>Eklemli Platform</h3>
               <p style={cardTextStyle}>
                 Kolları birden fazla eklemden bükülen, hem dikey hem de yatay yönde hareket edebilen
@@ -173,7 +172,7 @@ export default function Page() {
               </p>
             </div>
             <div style={cardStyle}>
-              <div style={{ fontSize: 28, marginBottom: 12 }}>↕️</div>
+              <div style={{ fontSize: 28, marginBottom: 12 }}></div>
               <h3 style={h3CardStyle}>Boom Lift ile Farkı</h3>
               <p style={cardTextStyle}>
                 &quot;Boom lift&quot; hem teleskopik hem eklemli platformları kapsayan genel bir terimdir.
@@ -244,32 +243,32 @@ export default function Page() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20, marginTop: 36 }}>
 
             <SectorCard
-              icon="🏗️"
+              icon=""
               h3="İnşaat ve Cephe Çalışmalarında Eklemli Platform Kullanımı"
               text="Bina cephesi, iskele destekleme, beton kalıp işleri ve yüksek kat pencere montajında en çok tercih edilen erişim ekipmanıdır. Engelli şantiye yapısında kol esnekliği kritik avantaj sağlar."
             />
             <SectorCard
-              icon="⚙️"
+              icon=""
               h3="Bakım, Montaj ve Endüstriyel Tesislerde Eklemli Platform"
               text="Fabrika tavanı, boru tesisatı, elektrik panosu ve HVAC sistemlerinin bakım-onarımında kullanılır. Üretim hattını durdurmadan makinelerin üstünden aşarak erişim sağlar."
             />
             <SectorCard
-              icon="💡"
+              icon=""
               h3="Aydınlatma ve Elektrik Tesisatı"
               text="Stadyum, meydan, otopark ve sanayi aydınlatma sistemlerinin montaj ve bakımında etkili çözüm sunar."
             />
             <SectorCard
-              icon="🌳"
+              icon=""
               h3="Ağaç Bakımı ve Peyzaj"
               text="Büyük ağaçların budanması, park ve meydan peyzaj düzenlemelerinde güvenli ve stabil çalışma platformu sağlar."
             />
             <SectorCard
-              icon="🎬"
+              icon=""
               h3="Film, Etkinlik ve Prodüksiyon"
               text="Film çekimi, konser sahne kurulumu ve açık hava etkinliklerinde kamera platformu veya teknik erişim aracı olarak kullanılır."
             />
             <SectorCard
-              icon="⚡"
+              icon=""
               h3="Enerji ve Altyapı"
               text="Rüzgâr türbini bakımı, enerji nakil hattı ve trafo merkezi çalışmalarında yüksek güvenlik standardıyla hizmet verir."
             />
@@ -379,12 +378,12 @@ export default function Page() {
           <h3 style={{ ...h2Style, fontSize: 22 }}>Eklemli Platform Kiralama Fiyatlarını Etkileyen Faktörler</h3>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16, marginTop: 28 }}>
             {[
-              ["📏", "Çalışma Yüksekliği", "Yüksek erişim arttıkça platform büyüklüğü ve maliyet artar."],
-              ["⏱️", "Kiralama Süresi", "Uzun süreli kiralamalar günlük ortalama maliyeti düşürür."],
-              ["🚛", "Teslimat Mesafesi", "Uzak lokasyonlar için nakliye ücreti eklenir."],
-              ["👷", "Operatör İhtiyacı", "Operatörlü kiralama için ek ücret uygulanır."],
-              ["🔧", "Ekipman Yaşı", "Yeni model platformlar daha yüksek performans sunar, fiyat farkı oluşabilir."],
-              ["📅", "Sezon", "Yoğun inşaat sezonlarında talep artar ve fiyatlar buna göre şekillenir."],
+              ["", "Çalışma Yüksekliği", "Yüksek erişim arttıkça platform büyüklüğü ve maliyet artar."],
+              ["⏱", "Kiralama Süresi", "Uzun süreli kiralamalar günlük ortalama maliyeti düşürür."],
+              ["", "Teslimat Mesafesi", "Uzak lokasyonlar için nakliye ücreti eklenir."],
+              ["", "Operatör İhtiyacı", "Operatörlü kiralama için ek ücret uygulanır."],
+              ["", "Ekipman Yaşı", "Yeni model platformlar daha yüksek performans sunar, fiyat farkı oluşabilir."],
+              ["", "Sezon", "Yoğun inşaat sezonlarında talep artar ve fiyatlar buna göre şekillenir."],
             ].map(([icon, title, text]) => (
               <div key={title} style={{ background: "#fff", padding: "20px", textAlign: "center", borderTop: "3px solid #F5A623" }}>
                 <div style={{ fontSize: 28, marginBottom: 8 }}>{icon}</div>
@@ -468,8 +467,7 @@ export default function Page() {
             padding: "16px 40px", fontWeight: 900, fontSize: 16, textDecoration: "none",
             letterSpacing: 0.5,
           }}>
-            Teklif İste →
-          </a>
+            Teklif İste           </a>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -295,14 +296,14 @@ export default function MonorayVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🏭 Monoray Vinç Sistemleri Rehberi 2026
+              Monoray Vinç Sistemleri Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Monoray Vinç Sistemleri –<br />{" "}
               <span className="text-yellow-400">Güvenli, Verimli ve Uzun Ömürlü Çözümler</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-              250 kg'dan 10 tona kadar geniş kapasite yelpazesi, kavisli ray desteği ve CE belgeli
+              250 kg&apos;dan 10 tona kadar geniş kapasite yelpazesi, kavisli ray desteği ve CE belgeli
               tasarımıyla endüstriyel taşıma operasyonlarının en ekonomik çözümü.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -310,14 +311,13 @@ export default function MonorayVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Teklif Al: 0532 303 90 89
+                Teklif Al: 0532 303 90 89
               </a>
               <a
                 href="#modeller"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Modelleri İncele ↓
-              </a>
+                Modelleri İncele               </a>
             </div>
           </div>
         </div>
@@ -382,7 +382,7 @@ export default function MonorayVincPage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
-                  📸 Fabrika içi monoray hat uygulaması
+                  Fabrika içi monoray hat uygulaması
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -393,7 +393,7 @@ export default function MonorayVincPage() {
                   { icon: "🏭", baslik: "Geniş Sektör", aciklama: "Otomotiv'den kimyaya kadar" },
                 ].map((k) => (
                   <div key={k.baslik} className="bg-gray-50 rounded-2xl p-4">
-                    <div className="text-2xl mb-1">{k.icon}</div>
+                    <VincIcon name={k.icon} className="w-7 h-7 mb-1" />
                     <div className="font-bold text-gray-900 text-sm">{k.baslik}</div>
                     <div className="text-gray-500 text-xs">{k.aciklama}</div>
                   </div>
@@ -426,7 +426,7 @@ export default function MonorayVincPage() {
                     {m.etiket}
                   </span>
                 )}
-                <div className="text-4xl mb-4">{m.icon}</div>
+                <VincIcon name={m.icon} className="w-10 h-10 mb-4" />
                 <h3 className="text-gray-900 font-bold text-xl mb-3">{m.title}</h3>
                 <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                   <div className="bg-gray-50 rounded-xl p-3">
@@ -467,7 +467,7 @@ export default function MonorayVincPage() {
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
                 {["Montaj ve takım atölyeleri", "Küçük depo ve sevkiyat alanları", "Tekstil ve gıda üretim tesisleri", "Küçük makine imalathaneleri"].map((m) => (
-                  <li key={m} className="flex gap-2"><span className="text-yellow-600">✓</span>{m}</li>
+                  <li key={m} className="flex gap-2">{m}</li>
                 ))}
               </ul>
             </div>
@@ -481,7 +481,7 @@ export default function MonorayVincPage() {
               </p>
               <ul className="space-y-2 text-sm text-gray-300">
                 {["Pres ve kalıp sanayi", "Ağır makine montaj hatları", "Tersane ve çelik konstrüksiyon", "Kimya ve petrokimya tesisleri"].map((m) => (
-                  <li key={m} className="flex gap-2"><span className="text-yellow-400">✓</span>{m}</li>
+                  <li key={m} className="flex gap-2">{m}</li>
                 ))}
               </ul>
             </div>
@@ -503,7 +503,7 @@ export default function MonorayVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {sektorler.map((s) => (
               <div key={s.title} className="p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 hover:border-yellow-200 border border-transparent transition">
-                <div className="text-4xl mb-3">{s.icon}</div>
+                <VincIcon name={s.icon} className="w-10 h-10 mb-3" />
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{s.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{s.desc}</p>
                 <ul className="space-y-1">
@@ -530,7 +530,7 @@ export default function MonorayVincPage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
-                  📸 Üretim hattı – otomatik monoray sistemi
+                  Üretim hattı – otomatik monoray sistemi
                 </div>
               </div>
               <div>
@@ -561,7 +561,7 @@ export default function MonorayVincPage() {
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   {["Forklift manevra alanı kazanımı", "Raf arası dikey ve yatay taşıma", "Sevkiyat bandına otomatik besleme", "24 saat otomasyon desteği"].map((m) => (
-                    <li key={m} className="flex gap-2"><span className="text-yellow-600">✓</span>{m}</li>
+                    <li key={m} className="flex gap-2">{m}</li>
                   ))}
                 </ul>
               </div>
@@ -643,7 +643,7 @@ export default function MonorayVincPage() {
               <div>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   FEM 1.001 standardı vinçleri günlük çalışma süresi ve yük spektrumuna göre
-                  1m'den 5m'ye kadar sınıflandırır. Yanlış seçilen çalışma sınıfı; erken
+                  1m&apos;den 5m&apos;ye kadar sınıflandırır. Yanlış seçilen çalışma sınıfı; erken
                   mekanik arıza ve iş güvenliği risklerine yol açar.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
@@ -742,7 +742,7 @@ export default function MonorayVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
             {guvenlikOzellikleri.map((g) => (
               <div key={g.baslik} className="bg-white/70 rounded-2xl p-5">
-                <div className="text-3xl mb-3">{g.icon}</div>
+                <VincIcon name={g.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 text-sm mb-2">{g.baslik}</h3>
                 <p className="text-gray-600 text-xs leading-relaxed">{g.aciklama}</p>
               </div>
@@ -755,12 +755,12 @@ export default function MonorayVincPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 CE belgesi, ürünün AB Makine Direktifi (2006/42/EC) kapsamındaki tasarım, imalat
                 ve test süreçlerini başarıyla tamamladığını gösteren zorunlu uygunluk beyanıdır.
-                Türkiye'de 6331 sayılı İSG Kanunu ve İş Ekipmanları Yönetmeliği çerçevesinde
+                Türkiye&apos;de 6331 sayılı İSG Kanunu ve İş Ekipmanları Yönetmeliği çerçevesinde
                 bu belge olmaksızın vinç sistemi işletmek yasaktır.
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
                 {["CE Uygunluk Beyanı", "FEM 1.001 Çalışma Sınıfı Raporu", "Yük Testi Protokolü (%125 nominal yük)", "Periyodik Muayene Sertifikası (yıllık)"].map((b) => (
-                  <li key={b} className="flex gap-2"><span className="text-green-700">✓</span>{b}</li>
+                  <li key={b} className="flex gap-2">{b}</li>
                 ))}
               </ul>
             </div>
@@ -768,14 +768,14 @@ export default function MonorayVincPage() {
               <h3 className="text-xl font-black text-gray-900 mb-4">Elektriksel Güvenlik ve Aşırı Yük Koruması</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Monoray vinç sistemlerinde elektriksel güvenlik çok katmanlı koruma anlayışıyla
-                sağlanır. Elektronik yük hücresi, nominal kapasitenin %110'unda devreye giren
-                otomatik durdurma komutu verir. Üst sınır switch'i kancayı tamburdan uzaklaşmaktan
+                sağlanır. Elektronik yük hücresi, nominal kapasitenin %110&apos;unda devreye giren
+                otomatik durdurma komutu verir. Üst sınır switch&apos;i kancayı tamburdan uzaklaşmaktan
                 alıkoyar; acil durdurma (ESTOP) sistemi ise herhangi bir anormallikte tüm hareketi
                 anında dondurur.
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
                 {["Elektronik aşırı yük sınırlayıcı (SLI)", "Üst ve alt limit switch çifti", "Acil durdurma (ESTOP) devresi", "Kaçak akım koruma rölesi (RCD)", "Termal motor koruması"].map((b) => (
-                  <li key={b} className="flex gap-2"><span className="text-green-700">✓</span>{b}</li>
+                  <li key={b} className="flex gap-2">{b}</li>
                 ))}
               </ul>
             </div>
@@ -867,7 +867,7 @@ export default function MonorayVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -887,7 +887,7 @@ export default function MonorayVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"
