@@ -302,7 +302,7 @@ export default function MonorayVincPage() {
               <span className="text-yellow-400">Güvenli, Verimli ve Uzun Ömürlü Çözümler</span>
             </h1>
             <p className="text-gray-300 text-xl mb-8 leading-relaxed">
-              250 kg'dan 10 tona kadar geniş kapasite yelpazesi, kavisli ray desteği ve CE belgeli
+              250 kg&apos;dan 10 tona kadar geniş kapasite yelpazesi, kavisli ray desteği ve CE belgeli
               tasarımıyla endüstriyel taşıma operasyonlarının en ekonomik çözümü.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -643,7 +643,7 @@ export default function MonorayVincPage() {
               <div>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   FEM 1.001 standardı vinçleri günlük çalışma süresi ve yük spektrumuna göre
-                  1m'den 5m'ye kadar sınıflandırır. Yanlış seçilen çalışma sınıfı; erken
+                  1m&apos;den 5m&apos;ye kadar sınıflandırır. Yanlış seçilen çalışma sınıfı; erken
                   mekanik arıza ve iş güvenliği risklerine yol açar.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
@@ -755,7 +755,7 @@ export default function MonorayVincPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 CE belgesi, ürünün AB Makine Direktifi (2006/42/EC) kapsamındaki tasarım, imalat
                 ve test süreçlerini başarıyla tamamladığını gösteren zorunlu uygunluk beyanıdır.
-                Türkiye'de 6331 sayılı İSG Kanunu ve İş Ekipmanları Yönetmeliği çerçevesinde
+                Türkiye&apos;de 6331 sayılı İSG Kanunu ve İş Ekipmanları Yönetmeliği çerçevesinde
                 bu belge olmaksızın vinç sistemi işletmek yasaktır.
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
@@ -768,8 +768,8 @@ export default function MonorayVincPage() {
               <h3 className="text-xl font-black text-gray-900 mb-4">Elektriksel Güvenlik ve Aşırı Yük Koruması</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Monoray vinç sistemlerinde elektriksel güvenlik çok katmanlı koruma anlayışıyla
-                sağlanır. Elektronik yük hücresi, nominal kapasitenin %110'unda devreye giren
-                otomatik durdurma komutu verir. Üst sınır switch'i kancayı tamburdan uzaklaşmaktan
+                sağlanır. Elektronik yük hücresi, nominal kapasitenin %110&apos;unda devreye giren
+                otomatik durdurma komutu verir. Üst sınır switch&apos;i kancayı tamburdan uzaklaşmaktan
                 alıkoyar; acil durdurma (ESTOP) sistemi ise herhangi bir anormallikte tüm hareketi
                 anında dondurur.
               </p>

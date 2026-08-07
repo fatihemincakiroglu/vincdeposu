@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import IlceGrid from "@/components/IlceGrid";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -20,46 +21,46 @@ export const metadata: Metadata = {
 
 /* ─── VERİ ─── */
 const hizmetler = [
-  { icon: "🏗️", title: "Kiralık Vinç", desc: "Her ölçekte inşaat ve sanayi projesi için kiralık vinç hizmeti.", href: "/kiralik-vinc" },
-  { icon: "🦺", title: "Kiralık Manlift", desc: "Makaslı, eklemli, örümcek ve sepetli platform kiralama.", href: "/kiralik-manlift" },
-  { icon: "👷", title: "Operatörlü Hizmet", desc: "Sertifikalı operatörlerimizle güvenli ve profesyonel vinç operasyonu.", href: "/operatorlu-vinc-hizmeti" },
-  { icon: "🔧", title: "Bakım & Onarım", desc: "Vinçlerinizin uzun ömürlü kullanımı için periyodik bakım hizmeti.", href: "/vinc-bakim-ve-onarim" },
-  { icon: "🚛", title: "Taşıma & Lojistik", desc: "Vinç taşıma ve lojistik süreçlerinde güvenilir çözümler.", href: "/vinc-tasima-ve-lojistik" },
-  { icon: "📋", title: "Sertifikasyon", desc: "Vinç operatörleri için eğitim ve sertifikasyon programları.", href: "/vinc-sertifikasyon-ve-egitim" },
-  { icon: "🚨", title: "Acil Hizmet", desc: "7/24 acil vinç hizmetleriyle her an yanınızdayız.", href: "/vinc-acil-durum-hizmetleri" },
-  { icon: "🛒", title: "Satılık Vinç", desc: "İkinci el ve sıfır vinç satışında güvenilir adresiniz.", href: "/satilik-vinc" },
+  { icon: "kanca", title: "Kiralık Vinç", desc: "Her ölçekte inşaat ve sanayi projesi için kiralık vinç hizmeti.", href: "/kiralik-vinc" },
+  { icon: "manlift", title: "Kiralık Manlift", desc: "Makaslı, eklemli, örümcek ve sepetli platform kiralama.", href: "/kiralik-manlift" },
+  { icon: "operator", title: "Operatörlü Hizmet", desc: "Sertifikalı operatörlerimizle güvenli ve profesyonel vinç operasyonu.", href: "/operatorlu-vinc-hizmeti" },
+  { icon: "anahtar", title: "Bakım & Onarım", desc: "Vinçlerinizin uzun ömürlü kullanımı için periyodik bakım hizmeti.", href: "/vinc-bakim-ve-onarim" },
+  { icon: "lojistik", title: "Taşıma & Lojistik", desc: "Vinç taşıma ve lojistik süreçlerinde güvenilir çözümler.", href: "/vinc-tasima-ve-lojistik" },
+  { icon: "sertifika", title: "Sertifikasyon", desc: "Vinç operatörleri için eğitim ve sertifikasyon programları.", href: "/vinc-sertifikasyon-ve-egitim" },
+  { icon: "acil", title: "Acil Hizmet", desc: "7/24 acil vinç hizmetleriyle her an yanınızdayız.", href: "/vinc-acil-durum-hizmetleri" },
+  { icon: "satis", title: "Satılık Vinç", desc: "İkinci el ve sıfır vinç satışında güvenilir adresiniz.", href: "/satilik-vinc" },
 ];
 
 const vincCesitleri = [
-  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "🚛", renk: "#F59E0B" },
-  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "🏗️", renk: "#3B82F6" },
-  { title: "Kule Vinç", href: "/kule-vinc", icon: "🗼", renk: "#8B5CF6" },
-  { title: "Ahtapot Vinç", href: "/ahtapot-vinc", icon: "🐙", renk: "#EC4899" },
-  { title: "Kamyon Üstü Vinç", href: "/kamyon-ustu-vinc", icon: "🚚", renk: "#10B981" },
-  { title: "Paletli Vinç", href: "/paletli-vinc", icon: "⚙️", renk: "#F97316" },
-  { title: "Raylı Vinç", href: "/rayli-vinc", icon: "🚃", renk: "#14B8A6" },
-  { title: "Portal Vinç", href: "/portal-vinc", icon: "🌉", renk: "#6366F1" },
-  { title: "Monoray Vinç", href: "/monoray-vinc", icon: "📐", renk: "#EF4444" },
-  { title: "Sabit Vinç", href: "/sabit-vinc", icon: "🏭", renk: "#84CC16" },
-  { title: "Minik Vinç", href: "/minik-vinc", icon: "🔩", renk: "#F59E0B" },
-  { title: "Helikopter Vinç", href: "/helikopter-vinc", icon: "🚁", renk: "#06B6D4" },
+  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "sepetli", renk: "#F59E0B" },
+  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "mobil", renk: "#3B82F6" },
+  { title: "Kule Vinç", href: "/kule-vinc", icon: "kule", renk: "#8B5CF6" },
+  { title: "Ahtapot Vinç", href: "/ahtapot-vinc", icon: "ahtapot", renk: "#EC4899" },
+  { title: "Kamyon Üstü Vinç", href: "/kamyon-ustu-vinc", icon: "kamyonustu", renk: "#10B981" },
+  { title: "Paletli Vinç", href: "/paletli-vinc", icon: "paletli", renk: "#F97316" },
+  { title: "Raylı Vinç", href: "/rayli-vinc", icon: "rayli", renk: "#14B8A6" },
+  { title: "Portal Vinç", href: "/portal-vinc", icon: "portal", renk: "#6366F1" },
+  { title: "Monoray Vinç", href: "/monoray-vinc", icon: "monoray", renk: "#EF4444" },
+  { title: "Sabit Vinç", href: "/sabit-vinc", icon: "sabit", renk: "#84CC16" },
+  { title: "Minik Vinç", href: "/minik-vinc", icon: "minik", renk: "#F59E0B" },
+  { title: "Helikopter Vinç", href: "/helikopter-vinc", icon: "helikopter", renk: "#06B6D4" },
 ];
 
 const urunler = [
-  { title: "Makaslı Platform", href: "/makasli-platform", icon: "⬆️", desc: "Dikey erişim, geniş çalışma platformu" },
-  { title: "Eklemli Platform", href: "/eklemli-platform", icon: "🦾", desc: "Dar alanlarda engel üzeri erişim" },
-  { title: "Örümcek Platform", href: "/orumcek-platform", icon: "🕷️", desc: "Hassas zemin, dar alan uyumlu" },
-  { title: "Forklift", href: "/forklift-kiralama", icon: "🚜", desc: "Depo ve fabrika yük taşıma çözümleri" },
-  { title: "Telehandler", href: "/telehandler-kiralama", icon: "🦺", desc: "Yüksek erişimli teleskopik ekipman" },
+  { title: "Makaslı Platform", href: "/makasli-platform", icon: "makasli", desc: "Dikey erişim, geniş çalışma platformu" },
+  { title: "Eklemli Platform", href: "/eklemli-platform", icon: "eklemli", desc: "Dar alanlarda engel üzeri erişim" },
+  { title: "Örümcek Platform", href: "/orumcek-platform", icon: "orumcek", desc: "Hassas zemin, dar alan uyumlu" },
+  { title: "Forklift", href: "/forklift-kiralama", icon: "forklift", desc: "Depo ve fabrika yük taşıma çözümleri" },
+  { title: "Telehandler", href: "/telehandler-kiralama", icon: "telehandler", desc: "Yüksek erişimli teleskopik ekipman" },
 ];
 
 const neden = [
-  { icon: "🏆", title: "25 Yıllık Deneyim", desc: "Sektörde çeyrek asırlık tecrübemizle binlerce projeyi başarıyla tamamladık." },
-  { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipmanlarımız kapsamlı sigorta güvencesi altındadır." },
-  { icon: "⚡", title: "Hızlı Teslimat", desc: "İstanbul'un tüm ilçelerinde aynı gün ya da ertesi gün teslimat." },
-  { icon: "🔧", title: "Bakımlı Filo", desc: "Filomuz düzenli teknik kontrollerden geçer, arıza riskini minimize ederiz." },
-  { icon: "👷", title: "Sertifikalı Operatör", desc: "Eğitimli ve belgeli operatörlerimiz iş güvenliğini en üst seviyede tutar." },
-  { icon: "📞", title: "7/24 Destek", desc: "Gece ya da gündüz, her an teknik destek ve acil müdahale hizmetindeyiz." },
+  { icon: "odul", title: "25 Yıllık Deneyim", desc: "Sektörde çeyrek asırlık tecrübemizle binlerce projeyi başarıyla tamamladık." },
+  { icon: "kalkan", title: "Tam Sigortalı", desc: "Tüm ekipmanlarımız kapsamlı sigorta güvencesi altındadır." },
+  { icon: "hiz", title: "Hızlı Teslimat", desc: "İstanbul'un tüm ilçelerinde aynı gün ya da ertesi gün teslimat." },
+  { icon: "anahtar", title: "Bakımlı Filo", desc: "Filomuz düzenli teknik kontrollerden geçer, arıza riskini minimize ederiz." },
+  { icon: "operator", title: "Sertifikalı Operatör", desc: "Eğitimli ve belgeli operatörlerimiz iş güvenliğini en üst seviyede tutar." },
+  { icon: "telefon", title: "7/24 Destek", desc: "Gece ya da gündüz, her an teknik destek ve acil müdahale hizmetindeyiz." },
 ];
 
 const galeri = [
@@ -116,7 +117,7 @@ export default function HomePage() {
                   href="tel:05323039089"
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-5 rounded-2xl text-lg transition text-center shadow-lg shadow-yellow-400/20"
                 >
-                  📞 0532 303 90 89
+                  0532 303 90 89
                 </a>
                 <Link
                   href="/kiralik-vinc"
@@ -145,17 +146,17 @@ export default function HomePage() {
             {/* Right — big feature cards */}
             <div className="hidden lg:grid grid-cols-2 gap-4">
               {[
-                { icon: "🏗️", title: "Kiralık Vinç", sub: "Sepetli · Mobil · Kule", href: "/kiralik-vinc", bg: "from-yellow-500/20 to-yellow-500/5" },
-                { icon: "🦺", title: "Kiralık Manlift", sub: "Makaslı · Eklemli · Örümcek", href: "/kiralik-manlift", bg: "from-blue-500/20 to-blue-500/5" },
-                { icon: "👷", title: "Operatörlü", sub: "Sertifikalı operatör desteği", href: "/operatorlu-vinc-hizmeti", bg: "from-green-500/20 to-green-500/5" },
-                { icon: "🚨", title: "Acil Hizmet", sub: "7/24 anında müdahale", href: "/vinc-acil-durum-hizmetleri", bg: "from-red-500/20 to-red-500/5" },
+                { icon: "kanca", title: "Kiralık Vinç", sub: "Sepetli · Mobil · Kule", href: "/kiralik-vinc", bg: "from-yellow-500/20 to-yellow-500/5" },
+                { icon: "manlift", title: "Kiralık Manlift", sub: "Makaslı · Eklemli · Örümcek", href: "/kiralik-manlift", bg: "from-blue-500/20 to-blue-500/5" },
+                { icon: "operator", title: "Operatörlü", sub: "Sertifikalı operatör desteği", href: "/operatorlu-vinc-hizmeti", bg: "from-green-500/20 to-green-500/5" },
+                { icon: "acil", title: "Acil Hizmet", sub: "7/24 anında müdahale", href: "/vinc-acil-durum-hizmetleri", bg: "from-red-500/20 to-red-500/5" },
               ].map((c) => (
                 <Link
                   key={c.href}
                   href={c.href}
                   className={`group bg-gradient-to-br ${c.bg} border border-white/10 rounded-3xl p-6 hover:border-yellow-400/50 hover:scale-[1.02] transition-all duration-300`}
                 >
-                  <div className="text-5xl mb-4">{c.icon}</div>
+                  <VincIcon name={c.icon} className="w-12 h-12 mb-4 text-yellow-400" />
                   <div className="text-white font-black text-lg mb-1">{c.title}</div>
                   <div className="text-gray-500 text-sm">{c.sub}</div>
                   <div className="mt-4 text-yellow-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition">
@@ -196,7 +197,7 @@ export default function HomePage() {
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5">
               {neden.map((n) => (
                 <div key={n.title} className="flex gap-4 p-5 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-md transition group">
-                  <div className="text-3xl flex-shrink-0">{n.icon}</div>
+                  <VincIcon name={n.icon} className="w-8 h-8 flex-shrink-0 text-yellow-500" />
                   <div>
                     <h3 className="font-black text-gray-900 mb-1 group-hover:text-yellow-600 transition">{n.title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{n.desc}</p>
@@ -270,7 +271,7 @@ export default function HomePage() {
                 href={h.href}
                 className="group bg-white border border-gray-100 rounded-3xl p-6 hover:border-yellow-400 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="text-4xl mb-5">{h.icon}</div>
+                <VincIcon name={h.icon} className="w-10 h-10 mb-5 text-yellow-500" />
                 <h3 className="font-black text-gray-900 text-lg mb-2 group-hover:text-yellow-600 transition">{h.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{h.desc}</p>
                 <span className="text-yellow-500 text-sm font-bold">Detaylar →</span>
@@ -309,7 +310,7 @@ export default function HomePage() {
                 className="group bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-yellow-400/60 transition"
                 style={{ "--accent": v.renk } as React.CSSProperties}
               >
-                <div className="text-4xl mb-3">{v.icon}</div>
+                <VincIcon name={v.icon} className="w-10 h-10 mb-3" style={{ color: v.renk }} />
                 <div className="text-white font-bold text-sm group-hover:text-yellow-400 transition leading-tight">{v.title}</div>
               </Link>
             ))}
@@ -339,7 +340,7 @@ export default function HomePage() {
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-x-8 -translate-y-8 group-hover:bg-black/10 transition" />
                 <div className="relative">
-                  <div className="text-5xl mb-5">{u.icon}</div>
+                  <VincIcon name={u.icon} className="w-12 h-12 mb-5 text-yellow-500" />
                   <h3 className="font-black text-lg mb-2">{u.title}</h3>
                   <p className="text-sm opacity-60 group-hover:opacity-80 leading-relaxed">{u.desc}</p>
                   <div className="mt-5 font-bold text-sm text-yellow-400 group-hover:text-black">İncele →</div>
@@ -364,7 +365,7 @@ export default function HomePage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl transition"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
             <Link
               href="/kiralik-vinc"
@@ -387,13 +388,12 @@ export default function HomePage() {
       <section className="bg-gray-900 py-16 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { v: "25+", l: "Yıllık Deneyim", icon: "🏆" },
-            { v: "39", l: "İlçede Hizmet", icon: "📍" },
-            { v: "1000+", l: "Tamamlanan Proje", icon: "✅" },
-            { v: "7/24", l: "Acil Destek", icon: "📞" },
+            { v: "25+", l: "Yıllık Deneyim" },
+            { v: "39", l: "İlçede Hizmet" },
+            { v: "1000+", l: "Tamamlanan Proje" },
+            { v: "7/24", l: "Acil Destek" },
           ].map((s) => (
             <div key={s.l} className="border border-white/10 rounded-2xl p-6">
-              <div className="text-4xl mb-3">{s.icon}</div>
               <div className="text-4xl font-black text-yellow-400 mb-2">{s.v}</div>
               <div className="text-gray-400 text-sm font-medium">{s.l}</div>
             </div>
@@ -425,7 +425,7 @@ export default function HomePage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-12 py-5 rounded-2xl text-xl transition shadow-2xl shadow-yellow-400/20"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

@@ -7,6 +7,23 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+// Bu üç yazının app/blog altında kendi statik klasörü var; Next'te statik rota
+// dinamik [slug] rotasına göre önceliklidir, burada tekrar üretmiyoruz.
+const ozelStatikRotalar = new Set([
+  "kiralik-vinc-fiyatlari",
+  "vinc-kiralama-fiyatlari",
+  "gunluk-vinc-kiralama-fiyatlari",
+]);
+
+export function generateStaticParams() {
+  return allPosts
+    .filter((p) => !ozelStatikRotalar.has(p.slug))
+    .map((p) => ({ slug: p.slug }));
+}
+
+// Bilinmeyen slug'lar build sonrası da 404 versin (notFound zaten çağrılıyor).
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);

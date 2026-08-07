@@ -25,7 +25,7 @@ const vincTurleri = [
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Gaziosmanpaşa'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Gaziosmanpaşa'nın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Küçükköy, Sarıgöl ve kentsel dönüşüm bölgelerinde de sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
@@ -36,7 +36,7 @@ const vincTurleri = [
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Gaziosmanpaşa'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Gaziosmanpaşa'nın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Gaziosmanpaşa'ya aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
@@ -58,7 +58,7 @@ const vincTurleri = [
     href: "/ahtapot-vinc",
     kapasite: "10 – 50 ton",
     kullanim: "Dar alan, bina içi",
-    desc: "Gaziosmanpaşa'ın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
+    desc: "Gaziosmanpaşa'nın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
     ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
   },
   {
@@ -69,7 +69,7 @@ const vincTurleri = [
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Gaziosmanpaşa'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Gaziosmanpaşa ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {
@@ -97,12 +97,12 @@ const fiyatTablosu = [
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Gaziosmanpaşa'ın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
+  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Gaziosmanpaşa'nın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
   { icon: "🏭", title: "Fabrika & Sanayi", desc: "Gaziosmanpaşa sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
   { icon: "⚡", title: "Enerji Projeleri", desc: "Gaziosmanpaşa çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
   { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
   { icon: "🚢", title: "Liman & Tersane", desc: "Gaziosmanpaşa ve çevresindeki limanlarda konteyner yükleme, tekne bakımı ve liman operasyonları." },
-  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Gaziosmanpaşa'ın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
+  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Gaziosmanpaşa'nın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
   { icon: "📡", title: "Telekom & Anten", desc: "Gaziosmanpaşa ve çevresinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
   { icon: "🌳", title: "Peyzaj & Park", desc: "Gaziosmanpaşa park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
 ];
@@ -112,7 +112,7 @@ const adimlar = [
   { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
   { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
   { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
-  { no: "05", icon: "🚛", title: "Vinç Gaziosmanpaşa'a Teslim Edilir", desc: "Belirlenen tarihte Gaziosmanpaşa'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "05", icon: "🚛", title: "Vinç Gaziosmanpaşa'ya Teslim Edilir", desc: "Belirlenen tarihte Gaziosmanpaşa'daki şantiyenize kurulum ekibi ile ulaşırız." },
   { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
@@ -131,7 +131,7 @@ const sss = [
     c: "Gaziosmanpaşa'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
-    s: "Gaziosmanpaşa'ın her ilçesine hizmet veriyor musunuz?",
+    s: "Gaziosmanpaşa'nın her ilçesine hizmet veriyor musunuz?",
     c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
   },
   {

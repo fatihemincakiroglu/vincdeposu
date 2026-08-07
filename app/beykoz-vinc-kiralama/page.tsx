@@ -25,7 +25,7 @@ const vincTurleri = [
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Beykoz'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Beykoz'un dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Kavacık, Çubuklu ve Paşabahçe çevresinde de sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
@@ -36,7 +36,7 @@ const vincTurleri = [
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Beykoz'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Beykoz'un büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Beykoz'a aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
@@ -58,7 +58,7 @@ const vincTurleri = [
     href: "/ahtapot-vinc",
     kapasite: "10 – 50 ton",
     kullanim: "Dar alan, bina içi",
-    desc: "Beykoz'ın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
+    desc: "Beykoz'un tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
     ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
   },
   {
@@ -69,7 +69,7 @@ const vincTurleri = [
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Beykoz'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Beykoz ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {
@@ -97,12 +97,12 @@ const fiyatTablosu = [
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Beykoz'ın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
+  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Beykoz'un yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
   { icon: "🏭", title: "Fabrika & Sanayi", desc: "Beykoz sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
   { icon: "⚡", title: "Enerji Projeleri", desc: "Beykoz çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
   { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
   { icon: "🚢", title: "Liman & Tersane", desc: "Beykoz ve çevresindeki limanlarda konteyner yükleme, tekne bakımı ve liman operasyonları." },
-  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Beykoz'ın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
+  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Beykoz'un köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
   { icon: "📡", title: "Telekom & Anten", desc: "Beykoz ve çevresinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
   { icon: "🌳", title: "Peyzaj & Park", desc: "Beykoz park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
 ];
@@ -131,7 +131,7 @@ const sss = [
     c: "Beykoz'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
-    s: "Beykoz'ın her ilçesine hizmet veriyor musunuz?",
+    s: "Beykoz'un her ilçesine hizmet veriyor musunuz?",
     c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
   },
   {

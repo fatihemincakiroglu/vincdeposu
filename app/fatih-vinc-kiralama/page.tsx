@@ -25,7 +25,7 @@ const vincTurleri = [
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Fatih'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Fatih'in dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Aksaray, Eminönü ve tarihi yarımadanın dar sokaklarında da sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
@@ -36,7 +36,7 @@ const vincTurleri = [
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Fatih'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Fatih'in büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Fatih'e aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
@@ -47,7 +47,7 @@ const vincTurleri = [
     href: "/kule-vinc",
     kapasite: "1 – 25 ton",
     kullanim: "Uzun süreli inşaat",
-    desc: "Fatih'daki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
+    desc: "Fatih'teki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
     ozellikler: ["Uzun vadeli proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
   },
   {
@@ -58,7 +58,7 @@ const vincTurleri = [
     href: "/ahtapot-vinc",
     kapasite: "10 – 50 ton",
     kullanim: "Dar alan, bina içi",
-    desc: "Fatih'ın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
+    desc: "Fatih'in tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
     ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
   },
   {
@@ -69,7 +69,7 @@ const vincTurleri = [
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Fatih'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Fatih ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {
@@ -97,12 +97,12 @@ const fiyatTablosu = [
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Fatih'ın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
+  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Fatih'in yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
   { icon: "🏭", title: "Fabrika & Sanayi", desc: "Fatih sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
   { icon: "⚡", title: "Enerji Projeleri", desc: "Fatih çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
   { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
   { icon: "🚢", title: "Liman & Tersane", desc: "Fatih ve çevresindeki limanlarda konteyner yükleme, tekne bakımı ve liman operasyonları." },
-  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Fatih'ın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
+  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Fatih'in köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
   { icon: "📡", title: "Telekom & Anten", desc: "Fatih ve çevresinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
   { icon: "🌳", title: "Peyzaj & Park", desc: "Fatih park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
 ];
@@ -112,12 +112,12 @@ const adimlar = [
   { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
   { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
   { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
-  { no: "05", icon: "🚛", title: "Vinç Fatih'a Teslim Edilir", desc: "Belirlenen tarihte Fatih'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "05", icon: "🚛", title: "Vinç Fatih'e Teslim Edilir", desc: "Belirlenen tarihte Fatih'teki şantiyenize kurulum ekibi ile ulaşırız." },
   { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
 const neden = [
-  { icon: "🏆", title: "25 Yıllık Fatih Deneyimi", desc: "Fatih'da çeyrek asır, 1000+ başarıyla tamamlanan proje." },
+  { icon: "🏆", title: "25 Yıllık Fatih Deneyimi", desc: "Fatih'te çeyrek asır, 1000+ başarıyla tamamlanan proje." },
   { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipman ve operasyonlar kapsamlı sigorta güvencesinde." },
   { icon: "⚡", title: "Aynı Gün Teslimat", desc: "Fatih ve çevresinde stok garantisiyle acil taleplerde aynı gün vinç sahada." },
   { icon: "👷", title: "Sertifikalı Operatör", desc: "MEB onaylı belgeli, ISG eğitimli operatörler." },
@@ -127,11 +127,11 @@ const neden = [
 
 const sss = [
   {
-    s: "Fatih'da vinç kiralama fiyatları nasıl belirleniyor?",
-    c: "Fatih'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
+    s: "Fatih'te vinç kiralama fiyatları nasıl belirleniyor?",
+    c: "Fatih'te vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
-    s: "Fatih'ın her ilçesine hizmet veriyor musunuz?",
+    s: "Fatih'in her ilçesine hizmet veriyor musunuz?",
     c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
   },
   {

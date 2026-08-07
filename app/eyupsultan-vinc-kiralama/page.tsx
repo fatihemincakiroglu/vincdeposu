@@ -25,7 +25,7 @@ const vincTurleri = [
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Eyüpsultan'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Eyüpsultan'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Göktürk, Alibeyköy ve Kemerburgaz çevresinde de sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
@@ -36,7 +36,7 @@ const vincTurleri = [
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Eyüpsultan'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Eyüpsultan'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Eyüpsultan'a aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
@@ -69,7 +69,7 @@ const vincTurleri = [
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Eyüpsultan'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Eyüpsultan ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {

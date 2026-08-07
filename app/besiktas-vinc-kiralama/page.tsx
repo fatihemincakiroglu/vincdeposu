@@ -25,7 +25,7 @@ const vincTurleri = [
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Beşiktaş'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Beşiktaş'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Levent, Etiler ve Ortaköy çevresinde de sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
@@ -36,7 +36,7 @@ const vincTurleri = [
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Beşiktaş'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Beşiktaş'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Beşiktaş'a aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
@@ -47,7 +47,7 @@ const vincTurleri = [
     href: "/kule-vinc",
     kapasite: "1 – 25 ton",
     kullanim: "Uzun süreli inşaat",
-    desc: "Beşiktaş'daki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
+    desc: "Beşiktaş'taki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
     ozellikler: ["Uzun vadeli proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
   },
   {
@@ -69,7 +69,7 @@ const vincTurleri = [
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Beşiktaş'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Beşiktaş ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {
@@ -112,12 +112,12 @@ const adimlar = [
   { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
   { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
   { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
-  { no: "05", icon: "🚛", title: "Vinç Beşiktaş'a Teslim Edilir", desc: "Belirlenen tarihte Beşiktaş'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "05", icon: "🚛", title: "Vinç Beşiktaş'a Teslim Edilir", desc: "Belirlenen tarihte Beşiktaş'taki şantiyenize kurulum ekibi ile ulaşırız." },
   { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
 const neden = [
-  { icon: "🏆", title: "25 Yıllık Beşiktaş Deneyimi", desc: "Beşiktaş'da çeyrek asır, 1000+ başarıyla tamamlanan proje." },
+  { icon: "🏆", title: "25 Yıllık Beşiktaş Deneyimi", desc: "Beşiktaş'ta çeyrek asır, 1000+ başarıyla tamamlanan proje." },
   { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipman ve operasyonlar kapsamlı sigorta güvencesinde." },
   { icon: "⚡", title: "Aynı Gün Teslimat", desc: "Beşiktaş ve çevresinde stok garantisiyle acil taleplerde aynı gün vinç sahada." },
   { icon: "👷", title: "Sertifikalı Operatör", desc: "MEB onaylı belgeli, ISG eğitimli operatörler." },
@@ -127,8 +127,8 @@ const neden = [
 
 const sss = [
   {
-    s: "Beşiktaş'da vinç kiralama fiyatları nasıl belirleniyor?",
-    c: "Beşiktaş'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
+    s: "Beşiktaş'ta vinç kiralama fiyatları nasıl belirleniyor?",
+    c: "Beşiktaş'ta vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
     s: "Beşiktaş'ın her ilçesine hizmet veriyor musunuz?",
