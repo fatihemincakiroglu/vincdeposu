@@ -25,7 +25,7 @@ const vincTurleri = [
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Sultangazi'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Sultangazi'nin dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Cebeci, Habibler ve 75. Yıl çevresinde de sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
@@ -36,7 +36,7 @@ const vincTurleri = [
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Sultangazi'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Sultangazi'nin büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Sultangazi'ye aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
@@ -47,7 +47,7 @@ const vincTurleri = [
     href: "/kule-vinc",
     kapasite: "1 – 25 ton",
     kullanim: "Uzun süreli inşaat",
-    desc: "Sultangazi'daki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
+    desc: "Sultangazi'deki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
     ozellikler: ["Uzun vadeli proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
   },
   {
@@ -58,7 +58,7 @@ const vincTurleri = [
     href: "/ahtapot-vinc",
     kapasite: "10 – 50 ton",
     kullanim: "Dar alan, bina içi",
-    desc: "Sultangazi'ın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
+    desc: "Sultangazi'nin tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
     ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
   },
   {
@@ -69,7 +69,7 @@ const vincTurleri = [
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Sultangazi'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Sultangazi ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {
@@ -97,12 +97,12 @@ const fiyatTablosu = [
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Sultangazi'ın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
+  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Sultangazi'nin yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
   { icon: "🏭", title: "Fabrika & Sanayi", desc: "Sultangazi sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
   { icon: "⚡", title: "Enerji Projeleri", desc: "Sultangazi çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
   { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
   { icon: "🚢", title: "Liman & Tersane", desc: "Sultangazi ve çevresindeki limanlarda konteyner yükleme, tekne bakımı ve liman operasyonları." },
-  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Sultangazi'ın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
+  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Sultangazi'nin köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
   { icon: "📡", title: "Telekom & Anten", desc: "Sultangazi ve çevresinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
   { icon: "🌳", title: "Peyzaj & Park", desc: "Sultangazi park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
 ];
@@ -112,12 +112,12 @@ const adimlar = [
   { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
   { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
   { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
-  { no: "05", icon: "🚛", title: "Vinç Sultangazi'a Teslim Edilir", desc: "Belirlenen tarihte Sultangazi'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "05", icon: "🚛", title: "Vinç Sultangazi'ye Teslim Edilir", desc: "Belirlenen tarihte Sultangazi'deki şantiyenize kurulum ekibi ile ulaşırız." },
   { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
 const neden = [
-  { icon: "🏆", title: "25 Yıllık Sultangazi Deneyimi", desc: "Sultangazi'da çeyrek asır, 1000+ başarıyla tamamlanan proje." },
+  { icon: "🏆", title: "25 Yıllık Sultangazi Deneyimi", desc: "Sultangazi'de çeyrek asır, 1000+ başarıyla tamamlanan proje." },
   { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipman ve operasyonlar kapsamlı sigorta güvencesinde." },
   { icon: "⚡", title: "Aynı Gün Teslimat", desc: "Sultangazi ve çevresinde stok garantisiyle acil taleplerde aynı gün vinç sahada." },
   { icon: "👷", title: "Sertifikalı Operatör", desc: "MEB onaylı belgeli, ISG eğitimli operatörler." },
@@ -127,11 +127,11 @@ const neden = [
 
 const sss = [
   {
-    s: "Sultangazi'da vinç kiralama fiyatları nasıl belirleniyor?",
-    c: "Sultangazi'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
+    s: "Sultangazi'de vinç kiralama fiyatları nasıl belirleniyor?",
+    c: "Sultangazi'de vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
-    s: "Sultangazi'ın her ilçesine hizmet veriyor musunuz?",
+    s: "Sultangazi'nin her ilçesine hizmet veriyor musunuz?",
     c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
   },
   {

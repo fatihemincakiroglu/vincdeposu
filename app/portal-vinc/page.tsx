@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   alternates: {
@@ -371,7 +370,7 @@ export default function PortalVincPage() {
                 <p className="text-gray-600 text-lg leading-relaxed mb-4">
                   Portal vinç (gantry crane), iki bağımsız taşıyıcı ayak üzerine oturan yatay bir ana kiriş ve bu
                   kirişin boyunca hareket eden bir vinç mekanizmasından oluşan endüstriyel kaldırma ekipmanıdır.
-                  Türkçede "gantri vinç" olarak da adlandırılır.
+                  Türkçede &quot;gantri vinç&quot; olarak da adlandırılır.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-4">
                   Köprülü vinçten en temel farkı, kendi bağımsız taşıyıcı yapısına sahip olmasıdır. Bu özellik
@@ -537,7 +536,7 @@ export default function PortalVincPage() {
                   Raylı Portal Vinç (Rail Mounted Gantry) Karşılaştırması
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  RMG vinçler, sabit ray sistemi üzerinde hareket ederek RTG'ye kıyasla daha yüksek çevrim hızı ve
+                  RMG vinçler, sabit ray sistemi üzerinde hareket ederek RTG&apos;ye kıyasla daha yüksek çevrim hızı ve
                   hassas konumlama imkânı sunar. Tam otomasyon (ARMG) ile desteklendiğinde insansız terminal
                   operasyonunu mümkün kılar.
                 </p>
@@ -880,7 +879,7 @@ export default function PortalVincPage() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Bakım planı; vincin FEM/ISO kullanım sınıfı (A3–A8), günlük ortalama çevrim sayısı ve çalışma
                 ortamı koşullarına (toz, nem, sıcaklık) göre hazırlanır. Üretici OEM kılavuzu temel referanstır;
-                Türkiye'de 6331 sayılı İş Sağlığı ve Güvenliği Kanunu kapsamında yıllık periyodik muayene zorunludur.
+                Türkiye&apos;de 6331 sayılı İş Sağlığı ve Güvenliği Kanunu kapsamında yıllık periyodik muayene zorunludur.
                 Bakım planının yetkili servis tarafından imzalanarak arşivlenmesi iş güvenliği denetimlerinde zorunludur.
               </p>
             </div>
@@ -898,7 +897,7 @@ export default function PortalVincPage() {
                 </h2>
                 <p className="text-gray-800 text-lg leading-relaxed mb-4">
                   Portal vinç işletiminde güvenlik, teknik performans kadar kritik bir gerekliliktir.
-                  Türkiye'deki yasal mevzuat ve uluslararası standartlar hem imalatçı hem de işletmeci
+                  Türkiye&apos;deki yasal mevzuat ve uluslararası standartlar hem imalatçı hem de işletmeci
                   için kapsamlı yükümlülükler tanımlar.
                 </p>
                 <div className="p-4 bg-white/60 rounded-xl">
