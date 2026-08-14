@@ -177,6 +177,78 @@ const teklifBilgileri = [
   "Çevrede elektrik hattı, ağaç veya trafik engeli olup olmadığı",
 ];
 
+const mobilVincFiyatlari = [
+  { sinif: "25 – 40 Ton", bom: "25 – 35 m", saatlik: "1.200 – 2.000 TL", gunluk: "10.000 – 15.000 TL", haftalik: "55.000 – 80.000 TL", aylik: "200.000 – 280.000 TL" },
+  { sinif: "50 – 60 Ton", bom: "35 – 45 m", saatlik: "1.500 – 2.500 TL", gunluk: "15.000 – 20.000 TL", haftalik: "80.000 – 110.000 TL", aylik: "250.000 – 350.000 TL" },
+  { sinif: "70 – 90 Ton", bom: "40 – 50 m", saatlik: "2.000 – 3.500 TL", gunluk: "20.000 – 30.000 TL", haftalik: "110.000 – 160.000 TL", aylik: "350.000 – 500.000 TL" },
+  { sinif: "100 – 150 Ton", bom: "45 – 65 m", saatlik: "2.500 – 5.000 TL", gunluk: "30.000 – 50.000 TL", haftalik: "160.000 – 260.000 TL", aylik: "500.000 – 850.000 TL" },
+  { sinif: "150 Ton Üzeri", bom: "60 m+", saatlik: "Özel teklif", gunluk: "Özel teklif", haftalik: "Proje bazlı", aylik: "Proje bazlı" },
+];
+
+const sepetliVincFiyatlari = [
+  { yukseklik: "16 – 22 Metre", kullanim: "Tabela, alçak katlı bakım", saatlik: "1.200 – 1.800 TL", gunluk: "7.000 – 9.000 TL", haftalik: "38.000 – 48.000 TL", aylik: "130.000 – 170.000 TL" },
+  { yukseklik: "24 – 32 Metre", kullanim: "Dış cephe, orta kat erişimi", saatlik: "1.500 – 2.200 TL", gunluk: "8.500 – 11.000 TL", haftalik: "45.000 – 60.000 TL", aylik: "150.000 – 200.000 TL" },
+  { yukseklik: "36 – 45 Metre", kullanim: "AVM, plaza, reklam montajı", saatlik: "2.000 – 2.800 TL", gunluk: "10.000 – 13.000 TL", haftalik: "55.000 – 70.000 TL", aylik: "180.000 – 240.000 TL" },
+  { yukseklik: "48 – 60 Metre", kullanim: "Yüksek yapı, endüstriyel bakım", saatlik: "2.500 – 3.500 TL", gunluk: "12.000 – 16.000 TL", haftalik: "65.000 – 90.000 TL", aylik: "220.000 – 300.000 TL" },
+  { yukseklik: "60 Metre Üzeri", kullanim: "Özel projeler", saatlik: "Özel teklif", gunluk: "Özel teklif", haftalik: "Proje bazlı", aylik: "Proje bazlı" },
+];
+
+const hiyapFiyatlari = [
+  { sinif: "10 – 25 Ton/Metre", bom: "12 – 20 m", saatlik: "1.200 – 2.000 TL", gunluk: "7.000 – 10.000 TL", aylik: "130.000 – 190.000 TL" },
+  { sinif: "25 – 40 Ton/Metre", bom: "15 – 25 m", saatlik: "2.000 – 3.200 TL", gunluk: "10.000 – 15.000 TL", aylik: "190.000 – 280.000 TL" },
+  { sinif: "40 Ton/Metre Üzeri", bom: "20 m+", saatlik: "Özel teklif", gunluk: "Özel teklif", aylik: "Proje bazlı" },
+];
+
+const fiyatFaktorleri: { label: string }[] = [
+  { label: "Vinç tipi ve kapasitesi" },
+  { label: "Bom uzunluğu ve çalışma yüksekliği" },
+  { label: "Yatay erişim mesafesi" },
+  { label: "Saha ve zemin koşulları" },
+  { label: "Araç konumlandırma alanı" },
+  { label: "Operatör dahil olup olmaması" },
+  { label: "Nakliye ve sevkiyat mesafesi" },
+  { label: "Kiralama süresi" },
+  { label: "Gece veya hafta sonu çalışması" },
+  { label: "Bekleme süresi" },
+  { label: "Sapan, sepet ve ek ekipman ihtiyacı" },
+  { label: "İş güvenliği ve yönlendirme personeli" },
+];
+
+const surelendirme = [
+  {
+    icon: "saat",
+    title: "Saatlik Kiralama",
+    desc: "Tek noktada yapılacak kısa süreli kaldırma işleri için uygundur. Çoğu çalışmada minimum süre uygulaması bulunur; bir saatlik iş için dahi belirli bir alt süre üzerinden ücretlendirme yapılabilir.",
+  },
+  {
+    icon: "takvim",
+    title: "Günlük Kiralama",
+    desc: "Gün içinde birden fazla kaldırma, uzun süren montaj veya farklı noktalarda çalışma gerekiyorsa günlük plan daha ekonomiktir. Günlük mesai süresi teklif aşamasında netleştirilir.",
+  },
+  {
+    icon: "takvimHafta",
+    title: "Haftalık Kiralama",
+    desc: "Devam eden şantiye, montaj veya bakım süreçlerinde haftalık kullanım, günlük kiralamaya göre birim maliyeti düşürür ve ekipmanın sahada hazır kalmasını sağlar.",
+  },
+  {
+    icon: "sozlesme",
+    title: "Aylık Kiralama",
+    desc: "Şantiye, fabrika ve sürekli yük kaldırma ihtiyacı olan tesislerde aylık anlaşma en planlı bütçeyi sunar. Uzun vadede birim maliyet belirgin şekilde azalır.",
+  },
+];
+
+const teklifBilgileri = [
+  "İşin yapılacağı açık adres",
+  "Yükün yaklaşık ağırlığı, ölçüsü ve niteliği",
+  "Kaldırma yüksekliği ve yatay erişim mesafesi",
+  "Çalışma alanının fotoğrafı veya videosu",
+  "Tercih edilen vinç tipi (varsa)",
+  "Kiralama süresi, tarih ve saat",
+  "Operatör veya ek personel ihtiyacı",
+  "Saha girişi, zemin durumu ve manevra alanı",
+  "Çevrede elektrik hattı, ağaç veya trafik engeli olup olmadığı",
+];
+
 const kullanımAlanlari = [
   { icon: "kule", title: "İnşaat", desc: "Yüksek katlı yapı inşaatında kolon, kalıp ve prefabrik eleman montajı; temel kazısı sırasında malzeme taşıma işleri." },
   { icon: "sabit", title: "Sanayi", desc: "Fabrika içi ağır makine montajı, üretim hattı kurulumu ve büyük ekipmanların güvenli şekilde yerleştirilmesi." },
