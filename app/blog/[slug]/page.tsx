@@ -2,10 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, allPosts } from "../posts-data";
+import VincIcon from "@/components/VincIcon";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+// Bu üç yazının app/blog altında kendi statik klasörü var; Next'te statik rota
+// dinamik [slug] rotasına göre önceliklidir, burada tekrar üretmiyoruz.
+const ozelStatikRotalar = new Set([
+  "kiralik-vinc-fiyatlari",
+  "vinc-kiralama-fiyatlari",
+  "gunluk-vinc-kiralama-fiyatlari",
+]);
+
+export function generateStaticParams() {
+  return allPosts
+    .filter((p) => !ozelStatikRotalar.has(p.slug))
+    .map((p) => ({ slug: p.slug }));
+}
+
+// Bilinmeyen slug'lar build sonrası da 404 versin (notFound zaten çağrılıyor).
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -63,7 +81,7 @@ export default async function BlogPostPage({ params }: Props) {
             className="inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-5"
             style={{ background: (post.categoryColor ?? "#F59E0B") + "30", color: post.categoryColor ?? "#F59E0B" }}
           >
-            {post.image} {post.category}
+            {post.category}
           </Link>
           <h1 className="text-3xl md:text-4xl font-black leading-tight mb-5">{post.title}</h1>
           <div className="flex flex-wrap items-center gap-3 text-gray-400 text-sm">
@@ -100,7 +118,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl text-center transition"
             >
-              📞 0532 303 90 89 — Uzmanla Görüş
+              0532 303 90 89 — Uzmanla Görüş
             </a>
             <Link
               href="/iletisim"
@@ -123,7 +141,7 @@ export default async function BlogPostPage({ params }: Props) {
                 href={`/blog/${p.slug}`}
                 className="bg-white border border-gray-100 rounded-2xl p-5 hover:border-yellow-300 hover:shadow-md transition"
               >
-                <div className="text-2xl mb-3">{p.image}</div>
+                <VincIcon name={p.image} className="w-7 h-7 mb-3 text-yellow-500" />
                 <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2">{p.title}</h3>
                 <p className="text-gray-500 text-xs">{p.readTime} okuma</p>
               </Link>
@@ -131,7 +149,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
           <div className="text-center mt-10">
             <Link href="/blog" className="text-yellow-600 font-semibold hover:underline">
-              ← Tüm yazılara dön
+              Tüm yazılara dön
             </Link>
           </div>
         </div>

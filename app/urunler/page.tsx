@@ -339,14 +339,13 @@ export default function UrunlerPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-4 rounded-2xl text-lg transition text-center shadow-lg shadow-yellow-400/20"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <a
               href="#karsilastirma"
               className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-8 py-4 rounded-2xl text-lg transition text-center"
             >
-              Karşılaştırma Tablosu ↓
-            </a>
+              Karşılaştırma Tablosu             </a>
           </div>
 
           {/* Hızlı geçiş çipleri */}
@@ -391,7 +390,6 @@ export default function UrunlerPage() {
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-5">
               {secimKriterleri.map((k) => (
                 <div key={k.baslik} className="flex gap-4 p-5 rounded-2xl border border-gray-100 hover:border-yellow-300 hover:shadow-md transition group">
-                  <span className="text-yellow-500 font-black text-xl shrink-0">✓</span>
                   <div>
                     <h3 className="font-black text-gray-900 mb-1 group-hover:text-yellow-600 transition">{k.baslik}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{k.aciklama}</p>
@@ -439,8 +437,7 @@ export default function UrunlerPage() {
                     <td className="px-5 py-4 text-gray-600">{u.kullanim}</td>
                     <td className="px-5 py-4 text-right whitespace-nowrap">
                       <Link href={`/${u.slug}`} className="text-yellow-600 font-bold hover:underline">
-                        İncele →
-                      </Link>
+                        İncele                       </Link>
                     </td>
                   </tr>
                 ))}
@@ -500,7 +497,6 @@ export default function UrunlerPage() {
                   <ul className="space-y-2.5 mb-6">
                     {u.ozellikler.map((oz) => (
                       <li key={oz} className="flex gap-2.5 items-start text-sm text-gray-700">
-                        <span className="text-green-600 font-bold shrink-0">✓</span>
                         {oz}
                       </li>
                     ))}
@@ -526,8 +522,7 @@ export default function UrunlerPage() {
                     className="inline-flex items-center gap-2 font-black px-6 py-3 rounded-xl transition text-black"
                     style={{ backgroundColor: u.renk }}
                   >
-                    {u.ad} Hakkında Detaylı Bilgi →
-                  </Link>
+                    {u.ad} Hakkında Detaylı Bilgi                   </Link>
                 </div>
               </div>
             ))}
@@ -595,7 +590,7 @@ export default function UrunlerPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl transition"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
             <Link
               href="/kiralik-manlift"
@@ -617,15 +612,14 @@ export default function UrunlerPage() {
           <div className="space-y-4">
             {sss.map((s) => (
               <div key={s.soru} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -650,7 +644,7 @@ export default function UrunlerPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-12 py-5 rounded-2xl text-xl transition shadow-2xl shadow-yellow-400/20"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

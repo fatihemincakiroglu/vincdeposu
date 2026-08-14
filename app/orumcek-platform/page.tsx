@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -134,7 +135,7 @@ export default function KiralikOrumcekPlatformPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🕷️ Örümcek Platform Kiralama Rehberi 2026
+              Örümcek Platform Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Örümcek Platform Kiralama<br />{" "}
@@ -149,14 +150,13 @@ export default function KiralikOrumcekPlatformPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#platform-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Platform Türlerini İncele ↓
-              </a>
+                Platform Türlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function KiralikOrumcekPlatformPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -259,15 +259,15 @@ export default function KiralikOrumcekPlatformPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🕷️ Örümcek Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Örümcek Platform</h3>
               <p className="text-gray-500 text-sm">Açılabilen ayaklarla engebeli ve dar alanlarda stabil çalışma sağlar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🦾 Eklemli Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Eklemli Platform</h3>
               <p className="text-gray-500 text-sm">Uzun kollu yapısıyla engel üzerinden erişim gerektiren işlerde tercih edilir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">✂️ Makaslı Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Makaslı Platform</h3>
               <p className="text-gray-500 text-sm">Düz zeminlerde dikey erişim ve geniş platform alanı sunar.</p>
             </div>
           </div>
@@ -291,7 +291,7 @@ export default function KiralikOrumcekPlatformPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -299,7 +299,7 @@ export default function KiralikOrumcekPlatformPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -312,8 +312,7 @@ export default function KiralikOrumcekPlatformPage() {
                       href={v.href}
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </Link>
                   </div>
                 </div>
               </div>
@@ -323,7 +322,7 @@ export default function KiralikOrumcekPlatformPage() {
           {/* Akülü ve Dizel Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🔋 Akülü Örümcek Platform Kiralama – Dar Alan ve İç Mekan Çalışmaları İçin</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Akülü Örümcek Platform Kiralama – Dar Alan ve İç Mekan Çalışmaları İçin</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Akülü örümcek platformlar sessiz çalışma prensibi sayesinde fabrika, alışveriş merkezi,
                 otel ve ofis gibi iç mekanlarda tercih edilir. Egzoz emisyonu üretmediği için kapalı alan
@@ -331,7 +330,7 @@ export default function KiralikOrumcekPlatformPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⛽ Dizel Örümcek Platform Kiralama – Açık Alan, Engebeli ve Yumuşak Zemin İçin</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Dizel Örümcek Platform Kiralama – Açık Alan, Engebeli ve Yumuşak Zemin İçin</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Dizel örümcek platformlar yüksek tork ve güç sunarak inşaat sahası, orman ve arazi gibi
                 engebeli ortamlarda etkin çalışır. Yumuşak ve düzensiz zeminlerde geniş ayak açıklığı ile
@@ -353,7 +352,7 @@ export default function KiralikOrumcekPlatformPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -365,7 +364,7 @@ export default function KiralikOrumcekPlatformPage() {
           {/* İnşaat / Orman Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ İnşaat, Cephe ve Çatı Çalışmalarında Örümcek Platform Kullanımı</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">İnşaat, Cephe ve Çatı Çalışmalarında Örümcek Platform Kullanımı</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 İnşaat sahalarında cephe izolasyonu, boya ve sıva işlerinde örümcek platform; operatöre
                 ve malzemeye güvenli erişim sağlar. Çatı bakım ve onarım çalışmalarında da iskele kurmaya
@@ -373,7 +372,7 @@ export default function KiralikOrumcekPlatformPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🌳 Orman, Bahçe ve Peyzaj Alanlarında Örümcek Platform</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Orman, Bahçe ve Peyzaj Alanlarında Örümcek Platform</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Ağaç budama, peyzaj düzenleme ve park bakım çalışmalarında örümcek platformun ayak
                 sistemi, yumuşak ve eğimli zeminlerde dengeyi korur. Bahçe ve orman alanlarında zemine
@@ -399,7 +398,7 @@ export default function KiralikOrumcekPlatformPage() {
               { icon: "👷", title: "Operatör Desteği", desc: "Sertifikalı operatör hizmeti ile güvenli ve verimli çalışma sağlanır." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -419,15 +418,15 @@ export default function KiralikOrumcekPlatformPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📏 Çalışma Yüksekliği</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Çalışma Yüksekliği</h3>
               <p className="text-gray-500 text-sm">Ulaşılması gereken maksimum yüksekliğe göre uygun model belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚖️ Taşıma Ağırlığı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Taşıma Ağırlığı</h3>
               <p className="text-gray-500 text-sm">Sepete binecek operatör ve malzeme ağırlığı kapasiteyi belirler.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🪨 Zemin Yapısı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Zemin Yapısı</h3>
               <p className="text-gray-500 text-sm">Düz, engebeli veya yumuşak zemine göre akülü, dizel ya da izci model seçilir.</p>
             </div>
           </div>
@@ -497,7 +496,6 @@ export default function KiralikOrumcekPlatformPage() {
             <div className="space-y-3">
               {guvenlikkurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -516,15 +514,14 @@ export default function KiralikOrumcekPlatformPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -602,7 +599,7 @@ export default function KiralikOrumcekPlatformPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

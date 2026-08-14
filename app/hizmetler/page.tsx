@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -368,14 +369,13 @@ export default function HizmetlerPage() {
                   href="tel:05323039089"
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-5 rounded-2xl text-lg transition text-center shadow-lg shadow-yellow-400/20"
                 >
-                  📞 0532 303 90 89
+                  0532 303 90 89
                 </a>
                 <a
                   href="#hizmetler"
                   className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-8 py-5 rounded-2xl text-lg transition text-center"
                 >
-                  Hizmetleri Keşfet ↓
-                </a>
+                  Hizmetleri Keşfet                 </a>
               </div>
             </div>
 
@@ -391,7 +391,7 @@ export default function HizmetlerPage() {
                     className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
                     style={{ background: h.renk + "20" }}
                   >
-                    {h.icon}
+                    <VincIcon name={h.icon} className="w-6 h-6" style={{ color: h.renk }} />
                   </div>
                   <div>
                     <div
@@ -442,7 +442,7 @@ export default function HizmetlerPage() {
           </div>
 
           <div className="space-y-10">
-            {hizmetler.map((h, idx) => (
+            {hizmetler.map((h) => (
               <div
                 key={h.id}
                 id={h.id}
@@ -458,7 +458,7 @@ export default function HizmetlerPage() {
                       className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 shadow-sm"
                       style={{ background: h.renk + "25", border: `2px solid ${h.renk}50` }}
                     >
-                      {h.icon}
+                      <VincIcon name={h.icon} className="w-8 h-8" style={{ color: h.renk }} />
                     </div>
                     <div>
                       <div className="flex items-center gap-3 mb-1">
@@ -479,8 +479,7 @@ export default function HizmetlerPage() {
                     className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-xl transition text-sm whitespace-nowrap flex-shrink-0 text-white hover:opacity-90 shadow-md"
                     style={{ background: h.renk }}
                   >
-                    Detaylı Bilgi →
-                  </Link>
+                    Detaylı Bilgi                   </Link>
                 </div>
 
                 <div className="p-8">
@@ -499,7 +498,7 @@ export default function HizmetlerPage() {
                               className="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full border"
                               style={{ background: h.renkLight, borderColor: h.renk + "40", color: h.renk }}
                             >
-                              <span>{ak.icon}</span>
+                              <VincIcon name={ak.icon} className="w-4 h-4" />
                               {ak.label}
                             </span>
                           ))}
@@ -515,8 +514,7 @@ export default function HizmetlerPage() {
                               className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold text-white"
                               style={{ background: h.renk }}
                             >
-                              ✓
-                            </div>
+                                                          </div>
                             <span className="text-gray-700 text-sm">{o}</span>
                           </div>
                         ))}
@@ -547,7 +545,7 @@ export default function HizmetlerPage() {
                             className="block text-center text-sm font-bold py-2 rounded-xl text-white transition hover:opacity-90"
                             style={{ background: h.renk }}
                           >
-                            📞 Teklif Al
+                            Teklif Al
                           </a>
                         </div>
                       </div>
@@ -606,7 +604,7 @@ export default function HizmetlerPage() {
                   <div className="hidden lg:block absolute top-8 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] h-0.5 bg-gradient-to-r from-yellow-400/30 to-yellow-400/10" />
                 )}
                 <div className="w-16 h-16 bg-yellow-400/10 border-2 border-yellow-400/30 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
-                  {s.icon}
+                  <VincIcon name={s.icon} className="w-7 h-7 text-yellow-500" />
                 </div>
                 <div className="text-yellow-400 text-xs font-black tracking-widest mb-2">{s.no}</div>
                 <h4 className="text-white font-black text-sm mb-2">{s.title}</h4>
@@ -620,7 +618,7 @@ export default function HizmetlerPage() {
               href="tel:05323039089"
               className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-black px-10 py-5 rounded-2xl text-lg transition shadow-lg shadow-yellow-400/20"
             >
-              📞 Hemen Başlayın — 0532 303 90 89
+              Hemen Başlayın — 0532 303 90 89
             </a>
           </div>
         </div>
@@ -659,10 +657,10 @@ export default function HizmetlerPage() {
                     <td className="px-6 py-4 font-black text-gray-900">{r.hizmet}</td>
                     <td className="px-6 py-4 text-gray-600">{r.sure}</td>
                     <td className="px-6 py-4 text-gray-600">{r.fiyat}</td>
-                    <td className="px-5 py-4 text-center text-lg">{r.sigorta ? "✅" : <span className="text-gray-300">—</span>}</td>
-                    <td className="px-5 py-4 text-center text-lg">{r.operatör ? "✅" : <span className="text-gray-300">—</span>}</td>
-                    <td className="px-5 py-4 text-center text-lg">{r.kargo ? "✅" : <span className="text-gray-300">—</span>}</td>
-                    <td className="px-5 py-4 text-center text-lg">{r.acil ? "✅" : <span className="text-gray-300">—</span>}</td>
+                    <td className="px-5 py-4 text-center text-lg">{r.sigorta ? "" : <span className="text-gray-300">—</span>}</td>
+                    <td className="px-5 py-4 text-center text-lg">{r.operatör ? "" : <span className="text-gray-300">—</span>}</td>
+                    <td className="px-5 py-4 text-center text-lg">{r.kargo ? "" : <span className="text-gray-300">—</span>}</td>
+                    <td className="px-5 py-4 text-center text-lg">{r.acil ? "" : <span className="text-gray-300">—</span>}</td>
                   </tr>
                 ))}
               </tbody>
@@ -670,7 +668,7 @@ export default function HizmetlerPage() {
           </div>
 
           <div className="mt-5 flex items-center justify-center gap-6 text-sm text-gray-400">
-            <span>✅ Dahil &amp; Aktif</span>
+            <span>Dahil &amp; Aktif</span>
             <span className="text-gray-200">|</span>
             <span>— Bu hizmette geçerli değil</span>
             <span className="text-gray-200">|</span>
@@ -708,7 +706,7 @@ export default function HizmetlerPage() {
                   key={a.title}
                   className="flex gap-4 p-5 rounded-2xl border border-gray-100 bg-white hover:border-yellow-300 hover:shadow-md transition group"
                 >
-                  <div className="text-3xl flex-shrink-0">{a.icon}</div>
+                  <VincIcon name={a.icon} className="w-8 h-8 flex-shrink-0" />
                   <div>
                     <h4 className="font-black text-gray-900 mb-1 group-hover:text-yellow-600 transition">{a.title}</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">{a.desc}</p>
@@ -754,7 +752,7 @@ export default function HizmetlerPage() {
               href="tel:05323039089"
               className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl transition"
             >
-              📞 0532 303 90 89 — Hemen Ara
+              0532 303 90 89 — Hemen Ara
             </a>
           </div>
         </div>
@@ -782,7 +780,7 @@ export default function HizmetlerPage() {
                     className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
                     style={{ background: h.renk + "25" }}
                   >
-                    {h.icon}
+                    <VincIcon name={h.icon} className="w-6 h-6" style={{ color: h.renk }} />
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-wider mb-0.5" style={{ color: h.renk }}>
@@ -792,7 +790,7 @@ export default function HizmetlerPage() {
                   </div>
                 </div>
                 <p className="text-gray-500 text-xs leading-relaxed mb-3">{h.altyazi}</p>
-                <div className="text-xs font-bold" style={{ color: h.renk }}>Sayfaya Git →</div>
+                <div className="text-xs font-bold" style={{ color: h.renk }}>Sayfaya Git </div>
               </Link>
             ))}
 
@@ -803,15 +801,14 @@ export default function HizmetlerPage() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-yellow-400/20 flex-shrink-0">
-                  📩
-                </div>
+                                  </div>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wider text-yellow-400 mb-0.5">Teklif</div>
                   <div className="text-yellow-400 font-bold text-sm">İletişime Geç</div>
                 </div>
               </div>
               <p className="text-gray-500 text-xs leading-relaxed mb-3">Projeniz için özel teklif alın.</p>
-              <div className="text-xs font-bold text-yellow-400">Formu Doldur →</div>
+              <div className="text-xs font-bold text-yellow-400">Formu Doldur </div>
             </Link>
           </div>
         </div>
@@ -835,14 +832,13 @@ export default function HizmetlerPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-black px-10 py-5 rounded-2xl transition text-lg"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
             <Link
               href="/iletisim"
               className="bg-white hover:bg-gray-100 text-gray-900 font-bold px-10 py-5 rounded-2xl transition text-lg"
             >
-              Teklif Al →
-            </Link>
+              Teklif Al             </Link>
           </div>
         </div>
       </section>

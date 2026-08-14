@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
     canonical: "/kiralik-vinc",
   },
-  title: { absolute: "Kiralık Vinç Fiyatları ve Günlük Kiralık Vinç" },
+  title: { absolute: "Kiralık Vinç | Kiralık Vinç Fiyatları 2026 – Vinç Deposu" },
   description:
-    "Kiralık vinç fiyatları ve günlük kiralık vinç seçenekleri için en uygun çözümleri sunuyoruz. İhtiyacınıza uygun vinç kiralama hizmetleri için iletişime geçin!",
+    "Kiralık vinç fiyatları 2026: mobil, sepetli, hiyap ve ağır tonaj vinçlerde saatlik, günlük, haftalık ve aylık güncel fiyat aralıkları. İstanbul'un 39 ilçesinde operatörlü kiralık vinç. Hemen teklif alın: 0532 303 90 89",
   keywords: ["kiralık vinç", "vinç kiralama", "kiralık vinç fiyatları", "günlük vinç kiralama", "istanbul kiralık vinç"],
 };
 
 const vincTurleri = [
   {
-    icon: "🚛",
+    icon: "mobil",
     title: "Mobil Vinç",
     desc: "Tekerlekli şasi üzerinde hareket edebilen, şehir içi projelerde esneklik sağlayan vinç türü.",
     fiyat: "15.000 – 30.000 TL / gün",
@@ -22,7 +23,7 @@ const vincTurleri = [
     ozellikler: ["Hızlı kurulum", "Şehir içi uygun", "Farklı kapasiteler"],
   },
   {
-    icon: "🏗️",
+    icon: "sepetli",
     title: "Sepetli Vinç",
     desc: "Yüksek noktalara personel erişimi sağlayan, cephe ve bakım işlerinde tercih edilen vinç.",
     fiyat: "5.000 – 50.000 TL / gün",
@@ -30,7 +31,7 @@ const vincTurleri = [
     ozellikler: ["Personel taşıma", "Cephe çalışması", "Yüksek erişim"],
   },
   {
-    icon: "⛏️",
+    icon: "paletli",
     title: "Paletli Vinç",
     desc: "Zorlu arazi koşullarında çalışabilen, büyük kapasiteli ağır sanayi vinci.",
     fiyat: "Teklif alınız",
@@ -38,7 +39,7 @@ const vincTurleri = [
     ozellikler: ["Zorlu arazi", "Büyük kapasite", "Stabil yapı"],
   },
   {
-    icon: "🏢",
+    icon: "kule",
     title: "Kule Vinç",
     desc: "Uzun süreli inşaat projelerinde kullanılan, yüksek kaldırma kapasiteli sabit vinç.",
     fiyat: "3.000 TL / gün'den",
@@ -46,7 +47,7 @@ const vincTurleri = [
     ozellikler: ["Uzun vadeli", "Yüksek kapasite", "İnşaat projeleri"],
   },
   {
-    icon: "🐙",
+    icon: "ahtapot",
     title: "Ahtapot Vinç",
     desc: "Dar alanlarda çalışabilen, çok yönlü hareket kabiliyetine sahip kompakt vinç.",
     fiyat: "Teklif alınız",
@@ -54,7 +55,7 @@ const vincTurleri = [
     ozellikler: ["Dar alan", "Kompakt yapı", "Çok yönlü"],
   },
   {
-    icon: "🚁",
+    icon: "helikopter",
     title: "Helikopter Vinç",
     desc: "Erişilmesi güç noktalara yük taşıma ve montaj işlemleri için özel hava vinci.",
     fiyat: "Teklif alınız",
@@ -64,21 +65,125 @@ const vincTurleri = [
 ];
 
 const fiyatTablosu = [
-  { tur: "18m Sepetli Vinç", saatlik: "1.500 TL", gunluk: "8.000 TL", aylik: "Teklif" },
-  { tur: "53m Sepetli Vinç", saatlik: "3.000 TL", gunluk: "12.000 TL", aylik: "Teklif" },
-  { tur: "Mobil Vinç (50 ton)", saatlik: "1.500 TL", gunluk: "15.000 TL", aylik: "250.000 TL" },
-  { tur: "Mobil Vinç (100 ton)", saatlik: "2.000 TL", gunluk: "30.000 TL", aylik: "500.000 TL" },
-  { tur: "Kule Vinç", saatlik: "—", gunluk: "3.000 TL", aylik: "Teklif" },
-  { tur: "Operatör Hizmeti", saatlik: "500 TL", gunluk: "2.000 TL", aylik: "Teklif" },
+  { tur: "Hiyap / Kamyon Üstü Vinç", kapasite: "10 – 25 ton/m", saatlik: "1.200 – 2.000 TL", gunluk: "7.000 – 10.000 TL", haftalik: "38.000 – 55.000 TL", aylik: "130.000 – 190.000 TL" },
+  { tur: "Küçük Mobil Vinç", kapasite: "25 – 40 ton", saatlik: "1.200 – 2.000 TL", gunluk: "10.000 – 15.000 TL", haftalik: "55.000 – 80.000 TL", aylik: "200.000 – 280.000 TL" },
+  { tur: "Orta Sınıf Mobil Vinç", kapasite: "50 – 60 ton", saatlik: "1.500 – 2.500 TL", gunluk: "15.000 – 20.000 TL", haftalik: "80.000 – 110.000 TL", aylik: "250.000 – 350.000 TL" },
+  { tur: "Ağır Mobil Vinç", kapasite: "70 – 90 ton", saatlik: "2.000 – 3.500 TL", gunluk: "20.000 – 30.000 TL", haftalik: "110.000 – 160.000 TL", aylik: "350.000 – 500.000 TL" },
+  { tur: "Ağır Tonaj / Teleskopik Vinç", kapasite: "100 – 150 ton", saatlik: "2.500 – 5.000 TL", gunluk: "30.000 – 50.000 TL", haftalik: "160.000 – 260.000 TL", aylik: "500.000 – 850.000 TL" },
+  { tur: "Sepetli Vinç", kapasite: "16 – 32 m", saatlik: "1.200 – 2.200 TL", gunluk: "7.000 – 11.000 TL", haftalik: "38.000 – 60.000 TL", aylik: "130.000 – 200.000 TL" },
+  { tur: "Yüksek Erişimli Sepetli Vinç", kapasite: "36 – 60 m", saatlik: "2.000 – 3.500 TL", gunluk: "10.000 – 16.000 TL", haftalik: "55.000 – 90.000 TL", aylik: "180.000 – 300.000 TL" },
+  { tur: "Örümcek (Mini) Vinç", kapasite: "3 – 8 ton", saatlik: "Özel teklif", gunluk: "Özel teklif", haftalik: "Proje bazlı", aylik: "Proje bazlı" },
+  { tur: "Kule Vinç", kapasite: "Proje bazlı", saatlik: "—", gunluk: "3.000 TL'den başlayan", haftalik: "Teklif", aylik: "Teklif" },
+  { tur: "Operatör Hizmeti", kapasite: "—", saatlik: "500 TL", gunluk: "2.000 TL", haftalik: "Teklif", aylik: "Teklif" },
+];
+
+const mobilVincFiyatlari = [
+  { sinif: "25 – 40 Ton", bom: "25 – 35 m", saatlik: "1.200 – 2.000 TL", gunluk: "10.000 – 15.000 TL", haftalik: "55.000 – 80.000 TL", aylik: "200.000 – 280.000 TL" },
+  { sinif: "50 – 60 Ton", bom: "35 – 45 m", saatlik: "1.500 – 2.500 TL", gunluk: "15.000 – 20.000 TL", haftalik: "80.000 – 110.000 TL", aylik: "250.000 – 350.000 TL" },
+  { sinif: "70 – 90 Ton", bom: "40 – 50 m", saatlik: "2.000 – 3.500 TL", gunluk: "20.000 – 30.000 TL", haftalik: "110.000 – 160.000 TL", aylik: "350.000 – 500.000 TL" },
+  { sinif: "100 – 150 Ton", bom: "45 – 65 m", saatlik: "2.500 – 5.000 TL", gunluk: "30.000 – 50.000 TL", haftalik: "160.000 – 260.000 TL", aylik: "500.000 – 850.000 TL" },
+  { sinif: "150 Ton Üzeri", bom: "60 m+", saatlik: "Özel teklif", gunluk: "Özel teklif", haftalik: "Proje bazlı", aylik: "Proje bazlı" },
+];
+
+const sepetliVincFiyatlari = [
+  { yukseklik: "16 – 22 Metre", kullanim: "Tabela, alçak katlı bakım", saatlik: "1.200 – 1.800 TL", gunluk: "7.000 – 9.000 TL", haftalik: "38.000 – 48.000 TL", aylik: "130.000 – 170.000 TL" },
+  { yukseklik: "24 – 32 Metre", kullanim: "Dış cephe, orta kat erişimi", saatlik: "1.500 – 2.200 TL", gunluk: "8.500 – 11.000 TL", haftalik: "45.000 – 60.000 TL", aylik: "150.000 – 200.000 TL" },
+  { yukseklik: "36 – 45 Metre", kullanim: "AVM, plaza, reklam montajı", saatlik: "2.000 – 2.800 TL", gunluk: "10.000 – 13.000 TL", haftalik: "55.000 – 70.000 TL", aylik: "180.000 – 240.000 TL" },
+  { yukseklik: "48 – 60 Metre", kullanim: "Yüksek yapı, endüstriyel bakım", saatlik: "2.500 – 3.500 TL", gunluk: "12.000 – 16.000 TL", haftalik: "65.000 – 90.000 TL", aylik: "220.000 – 300.000 TL" },
+  { yukseklik: "60 Metre Üzeri", kullanim: "Özel projeler", saatlik: "Özel teklif", gunluk: "Özel teklif", haftalik: "Proje bazlı", aylik: "Proje bazlı" },
+];
+
+const hiyapFiyatlari = [
+  { sinif: "5 – 10 Ton", bom: "10 – 15 m", saatlik: "1.200 – 1.800 TL", gunluk: "6.500 – 8.500 TL", haftalik: "35.000 – 46.000 TL", aylik: "120.000 – 160.000 TL" },
+  { sinif: "10 – 25 Ton/Metre", bom: "12 – 20 m", saatlik: "1.200 – 2.000 TL", gunluk: "7.000 – 10.000 TL", haftalik: "38.000 – 55.000 TL", aylik: "130.000 – 190.000 TL" },
+  { sinif: "25 – 40 Ton/Metre", bom: "15 – 25 m", saatlik: "2.000 – 3.200 TL", gunluk: "10.000 – 15.000 TL", haftalik: "55.000 – 80.000 TL", aylik: "190.000 – 280.000 TL" },
+  { sinif: "40 Ton/Metre Üzeri", bom: "20 m+", saatlik: "Özel teklif", gunluk: "Özel teklif", haftalik: "Proje bazlı", aylik: "Proje bazlı" },
+];
+
+const fiyatFaktorleri: { label: string }[] = [
+  { label: "Vinç tipi ve kapasitesi" },
+  { label: "Bom uzunluğu ve çalışma yüksekliği" },
+  { label: "Yatay erişim mesafesi" },
+  { label: "Saha ve zemin koşulları" },
+  { label: "Araç konumlandırma alanı" },
+  { label: "Operatör dahil olup olmaması" },
+  { label: "Nakliye ve sevkiyat mesafesi" },
+  { label: "Kiralama süresi" },
+  { label: "Gece veya hafta sonu çalışması" },
+  { label: "Bekleme süresi" },
+  { label: "Sapan, sepet ve ek ekipman ihtiyacı" },
+  { label: "İş güvenliği ve yönlendirme personeli" },
+];
+
+const surelendirme = [
+  {
+    icon: "saat",
+    title: "Saatlik Kiralama",
+    desc: "Tek noktada yapılacak kısa süreli kaldırma işleri için uygundur. Çoğu çalışmada minimum süre uygulaması bulunur; bir saatlik iş için dahi belirli bir alt süre üzerinden ücretlendirme yapılabilir.",
+  },
+  {
+    icon: "takvim",
+    title: "Günlük Kiralama",
+    desc: "Gün içinde birden fazla kaldırma, uzun süren montaj veya farklı noktalarda çalışma gerekiyorsa günlük plan daha ekonomiktir. Günlük mesai süresi teklif aşamasında netleştirilir.",
+  },
+  {
+    icon: "takvimHafta",
+    title: "Haftalık Kiralama",
+    desc: "Devam eden şantiye, montaj veya bakım süreçlerinde haftalık kullanım, günlük kiralamaya göre birim maliyeti düşürür ve ekipmanın sahada hazır kalmasını sağlar.",
+  },
+  {
+    icon: "sozlesme",
+    title: "Aylık Kiralama",
+    desc: "Şantiye, fabrika ve sürekli yük kaldırma ihtiyacı olan tesislerde aylık anlaşma en planlı bütçeyi sunar. Uzun vadede birim maliyet belirgin şekilde azalır.",
+  },
+];
+
+const vincSecimi = [
+  {
+    icon: "sepetli",
+    title: "Sepetli Vinç",
+    isler: "Dış cephe, tabela montajı, cam temizliği, bakım-onarım ve yüksekte güvenli personel erişimi gereken işler.",
+    href: "/sepetli-vinc",
+  },
+  {
+    icon: "mobil",
+    title: "Mobil Vinç",
+    isler: "Makine taşıma, yük kaldırma, konteyner ve montaj işleri; şehir içinde hızlı kurulum gereken projeler.",
+    href: "/mobil-vinc",
+  },
+  {
+    icon: "paletli",
+    title: "Teleskopik / Ağır Tonaj",
+    isler: "Ağır yük, uzun erişim ve büyük ölçekli projeler; çelik konstrüksiyon ve endüstriyel montaj.",
+    href: "/paletli-vinc",
+  },
+  {
+    icon: "kamyonustu",
+    title: "Kamyon Üstü Vinç",
+    isler: "Taşıma ve kaldırmanın aynı araçla yapılacağı işler; şehir içi yükleme-boşaltma ve malzeme indirme.",
+    href: "/kamyon-ustu-vinc",
+  },
+];
+
+const teklifBilgileri = [
+  "İşin yapılacağı açık adres",
+  "Yükün yaklaşık ağırlığı, ölçüsü ve niteliği",
+  "Kaldırma yüksekliği ve yatay erişim mesafesi",
+  "Çalışma alanının fotoğrafı veya videosu",
+  "Tercih edilen vinç tipi (varsa)",
+  "Kiralama süresi, tarih ve saat",
+  "Operatör veya ek personel ihtiyacı",
+  "Saha girişi, zemin durumu ve manevra alanı",
+  "Çevrede elektrik hattı, ağaç veya trafik engeli olup olmadığı",
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "İnşaat", desc: "Yüksek katlı yapı inşaatında kolon, kalıp ve prefabrik eleman montajı; temel kazısı sırasında malzeme taşıma işleri." },
-  { icon: "🏭", title: "Sanayi", desc: "Fabrika içi ağır makine montajı, üretim hattı kurulumu ve büyük ekipmanların güvenli şekilde yerleştirilmesi." },
-  { icon: "⚓", title: "Liman", desc: "Konteyner indirme-bindirme, gemi bakım operasyonları ve liman sahasındaki yük taşıma işlemleri." },
-  { icon: "💨", title: "Enerji", desc: "Rüzgar türbini kanat ve göbek montajı, trafo merkezi kurulumu ve solar panel sahası çalışmaları." },
-  { icon: "🛣️", title: "Altyapı", desc: "Köprü ayağı montajı, menfez ve tünel çalışmaları ile karayolu üst yapı projelerindeki ağır eleman taşımaları." },
-  { icon: "🏠", title: "Cephe", desc: "Bina dış cephe boya, mantolama, cam değişimi ve cephe aydınlatma sistemlerinin kurulum-bakım işleri." },
+  { icon: "kule", title: "İnşaat", desc: "Yüksek katlı yapı inşaatında kolon, kalıp ve prefabrik eleman montajı; temel kazısı sırasında malzeme taşıma işleri." },
+  { icon: "sabit", title: "Sanayi", desc: "Fabrika içi ağır makine montajı, üretim hattı kurulumu ve büyük ekipmanların güvenli şekilde yerleştirilmesi." },
+  { icon: "portal", title: "Liman", desc: "Konteyner indirme-bindirme, gemi bakım operasyonları ve liman sahasındaki yük taşıma işlemleri." },
+  { icon: "hiz", title: "Enerji", desc: "Rüzgar türbini kanat ve göbek montajı, trafo merkezi kurulumu ve solar panel sahası çalışmaları." },
+  { icon: "paletli", title: "Altyapı", desc: "Köprü ayağı montajı, menfez ve tünel çalışmaları ile karayolu üst yapı projelerindeki ağır eleman taşımaları." },
+  { icon: "sepetli", title: "Cephe", desc: "Bina dış cephe boya, mantolama, cam değişimi ve cephe aydınlatma sistemlerinin kurulum-bakım işleri." },
 ];
 
 const vincSecimRehberi = [
@@ -148,6 +253,38 @@ const sss = [
     soru: "Dar sokaklarda hangi vinç türü kullanılır?",
     cevap: "Dar sokak ve kısıtlı alanlarda ahtapot vinç veya kompakt sepetli vinç modelleri, manevra kabiliyeti sayesinde en uygun çözümü sunar.",
   },
+  {
+    soru: "Vinç kiralamada minimum çalışma süresi var mı?",
+    cevap: "Evet, çoğu saatlik çalışmada minimum süre uygulaması bulunur. Kısa bir iş için dahi vincin sevkiyatı ve kurulumu gerektiğinden, belirli bir alt süre üzerinden ücretlendirme yapılabilir. Bu detay teklif aşamasında netleştirilir.",
+  },
+  {
+    soru: "Nakliye ve sevkiyat ücreti fiyata dahil mi?",
+    cevap: "Sevkiyat maliyeti; işin yapılacağı konuma, araç tipine ve mesafeye göre değişir. Bazı çalışmalarda fiyata dahil edilirken bazılarında ayrıca hesaplanır. Teklif alırken nakliye, kurulum ve bekleme süresinin kapsamını mutlaka sorun.",
+  },
+  {
+    soru: "Gece veya hafta sonu çalışması fiyatı etkiler mi?",
+    cevap: "Etkileyebilir. Gece mesaisi, resmi tatil ve hafta sonu çalışmalarında ek personel planlaması gerektiğinden fiyatlandırma standart mesaiye göre farklılık gösterebilir.",
+  },
+  {
+    soru: "Ağır tonaj ve teleskopik vinçlerde neden proje bazlı teklif verilir?",
+    cevap: "Bu sınıf vinçlerde maliyeti yükün ağırlığı kadar çalışma açısı, bom mesafesi, zemin taşıma kapasitesi ve çevredeki engeller belirler. Bu değişkenler netleşmeden standart bir fiyat vermek yanıltıcı olacağından keşif sonrası proje bazlı teklif hazırlanır.",
+  },
+  {
+    soru: "Günlük vinç kullanımı hangi işlerde tercih edilir?",
+    cevap: "Gün içinde birden fazla kaldırma yapılacaksa, montaj gün boyu sürecekse veya vincin sahada hazır beklemesi gerekiyorsa günlük kiralama saatlik kullanıma göre daha ekonomiktir. Günlük mesai süresi teklif aşamasında netleştirilir.",
+  },
+  {
+    soru: "Sepetli vinç fiyatları neye göre hesaplanır?",
+    cevap: "Sepetli vinçte fiyatı çalışma yüksekliği, yatay erişim mesafesi, sepet kapasitesi, işin yapılacağı alan ve kullanım süresi belirler. Metre arttıkça yalnızca yükseklik değil, aracın güvenli konumlandırılması da fiyata etki eder.",
+  },
+  {
+    soru: "Mobil vinç fiyatlarında tonaj neden önemlidir?",
+    cevap: "Tonaj, vincin kaldırma kapasitesini ve dolayısıyla sınıfını belirler; ancak tek başına yeterli değildir. Yükün kaldırılacağı mesafe, bom açısı ve saha koşulları aynı tonajdaki iki işte bile farklı fiyat çıkarabilir.",
+  },
+  {
+    soru: "Fiyat teklifi için hangi bilgileri paylaşmalıyım?",
+    cevap: "Açık adres, yükün yaklaşık ağırlığı ve ölçüsü, kaldırma yüksekliği, yatay erişim mesafesi, kiralama süresi ve mümkünse çalışma alanının fotoğrafı en doğru teklifi almanızı sağlar. Eksik bilgiyle alınan teklif, saha keşfinde değişebilir.",
+  },
 ];
 
 const faqSchema = {
@@ -163,11 +300,34 @@ const faqSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  name: "Kiralık Vinç",
   serviceType: "Kiralık Vinç Hizmeti",
-  provider: { "@type": "LocalBusiness", name: "Vinç Deposu", telephone: "+905323039089" },
+  url: "https://vincdeposu.com.tr/kiralik-vinc",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Vinç Deposu",
+    telephone: "+905323039089",
+    url: "https://vincdeposu.com.tr",
+  },
   areaServed: { "@type": "City", name: "İstanbul" },
   description:
-    "Mobil vinç, sepetli vinç, kule vinç, paletli vinç ve daha fazlası için günlük ve aylık kiralık vinç hizmeti.",
+    "Mobil vinç, sepetli vinç, kule vinç, paletli vinç ve daha fazlası için saatlik, günlük, haftalık ve aylık kiralık vinç hizmeti.",
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "TRY",
+    lowPrice: "6500",
+    highPrice: "850000",
+    description: "Günlükten aylığa kiralama seçenekleri; net fiyat saha ve iş detayına göre belirlenir.",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Anasayfa", item: "https://vincdeposu.com.tr" },
+    { "@type": "ListItem", position: 2, name: "Kiralık Vinç", item: "https://vincdeposu.com.tr/kiralik-vinc" },
+  ],
 };
 
 export default function KiralikVincPage() {
@@ -181,6 +341,10 @@ export default function KiralikVincPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-yellow-900 text-white overflow-hidden">
@@ -191,7 +355,7 @@ export default function KiralikVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🏗️ Vinç Kiralama Rehberi 2025
+              Vinç Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Kiralık Vinç<br />{" "}
@@ -206,14 +370,13 @@ export default function KiralikVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#vinc-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Vinç Türlerini İncele ↓
-              </a>
+                Vinç Türlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -233,6 +396,32 @@ export default function KiralikVincPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Giriş */}
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-4">
+          <p>
+            <strong className="text-gray-900">Kiralık vinç fiyatları</strong>; seçilecek vinç tipi, tonaj
+            kapasitesi, bom uzunluğu, çalışma yüksekliği, yatay erişim mesafesi, saha koşulları, operatör ihtiyacı
+            ve kiralama süresine göre değişir. Bu nedenle her işte geçerli tek bir sabit rakamdan söz etmek doğru
+            olmaz: aynı tonaj sınıfındaki iki vinç, farklı sahalarda farklı maliyetler oluşturur.
+          </p>
+          <p>
+            Bu sayfada kiralık vinç fiyatlarını saatlik, günlük, haftalık ve aylık kullanım seçenekleriyle birlikte
+            ele aldık. Tablolardaki aralıklar genel bilgilendirme amaçlıdır; net fiyat için işin yapılacağı adres,
+            yük bilgisi, çalışma yüksekliği ve kiralama süresi birlikte değerlendirilir. İstanbul genelindeki
+            hizmet ağımız için{" "}
+            <Link href="/istanbul-vinc-kiralama" className="text-yellow-600 font-semibold hover:underline">
+              İstanbul vinç kiralama
+            </Link>{" "}
+            sayfasını, fiyatların detaylı analizi için{" "}
+            <Link href="/blog/kiralik-vinc-fiyatlari" className="text-yellow-600 font-semibold hover:underline">
+              kiralık vinç fiyatları rehberimizi
+            </Link>{" "}
+            inceleyebilirsiniz.
+          </p>
         </div>
       </section>
 
@@ -271,7 +460,7 @@ export default function KiralikVincPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3 mx-auto text-yellow-400" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -279,7 +468,7 @@ export default function KiralikVincPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -292,8 +481,7 @@ export default function KiralikVincPage() {
                       href={v.href}
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </Link>
                   </div>
                 </div>
               </div>
@@ -392,7 +580,7 @@ export default function KiralikVincPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0 text-yellow-500" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -408,17 +596,19 @@ export default function KiralikVincPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-yellow-400 font-semibold text-sm uppercase tracking-wider mb-3">Şeffaf Fiyatlandırma</p>
-            <h2 className="text-4xl font-black mb-4">Kiralık Vinç Fiyatları 2025</h2>
+            <h2 className="text-4xl font-black mb-4">Kiralık Vinç Fiyatları 2026</h2>
             <p className="text-gray-400 text-lg">Fiyatlar vinç türü ve projeye göre değişiklik gösterebilir.</p>
           </div>
           <div className="overflow-x-auto rounded-2xl border border-gray-700">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-800 text-gray-300">
-                  <th className="text-left px-6 py-4 font-semibold">Vinç Türü</th>
-                  <th className="text-center px-6 py-4 font-semibold">Saatlik</th>
-                  <th className="text-center px-6 py-4 font-semibold">Günlük</th>
-                  <th className="text-center px-6 py-4 font-semibold">Aylık</th>
+                  <th className="text-left px-4 py-4 font-semibold">Vinç Modeli</th>
+                  <th className="text-center px-4 py-4 font-semibold">Kapasite / Erişim</th>
+                  <th className="text-center px-4 py-4 font-semibold">Saatlik</th>
+                  <th className="text-center px-4 py-4 font-semibold">Günlük</th>
+                  <th className="text-center px-4 py-4 font-semibold">Haftalık</th>
+                  <th className="text-center px-4 py-4 font-semibold">Aylık</th>
                 </tr>
               </thead>
               <tbody>
@@ -427,10 +617,12 @@ export default function KiralikVincPage() {
                     key={f.tur}
                     className={`border-t border-gray-700 hover:bg-gray-800 transition ${i % 2 === 0 ? "bg-gray-900" : "bg-gray-850"}`}
                   >
-                    <td className="px-6 py-4 font-medium text-white">{f.tur}</td>
-                    <td className="px-6 py-4 text-center text-yellow-400">{f.saatlik}</td>
-                    <td className="px-6 py-4 text-center text-yellow-400">{f.gunluk}</td>
-                    <td className="px-6 py-4 text-center text-yellow-400">{f.aylik}</td>
+                    <td className="px-4 py-4 font-medium text-white whitespace-nowrap">{f.tur}</td>
+                    <td className="px-4 py-4 text-center text-gray-300 whitespace-nowrap">{f.kapasite}</td>
+                    <td className="px-4 py-4 text-center text-yellow-400 whitespace-nowrap">{f.saatlik}</td>
+                    <td className="px-4 py-4 text-center text-yellow-400 whitespace-nowrap">{f.gunluk}</td>
+                    <td className="px-4 py-4 text-center text-yellow-400 whitespace-nowrap">{f.haftalik}</td>
+                    <td className="px-4 py-4 text-center text-yellow-400 whitespace-nowrap">{f.aylik}</td>
                   </tr>
                 ))}
               </tbody>
@@ -439,36 +631,165 @@ export default function KiralikVincPage() {
           <p className="text-gray-500 text-sm text-center mt-4">
             * Fiyatlar KDV hariç olup lokasyon ve proje detaylarına göre değişebilir.
           </p>
+
+          {/* Tonaja göre mobil vinç */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-black mb-3">Tonaja Göre Mobil Vinç Kiralama Fiyatları</h3>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Mobil vinç fiyatları öncelikle tonaj kapasitesi ve bom uzunluğuyla ilişkilidir; ancak tonaj tek başına
+              yeterli bir ölçüt değildir. Yükün kaldırılacağı mesafe, çalışma açısı, zemin uygunluğu ve sahadaki
+              manevra imkânı da toplam maliyeti etkiler. Ekipman detayları için{" "}
+              <Link href="/mobil-vinc" className="text-yellow-400 hover:underline">mobil vinç</Link> sayfamızı
+              inceleyebilirsiniz.
+            </p>
+            <div className="overflow-x-auto rounded-2xl border border-gray-700">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-gray-800 text-gray-300">
+                    <th className="text-left px-4 py-3 font-semibold">Sınıf</th>
+                    <th className="text-center px-4 py-3 font-semibold">Bom</th>
+                    <th className="text-center px-4 py-3 font-semibold">Saatlik</th>
+                    <th className="text-center px-4 py-3 font-semibold">Günlük</th>
+                    <th className="text-center px-4 py-3 font-semibold">Haftalık</th>
+                    <th className="text-center px-4 py-3 font-semibold">Aylık</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {mobilVincFiyatlari.map((f) => (
+                    <tr key={f.sinif} className="border-t border-gray-700 hover:bg-gray-800 transition">
+                      <td className="px-4 py-3 font-medium text-white whitespace-nowrap">{f.sinif}</td>
+                      <td className="px-4 py-3 text-center text-gray-300 whitespace-nowrap">{f.bom}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.saatlik}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.gunluk}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.haftalik}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.aylik}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-gray-500 text-sm mt-3">
+              Gereğinden düşük kapasite güvenlik riski oluşturur, gereğinden yüksek tonaj ise maliyeti artırır. Yük
+              ağırlığını ve kaldırma mesafesini doğru paylaşmak en uygun sınıfın seçilmesini sağlar.
+            </p>
+          </div>
+
+          {/* Yüksekliğe göre sepetli vinç */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-black mb-3">Yüksekliğe Göre Sepetli Vinç Kiralama Fiyatları</h3>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Sepetli vinçte fiyat; çalışma yüksekliği, yatay erişim, sepet kapasitesi ve işin yapılacağı alana göre
+              belirlenir. Metre arttıkça yalnızca yükseklik değil, güvenli konumlandırma ihtiyacı da önem kazanır.
+              Detaylar için <Link href="/sepetli-vinc" className="text-yellow-400 hover:underline">sepetli vinç</Link>{" "}
+              sayfamıza göz atabilirsiniz.
+            </p>
+            <div className="overflow-x-auto rounded-2xl border border-gray-700">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-gray-800 text-gray-300">
+                    <th className="text-left px-4 py-3 font-semibold">Yükseklik</th>
+                    <th className="text-left px-4 py-3 font-semibold">Tipik Kullanım</th>
+                    <th className="text-center px-4 py-3 font-semibold">Saatlik</th>
+                    <th className="text-center px-4 py-3 font-semibold">Günlük</th>
+                    <th className="text-center px-4 py-3 font-semibold">Haftalık</th>
+                    <th className="text-center px-4 py-3 font-semibold">Aylık</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sepetliVincFiyatlari.map((f) => (
+                    <tr key={f.yukseklik} className="border-t border-gray-700 hover:bg-gray-800 transition">
+                      <td className="px-4 py-3 font-medium text-white whitespace-nowrap">{f.yukseklik}</td>
+                      <td className="px-4 py-3 text-gray-300">{f.kullanim}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.saatlik}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.gunluk}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.haftalik}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.aylik}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Teleskopik ve ağır tonaj */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-black mb-3">Teleskopik ve Ağır Tonaj Vinçlerde Fiyatlandırma</h3>
+            <p className="text-gray-400 leading-relaxed">
+              Çelik konstrüksiyon montajı, fabrika içi makine yerleştirme, konteyner kaldırma ve büyük ölçekli
+              projelerde kullanılan teleskopik ve ağır tonaj vinçlerde çoğu zaman standart saatlik ücret yerine
+              proje bazlı teklif hazırlanır. Bu sınıfta maliyeti yükün ağırlığı kadar çalışma açısı, bom mesafesi,
+              zeminin taşıma kapasitesi ve çevredeki engeller belirler; bu değişkenler netleşmeden verilen fiyat
+              yanıltıcı olur. Ekipman seçenekleri için{" "}
+              <Link href="/mobil-vinc" className="text-yellow-400 hover:underline">mobil vinç</Link> ve zorlu
+              zeminlerde <Link href="/paletli-vinc" className="text-yellow-400 hover:underline">paletli vinç</Link>{" "}
+              sayfalarımıza göz atabilirsiniz.
+            </p>
+          </div>
+
+          {/* Kamyon üstü / hiyap */}
+          <div className="mt-14">
+            <h3 className="text-2xl font-black mb-3">Kamyon Üstü (Hiyap) Vinç Fiyatları</h3>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Taşıma ve kaldırmanın aynı araçla yapılabildiği{" "}
+              <Link href="/kamyon-ustu-vinc" className="text-yellow-400 hover:underline">kamyon üstü vinçler</Link>,
+              şehir içi makine taşıma, konteyner yerleştirme ve kısa süreli yükleme-boşaltma işlerinde pratik bir
+              çözümdür.
+            </p>
+            <div className="overflow-x-auto rounded-2xl border border-gray-700">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-gray-800 text-gray-300">
+                    <th className="text-left px-4 py-3 font-semibold">Sınıf</th>
+                    <th className="text-center px-4 py-3 font-semibold">Bom</th>
+                    <th className="text-center px-4 py-3 font-semibold">Saatlik</th>
+                    <th className="text-center px-4 py-3 font-semibold">Günlük</th>
+                    <th className="text-center px-4 py-3 font-semibold">Haftalık</th>
+                    <th className="text-center px-4 py-3 font-semibold">Aylık</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {hiyapFiyatlari.map((f) => (
+                    <tr key={f.sinif} className="border-t border-gray-700 hover:bg-gray-800 transition">
+                      <td className="px-4 py-3 font-medium text-white whitespace-nowrap">{f.sinif}</td>
+                      <td className="px-4 py-3 text-center text-gray-300 whitespace-nowrap">{f.bom}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.saatlik}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.gunluk}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.haftalik}</td>
+                      <td className="px-4 py-3 text-center text-yellow-400 whitespace-nowrap">{f.aylik}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-gray-500 text-sm mt-3">
+              Ağır tonaj, uzun bom, dar saha, özel kurulum, gece çalışması ve uzun bekleme gerektiren işlerde
+              fiyatlandırma proje bazlı yapılır.
+            </p>
+          </div>
+
           <div className="mt-10 text-gray-300 leading-relaxed space-y-4">
             <p>
-              2026 yılında vinç kiralama fiyatları, hizmet süresi ve vinç türüne göre önemli farklılıklar
-              göstermektedir. Saatlik vinç kiralama ücretleri 700 TL ile 2000 TL arasında değişmektedir. Fiyatları
-              etkileyen temel faktörler arasında vinç tipi, hizmet süresi ve ekstra hizmetler bulunmaktadır.
+              2026 yılında kiralık vinç fiyatları; vinç türü, kapasite ve kullanım süresine göre geniş bir aralıkta
+              seyreder. Saatlik ücretler kompakt sepetli ve hiyap sınıfında 1.200 TL seviyesinden başlar, ağır tonaj
+              mobil vinçlerde 5.000 TL ve üzerine çıkar. Fiyatı belirleyen temel unsurlar; vinç tipi, bom uzunluğu,
+              saha koşulları ve operatör dahil hizmet kapsamıdır.
             </p>
             <p>
-              Günlük vinç kiralama fiyatları, vinç türüne ve kapasitesine bağlı olarak geniş bir aralıkta seyreder.
-              Sepetli vinçler için günlük fiyatlar 5.000 TL ile 50.000 TL arasında değişmektedir. Bununla birlikte,
-              mobil vinçlerin günlük kiralama bedelleri 15.000 TL ile 30.000 TL arasındadır. Ayrıca, operatör hizmeti
-              için ek olarak 500 TL ile 5.000 TL arasında bir ücret talep edilmektedir.
+              Günlük kullanımda sepetli vinçler yükseklik sınıfına göre 7.000 – 16.000 TL, mobil vinçler tonaja göre
+              10.000 – 50.000 TL bandında fiyatlanır; operatör hizmeti günlük 2.000 TL&apos;den itibaren eklenir.
+              Uzun vadeli projelerde aylık kiralama belirgin avantaj sağlar: aynı ekipmanın birim maliyeti, günlük
+              kullanıma kıyasla yüzde 20 – 35 oranında düşer.
             </p>
             <p>
-              Uzun vadeli projelerde aylık kiralama seçeneği daha ekonomik bir çözüm sunmaktadır. Mobil vinçler için
-              aylık kiralama bedelleri 250.000 TL ile 500.000 TL arasında değişmektedir. Özellikle sepetli vinçlerde
-              aylık kiralama, günlük kiralamalara kıyasla önemli maliyet avantajları sağlar.
+              İşin yapılacağı bölge de maliyeti etkiler. İkitelli&apos;deki merkezimize yakın bölgelerde (Başakşehir,
+              Küçükçekmece, Esenyurt, Avcılar gibi) sevkiyat süresi kısaldığı için toplam maliyet daha uygun
+              olabilirken, uzak ilçelerde ve boğaz geçişi gerektiren işlerde nakliye kalemi teklife yansır. Net rakam
+              için çalışma adresinin paylaşılması bu yüzden önemlidir.
             </p>
             <p>
-              Bölgesel olarak İstanbul&apos;da sepetli vinç kiralaması için saatlik ücretler 1.500 TL ile 2.500 TL
-              arasında değişirken, günlük fiyatlar 8.000 TL ile 12.000 TL aralığındadır. Örneğin Halkalı, Kayaşehir ve
-              İkitelli bölgelerinde 35 tonluk çift kırma vinç için günlük 750 TL, 80 tonluk çift kırma vinç için 1200
-              TL ücret alınmaktadır. Diğer yandan Esenyurt, Avcılar ve Beylikdüzü bölgelerinde mobil vinç kiralama
-              bedeli günlük 2500 TL civarındadır. Buna ek olarak şehir merkezine yakın ve erişimi kolay çalışma
-              alanlarında fiyatlar daha uygun olabilmektedir.
-            </p>
-            <p>
-              Vinç kiralama sürecinde fiyat odaklı olmak yerine, firmanın kurumsallığı ve hizmet kalitesi öncelikli
-              olarak değerlendirilmelidir. Bununla birlikte teknik destek, bakım hizmetleri ve müşteri desteği gibi
-              faktörler de göz önünde bulundurulmalıdır. Özellikle uzun süreli projelerde, kiralama süresinin uzaması
-              birim maliyeti düşürmektedir.
+              Vinç kiralarken yalnızca fiyata odaklanmak doğru değildir; düşük görünen bir teklif, işe uygun olmayan
+              ekipman nedeniyle zaman kaybına ve ek maliyete dönüşebilir. Firmanın kurumsallığı, sigorta kapsamı,
+              operatör belgeleri, teknik destek ve bakım hizmetleri de karşılaştırmaya dahil edilmelidir.
             </p>
           </div>
           <div className="text-center mt-8">
@@ -476,7 +797,125 @@ export default function KiralikVincPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Fiyat Neye Göre Belirlenir */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Fiyatlandırma Mantığı</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Kiralık Vinç Fiyatları Neye Göre Belirlenir?</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Vinç ücretleri hesaplanırken yalnızca kaldırılacak yükün ağırlığına bakılmaz. Aynı tonaj sınıfındaki
+              iki vinç, farklı sahalarda farklı maliyetler oluşturabilir: dar bir sokakta kısa süreli bir kaldırma
+              işiyle geniş bir şantiyede gün boyu sürecek çalışma aynı fiyatlandırma mantığına sahip değildir.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {fiyatFaktorleri.map((f) => (
+              <div key={f.label} className="bg-white border border-gray-100 rounded-2xl p-5 flex items-start gap-3 hover:border-yellow-300 transition">
+                <span className="w-2 h-2 rounded-full bg-yellow-400 mt-1.5 flex-shrink-0"></span>
+                <span className="text-gray-700 text-sm font-medium leading-snug">{f.label}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-600 mt-8 leading-relaxed max-w-3xl mx-auto text-center">
+            Bu nedenle teklif alırken yalnızca &quot;kaç ton vinç gerekir?&quot; sorusuna cevap vermek yeterli olmaz.
+            Yükün nereden alınıp nereye bırakılacağı, vincin sahaya nasıl gireceği ve çalışmanın ne kadar süreceği de
+            fiyatı doğrudan etkiler. Düşük görünen bir teklif, işe uygun olmayan ekipman seçimi nedeniyle zaman
+            kaybına, ek maliyete veya güvenlik riskine dönüşebilir.
+          </p>
+        </div>
+      </section>
+
+      {/* Süre Bazlı Ücretlendirme */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Kullanım Süresi</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Saatlik, Günlük, Haftalık ve Aylık Vinç Ücretleri</h2>
+            <p className="text-gray-600 text-lg">
+              Vinç ücretleri yalnızca aracın tipine değil, kullanım süresine göre de değişir.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {surelendirme.map((s) => (
+              <div key={s.title} className="bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:border-yellow-300 transition">
+                <VincIcon name={s.icon} className="w-9 h-9 mb-3 text-yellow-500" />
+                <h3 className="font-bold text-gray-900 text-lg mb-2">{s.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vinç Tipi Seçim Rehberi */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-3">Doğru Ekipman</p>
+            <h2 className="text-4xl font-black text-gray-900 mb-4">Projenize Uygun Vinç Tipi Nasıl Belirlenir?</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Her iş için aynı vinç tipi uygun değildir. Doğru seçim; işin güvenliği, süresi ve toplam maliyeti
+              üzerinde doğrudan etkilidir. Fiyat karşılaştırması yaparken yalnızca saatlik ücrete değil, ekipmanın
+              işe uygunluğuna da bakılmalıdır.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {vincSecimi.map((v) => (
+              <Link
+                key={v.title}
+                href={v.href}
+                className="group bg-white border border-gray-100 rounded-2xl p-7 flex gap-5 items-start hover:border-yellow-300 hover:shadow-lg transition"
+              >
+                <span className="w-14 h-14 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center shrink-0 text-gray-800 group-hover:bg-yellow-400 transition-colors">
+                  <VincIcon name={v.icon} className="w-8 h-8" />
+                </span>
+                <span>
+                  <span className="block font-black text-gray-900 text-lg mb-1 group-hover:text-yellow-600 transition">{v.title}</span>
+                  <span className="block text-gray-600 text-sm leading-relaxed">{v.isler}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Teklif İçin Gerekli Bilgiler */}
+      <section className="py-20 px-4 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-yellow-400 font-semibold text-sm uppercase tracking-wider mb-3">Doğru Teklif</p>
+            <h2 className="text-4xl font-black mb-4">Fiyat Teklifi İçin Gerekli Bilgiler</h2>
+            <p className="text-gray-400 text-lg">
+              Eksik bilgiyle alınan teklif, saha keşfi veya çalışma günü geldiğinde değişebilir. Aşağıdaki bilgileri
+              paylaşmanız hem doğru ekipman seçimini hem de gerçekçi bir fiyat almanızı sağlar.
+            </p>
+          </div>
+          <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-10">
+            {teklifBilgileri.map((b) => (
+              <li key={b} className="flex items-start gap-3 text-gray-300">
+                <span className="text-sm leading-relaxed">{b}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="text-center">
+            <a
+              href="https://wa.me/905323039089"
+              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-xl text-lg transition mr-3"
+            >
+              WhatsApp&apos;tan Bilgi Gönderin
+            </a>
+            <a
+              href="tel:05323039089"
+              className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
+            >
+              0532 303 90 89
             </a>
           </div>
         </div>
@@ -537,7 +976,6 @@ export default function KiralikVincPage() {
             <div className="space-y-3">
               {guvenlikkurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -642,15 +1080,14 @@ export default function KiralikVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -728,7 +1165,7 @@ export default function KiralikVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

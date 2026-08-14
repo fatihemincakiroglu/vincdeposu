@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -133,7 +134,7 @@ export default function HelikopterVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🚁 Helikopter Vinç Rehberi 2026
+              Helikopter Vinç Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Helikopter Vinç<br />{" "}
@@ -148,14 +149,13 @@ export default function HelikopterVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#helikopter-vinc-cesitleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Helikopter Vinç Çeşitlerini İncele ↓
-              </a>
+                Helikopter Vinç Çeşitlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -219,7 +219,7 @@ export default function HelikopterVincPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -242,15 +242,15 @@ export default function HelikopterVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🚁 Helikopter Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Helikopter Vinç</h3>
               <p className="text-gray-500 text-sm">Havadan hareket ederek karadan erişimin zor olduğu bölgelere ulaşım sağlar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏗️ Konvansiyonel Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Konvansiyonel Vinç</h3>
               <p className="text-gray-500 text-sm">Sabit bir konumdan çalışır, erişim alanı zemin koşullarına bağlıdır.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⛰️ Arazi Tipi Vinçler</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Arazi Tipi Vinçler</h3>
               <p className="text-gray-500 text-sm">Dağlık ve engebeli bölgelerde sınırlı hareket kabiliyetine sahiptir.</p>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function HelikopterVincPage() {
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -282,7 +282,7 @@ export default function HelikopterVincPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -295,8 +295,7 @@ export default function HelikopterVincPage() {
                       href={v.href}
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </Link>
                   </div>
                 </div>
               </div>
@@ -306,7 +305,7 @@ export default function HelikopterVincPage() {
           {/* Kurtarma ve Askeri Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🚁 Kurtarma Helikopter Vinçleri</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Kurtarma Helikopter Vinçleri</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Kurtarma tipi helikopter vinçler, afet ve acil durum bölgelerinde hızlı müdahale
                 için özel halat ve makara sistemleriyle donatılmıştır. Deniz, dağ ve sel gibi
@@ -314,7 +313,7 @@ export default function HelikopterVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🎖️ Askeri Helikopter Vinçleri</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Askeri Helikopter Vinçleri</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Askeri helikopter vinçler, tahliye, lojistik destek ve özel görevlerde
                 kullanılır. Yüksek güvenlik standartlarına sahip dayanıklı yapısı sayesinde
@@ -336,7 +335,7 @@ export default function HelikopterVincPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -348,7 +347,7 @@ export default function HelikopterVincPage() {
           {/* Deniz Kurtarma / Orman Yangını Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🌊 Deniz Kurtarma Operasyonlarında Kullanımı</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Deniz Kurtarma Operasyonlarında Kullanımı</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Açık deniz ve kıyı bölgelerinde gemi kazaları, batma riski taşıyan teknelerde
                 veya sağlık sorunu yaşayan kişilerin tahliyesinde helikopter vinç, hızlı ve
@@ -356,7 +355,7 @@ export default function HelikopterVincPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🔥 Orman Yangınlarına Müdahale</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Orman Yangınlarına Müdahale</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Orman yangınlarında helikopter vinç sistemleri, su torbası ve söndürme
                 ekipmanlarını taşıyarak karadan erişimin zor olduğu alev cephelerine havadan
@@ -368,7 +367,7 @@ export default function HelikopterVincPage() {
           {/* Dağlık Arazi / Enerji Hattı Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⛰️ Dağlık Arazilerde Kurtarma</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Dağlık Arazilerde Kurtarma</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Karadan ulaşımın mümkün olmadığı yüksek rakımlı ve engebeli bölgelerde kaybolan
                 veya yaralanan kişilerin tahliyesinde helikopter vinç, vakit kaybetmeden
@@ -376,7 +375,7 @@ export default function HelikopterVincPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⚡ Enerji Hatları ve Kule Kurulumu</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Enerji Hatları ve Kule Kurulumu</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Yüksek gerilim hatlarının ve iletim kulelerinin kurulum ile bakım çalışmalarında
                 helikopter vinç, izoleli donanımlarla güvenli erişim sağlayarak operasyon
@@ -387,7 +386,7 @@ export default function HelikopterVincPage() {
 
           {/* İnşaat ve Gökdelen Alt Bölüm */}
           <div className="bg-gray-50 p-8 rounded-2xl mt-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">🏙️ İnşaat ve Gökdelen Projeleri</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">İnşaat ve Gökdelen Projeleri</h3>
             <p className="text-gray-500 text-sm leading-relaxed">
               Yüksek katlı yapı ve gökdelen projelerinde kule vinç parçaları, klima üniteleri
               ve ağır ekipmanların havadan taşınmasında helikopter vinç, karadan erişimin
@@ -406,7 +405,7 @@ export default function HelikopterVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-3">🚁 Helikopter Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-3">Helikopter Vinç</h3>
               <ul className="text-gray-500 text-sm space-y-2">
                 <li>• Karadan erişimin zor olduğu bölgelere ulaşır</li>
                 <li>• Hızlı konumlanma ve operasyon esnekliği sağlar</li>
@@ -415,7 +414,7 @@ export default function HelikopterVincPage() {
               </ul>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-3">🏗️ Konvansiyonel Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-3">Konvansiyonel Vinç</h3>
               <ul className="text-gray-500 text-sm space-y-2">
                 <li>• Sabit bir konumdan çalışır</li>
                 <li>• Zemin ve altyapı koşullarına bağımlıdır</li>
@@ -436,15 +435,15 @@ export default function HelikopterVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚖️ Taşıma Kapasitesi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Taşıma Kapasitesi</h3>
               <p className="text-gray-500 text-sm">Helikopter modeline göre değişen yük kapasitesi, operasyon tipine uygun şekilde belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🪢 Halat ve Makara Sistemi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Halat ve Makara Sistemi</h3>
               <p className="text-gray-500 text-sm">Yük tipine göre değişen uzunlukta özel halat ve hassas kontrol sağlayan makara sistemleri kullanılır.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🌬️ Uçuş ve Hava Koşulları</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Uçuş ve Hava Koşulları</h3>
               <p className="text-gray-500 text-sm">Rüzgar hızı, görüş mesafesi ve hava koşulları operasyon güvenliği açısından sürekli takip edilir.</p>
             </div>
           </div>
@@ -507,7 +506,7 @@ export default function HelikopterVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">📋 Kiralama Öncesi Dikkat Edilmesi Gerekenler</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Kiralama Öncesi Dikkat Edilmesi Gerekenler</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Operasyon bölgesinin uçuş izinleri, yükün ağırlık ve boyut bilgileri,
                 hava koşulları ve operasyon süresi gibi detayların önceden netleştirilmesi,
@@ -515,7 +514,7 @@ export default function HelikopterVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">👷 Operatör ve Teknik Destek Hizmetleri</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Operatör ve Teknik Destek Hizmetleri</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Sertifikalı pilotlar ve deneyimli yer ekibi, operasyon süresince teknik
                 destek sağlar. Uçuş öncesi planlama, saha güvenliği ve ekipman kontrolü
@@ -542,7 +541,6 @@ export default function HelikopterVincPage() {
             <div className="space-y-3">
               {guvenlikkurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -561,15 +559,14 @@ export default function HelikopterVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -586,7 +583,7 @@ export default function HelikopterVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

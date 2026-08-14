@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 
 /* ─────────────────────────────────────────────
    VERİ
@@ -48,12 +47,12 @@ const surec = [
 ];
 
 const fiyatFaktorler = [
-  ["📏", "Çalışma Yüksekliği", "Platform büyüdükçe maliyet artar."],
-  ["👥", "Platform Kapasitesi", "Daha fazla yük veya kişi taşıyan modeller daha yüksek ücretlidir."],
-  ["⏱️", "Kiralama Süresi", "Uzun süreli kiralamalar günlük ortalama maliyeti düşürür."],
-  ["🚛", "Teslimat Mesafesi", "Uzak lokasyonlar için nakliye ücreti eklenir."],
-  ["🔋", "Motor Tipi", "Dizel modeller akülüye göre genellikle daha yüksek ücretlidir."],
-  ["📅", "Sezon", "Yoğun inşaat ve tadilat sezonlarında talep artışı fiyatı etkiler."],
+  ["", "Çalışma Yüksekliği", "Platform büyüdükçe maliyet artar."],
+  ["", "Platform Kapasitesi", "Daha fazla yük veya kişi taşıyan modeller daha yüksek ücretlidir."],
+  ["⏱", "Kiralama Süresi", "Uzun süreli kiralamalar günlük ortalama maliyeti düşürür."],
+  ["", "Teslimat Mesafesi", "Uzak lokasyonlar için nakliye ücreti eklenir."],
+  ["", "Motor Tipi", "Dizel modeller akülüye göre genellikle daha yüksek ücretlidir."],
+  ["", "Sezon", "Yoğun inşaat ve tadilat sezonlarında talep artışı fiyatı etkiler."],
 ];
 
 const sss = [
@@ -103,8 +102,7 @@ export default function Page() {
               href="#fiyatlar"
               className="inline-block bg-[#F5A623] text-[#0D1B2A] font-extrabold px-8 py-4 text-sm tracking-wide hover:brightness-105 transition"
             >
-              Fiyat Teklifi Al →
-            </a>
+              Fiyat Teklifi Al             </a>
             <a
               href="#secim-rehberi"
               className="inline-block border border-white/30 text-white font-semibold px-8 py-4 text-sm tracking-wide hover:bg-white/10 transition"
@@ -186,7 +184,7 @@ export default function Page() {
           <h2 className={h2}>Makaslı Platform Nedir? Eklemli Platform ile Farkı</h2>
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <div className="bg-white p-7">
-              <div className="text-3xl mb-3">✂️</div>
+              <div className="text-3xl mb-3"></div>
               <h3 className="font-extrabold text-lg mb-3 text-[#0D1B2A]">Makaslı Platform</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Birbirine bağlı çapraz kolların açılıp kapanmasıyla yalnızca dikey yönde yükselen
@@ -196,7 +194,7 @@ export default function Page() {
               </p>
             </div>
             <div className="bg-white p-7">
-              <div className="text-3xl mb-3">🔀</div>
+              <div className="text-3xl mb-3"></div>
               <h3 className="font-extrabold text-lg mb-3 text-[#0D1B2A]">Eklemli Platform ile Farkı</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Eklemli (mafsallı) platform kollar sayesinde yatay da uzanabilir; engel etrafından
@@ -430,14 +428,13 @@ export default function Page() {
               href="tel:05323039089"
               className="bg-[#0D1B2A] hover:bg-[#1a2e42] text-white font-black px-10 py-5 transition text-base"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
             <a
               href="/iletisim"
               className="bg-white hover:bg-gray-100 text-[#0D1B2A] font-bold px-10 py-5 transition text-base"
             >
-              Teklif Al →
-            </a>
+              Teklif Al             </a>
           </div>
         </div>
       </section>

@@ -228,7 +228,7 @@ export default function VincKiralamaFiyatlariPage() {
             className="inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-5"
             style={{ background: "#3b82f630", color: "#3b82f6" }}
           >
-            🏗️ Vinç Kiralama
+            Vinç Kiralama
           </Link>
           <h1 className="text-3xl md:text-4xl font-black leading-tight mb-5">
             Vinç Kiralama Fiyatları 2026: Saatlik, Günlük ve Aylık Güncel Fiyat Listesi
@@ -415,7 +415,7 @@ export default function VincKiralamaFiyatlariPage() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-1">
                   <strong className="text-gray-900">Kimler için uygun:</strong> {m.uygun}
                 </p>
-                <p className="text-gray-500 text-sm leading-relaxed">⚠️ {m.dikkat}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{m.dikkat}</p>
               </div>
             ))}
           </div>
@@ -501,7 +501,6 @@ export default function VincKiralamaFiyatlariPage() {
           <ul className="space-y-3 mb-6">
             {dikkatListesi.map((madde) => (
               <li key={madde} className="flex gap-3 items-start bg-gray-50 rounded-xl p-4">
-                <span className="text-green-600 font-bold shrink-0">✓</span>
                 <span className="text-gray-700 text-sm leading-relaxed">{madde}</span>
               </li>
             ))}
@@ -518,7 +517,6 @@ export default function VincKiralamaFiyatlariPage() {
           <ul className="space-y-3 mb-6">
             {ipuclari.map((madde) => (
               <li key={madde} className="flex gap-3 items-start bg-yellow-50 border border-yellow-100 rounded-xl p-4">
-                <span className="text-yellow-600 font-bold shrink-0">💡</span>
                 <span className="text-gray-700 text-sm leading-relaxed">{madde}</span>
               </li>
             ))}
@@ -570,7 +568,7 @@ export default function VincKiralamaFiyatlariPage() {
           <div className="space-y-4 mb-10">
             {sss.map((s) => (
               <div key={s.soru} className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -597,14 +595,13 @@ export default function VincKiralamaFiyatlariPage() {
                 href="tel:05323039089"
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl transition"
               >
-                📞 0532 303 90 89
+                0532 303 90 89
               </a>
               <Link
                 href="/kiralik-vinc"
                 className="border border-gray-600 hover:border-white text-white font-bold px-6 py-3 rounded-xl transition"
               >
-                Kiralık Vinç Sayfası →
-              </Link>
+                Kiralık Vinç Sayfası               </Link>
             </div>
           </div>
         </div>
@@ -619,7 +616,7 @@ export default function VincKiralamaFiyatlariPage() {
               href="/blog/gunluk-vinc-kiralama-fiyatlari"
               className="bg-white border border-gray-100 rounded-2xl p-5 hover:border-yellow-300 hover:shadow-md transition"
             >
-              <div className="text-2xl mb-3">💰</div>
+              <div className="text-2xl mb-3"></div>
               <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2">
                 Günlük Vinç Kiralama Fiyatları 2026: Detaylı Rehber ve Fiyat Tablosu
               </h3>
@@ -629,7 +626,7 @@ export default function VincKiralamaFiyatlariPage() {
               href="/blog/vinc-kiralama-fiyatlarini-etkileyen-faktorler"
               className="bg-white border border-gray-100 rounded-2xl p-5 hover:border-yellow-300 hover:shadow-md transition"
             >
-              <div className="text-2xl mb-3">📊</div>
+              <div className="text-2xl mb-3"></div>
               <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2">
                 Vinç Kiralama Fiyatlarını Etkileyen 7 Faktör
               </h3>
@@ -639,7 +636,7 @@ export default function VincKiralamaFiyatlariPage() {
               href="/blog/istanbul-vinc-kiralama-rehberi-2024"
               className="bg-white border border-gray-100 rounded-2xl p-5 hover:border-yellow-300 hover:shadow-md transition"
             >
-              <div className="text-2xl mb-3">🏗️</div>
+              <div className="text-2xl mb-3"></div>
               <h3 className="font-bold text-gray-900 text-sm leading-snug mb-2">
                 İstanbul&apos;da Vinç Kiralama: Fiyatlar, Türler ve Seçim Kriterleri
               </h3>
@@ -648,7 +645,7 @@ export default function VincKiralamaFiyatlariPage() {
           </div>
           <div className="text-center mt-10">
             <Link href="/blog" className="text-yellow-600 font-semibold hover:underline">
-              ← Tüm yazılara dön
+              Tüm yazılara dön
             </Link>
           </div>
         </div>

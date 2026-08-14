@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sssKategorileri, tumSorular } from "./data";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   title: "Sık Sorulan Sorular | Vinç ve Manlift Kiralama Rehberi",
@@ -45,7 +46,7 @@ export default function SikSorulanSorularPage() {
             href="tel:05323039089"
             className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl mt-8 transition"
           >
-            📞 0532 303 90 89
+            0532 303 90 89
           </a>
         </div>
       </section>
@@ -59,7 +60,7 @@ export default function SikSorulanSorularPage() {
               href={`#${slugify(k.kategori)}`}
               className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-white border border-gray-200 px-4 py-2 rounded-full hover:border-yellow-400 hover:text-yellow-700 transition"
             >
-              <span>{k.icon}</span> {k.kategori}
+              {k.kategori}
             </a>
           ))}
         </div>
@@ -71,7 +72,7 @@ export default function SikSorulanSorularPage() {
           {sssKategorileri.map((k) => (
             <div key={k.kategori} id={slugify(k.kategori)} className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-3xl">{k.icon}</span>
+                <VincIcon name={k.icon} className="w-8 h-8" />
                 <h2 className="text-2xl md:text-3xl font-black text-gray-900">{k.kategori}</h2>
                 <span className="text-sm text-gray-400 font-medium">({k.sorular.length} soru)</span>
               </div>
@@ -82,7 +83,7 @@ export default function SikSorulanSorularPage() {
                     className="group bg-white border border-gray-100 rounded-2xl p-5 hover:border-yellow-300 transition open:border-yellow-300 open:shadow-sm"
                   >
                     <summary className="font-bold text-gray-900 cursor-pointer list-none flex items-center justify-between gap-4">
-                      <span>❓ {s.soru}</span>
+                      <span>{s.soru}</span>
                       <span className="text-yellow-500 text-xl shrink-0 group-open:rotate-45 transition-transform">+</span>
                     </summary>
                     <p className="text-gray-600 text-sm leading-relaxed mt-3 pt-3 border-t border-gray-100">
@@ -106,7 +107,7 @@ export default function SikSorulanSorularPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

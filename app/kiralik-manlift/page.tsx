@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -121,12 +122,12 @@ function ilceToSlug(ilce: string) {
 }
 
 const ilgiliUrunler = [
-  { title: "Kiralık Vinç", href: "/kiralik-vinc", icon: "🏗️" },
-  { title: "Forklift Kiralama", href: "/forklift-kiralama", icon: "🚜" },
-  { title: "Telehandler", href: "/telehandler-kiralama", icon: "🦺" },
-  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "🚛" },
-  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "🔧" },
-  { title: "Operatörlü Hizmet", href: "/operatorlu-vinc-hizmeti", icon: "👷" },
+  { title: "Kiralık Vinç", href: "/kiralik-vinc", icon: "kanca" },
+  { title: "Forklift Kiralama", href: "/forklift-kiralama", icon: "forklift" },
+  { title: "Telehandler", href: "/telehandler-kiralama", icon: "telehandler" },
+  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "sepetli" },
+  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "mobil" },
+  { title: "Operatörlü Hizmet", href: "/operatorlu-vinc-hizmeti", icon: "operator" },
 ];
 
 const galeri = [
@@ -221,7 +222,7 @@ export default function KiralikManliftPage() {
                   href="tel:05323039089"
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-4 rounded-xl text-lg transition text-center"
                 >
-                  📞 0532 303 90 89
+                  0532 303 90 89
                 </a>
                 <a
                   href="#fiyatlar"
@@ -273,7 +274,7 @@ export default function KiralikManliftPage() {
                 <div className={`h-2 bg-gradient-to-r ${m.renk}`} />
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="text-5xl">{m.icon}</div>
+                    <VincIcon name={m.icon} className="w-12 h-12" />
                     <span className="text-xs font-bold text-gray-400 bg-gray-50 px-3 py-1 rounded-full">
                       {m.fiyat}
                     </span>
@@ -290,8 +291,7 @@ export default function KiralikManliftPage() {
                     ))}
                   </div>
                   <div className="mt-6 flex items-center text-yellow-600 font-bold text-sm group-hover:gap-3 transition-all">
-                    Detaylı İncele <span className="ml-2">→</span>
-                  </div>
+                    Detaylı İncele </div>
                 </div>
               </Link>
             ))}
@@ -340,7 +340,7 @@ export default function KiralikManliftPage() {
                 key={k.baslik}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-yellow-400/50 hover:bg-white/10 transition"
               >
-                <div className="text-4xl mb-4">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 mb-4" />
                 <h3 className="text-lg font-black mb-2">{k.baslik}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{k.aciklama}</p>
               </div>
@@ -354,7 +354,7 @@ export default function KiralikManliftPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Güncel Fiyatlar</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Kiralık Manlift Fiyatları 2025</h2>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Kiralık Manlift Fiyatları 2026</h2>
             <p className="text-gray-500 text-lg">
               Fiyatlar platform türü, yükseklik ve kiralama süresine göre değişmektedir.
             </p>
@@ -419,7 +419,7 @@ export default function KiralikManliftPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl text-lg transition whitespace-nowrap"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
           </div>
         </div>
@@ -523,7 +523,7 @@ export default function KiralikManliftPage() {
           <div className="grid gap-4">
             {sorular.map((s, i) => (
               <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <h3 className="font-black text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-black text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-500 leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -545,7 +545,7 @@ export default function KiralikManliftPage() {
                 href={u.href}
                 className="group bg-gray-50 hover:bg-yellow-400 border border-gray-100 hover:border-yellow-400 rounded-2xl p-5 text-center transition"
               >
-                <div className="text-3xl mb-2">{u.icon}</div>
+                <VincIcon name={u.icon} className="w-8 h-8 mb-2" />
                 <div className="text-sm font-bold text-gray-700 group-hover:text-black">{u.title}</div>
               </Link>
             ))}
@@ -577,7 +577,7 @@ export default function KiralikManliftPage() {
       {/* ── SON CTA ── */}
       <section className="py-20 px-4 bg-gray-950 text-white text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="text-6xl mb-6">🏗️</div>
+          <div className="text-6xl mb-6"></div>
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Hemen Teklif Alın</h2>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
             25 yıllık tecrübemiz ve geniş filo kapasitemizle en uygun manlift çözümünü
@@ -588,7 +588,7 @@ export default function KiralikManliftPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-10 py-5 rounded-xl text-xl transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

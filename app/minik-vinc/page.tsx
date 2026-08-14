@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -238,7 +239,7 @@ export default function MinikVincPage() {
           <div className="relative max-w-6xl mx-auto px-4 py-24">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                ⛓️ Minik Vinç Rehberi 2026
+                Minik Vinç Rehberi 2026
               </div>
               <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
                 Minik Vinç:<br />{" "}
@@ -254,14 +255,13 @@ export default function MinikVincPage() {
                   href="tel:05323039089"
                   className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
                 >
-                  📞 Teklif Al: 0532 303 90 89
+                  Teklif Al: 0532 303 90 89
                 </a>
                 <a
                   href="#minik-vinc-modelleri"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
                 >
-                  Modelleri İncele ↓
-                </a>
+                  Modelleri İncele                 </a>
               </div>
             </div>
           </div>
@@ -311,7 +311,6 @@ export default function MinikVincPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3]">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-200 to-gray-300">
-                  <span className="text-7xl">⛓️</span>
                   <span className="text-gray-500 font-semibold text-sm">Minik Vinç Genel Görünüm</span>
                   <span className="text-gray-400 text-xs">Kompakt Elektrikli Vinç Sistemi</span>
                 </div>
@@ -338,7 +337,7 @@ export default function MinikVincPage() {
                   href={v.href}
                   className="group p-6 border-2 border-gray-100 rounded-2xl hover:border-yellow-400 hover:shadow-lg transition flex flex-col bg-white"
                 >
-                  <div className="text-4xl mb-4">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-10 h-10 mb-4" />
                   <h3 className="text-xl font-black text-gray-900 mb-2 group-hover:text-yellow-600 transition">
                     {v.title}
                   </h3>
@@ -352,7 +351,7 @@ export default function MinikVincPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Kapasite: <strong className="text-gray-700">{v.kapasite}</strong></span>
-                    <span className="text-yellow-600 font-bold text-sm group-hover:underline">İncele →</span>
+                    <span className="text-yellow-600 font-bold text-sm group-hover:underline">İncele </span>
                   </div>
                 </Link>
               ))}
@@ -411,7 +410,7 @@ export default function MinikVincPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {kullanımAlanlari.map((a) => (
                 <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100 hover:border-yellow-300 transition">
-                  <div className="text-3xl shrink-0">{a.icon}</div>
+                  <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                     <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -575,7 +574,6 @@ export default function MinikVincPage() {
                     "Arıza anında 24 saat içinde teknik destek sağlanır",
                   ].map((m) => (
                     <div key={m} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                      <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                       <p className="text-gray-800 text-sm">{m}</p>
                     </div>
                   ))}
@@ -590,7 +588,7 @@ export default function MinikVincPage() {
                     <ul className="space-y-1">
                       {b.kontroller.map((k) => (
                         <li key={k} className="flex gap-2 text-sm text-gray-700">
-                          <span className="text-yellow-600 font-bold">✓</span> {k}
+                          {k}
                         </li>
                       ))}
                     </ul>
@@ -613,15 +611,14 @@ export default function MinikVincPage() {
             <div className="space-y-4">
               {sss.map((s, i) => (
                 <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                  <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
                 </div>
               ))}
             </div>
             <div className="text-center mt-8">
               <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-                Tüm soruları görüntüle →
-              </Link>
+                Tüm soruları görüntüle               </Link>
             </div>
           </div>
         </section>
@@ -638,7 +635,7 @@ export default function MinikVincPage() {
                 href="tel:05323039089"
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 0532 303 90 89
+                0532 303 90 89
               </a>
               <Link
                 href="/iletisim"

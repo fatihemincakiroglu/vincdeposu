@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -313,7 +313,7 @@ export default function PortalVincPage() {
           <div className="relative max-w-6xl mx-auto px-4 py-24">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                🏗️ Portal Vinç Kapsamlı Rehber 2026
+                Portal Vinç Kapsamlı Rehber 2026
               </div>
               <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
                 Portal Vinç:<br />{" "}
@@ -329,14 +329,13 @@ export default function PortalVincPage() {
                   href="tel:05323039089"
                   className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
                 >
-                  📞 Teklif Al: 0532 303 90 89
+                  Teklif Al: 0532 303 90 89
                 </a>
                 <a
                   href="#portal-vinc-cesitleri"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
                 >
-                  Portal Vinç Çeşitlerini İncele ↓
-                </a>
+                  Portal Vinç Çeşitlerini İncele                 </a>
               </div>
             </div>
           </div>
@@ -371,7 +370,7 @@ export default function PortalVincPage() {
                 <p className="text-gray-600 text-lg leading-relaxed mb-4">
                   Portal vinç (gantry crane), iki bağımsız taşıyıcı ayak üzerine oturan yatay bir ana kiriş ve bu
                   kirişin boyunca hareket eden bir vinç mekanizmasından oluşan endüstriyel kaldırma ekipmanıdır.
-                  Türkçede "gantri vinç" olarak da adlandırılır.
+                  Türkçede &quot;gantri vinç&quot; olarak da adlandırılır.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-4">
                   Köprülü vinçten en temel farkı, kendi bağımsız taşıyıcı yapısına sahip olmasıdır. Bu özellik
@@ -388,7 +387,6 @@ export default function PortalVincPage() {
               <div className="relative rounded-2xl overflow-hidden bg-gray-100 aspect-[4/3]">
                 {/* Görsel placeholder – gerçek projede next/image ile değiştirin */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-200 to-gray-300">
-                  <span className="text-7xl">🏗️</span>
                   <span className="text-gray-500 font-semibold text-sm">Portal Vinç Genel Görünüm</span>
                   <span className="text-gray-400 text-xs">Görsel: Full Gantry Crane</span>
                 </div>
@@ -412,7 +410,7 @@ export default function PortalVincPage() {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
-                  baslik: "🏗️ Portal Vinç (Gantry Crane)",
+                  baslik: "Portal Vinç (Gantry Crane)",
                   maddeler: [
                     "Bağımsız taşıyıcı ayaklar – bina kirişine gerek yok",
                     "Açık alan ve dış mekânda kullanılabilir",
@@ -424,7 +422,7 @@ export default function PortalVincPage() {
                   renk: "border-yellow-400 bg-yellow-50",
                 },
                 {
-                  baslik: "🏭 Köprülü Vinç (Overhead Crane)",
+                  baslik: "Köprülü Vinç (Overhead Crane)",
                   maddeler: [
                     "Mevcut bina kirişlerine veya özel konstrüksiyona asılı",
                     "Yalnızca kapalı alanlarda kullanılır",
@@ -469,7 +467,7 @@ export default function PortalVincPage() {
                   href={v.href}
                   className="group p-6 border-2 border-gray-100 rounded-2xl hover:border-yellow-400 hover:shadow-lg transition flex flex-col"
                 >
-                  <div className="text-4xl mb-4">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-10 h-10 mb-4" />
                   <h3 className="text-xl font-black text-gray-900 mb-2 group-hover:text-yellow-600 transition">
                     {v.title}
                   </h3>
@@ -483,7 +481,7 @@ export default function PortalVincPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Kapasite: <strong className="text-gray-700">{v.kapasite}</strong></span>
-                    <span className="text-yellow-600 font-bold text-sm group-hover:underline">İncele →</span>
+                    <span className="text-yellow-600 font-bold text-sm group-hover:underline">İncele </span>
                   </div>
                 </Link>
               ))}
@@ -499,7 +497,6 @@ export default function PortalVincPage() {
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden bg-gray-200 aspect-[4/3]">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <span className="text-7xl">🚛</span>
                   <span className="text-gray-500 font-semibold text-sm">RTG – Rubber Tyred Gantry</span>
                   <span className="text-gray-400 text-xs">Tekerlekli Portal Vinç</span>
                 </div>
@@ -522,7 +519,7 @@ export default function PortalVincPage() {
                     "Modern terminallerde otomasyon (ARTG) ile entegre çalışır",
                   ].map((m) => (
                     <li key={m} className="flex gap-2">
-                      <span className="text-yellow-500 font-bold">✓</span> {m}
+                      {m}
                     </li>
                   ))}
                 </ul>
@@ -537,7 +534,7 @@ export default function PortalVincPage() {
                   Raylı Portal Vinç (Rail Mounted Gantry) Karşılaştırması
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  RMG vinçler, sabit ray sistemi üzerinde hareket ederek RTG'ye kıyasla daha yüksek çevrim hızı ve
+                  RMG vinçler, sabit ray sistemi üzerinde hareket ederek RTG&apos;ye kıyasla daha yüksek çevrim hızı ve
                   hassas konumlama imkânı sunar. Tam otomasyon (ARMG) ile desteklendiğinde insansız terminal
                   operasyonunu mümkün kılar.
                 </p>
@@ -558,7 +555,6 @@ export default function PortalVincPage() {
               </div>
               <div className="relative rounded-2xl overflow-hidden bg-gray-200 aspect-[4/3] order-1 md:order-2">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <span className="text-7xl">🛤️</span>
                   <span className="text-gray-500 font-semibold text-sm">RMG – Rail Mounted Gantry</span>
                   <span className="text-gray-400 text-xs">Raylı Portal Vinç</span>
                 </div>
@@ -582,7 +578,7 @@ export default function PortalVincPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {kullanımAlanlari.map((a) => (
                 <div key={a.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-yellow-300 transition">
-                  <div className="text-3xl shrink-0">{a.icon}</div>
+                  <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                     <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -595,7 +591,7 @@ export default function PortalVincPage() {
             <div className="mt-14 grid md:grid-cols-3 gap-6">
               <div className="md:col-span-3 grid md:grid-cols-3 gap-6">
                 <div className="p-6 bg-blue-50 border border-blue-100 rounded-2xl">
-                  <h3 className="font-black text-gray-900 mb-3">⚓ Liman ve Konteyner Terminallerinde Portal Vinç Kullanımı</h3>
+                  <h3 className="font-black text-gray-900 mb-3">Liman ve Konteyner Terminallerinde Portal Vinç Kullanımı</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Konteyner terminallerinde RTG ve RMG tipi portal vinçler, 20 ve 40 fit konteynerleri gemiden rıhtıma
                     veya rıhtımdan sahalara hızla taşımak için kullanılır. Modern terminallerde otomatik (ARMG) sistemler
@@ -604,7 +600,7 @@ export default function PortalVincPage() {
                   </p>
                 </div>
                 <div className="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
-                  <h3 className="font-black text-gray-900 mb-3">🚢 Tersane ve Gemi İnşaatında Portal Vinç</h3>
+                  <h3 className="font-black text-gray-900 mb-3">Tersane ve Gemi İnşaatında Portal Vinç</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Tersanelerde çift kiriş, yüksek kapasiteli portal vinçler gemi bloklarının montajında kritik rol oynar.
                     100–900 ton kapasiteli modeller, bütünleşik gemi bloklarını hassas biçimde kaldırarak iskele üzerinde
@@ -613,7 +609,7 @@ export default function PortalVincPage() {
                   </p>
                 </div>
                 <div className="p-6 bg-orange-50 border border-orange-100 rounded-2xl">
-                  <h3 className="font-black text-gray-900 mb-3">🧱 Prefabrik ve Beton Sektöründe Portal Vinç Uygulamaları</h3>
+                  <h3 className="font-black text-gray-900 mb-3">Prefabrik ve Beton Sektöründe Portal Vinç Uygulamaları</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Prefabrik beton fabrikalarında portal vinçler; kalıp taşıma, kürleme havuzu transferi ve bitmiş
                     elemanların stok sahasına nakledilmesinde kullanılır. 10–50 ton kapasiteli modeller bu sektörde
@@ -756,7 +752,7 @@ export default function PortalVincPage() {
             {/* Günlük vs Aylık */}
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               <div className="p-6 bg-yellow-50 border border-yellow-200 rounded-2xl">
-                <h3 className="font-black text-gray-900 mb-2">📅 Günlük Kiralama Ne Zaman Tercih Edilmeli?</h3>
+                <h3 className="font-black text-gray-900 mb-2">Günlük Kiralama Ne Zaman Tercih Edilmeli?</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Kısa süreli proje, tek seferlik yükleme-boşaltma veya acil ihtiyaç durumlarında günlük kiralama
                   avantajlıdır. Kiralama süresi 5 günün altındaysa günlük birim fiyat yüksek görünse de toplam
@@ -764,7 +760,7 @@ export default function PortalVincPage() {
                 </p>
               </div>
               <div className="p-6 bg-gray-50 border border-gray-200 rounded-2xl">
-                <h3 className="font-black text-gray-900 mb-2">📆 Aylık Kiralama Ne Zaman Avantajlı?</h3>
+                <h3 className="font-black text-gray-900 mb-2">Aylık Kiralama Ne Zaman Avantajlı?</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   İnşaat veya üretim projelerinde sürekli kullanım söz konusuysa aylık kiralama birim maliyeti
                   önemli ölçüde düşürür. 30 günlük kullanımda aylık kira, günlük ücretin yaklaşık 15–18 katı
@@ -792,7 +788,7 @@ export default function PortalVincPage() {
                 { icon: "📋", baslik: "Garanti ve Sözleşme", aciklama: "Yapısal aksamlarda en az 2 yıl, elektrik-elektronik aksamlarda 1 yıl garanti standart kabul edilir. Performans testi (yük testi) sonuçlarını garanti belgesine ekletin." },
               ].map((m) => (
                 <div key={m.baslik} className="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                  <div className="text-3xl shrink-0">{m.icon}</div>
+                  <VincIcon name={m.icon} className="w-8 h-8 shrink-0" />
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">{m.baslik}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{m.aciklama}</p>
@@ -868,7 +864,7 @@ export default function PortalVincPage() {
                   <ul className="space-y-2">
                     {b.kontroller.map((k) => (
                       <li key={k} className="flex gap-2 text-sm text-gray-600">
-                        <span className="text-yellow-500 font-bold">✓</span> {k}
+                        {k}
                       </li>
                     ))}
                   </ul>
@@ -876,11 +872,11 @@ export default function PortalVincPage() {
               ))}
             </div>
             <div className="mt-8 p-6 bg-yellow-50 border border-yellow-200 rounded-2xl">
-              <h3 className="font-black text-gray-900 mb-2">📋 Portal Vinç Bakım Planı Nasıl Oluşturulur?</h3>
+              <h3 className="font-black text-gray-900 mb-2">Portal Vinç Bakım Planı Nasıl Oluşturulur?</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Bakım planı; vincin FEM/ISO kullanım sınıfı (A3–A8), günlük ortalama çevrim sayısı ve çalışma
                 ortamı koşullarına (toz, nem, sıcaklık) göre hazırlanır. Üretici OEM kılavuzu temel referanstır;
-                Türkiye'de 6331 sayılı İş Sağlığı ve Güvenliği Kanunu kapsamında yıllık periyodik muayene zorunludur.
+                Türkiye&apos;de 6331 sayılı İş Sağlığı ve Güvenliği Kanunu kapsamında yıllık periyodik muayene zorunludur.
                 Bakım planının yetkili servis tarafından imzalanarak arşivlenmesi iş güvenliği denetimlerinde zorunludur.
               </p>
             </div>
@@ -898,7 +894,7 @@ export default function PortalVincPage() {
                 </h2>
                 <p className="text-gray-800 text-lg leading-relaxed mb-4">
                   Portal vinç işletiminde güvenlik, teknik performans kadar kritik bir gerekliliktir.
-                  Türkiye'deki yasal mevzuat ve uluslararası standartlar hem imalatçı hem de işletmeci
+                  Türkiye&apos;deki yasal mevzuat ve uluslararası standartlar hem imalatçı hem de işletmeci
                   için kapsamlı yükümlülükler tanımlar.
                 </p>
                 <div className="p-4 bg-white/60 rounded-xl">
@@ -914,7 +910,6 @@ export default function PortalVincPage() {
               <div className="space-y-3">
                 {guvenlikMaddeleri.map((kural) => (
                   <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                    <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                     <p className="text-gray-800 text-sm">{kural}</p>
                   </div>
                 ))}
@@ -983,7 +978,7 @@ export default function PortalVincPage() {
                       <p className="text-gray-600 mt-1">{m.zayif}</p>
                     </div>
                     <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-100">
-                      <span className="text-yellow-700 font-bold">✦ İdeal Kullanım</span>
+                      <span className="text-yellow-700 font-bold">İdeal Kullanım</span>
                       <p className="text-gray-700 mt-1">{m.ideal}</p>
                     </div>
                   </div>
@@ -1005,15 +1000,14 @@ export default function PortalVincPage() {
             <div className="space-y-4">
               {sss.map((s, i) => (
                 <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                  <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
                 </div>
               ))}
             </div>
             <div className="text-center mt-8">
               <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-                Tüm soruları görüntüle →
-              </Link>
+                Tüm soruları görüntüle               </Link>
             </div>
           </div>
         </section>
@@ -1030,7 +1024,7 @@ export default function PortalVincPage() {
                 href="tel:05323039089"
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 0532 303 90 89
+                0532 303 90 89
               </a>
               <Link
                 href="/iletisim"

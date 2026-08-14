@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -101,21 +102,21 @@ const avantajlar = [
 ];
 
 const kisaDonemleriUygun = [
-  { sector: "🏗️ İnşaat Sektörü", durum: "Proje bazlı kısa dönem ihtiyaçlar" },
-  { sector: "📦 Lojistik & Depo", durum: "Sezonluk yoğunluk dönemleri" },
-  { sector: "🛍️ Perakende", durum: "Yıl sonu ve kampanya stok taşıma" },
-  { sector: "🎪 Organizasyon", durum: "Fuar, etkinlik kurulum süreçleri" },
-  { sector: "🌾 Tarım", durum: "Hasat dönemi yük taşıma ihtiyacı" },
-  { sector: "🏭 Üretim", durum: "Makine montaj ve yerleştirme projeleri" },
+  { sector: "İnşaat Sektörü", durum: "Proje bazlı kısa dönem ihtiyaçlar" },
+  { sector: "Lojistik & Depo", durum: "Sezonluk yoğunluk dönemleri" },
+  { sector: "Perakende", durum: "Yıl sonu ve kampanya stok taşıma" },
+  { sector: "Organizasyon", durum: "Fuar, etkinlik kurulum süreçleri" },
+  { sector: "Tarım", durum: "Hasat dönemi yük taşıma ihtiyacı" },
+  { sector: "Üretim", durum: "Makine montaj ve yerleştirme projeleri" },
 ];
 
 const uzunDonemleriUygun = [
-  { sector: "🏭 Fabrikalar", durum: "Sürekli üretim hattı taşıma işlemleri" },
-  { sector: "🚢 Liman & Terminaller", durum: "Yıl boyu yük elleçleme operasyonları" },
-  { sector: "🛒 Market Zincirleri", durum: "Depo ve mağaza lojistiği" },
-  { sector: "♻️ Geri Dönüşüm", durum: "Kesintisiz malzeme taşıma süreçleri" },
-  { sector: "⚗️ Kimya & İlaç", durum: "Hassas malzeme taşıma gerektiren alanlar" },
-  { sector: "📮 E-Ticaret Depoları", durum: "Fulfillment merkezi operasyonları" },
+  { sector: "Fabrikalar", durum: "Sürekli üretim hattı taşıma işlemleri" },
+  { sector: "Liman & Terminaller", durum: "Yıl boyu yük elleçleme operasyonları" },
+  { sector: "Market Zincirleri", durum: "Depo ve mağaza lojistiği" },
+  { sector: "Geri Dönüşüm", durum: "Kesintisiz malzeme taşıma süreçleri" },
+  { sector: "Kimya & İlaç", durum: "Hassas malzeme taşıma gerektiren alanlar" },
+  { sector: "E-Ticaret Depoları", durum: "Fulfillment merkezi operasyonları" },
 ];
 
 const dogruForklift = [
@@ -200,8 +201,8 @@ export default function ForkliftKiralamaPage() {
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-24 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 text-9xl">🏭</div>
-          <div className="absolute bottom-10 right-10 text-9xl">⚡</div>
+          <div className="absolute top-20 left-10 text-9xl"></div>
+          <div className="absolute bottom-10 right-10 text-9xl"></div>
         </div>
         <div className="relative max-w-6xl mx-auto">
           <div className="max-w-3xl">
@@ -230,13 +231,13 @@ export default function ForkliftKiralamaPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 0532 303 90 89
+                0532 303 90 89
               </a>
               <a
                 href="#fiyatlar"
                 className="inline-flex items-center justify-center gap-2 border-2 border-gray-600 hover:border-yellow-400 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                💰 Fiyat Tablosuna Git
+                Fiyat Tablosuna Git
               </a>
             </div>
           </div>
@@ -296,18 +297,18 @@ export default function ForkliftKiralamaPage() {
                 className={`border-2 rounded-2xl p-8 hover:shadow-xl transition group ${f.renk}`}
               >
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 ${f.iconBg}`}>
-                  {f.icon}
+                  <VincIcon name={f.icon} className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 mb-3">{f.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{f.desc}</p>
                 <div className="flex items-center gap-4 mb-5 text-sm text-gray-500">
-                  <span>⚖️ {f.kapasite}</span>
-                  <span>📅 {f.sure}</span>
+                  <span>{f.kapasite}</span>
+                  <span>{f.sure}</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {f.ozellikler.map((o) => (
                     <li key={o} className="flex items-center gap-2 text-sm text-gray-700">
-                      <span className="text-green-500 font-bold">✓</span> {o}
+                      {o}
                     </li>
                   ))}
                 </ul>
@@ -315,8 +316,7 @@ export default function ForkliftKiralamaPage() {
                   href="tel:05323039089"
                   className="block text-center bg-gray-900 hover:bg-yellow-400 hover:text-black text-white font-bold py-3 rounded-xl text-sm transition"
                 >
-                  Teklif Al →
-                </a>
+                  Teklif Al                 </a>
               </div>
             ))}
           </div>
@@ -328,7 +328,7 @@ export default function ForkliftKiralamaPage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
-              ⚡ H3: Alt Başlık
+              H3: Alt Başlık
             </div>
             <h3 className="text-3xl font-black text-gray-900 mb-4">
               Elektrikli Forklift Kiralama – Kapalı Alan Kullanımı İçin İdeal Çözüm
@@ -350,25 +350,24 @@ export default function ForkliftKiralamaPage() {
                 "Dar koridorlarda manevra kabiliyeti",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
-                  <span className="text-blue-500 font-bold mt-0.5 shrink-0">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
-            <div className="text-6xl text-center mb-6">⚡🏭</div>
+            <div className="text-6xl text-center mb-6"></div>
             <h4 className="font-black text-gray-900 text-lg mb-4 text-center">
               Hangi Sektörler Kullanır?
             </h4>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "📦 E-ticaret depoları",
-                "❄️ Soğuk hava depoları",
-                "🍞 Gıda üretim tesisleri",
-                "💊 İlaç & kimya depoları",
-                "🛒 Market zinciri depoları",
-                "📚 Kağıt & baskı fabrikaları",
+                "E-ticaret depoları",
+                "Soğuk hava depoları",
+                "Gıda üretim tesisleri",
+                "İlaç & kimya depoları",
+                "Market zinciri depoları",
+                "Kağıt & baskı fabrikaları",
               ].map((item) => (
                 <div key={item} className="bg-blue-50 rounded-lg px-3 py-2 text-xs text-gray-700 font-medium">
                   {item}
@@ -383,7 +382,7 @@ export default function ForkliftKiralamaPage() {
       <section className="py-20 px-4 bg-white" id="dizel">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 bg-orange-50 rounded-2xl p-8 border border-orange-100">
-            <div className="text-6xl text-center mb-6">🛢️🏗️</div>
+            <div className="text-6xl text-center mb-6"></div>
             <h4 className="font-black text-gray-900 text-lg mb-4 text-center">
               Dizel Forkliftin Güçlü Olduğu Alanlar
             </h4>
@@ -406,7 +405,7 @@ export default function ForkliftKiralamaPage() {
           </div>
           <div className="order-1 md:order-2">
             <div className="inline-block bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
-              🛢️ H3: Alt Başlık
+              H3: Alt Başlık
             </div>
             <h3 className="text-3xl font-black text-gray-900 mb-4">
               Dizel Forklift Kiralama – Açık Alan ve Ağır Yük Taşıma
@@ -427,7 +426,6 @@ export default function ForkliftKiralamaPage() {
                 "Kereste kelepçesi, döner çatal gibi özel aparatlarla kullanım",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
-                  <span className="text-orange-500 font-bold mt-0.5 shrink-0">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -468,7 +466,7 @@ export default function ForkliftKiralamaPage() {
               },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-2xl p-6 border border-yellow-200 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <VincIcon name={item.icon} className="w-10 h-10 mb-4" />
                 <h4 className="font-black text-gray-900 mb-2">{item.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -498,7 +496,7 @@ export default function ForkliftKiralamaPage() {
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 items-start">
                   <div className="w-10 h-10 bg-yellow-400/20 rounded-xl flex items-center justify-center text-xl shrink-0">
-                    {item.icon}
+                    <VincIcon name={item.icon} className="w-5 h-5 text-yellow-600" />
                   </div>
                   <div>
                     <div className="font-bold text-white">{item.title}</div>
@@ -528,7 +526,7 @@ export default function ForkliftKiralamaPage() {
                   ].map((r) => (
                     <tr key={r.kriter} className="border-b border-gray-700/50">
                       <td className="py-3 text-gray-400">{r.kriter}</td>
-                      <td className="py-3 text-center text-green-400">✓ {r.operatorlu}</td>
+                      <td className="py-3 text-center text-green-400">{r.operatorlu}</td>
                       <td className="py-3 text-center text-gray-400">{r.operatorsuz}</td>
                     </tr>
                   ))}
@@ -540,7 +538,7 @@ export default function ForkliftKiralamaPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl transition text-sm"
               >
-                📞 Operatörlü Fiyat Al
+                Operatörlü Fiyat Al
               </a>
             </div>
           </div>
@@ -569,7 +567,7 @@ export default function ForkliftKiralamaPage() {
                 { icon: "⚡", title: "Hızlı Teslimat", desc: "Stokta hazır modeller için 24 saat içinde teslimat imkânı." },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 items-start bg-white rounded-xl p-4 border border-gray-100">
-                  <div className="text-2xl shrink-0">{item.icon}</div>
+                  <VincIcon name={item.icon} className="w-7 h-7 shrink-0" />
                   <div>
                     <div className="font-bold text-gray-800">{item.title}</div>
                     <div className="text-gray-500 text-sm">{item.desc}</div>
@@ -651,7 +649,7 @@ export default function ForkliftKiralamaPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -672,7 +670,7 @@ export default function ForkliftKiralamaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {fiyatEtkenleri.map((item) => (
               <div key={item.title} className="border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 hover:shadow-md transition">
-                <div className="text-3xl mb-4">{item.icon}</div>
+                <VincIcon name={item.icon} className="w-8 h-8 mb-4" />
                 <h4 className="font-black text-gray-900 mb-2">{item.title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -747,7 +745,7 @@ export default function ForkliftKiralamaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {avantajlar.map((a) => (
               <div key={a.title} className="bg-white/70 hover:bg-white rounded-2xl p-6 transition">
-                <div className="text-3xl mb-4">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 mb-4" />
                 <h3 className="font-black text-gray-900 mb-2">{a.title}</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">{a.desc}</p>
               </div>
@@ -772,7 +770,7 @@ export default function ForkliftKiralamaPage() {
             {dogruForklift.map((item, i) => (
               <div key={i} className="border-2 border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="text-3xl">{item.icon}</div>
+                  <VincIcon name={item.icon} className="w-8 h-8" />
                   <div className="text-yellow-500 font-black text-4xl opacity-30">{String(i + 1).padStart(2, "0")}</div>
                 </div>
                 <h3 className="font-black text-gray-900 mb-2">{item.soru}</h3>
@@ -786,7 +784,7 @@ export default function ForkliftKiralamaPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Uzmanımızla Konuşun
+              Uzmanımızla Konuşun
             </a>
           </div>
         </div>
@@ -835,7 +833,6 @@ export default function ForkliftKiralamaPage() {
             <div className="space-y-3">
               {guvenlikKurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-gray-800/60 border border-gray-700 rounded-xl p-4">
-                  <span className="text-green-400 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-300 text-sm">{kural}</p>
                 </div>
               ))}
@@ -856,7 +853,7 @@ export default function ForkliftKiralamaPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -878,7 +875,7 @@ export default function ForkliftKiralamaPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

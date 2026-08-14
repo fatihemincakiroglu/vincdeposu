@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import IlceGrid from "@/components/IlceGrid";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -18,62 +19,62 @@ export const metadata: Metadata = {
 
 const vincTurleri = [
   {
-    icon: "🚛",
+    icon: "sepetli",
     renk: "#F59E0B",
     renkBg: "#FEF3C7",
     title: "Sepetli Vinç",
     href: "/sepetli-vinc",
     kapasite: "12m – 90m",
     kullanim: "Cephe, bakım, peyzaj",
-    desc: "Maltepe'ın dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Boğaz çevresi ve tarihi yarımadada da sorunsuz çalışır.",
+    desc: "Maltepe'nin dar sokak ve yoğun trafiğine uyum sağlayan sepetli vinçlerimiz, personel taşıma ve yüksek noktalara erişimde en yaygın tercih. Cevizli, Küçükyalı ve Başıbüyük çevresinde de sorunsuz çalışır.",
     ozellikler: ["Personel taşıma", "Dar alanlara uygun", "Hızlı kurulum", "Geniş erişim açısı"],
   },
   {
-    icon: "🏗️",
+    icon: "mobil",
     renk: "#3B82F6",
     renkBg: "#DBEAFE",
     title: "Mobil Vinç",
     href: "/mobil-vinc",
     kapasite: "25 – 500 ton",
     kullanim: "İnşaat, sanayi, enerji",
-    desc: "Maltepe'ın büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. Avrupa'dan Anadolu yakasına aynı gün mobilizasyon imkânı.",
+    desc: "Maltepe'nin büyük inşaat ve sanayi projelerinde hız ve esneklik sağlayan tekerlekli mobil vinçler. İkitelli'deki merkezimizden Maltepe'ye aynı gün mobilizasyon imkânı.",
     ozellikler: ["Hızlı mobilizasyon", "Yüksek kapasite", "Her araziye uygun", "Farklı bom uzunlukları"],
   },
   {
-    icon: "🗼",
+    icon: "kule",
     renk: "#8B5CF6",
     renkBg: "#EDE9FE",
     title: "Kule Vinç",
     href: "/kule-vinc",
     kapasite: "1 – 25 ton",
     kullanim: "Uzun süreli inşaat",
-    desc: "Maltepe'daki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
+    desc: "Maltepe'deki büyük konut ve ticari yapı projelerinde aylarca sabit çalışan, yüksek irtifada hassas yük taşıma yapan vinç türü. Uzun vadeli projeler için en ekonomik seçenek.",
     ozellikler: ["Uzun vadeli proje", "Yüksek irtifa", "Sabit kurulum", "Düşük günlük maliyet"],
   },
   {
-    icon: "🐙",
+    icon: "ahtapot",
     renk: "#EC4899",
     renkBg: "#FCE7F3",
     title: "Ahtapot Vinç",
     href: "/ahtapot-vinc",
     kapasite: "10 – 50 ton",
     kullanim: "Dar alan, bina içi",
-    desc: "Maltepe'ın tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
+    desc: "Maltepe'nin tarihi bina restorasyonları ve dar yapı adalarında kompakt yapısı ve çok yönlü hareketliliği ile tercih edilen vinç türü. Kapalı mekân projelerinde fark yaratır.",
     ozellikler: ["Bina içi çalışma", "Dar alan manevra", "Kompakt yapı", "Çok yönlü hareket"],
   },
   {
-    icon: "⚙️",
+    icon: "paletli",
     renk: "#F97316",
     renkBg: "#FFEDD5",
     title: "Paletli Vinç",
     href: "/paletli-vinc",
     kapasite: "50 – 3000 ton",
     kullanim: "Ağır sanayi, enerji",
-    desc: "Maltepe'ın liman, tersane ve ağır sanayi bölgelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
+    desc: "Maltepe ve çevresindeki büyük altyapı, enerji ve kentsel dönüşüm projelerinde yumuşak ve zorlu arazide çalışabilen yüksek kapasiteli paletli vinçler. Büyük enerji ve altyapı projelerinin tercihi.",
     ozellikler: ["Zorlu arazi", "Çok yüksek kapasite", "Stabil yapı", "Uzun bom seçenekleri"],
   },
   {
-    icon: "🚚",
+    icon: "kamyonustu",
     renk: "#10B981",
     renkBg: "#D1FAE5",
     title: "Kamyon Üstü Vinç",
@@ -97,12 +98,12 @@ const fiyatTablosu = [
 ];
 
 const kullanımAlanlari = [
-  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Maltepe'ın yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
+  { icon: "🏗️", title: "Yüksek Yapı İnşaatı", desc: "Maltepe'nin yükselen konut ve ofis projelerinde kat arası beton döküm, kolon montajı, iskelet kurulumu." },
   { icon: "🏭", title: "Fabrika & Sanayi", desc: "Maltepe sanayi bölgelerinde ağır makine montajı, ekipman taşıma ve yerleştirme." },
   { icon: "⚡", title: "Enerji Projeleri", desc: "Maltepe çevresinde rüzgar türbini montajı, trafo kurulumu, solar panel çalışmaları." },
   { icon: "🏠", title: "Dış Cephe Bakımı", desc: "Tarihi binaların ve modern yapıların boya, cam temizleme, cephe onarımı ve mantolama işleri." },
   { icon: "🚢", title: "Liman & Tersane", desc: "Maltepe ve çevresindeki limanlarda konteyner yükleme, tekne bakımı ve liman operasyonları." },
-  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Maltepe'ın köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
+  { icon: "🛣️", title: "Altyapı Projeleri", desc: "Maltepe'nin köprü, tünel, metro ve otoyol inşaat çalışmalarında profesyonel destek." },
   { icon: "📡", title: "Telekom & Anten", desc: "Maltepe ve çevresinde baz istasyonu kurulumu, anten montajı, çatı ekipmanı yerleşimi." },
   { icon: "🌳", title: "Peyzaj & Park", desc: "Maltepe park ve bahçelerinde ağırlıklı ağaç nakliyesi, anıt taş ve heykel yerleşimi." },
 ];
@@ -112,12 +113,12 @@ const adimlar = [
   { no: "02", icon: "🔍", title: "Keşif & Uygun Vinç Seçimi", desc: "Uzmanımız projenizi ve bölgenizi analiz eder, doğru vinç tipini belirler." },
   { no: "03", icon: "📋", title: "Fiyat Teklifi", desc: "Şeffaf, kalem kalem fiyatlandırma e-posta ile iletilir." },
   { no: "04", icon: "✍️", title: "Sözleşme İmzalanır", desc: "Kiralama koşulları, sigorta ve operatör detayları netleşir." },
-  { no: "05", icon: "🚛", title: "Vinç Maltepe'a Teslim Edilir", desc: "Belirlenen tarihte Maltepe'daki şantiyenize kurulum ekibi ile ulaşırız." },
+  { no: "05", icon: "🚛", title: "Vinç Maltepe'ye Teslim Edilir", desc: "Belirlenen tarihte Maltepe'deki şantiyenize kurulum ekibi ile ulaşırız." },
   { no: "06", icon: "✅", title: "İş Tamamlanır", desc: "Operasyon sona erince vinç teslim alınır, alan temizlenir." },
 ];
 
 const neden = [
-  { icon: "🏆", title: "25 Yıllık Maltepe Deneyimi", desc: "Maltepe'da çeyrek asır, 1000+ başarıyla tamamlanan proje." },
+  { icon: "🏆", title: "25 Yıllık Maltepe Deneyimi", desc: "Maltepe'de çeyrek asır, 1000+ başarıyla tamamlanan proje." },
   { icon: "🛡️", title: "Tam Sigortalı", desc: "Tüm ekipman ve operasyonlar kapsamlı sigorta güvencesinde." },
   { icon: "⚡", title: "Aynı Gün Teslimat", desc: "Maltepe ve çevresinde stok garantisiyle acil taleplerde aynı gün vinç sahada." },
   { icon: "👷", title: "Sertifikalı Operatör", desc: "MEB onaylı belgeli, ISG eğitimli operatörler." },
@@ -127,11 +128,11 @@ const neden = [
 
 const sss = [
   {
-    s: "Maltepe'da vinç kiralama fiyatları nasıl belirleniyor?",
-    c: "Maltepe'da vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
+    s: "Maltepe'de vinç kiralama fiyatları nasıl belirleniyor?",
+    c: "Maltepe'de vinç kiralama fiyatı; ilçe ve ulaşım mesafesi, seçilen vinç türü ve kapasitesi, kiralama süresi ile operatör ihtiyacına göre değişir. Uzmanımız projenizi inceleyerek şeffaf fiyat teklifi sunar.",
   },
   {
-    s: "Maltepe'ın her ilçesine hizmet veriyor musunuz?",
+    s: "Maltepe'nin her ilçesine hizmet veriyor musunuz?",
     c: "Evet. Boğazın her iki yakasında Avrupa ve Anadolu yakasındaki tüm 39 ilçeye aynı gün hizmet sunuyoruz. Araç filomuz stratejik noktalara dağılmış olup en hızlı şekilde sahaya ulaşıyor.",
   },
   {
@@ -214,14 +215,13 @@ export default function MaltepeVincKiralamaPage() {
                   href="tel:05323039089"
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-5 rounded-2xl text-lg transition text-center shadow-lg shadow-yellow-400/20"
                 >
-                  📞 0532 303 90 89
+                  0532 303 90 89
                 </a>
                 <a
                   href="#vinc-turleri"
                   className="border-2 border-white/20 hover:border-yellow-400 hover:text-yellow-400 text-white font-bold px-8 py-5 rounded-2xl text-lg transition text-center"
                 >
-                  Vinç Türlerini Keşfet ↓
-                </a>
+                  Vinç Türlerini Keşfet                 </a>
               </div>
 
               {/* Mini istatistikler */}
@@ -251,7 +251,7 @@ export default function MaltepeVincKiralamaPage() {
                     className="w-11 h-11 rounded-xl flex items-center justify-center text-2xl mb-3"
                     style={{ background: v.renk + "25" }}
                   >
-                    {v.icon}
+                    <VincIcon name={v.icon} className="w-6 h-6" style={{ color: v.renk }} />
                   </div>
                   <div className="text-white font-bold text-sm group-hover:text-yellow-400 transition mb-1">{v.title}</div>
                   <div className="text-gray-500 text-xs">{v.kapasite}</div>
@@ -269,7 +269,7 @@ export default function MaltepeVincKiralamaPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-6 gap-6 text-center">
           {istatistikler.map((s) => (
             <div key={s.l}>
-              <div className="text-2xl mb-1">{s.icon}</div>
+              <VincIcon name={s.icon} className="w-7 h-7 mb-1" />
               <div className="text-2xl font-black text-yellow-400">{s.v}</div>
               <div className="text-gray-500 text-xs mt-0.5">{s.l}</div>
             </div>
@@ -305,16 +305,16 @@ export default function MaltepeVincKiralamaPage() {
                       className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
                       style={{ background: v.renkBg, border: `2px solid ${v.renk}40` }}
                     >
-                      {v.icon}
+                      <VincIcon name={v.icon} className="w-8 h-8" style={{ color: v.renk }} />
                     </div>
                     <div>
                       <h3 className="text-xl font-black text-gray-900 mb-1">Maltepe {v.title} Kiralama</h3>
                       <div className="flex flex-wrap gap-3 text-sm">
                         <span className="flex items-center gap-1 text-gray-500">
-                          <span>⚖️</span> Kapasite: <strong className="text-gray-800">{v.kapasite}</strong>
+                          Kapasite: <strong className="text-gray-800">{v.kapasite}</strong>
                         </span>
                         <span className="flex items-center gap-1 text-gray-500">
-                          <span>🔨</span> Kullanım: <strong className="text-gray-800">{v.kullanim}</strong>
+                          Kullanım: <strong className="text-gray-800">{v.kullanim}</strong>
                         </span>
                       </div>
                     </div>
@@ -324,8 +324,7 @@ export default function MaltepeVincKiralamaPage() {
                     className="inline-flex items-center gap-2 font-bold px-5 py-3 rounded-xl transition text-sm whitespace-nowrap flex-shrink-0 text-white hover:opacity-90"
                     style={{ background: v.renk }}
                   >
-                    Detaylı Bilgi →
-                  </Link>
+                    Detaylı Bilgi                   </Link>
                 </div>
 
                 <div className="p-8 grid md:grid-cols-3 gap-8">
@@ -338,8 +337,7 @@ export default function MaltepeVincKiralamaPage() {
                             className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
                             style={{ background: v.renk }}
                           >
-                            ✓
-                          </div>
+                                                      </div>
                           <span className="text-gray-700 text-sm">{o}</span>
                         </div>
                       ))}
@@ -349,7 +347,7 @@ export default function MaltepeVincKiralamaPage() {
                     className="rounded-2xl p-5 text-center flex flex-col items-center justify-center gap-3"
                     style={{ background: v.renkBg, border: `1px solid ${v.renk}30` }}
                   >
-                    <div className="text-4xl">{v.icon}</div>
+                    <VincIcon name={v.icon} className="w-10 h-10" />
                     <div className="font-black text-gray-900">{v.title}</div>
                     <div className="text-sm text-gray-600">{v.kapasite}</div>
                     <a
@@ -357,7 +355,7 @@ export default function MaltepeVincKiralamaPage() {
                       className="mt-2 w-full text-center text-sm font-bold py-2.5 rounded-xl text-white transition hover:opacity-90"
                       style={{ background: v.renk }}
                     >
-                      📞 Fiyat Al
+                      Fiyat Al
                     </a>
                   </div>
                 </div>
@@ -410,21 +408,18 @@ export default function MaltepeVincKiralamaPage() {
 
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-5 flex gap-3">
-              <span className="text-2xl">💡</span>
               <div>
                 <div className="font-bold text-gray-900 text-sm mb-1">Fiyata dahil</div>
                 <div className="text-gray-600 text-xs leading-relaxed">Vinç, sertifikalı operatör ve sigorta standartta dahildir.</div>
               </div>
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-2xl p-5 flex gap-3">
-              <span className="text-2xl">📦</span>
               <div>
                 <div className="font-bold text-gray-900 text-sm mb-1">Ek ücretler</div>
                 <div className="text-gray-600 text-xs leading-relaxed">Maltepe dışı nakliye, gece mesaisi ve özel izin ayrıca fiyatlandırılır.</div>
               </div>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-2xl p-5 flex gap-3">
-              <span className="text-2xl">📅</span>
               <div>
                 <div className="font-bold text-gray-900 text-sm mb-1">Uzun dönem indirim</div>
                 <div className="text-gray-600 text-xs leading-relaxed">Aylık kiralama anlaşmalarında %20–35 indirim uygulanmaktadır.</div>
@@ -457,7 +452,7 @@ export default function MaltepeVincKiralamaPage() {
                 key={k.title}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-yellow-400/30 transition group"
               >
-                <div className="text-4xl mb-4">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 mb-4" />
                 <h4 className="text-white font-black mb-2 group-hover:text-yellow-400 transition">{k.title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">{k.desc}</p>
               </div>
@@ -484,7 +479,7 @@ export default function MaltepeVincKiralamaPage() {
                   <div className="hidden lg:block absolute top-8 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] h-0.5 bg-gradient-to-r from-yellow-400/40 to-yellow-400/10" />
                 )}
                 <div className="w-16 h-16 bg-yellow-400/10 border-2 border-yellow-400/30 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 relative z-10">
-                  {a.icon}
+                  <VincIcon name={a.icon} className="w-7 h-7 text-yellow-500" />
                 </div>
                 <div className="text-yellow-500 text-xs font-black tracking-widest mb-2">{a.no}</div>
                 <h4 className="text-gray-900 font-black text-sm mb-2">{a.title}</h4>
@@ -498,7 +493,7 @@ export default function MaltepeVincKiralamaPage() {
               href="tel:05323039089"
               className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-black px-10 py-5 rounded-2xl text-lg transition shadow-lg shadow-yellow-400/20"
             >
-              📞 Hemen Başlayın — 0532 303 90 89
+              Hemen Başlayın — 0532 303 90 89
             </a>
           </div>
         </div>
@@ -533,7 +528,7 @@ export default function MaltepeVincKiralamaPage() {
                   key={n.title}
                   className="flex gap-4 p-5 rounded-2xl border border-gray-100 bg-white hover:border-yellow-300 hover:shadow-md transition group"
                 >
-                  <div className="text-3xl flex-shrink-0">{n.icon}</div>
+                  <VincIcon name={n.icon} className="w-8 h-8 flex-shrink-0" />
                   <div>
                     <h4 className="font-black text-gray-900 mb-1 group-hover:text-yellow-600 transition">{n.title}</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">{n.desc}</p>
@@ -582,7 +577,7 @@ export default function MaltepeVincKiralamaPage() {
               href="tel:05323039089"
               className="inline-block bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl transition"
             >
-              📞 0532 303 90 89 — Hemen Ara
+              0532 303 90 89 — Hemen Ara
             </a>
           </div>
         </div>
@@ -602,10 +597,10 @@ export default function MaltepeVincKiralamaPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { icon: "👷", title: "Operatörlü Hizmet", desc: "Sertifikalı operatör ile tam hizmet paketi.", href: "/operatorlu-vinc-hizmeti", renk: "#10B981" },
-              { icon: "🔧", title: "Bakım & Onarım", desc: "Vinci arızalandığında saha servisi.", href: "/vinc-bakim-ve-onarim", renk: "#3B82F6" },
-              { icon: "🚨", title: "Acil Hizmet", desc: "7/24 acil vinç ihtiyaçlarınız için.", href: "/vinc-acil-durum-hizmetleri", renk: "#EF4444" },
-              { icon: "🚛", title: "Taşıma & Lojistik", desc: "Vinç nakliye ve şantiye kurulumu.", href: "/vinc-tasima-ve-lojistik", renk: "#14B8A6" },
+              { icon: "operator", title: "Operatörlü Hizmet", desc: "Sertifikalı operatör ile tam hizmet paketi.", href: "/operatorlu-vinc-hizmeti", renk: "#10B981" },
+              { icon: "anahtar", title: "Bakım & Onarım", desc: "Vinci arızalandığında saha servisi.", href: "/vinc-bakim-ve-onarim", renk: "#3B82F6" },
+              { icon: "acil", title: "Acil Hizmet", desc: "7/24 acil vinç ihtiyaçlarınız için.", href: "/vinc-acil-durum-hizmetleri", renk: "#EF4444" },
+              { icon: "lojistik", title: "Taşıma & Lojistik", desc: "Vinç nakliye ve şantiye kurulumu.", href: "/vinc-tasima-ve-lojistik", renk: "#14B8A6" },
             ].map((h) => (
               <Link
                 key={h.href}
@@ -616,11 +611,11 @@ export default function MaltepeVincKiralamaPage() {
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"
                   style={{ background: h.renk + "20" }}
                 >
-                  {h.icon}
+                  <VincIcon name={h.icon} className="w-6 h-6" style={{ color: h.renk }} />
                 </div>
                 <h4 className="font-black text-gray-900 mb-2 group-hover:text-yellow-600 transition">{h.title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed mb-3">{h.desc}</p>
-                <span className="text-sm font-bold" style={{ color: h.renk }}>İncele →</span>
+                <span className="text-sm font-bold" style={{ color: h.renk }}>İncele </span>
               </Link>
             ))}
           </div>
@@ -645,14 +640,13 @@ export default function MaltepeVincKiralamaPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-black px-10 py-5 rounded-2xl transition text-lg"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
             <Link
               href="/iletisim"
               className="bg-white hover:bg-gray-100 text-gray-900 font-bold px-10 py-5 rounded-2xl transition text-lg"
             >
-              Teklif Al →
-            </Link>
+              Teklif Al             </Link>
           </div>
         </div>
       </section>
