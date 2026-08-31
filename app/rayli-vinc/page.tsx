@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -12,13 +13,12 @@ export const metadata: Metadata = {
 
 /* ---------------- VERİ KÜMELERİ ---------------- */
 
-const rayliVincCesitleri = [
+const rayliVincCesitleri: { icon: string; title: string; desc: string; kapasite: string; href?: string; ozellikler: string[] }[] = [
   {
     icon: "🏗️",
     title: "Köprülü Raylı Vinç (Tek Kirişli)",
     desc: "Tek ana kiriş üzerinde hareket eden vinç arabasıyla çalışan, orta kapasiteli işler için ekonomik çözüm.",
     kapasite: "1 – 10 ton",
-    href: "/koprulu-rayli-vinc",
     ozellikler: ["Ekonomik", "Düşük tavan yüksekliği", "Kolay bakım"],
   },
   {
@@ -26,11 +26,10 @@ const rayliVincCesitleri = [
     title: "Köprülü Raylı Vinç (Çift Kirişli)",
     desc: "İki ana kiriş üzerinde çalışan vinç arabası sayesinde daha yüksek kapasite ve daha geniş açıklık sunan model.",
     kapasite: "10 – 80 ton",
-    href: "/cift-kirisli-rayli-vinc",
     ozellikler: ["Yüksek kapasite", "Geniş açıklık", "Üretim hattı uyumlu"],
   },
   {
-    icon: "🌉",
+    icon: "portal",
     title: "Portal Vinç (Gantry Crane)",
     desc: "Kendi taşıyıcı ayakları üzerinde hareket eden, mevcut bir yapıya ihtiyaç duymayan açık alan vinç sistemi.",
     kapasite: "5 – 100 ton",
@@ -42,7 +41,6 @@ const rayliVincCesitleri = [
     title: "Yarı Portal Vinç (Semi-Gantry)",
     desc: "Bir tarafı bina kolonuna, diğer tarafı kendi ayağına oturan, hibrit yapısıyla maliyet avantajı sağlayan model.",
     kapasite: "5 – 50 ton",
-    href: "/yari-portal-vinc",
     ozellikler: ["Maliyet avantajı", "Hibrit montaj", "Mevcut yapı kullanımı"],
   },
   {
@@ -50,11 +48,10 @@ const rayliVincCesitleri = [
     title: "Konsol (Jib) Raylı Vinç",
     desc: "Duvara veya kolona monte edilen, dönebilen kol yapısıyla sabit bir nokta etrafında çalışma alanı sunan model.",
     kapasite: "0,5 – 5 ton",
-    href: "/konsol-jib-vinc",
     ozellikler: ["Sabit nokta çalışma", "Dönebilen kol", "Az yer kaplar"],
   },
   {
-    icon: "➖",
+    icon: "monoray",
     title: "Monoray (Monorail) Vinç",
     desc: "Tek bir ray hattı boyunca hareket eden, doğrusal taşıma rotalarında verimli ve hızlı bir çözüm.",
     kapasite: "0,5 – 10 ton",
@@ -207,7 +204,7 @@ export default function RayliVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🏗️ Raylı Vinç Sistemleri Rehberi 2026
+              Raylı Vinç Sistemleri Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Raylı Vinç: Özellikleri,<br />{" "}
@@ -223,14 +220,13 @@ export default function RayliVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#rayli-vinc-cesitleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Raylı Vinç Çeşitlerini İncele ↓
-              </a>
+                Raylı Vinç Çeşitlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -271,15 +267,15 @@ export default function RayliVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🛤️ Sabit Hat Sistemi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Sabit Hat Sistemi</h3>
               <p className="text-gray-500 text-sm">Ray üzerinde hareket ederek tekrarlanabilir ve hassas taşıma sağlar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚙️ Yüksek Kapasite</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Yüksek Kapasite</h3>
               <p className="text-gray-500 text-sm">Yüzlerce kilogramdan yüzlerce tona kadar yük taşıma seçeneği sunar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏭 Sürekli Kullanım</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Sürekli Kullanım</h3>
               <p className="text-gray-500 text-sm">Üretim hattında kesintisiz ve yoğun çalışma koşullarına uygundur.</p>
             </div>
           </div>
@@ -299,11 +295,11 @@ export default function RayliVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {rayliVincCesitleri.map((v) => (
               <div
-                key={v.href}
+                key={v.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -311,7 +307,7 @@ export default function RayliVincPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -320,12 +316,13 @@ export default function RayliVincPage() {
                       <div className="text-xs text-gray-400">Kapasite</div>
                       <div className="text-gray-800 font-bold text-sm">{v.kapasite}</div>
                     </div>
-                    <Link
-                      href={v.href}
-                      className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
-                    >
-                      İncele →
-                    </Link>
+                    {v.href ? (
+                      <Link
+                        href={v.href}
+                        className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
+                      >
+                      İncele                     </Link>
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -335,7 +332,7 @@ export default function RayliVincPage() {
           {/* H3: Köprülü, Portal/Yarı Portal, Konsol, Tek/Çift Kiriş detayları */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ Köprülü Raylı Vinç (Overhead Crane) Özellikleri</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Köprülü Raylı Vinç (Overhead Crane) Özellikleri</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Köprülü raylı vinçler, bina kolonlarına monte edilen ray hattı üzerinde hareket
                 eden ana kiriş ve bu kiriş üzerinde yatay hareket eden vinç arabasından oluşur.
@@ -344,7 +341,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🌉 Portal ve Yarı Portal Raylı Vinç Nedir?</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Portal ve Yarı Portal Raylı Vinç Nedir?</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Portal vinçler kendi taşıyıcı ayakları üzerinde durarak mevcut bir bina yapısına
                 ihtiyaç duymaz; açık sahalarda tercih edilir. Yarı portal vinçlerde ise bir taraf
@@ -353,7 +350,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">📐 Konsol (Jib) Raylı Vinç Kullanım Avantajları</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Konsol (Jib) Raylı Vinç Kullanım Avantajları</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Konsol vinçler, duvara veya tekil bir kolona monte edilerek dönebilen kol
                 yapısıyla sabit bir nokta etrafında çalışma alanı oluşturur. Az yer kaplaması ve
@@ -361,7 +358,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⚖️ Tek Kiriş ve Çift Kiriş Raylı Vinç Karşılaştırması</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Tek Kiriş ve Çift Kiriş Raylı Vinç Karşılaştırması</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Tek kirişli vinçler daha düşük tavan yüksekliği gerektirir ve ekonomik bir
                 çözümdür; genellikle 10 tona kadar kapasitelerde kullanılır. Çift kirişli
@@ -387,15 +384,15 @@ export default function RayliVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🛤️ Raylı Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Raylı Vinç</h3>
               <p className="text-gray-500 text-sm">Sabit ray hattında çalışır, tekrarlanan üretim taşımaları için en verimli çözümdür.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🚚 Mobil Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Mobil Vinç</h3>
               <p className="text-gray-500 text-sm">Tekerlekli veya paletli şasi ile saha içinde özgürce hareket edebilir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🧺 Sepetli Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Sepetli Vinç</h3>
               <p className="text-gray-500 text-sm">Yük taşımak yerine personeli yükseğe çıkararak erişim ihtiyacını karşılar.</p>
             </div>
           </div>
@@ -413,7 +410,7 @@ export default function RayliVincPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanimAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-white rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -425,7 +422,7 @@ export default function RayliVincPage() {
           {/* H3: Fabrika, Liman, Çelik, Depo detayları */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏭 Fabrika ve Üretim Tesislerinde Raylı Vinç Kullanımı</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Fabrika ve Üretim Tesislerinde Raylı Vinç Kullanımı</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Üretim hatlarında hammadde, yarı mamul ve bitmiş ürünlerin istasyonlar arasında
                 taşınması raylı vinçlerle gerçekleştirilir. Sabit hat sayesinde taşıma rotaları
@@ -433,7 +430,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🚢 Liman ve Konteyner Terminallerinde Raylı Vinç</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Liman ve Konteyner Terminallerinde Raylı Vinç</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Liman sahalarında konteyner ve dökme yük aktarma işlemleri, yüksek kapasiteli
                 portal tipi raylı vinçlerle yürütülür. Sürekli ve yoğun çalışma koşullarına
@@ -441,7 +438,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🔩 Çelik Sektöründe Raylı Vinç Uygulamaları</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Çelik Sektöründe Raylı Vinç Uygulamaları</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Sıcak haddehane, döküm ve çelik servis merkezlerinde yüksek sıcaklığa dayanıklı
                 özel donanımlı çift kirişli raylı vinçler kullanılır. Ağır ve hassas yüklerin
@@ -449,7 +446,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">📦 Depo ve Lojistik Merkezlerinde Raylı Vinç</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Depo ve Lojistik Merkezlerinde Raylı Vinç</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Geniş depo alanlarında palet, rulo ve büyük hacimli ürünlerin istiflenmesinde
                 raylı vinçler forklift kullanımına kıyasla daha az alan kaplayarak depolama
@@ -474,19 +471,19 @@ export default function RayliVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📏 Açıklık (Span)</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Açıklık (Span)</h3>
               <p className="text-gray-500 text-sm">Ray hatları arasındaki mesafedir; bina genişliğine ve kullanım amacına göre belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⬆️ Kaldırma Yüksekliği</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Kaldırma Yüksekliği</h3>
               <p className="text-gray-500 text-sm">Kancanın en üst ve en alt nokta arasında hareket edebildiği toplam mesafedir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🚀 Hareket Hızları</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Hareket Hızları</h3>
               <p className="text-gray-500 text-sm">Köprü, vinç arabası ve kaldırma mekanizmasının ayrı ayrı hız değerleri vardır.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏷️ Kullanım Sınıfı (FEM/DIN)</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Kullanım Sınıfı (FEM/DIN)</h3>
               <p className="text-gray-500 text-sm">Günlük çalışma süresi ve yük spektrumuna göre belirlenen sınıflandırmadır.</p>
             </div>
           </div>
@@ -494,7 +491,7 @@ export default function RayliVincPage() {
           {/* H3: Ray sistemi + Elektrik motor */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🛤️ Raylı Vinç Ray Sistemi Seçimi ve Hesaplama</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Raylı Vinç Ray Sistemi Seçimi ve Hesaplama</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Ray profili seçimi; tekerlek yükü, açıklık ve kullanım sınıfına göre yapılan
                 statik hesaplarla belirlenir. Yanlış ray seçimi erken aşınmaya, tekerlek
@@ -503,7 +500,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⚡ Elektrik Motorlu ve Frekans Kontrollü Sistemler</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Elektrik Motorlu ve Frekans Kontrollü Sistemler</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Frekans kontrollü (inverter) sürücüler, vinç hareketlerinde yumuşak başlama ve
                 durma sağlayarak hem yük sallanmasını azaltır hem de mekanik parçalar üzerindeki
@@ -608,14 +605,14 @@ export default function RayliVincPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
 
           {/* H3: Günlük / Aylık Karşılaştırma + Fiyatı Etkileyen Faktörler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">📅 Günlük ve Aylık Kiralama Fiyat Karşılaştırması</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Günlük ve Aylık Kiralama Fiyat Karşılaştırması</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Kısa süreli projelerde günlük kiralama esneklik sağlarken, 1 aydan uzun
                 projelerde aylık paketler birim maliyeti önemli ölçüde düşürür. Genel olarak
@@ -623,7 +620,7 @@ export default function RayliVincPage() {
               </p>
             </div>
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">📋 Fiyatı Etkileyen Faktörler</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Fiyatı Etkileyen Faktörler</h3>
               <div className="space-y-2 mt-3">
                 {[
                   "Vinç tipi ve kaldırma kapasitesi",
@@ -661,7 +658,7 @@ export default function RayliVincPage() {
               { icon: "📄", title: "Garanti ve Servis Anlaşması", desc: "Periyodik bakım ve garanti kapsamı satın alma kararında önemli rol oynar." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -672,7 +669,7 @@ export default function RayliVincPage() {
 
           {/* H3: Marka karşılaştırması */}
           <div className="bg-gray-50 p-8 rounded-2xl">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🏆 Demag, Konecranes, Stahl: Popüler Marka Karşılaştırması</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Demag, Konecranes, Stahl: Popüler Marka Karşılaştırması</h3>
             <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
               <table className="w-full text-sm">
                 <thead>
@@ -724,7 +721,6 @@ export default function RayliVincPage() {
             <div className="space-y-3">
               {bakimKontrolListesi.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white rounded-xl p-4 border border-gray-100">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-700 text-sm">{kural}</p>
                 </div>
               ))}
@@ -733,7 +729,7 @@ export default function RayliVincPage() {
 
           {/* H3: Bakım planı nasıl oluşturulur */}
           <div className="mt-12 bg-white p-8 rounded-2xl border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🗂️ Raylı Vinç Bakım Planı Nasıl Oluşturulur?</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Raylı Vinç Bakım Planı Nasıl Oluşturulur?</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {[
                 { baslik: "Günlük Kontrol", aciklama: "Operatör tarafından görsel kontrol ve fonksiyon testi" },
@@ -767,7 +763,6 @@ export default function RayliVincPage() {
             <div className="space-y-3">
               {guvenlikBelgeleri.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-700 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -776,7 +771,7 @@ export default function RayliVincPage() {
 
           {/* H3: CE belgesi ve FEM/DIN standartları */}
           <div className="mt-12 bg-white/70 p-8 rounded-2xl">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">📜 CE Belgesi ve FEM / DIN Standartları</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">CE Belgesi ve FEM / DIN Standartları</h3>
             <p className="text-gray-800 text-sm leading-relaxed">
               CE işareti, vinç sisteminin Avrupa Birliği makine güvenliği gerekliliklerini
               karşıladığını gösterir. FEM (Fédération Européenne de la Manutention) ve DIN
@@ -810,7 +805,7 @@ export default function RayliVincPage() {
               { icon: "💰", title: "Fiyat-Performans Analizi", desc: "Tadilat ve nakliye maliyetleri toplam fiyata eklenerek karşılaştırma yapılmalıdır." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -831,20 +826,31 @@ export default function RayliVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Raylı Vinç Sistemleri</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Raylı vinç, fabrika ve atölye tavanına monte edilen raylar üzerinde hareket eden, tesisin iç lojistiğini kalıcı olarak çözen kaldırma sistemidir. Zemin alanı işgal etmez, forklift trafiğini azaltır ve operatör tek kumandayla tonlarca yükü milimetrik hassasiyetle konumlandırabilir. Üretim hattı besleme, kalıp değişimi, makine bakımı ve mamul sevkiyat alanlarında günde yüzlerce çevrim yapan sistemlerdir.</p>
+            <p>Sistem seçiminde bina açıklığı, kaldırılacak maksimum yük ve çalışma sınıfı (günlük çevrim yoğunluğu) belirleyicidir. Tek kirişli köprülü vinçler 10 tona kadar ekonomik çözüm sunarken, çift kirişli sistemler daha yüksek kapasite ve kanca yüksekliği sağlar. Mevcut binaya kurulumda kolon taşıma kapasitesi statik olarak doğrulanır; gerekirse bağımsız ayaklı portal sistem önerilir.</p>
+            <p>Raylı vinçte hizmetimiz satış-kurulumla bitmez: periyodik bakım, halat ve fren kontrolü, yasal periyodik muayene raporları ve arıza müdahalesi sözleşme kapsamında sürdürülür. Mevcut eski sistemlerin modernizasyonu — frekans invertörü eklenmesi, kumanda yenileme, kapasite artırımı — çoğu zaman yeni sistem maliyetinin çok altında kalır; keşif sonrası her iki seçeneği karşılaştırmalı sunuyoruz.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Teklif Alın</h2>
@@ -856,7 +862,7 @@ export default function RayliVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import VincIcon from "./VincIcon";
 
 const ilceler = [
   { label: "İstanbul", href: "/istanbul-vinc-kiralama" },
@@ -31,6 +32,31 @@ const ilceler = [
   { label: "Zeytinburnu", href: "/zeytinburnu-vinc-kiralama" },
 ];
 
+const manliftIlceleri = [
+  { label: "İstanbul", href: "/istanbul-kiralik-manlift" },
+  { label: "Avcılar", href: "/avcilar-kiralik-manlift" },
+  { label: "Bağcılar", href: "/bagcilar-kiralik-manlift" },
+  { label: "Bahçelievler", href: "/bahcelievler-kiralik-manlift" },
+  { label: "Bakırköy", href: "/bakirkoy-kiralik-manlift" },
+  { label: "Başakşehir", href: "/basaksehir-kiralik-manlift" },
+  { label: "Beşiktaş", href: "/besiktas-kiralik-manlift" },
+  { label: "Beykoz", href: "/beykoz-kiralik-manlift" },
+  { label: "Beylikdüzü", href: "/beylikduzu-kiralik-manlift" },
+  { label: "Beyoğlu", href: "/beyoglu-kiralik-manlift" },
+  { label: "Esenyurt", href: "/esenyurt-kiralik-manlift" },
+  { label: "Fatih", href: "/fatih-kiralik-manlift" },
+  { label: "Kadıköy", href: "/kadikoy-kiralik-manlift" },
+  { label: "Kağıthane", href: "/kagithane-kiralik-manlift" },
+  { label: "Kartal", href: "/kartal-kiralik-manlift" },
+  { label: "Maltepe", href: "/maltepe-kiralik-manlift" },
+  { label: "Pendik", href: "/pendik-kiralik-manlift" },
+  { label: "Sarıyer", href: "/sariyer-kiralik-manlift" },
+  { label: "Şişli", href: "/sisli-kiralik-manlift" },
+  { label: "Tuzla", href: "/tuzla-kiralik-manlift" },
+  { label: "Ümraniye", href: "/umraniye-kiralik-manlift" },
+  { label: "Üsküdar", href: "/uskudar-kiralik-manlift" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -48,7 +74,7 @@ export default function Footer() {
             href="tel:05323039089"
             className="inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg text-sm hover:bg-yellow-500 transition"
           >
-            📞 0532 303 90 89
+            0532 303 90 89
           </a>
         </div>
 
@@ -90,20 +116,34 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Kiralık Manlift İlçeler */}
+        <div>
+          <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Kiralık Manlift Bölgeleri</h4>
+          <ul className="grid grid-cols-2 gap-1 text-sm">
+            {manliftIlceleri.map((ilce) => (
+              <li key={ilce.href}>
+                <Link href={ilce.href} className="hover:text-yellow-400 transition">
+                  {ilce.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* İletişim */}
         <div>
           <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">İletişim</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex gap-2">
-              <span>📞</span>
+              <VincIcon name="telefon" className="w-4 h-4 mt-0.5 shrink-0 text-yellow-500" />
               <a href="tel:05323039089" className="hover:text-yellow-400 transition">0532 303 90 89</a>
             </li>
             <li className="flex gap-2">
-              <span>🌐</span>
+              <VincIcon name="radar" className="w-4 h-4 mt-0.5 shrink-0 text-yellow-500" />
               <span>vincdeposu.com.tr</span>
             </li>
             <li className="flex gap-2">
-              <span>📍</span>
+              <VincIcon name="konum" className="w-4 h-4 mt-0.5 shrink-0 text-yellow-500" />
               <a
                 href="https://maps.app.goo.gl/JXCzUwRJANU6cKvZ9"
                 target="_blank"
@@ -114,7 +154,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex gap-2 items-center">
-              <span>📷</span>
+              <VincIcon name="kamera" className="w-4 h-4 mt-0.5 shrink-0 text-yellow-500" />
               <a
                 href="https://www.instagram.com/expressplatform/"
                 target="_blank"

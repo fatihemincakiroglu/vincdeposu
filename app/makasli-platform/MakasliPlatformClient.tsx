@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 
 /* ─────────────────────────────────────────────
    VERİ
@@ -48,12 +47,12 @@ const surec = [
 ];
 
 const fiyatFaktorler = [
-  ["📏", "Çalışma Yüksekliği", "Platform büyüdükçe maliyet artar."],
-  ["👥", "Platform Kapasitesi", "Daha fazla yük veya kişi taşıyan modeller daha yüksek ücretlidir."],
-  ["⏱️", "Kiralama Süresi", "Uzun süreli kiralamalar günlük ortalama maliyeti düşürür."],
-  ["🚛", "Teslimat Mesafesi", "Uzak lokasyonlar için nakliye ücreti eklenir."],
-  ["🔋", "Motor Tipi", "Dizel modeller akülüye göre genellikle daha yüksek ücretlidir."],
-  ["📅", "Sezon", "Yoğun inşaat ve tadilat sezonlarında talep artışı fiyatı etkiler."],
+  ["", "Çalışma Yüksekliği", "Platform büyüdükçe maliyet artar."],
+  ["", "Platform Kapasitesi", "Daha fazla yük veya kişi taşıyan modeller daha yüksek ücretlidir."],
+  ["⏱", "Kiralama Süresi", "Uzun süreli kiralamalar günlük ortalama maliyeti düşürür."],
+  ["", "Teslimat Mesafesi", "Uzak lokasyonlar için nakliye ücreti eklenir."],
+  ["", "Motor Tipi", "Dizel modeller akülüye göre genellikle daha yüksek ücretlidir."],
+  ["", "Sezon", "Yoğun inşaat ve tadilat sezonlarında talep artışı fiyatı etkiler."],
 ];
 
 const sss = [
@@ -103,8 +102,7 @@ export default function Page() {
               href="#fiyatlar"
               className="inline-block bg-[#F5A623] text-[#0D1B2A] font-extrabold px-8 py-4 text-sm tracking-wide hover:brightness-105 transition"
             >
-              Fiyat Teklifi Al →
-            </a>
+              Fiyat Teklifi Al             </a>
             <a
               href="#secim-rehberi"
               className="inline-block border border-white/30 text-white font-semibold px-8 py-4 text-sm tracking-wide hover:bg-white/10 transition"
@@ -186,7 +184,7 @@ export default function Page() {
           <h2 className={h2}>Makaslı Platform Nedir? Eklemli Platform ile Farkı</h2>
           <div className="grid md:grid-cols-2 gap-8 mt-8">
             <div className="bg-white p-7">
-              <div className="text-3xl mb-3">✂️</div>
+              <div className="text-3xl mb-3"></div>
               <h3 className="font-extrabold text-lg mb-3 text-[#0D1B2A]">Makaslı Platform</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Birbirine bağlı çapraz kolların açılıp kapanmasıyla yalnızca dikey yönde yükselen
@@ -196,7 +194,7 @@ export default function Page() {
               </p>
             </div>
             <div className="bg-white p-7">
-              <div className="text-3xl mb-3">🔀</div>
+              <div className="text-3xl mb-3"></div>
               <h3 className="font-extrabold text-lg mb-3 text-[#0D1B2A]">Eklemli Platform ile Farkı</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Eklemli (mafsallı) platform kollar sayesinde yatay da uzanabilir; engel etrafından
@@ -419,6 +417,18 @@ export default function Page() {
       {/* ══════════════════════════════════════
           CTA FOOTER
       ══════════════════════════════════════ */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Makaslı Platform Kiralama</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Makaslı platform, çapraz makas mekanizmasıyla dikey yükselen, geniş sepet alanı sayesinde aynı anda birden fazla personelin malzemeyle birlikte çalışabildiği erişim ekipmanıdır. Bomlu platformlardan farkı düşey hareketidir: sepet tam olarak şasinin üzerinde yükselir, bu da onu tavan işleri, raf kurulumu, aydınlatma montajı ve sprinkler tesisatı gibi geniş alanlı iç mekân işlerinin standardı yapar.</p>
+            <p>Akülü modeller kapalı alanlar için tasarlanmıştır: sessiz, emisyonsuz ve beyaz lastikleriyle epoksi zeminlerde iz bırakmadan çalışır; 6-14 metre platform yüksekliği aralığında yoğunlaşır. Dizel modeller ise arazi tipi geniş lastikleri ve çekiş gücüyle şantiye dış sahalarında 10-18 metre bandında hizmet verir. Seçimde zemin tipi, kapı geçiş ölçüleri ve gereken taşıma kapasitesi (kişi + malzeme) belirleyicidir.</p>
+            <p>Kiralamada günlük, haftalık ve aylık planlar sunuyoruz; şantiye teslimi, şarj/yakıt düzeni ve operatör eğitimi (İPAF benzeri kullanım brifingi) hizmete dahildir. Uzun süreli kiralamalarda periyodik bakım tarafımızdan yapılır, arıza durumunda aynı gün yedek makine yönlendirilir. Birden fazla makine gereken projelerde filo indirimli paket fiyat çalışıyoruz.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#F5A623] py-16 px-6">
         <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
           <div className="text-center lg:text-left">
@@ -430,14 +440,13 @@ export default function Page() {
               href="tel:05323039089"
               className="bg-[#0D1B2A] hover:bg-[#1a2e42] text-white font-black px-10 py-5 transition text-base"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
             <a
               href="/iletisim"
               className="bg-white hover:bg-gray-100 text-[#0D1B2A] font-bold px-10 py-5 transition text-base"
             >
-              Teklif Al →
-            </a>
+              Teklif Al             </a>
           </div>
         </div>
       </section>

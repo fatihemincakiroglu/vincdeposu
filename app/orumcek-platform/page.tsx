@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -17,7 +18,6 @@ const platformTurleri = [
     title: "Akülü Örümcek Platform",
     desc: "Sessiz ve emisyonsuz çalışma sağlayan, dar alan ve iç mekan çalışmalarına uygun platform türü.",
     fiyat: "4.000 – 8.000 TL / gün",
-    href: "/akulu-orumcek-platform",
     ozellikler: ["Sessiz çalışma", "İç mekan uygun", "Emisyonsuz"],
   },
   {
@@ -25,7 +25,6 @@ const platformTurleri = [
     title: "Dizel Örümcek Platform",
     desc: "Açık alan ve engebeli zeminlerde güçlü performans sunan, ağır iş yükleri için tercih edilen platform.",
     fiyat: "6.000 – 12.000 TL / gün",
-    href: "/dizel-orumcek-platform",
     ozellikler: ["Açık alan", "Engebeli zemin", "Yüksek güç"],
   },
   {
@@ -33,7 +32,6 @@ const platformTurleri = [
     title: "İzci Örümcek Platform",
     desc: "Paletli hareket sistemiyle zorlu arazi koşullarında manevra kabiliyeti sunan kompakt platform.",
     fiyat: "5.000 – 10.000 TL / gün",
-    href: "/izci-orumcek-platform",
     ozellikler: ["Paletli sistem", "Zorlu arazi", "Kolay manevra"],
   },
   {
@@ -41,7 +39,6 @@ const platformTurleri = [
     title: "Bahçe Tipi Örümcek Platform",
     desc: "Peyzaj ve bahçe çalışmalarında yumuşak zemine zarar vermeyen, hafif yapılı örümcek platform.",
     fiyat: "4.500 – 9.000 TL / gün",
-    href: "/bahce-orumcek-platform",
     ozellikler: ["Hafif yapı", "Zemine zarar vermez", "Peyzaj uyumlu"],
   },
   {
@@ -49,7 +46,6 @@ const platformTurleri = [
     title: "Yüksek Erişimli Örümcek Platform",
     desc: "Cephe ve çatı çalışmalarında büyük yükseklik avantajı sunan, geniş erişim mesafeli platform.",
     fiyat: "Teklif alınız",
-    href: "/yuksek-erisimli-orumcek-platform",
     ozellikler: ["Yüksek erişim", "Geniş açı", "Cephe çalışması"],
   },
   {
@@ -57,7 +53,6 @@ const platformTurleri = [
     title: "Kompakt Örümcek Platform",
     desc: "Dar geçitlerden geçebilen, iç mekan ve sınırlı alan projelerinde tercih edilen küçük boyutlu platform.",
     fiyat: "Teklif alınız",
-    href: "/kompakt-orumcek-platform",
     ozellikler: ["Dar geçit", "Küçük boyut", "Esnek kullanım"],
   },
 ];
@@ -134,7 +129,7 @@ export default function KiralikOrumcekPlatformPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🕷️ Örümcek Platform Kiralama Rehberi 2026
+              Örümcek Platform Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Örümcek Platform Kiralama<br />{" "}
@@ -149,14 +144,13 @@ export default function KiralikOrumcekPlatformPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#platform-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Platform Türlerini İncele ↓
-              </a>
+                Platform Türlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -236,7 +230,7 @@ export default function KiralikOrumcekPlatformPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -259,15 +253,15 @@ export default function KiralikOrumcekPlatformPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🕷️ Örümcek Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Örümcek Platform</h3>
               <p className="text-gray-500 text-sm">Açılabilen ayaklarla engebeli ve dar alanlarda stabil çalışma sağlar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🦾 Eklemli Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Eklemli Platform</h3>
               <p className="text-gray-500 text-sm">Uzun kollu yapısıyla engel üzerinden erişim gerektiren işlerde tercih edilir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">✂️ Makaslı Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Makaslı Platform</h3>
               <p className="text-gray-500 text-sm">Düz zeminlerde dikey erişim ve geniş platform alanı sunar.</p>
             </div>
           </div>
@@ -287,11 +281,11 @@ export default function KiralikOrumcekPlatformPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {platformTurleri.map((v) => (
               <div
-                key={v.href}
+                key={v.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -299,7 +293,7 @@ export default function KiralikOrumcekPlatformPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -308,12 +302,10 @@ export default function KiralikOrumcekPlatformPage() {
                       <div className="text-xs text-gray-400">Fiyat</div>
                       <div className="text-gray-800 font-bold text-sm">{v.fiyat}</div>
                     </div>
-                    <Link
-                      href={v.href}
+                    <div
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </div>
                   </div>
                 </div>
               </div>
@@ -323,7 +315,7 @@ export default function KiralikOrumcekPlatformPage() {
           {/* Akülü ve Dizel Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🔋 Akülü Örümcek Platform Kiralama – Dar Alan ve İç Mekan Çalışmaları İçin</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Akülü Örümcek Platform Kiralama – Dar Alan ve İç Mekan Çalışmaları İçin</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Akülü örümcek platformlar sessiz çalışma prensibi sayesinde fabrika, alışveriş merkezi,
                 otel ve ofis gibi iç mekanlarda tercih edilir. Egzoz emisyonu üretmediği için kapalı alan
@@ -331,7 +323,7 @@ export default function KiralikOrumcekPlatformPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⛽ Dizel Örümcek Platform Kiralama – Açık Alan, Engebeli ve Yumuşak Zemin İçin</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Dizel Örümcek Platform Kiralama – Açık Alan, Engebeli ve Yumuşak Zemin İçin</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Dizel örümcek platformlar yüksek tork ve güç sunarak inşaat sahası, orman ve arazi gibi
                 engebeli ortamlarda etkin çalışır. Yumuşak ve düzensiz zeminlerde geniş ayak açıklığı ile
@@ -353,7 +345,7 @@ export default function KiralikOrumcekPlatformPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -365,7 +357,7 @@ export default function KiralikOrumcekPlatformPage() {
           {/* İnşaat / Orman Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ İnşaat, Cephe ve Çatı Çalışmalarında Örümcek Platform Kullanımı</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">İnşaat, Cephe ve Çatı Çalışmalarında Örümcek Platform Kullanımı</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 İnşaat sahalarında cephe izolasyonu, boya ve sıva işlerinde örümcek platform; operatöre
                 ve malzemeye güvenli erişim sağlar. Çatı bakım ve onarım çalışmalarında da iskele kurmaya
@@ -373,7 +365,7 @@ export default function KiralikOrumcekPlatformPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🌳 Orman, Bahçe ve Peyzaj Alanlarında Örümcek Platform</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Orman, Bahçe ve Peyzaj Alanlarında Örümcek Platform</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Ağaç budama, peyzaj düzenleme ve park bakım çalışmalarında örümcek platformun ayak
                 sistemi, yumuşak ve eğimli zeminlerde dengeyi korur. Bahçe ve orman alanlarında zemine
@@ -399,7 +391,7 @@ export default function KiralikOrumcekPlatformPage() {
               { icon: "👷", title: "Operatör Desteği", desc: "Sertifikalı operatör hizmeti ile güvenli ve verimli çalışma sağlanır." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -419,15 +411,15 @@ export default function KiralikOrumcekPlatformPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📏 Çalışma Yüksekliği</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Çalışma Yüksekliği</h3>
               <p className="text-gray-500 text-sm">Ulaşılması gereken maksimum yüksekliğe göre uygun model belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚖️ Taşıma Ağırlığı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Taşıma Ağırlığı</h3>
               <p className="text-gray-500 text-sm">Sepete binecek operatör ve malzeme ağırlığı kapasiteyi belirler.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🪨 Zemin Yapısı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Zemin Yapısı</h3>
               <p className="text-gray-500 text-sm">Düz, engebeli veya yumuşak zemine göre akülü, dizel ya da izci model seçilir.</p>
             </div>
           </div>
@@ -497,7 +489,6 @@ export default function KiralikOrumcekPlatformPage() {
             <div className="space-y-3">
               {guvenlikkurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -516,15 +507,14 @@ export default function KiralikOrumcekPlatformPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
@@ -538,59 +528,70 @@ export default function KiralikOrumcekPlatformPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
             {[
-              { label: "Adalar", href: "/adalar-orumcek-platform-kiralama" },
-              { label: "Arnavutköy", href: "/arnavutkoy-orumcek-platform-kiralama" },
-              { label: "Avcılar", href: "/avcilar-orumcek-platform-kiralama" },
-              { label: "Bağcılar", href: "/bagcilar-orumcek-platform-kiralama" },
-              { label: "Bahçelievler", href: "/bahcelievler-orumcek-platform-kiralama" },
-              { label: "Bakırköy", href: "/bakirkoy-orumcek-platform-kiralama" },
-              { label: "Başakşehir", href: "/basaksehir-orumcek-platform-kiralama" },
-              { label: "Bayrampaşa", href: "/bayrampasa-orumcek-platform-kiralama" },
-              { label: "Beşiktaş", href: "/besiktas-orumcek-platform-kiralama" },
-              { label: "Beykoz", href: "/beykoz-orumcek-platform-kiralama" },
-              { label: "Beylikdüzü", href: "/beylikduzu-orumcek-platform-kiralama" },
-              { label: "Beyoğlu", href: "/beyoglu-orumcek-platform-kiralama" },
-              { label: "Büyükçekmece", href: "/buyukcekmece-orumcek-platform-kiralama" },
-              { label: "Çatalca", href: "/catalca-orumcek-platform-kiralama" },
-              { label: "Çekmeköy", href: "/cekmekoy-orumcek-platform-kiralama" },
-              { label: "Esenler", href: "/esenler-orumcek-platform-kiralama" },
-              { label: "Esenyurt", href: "/esenyurt-orumcek-platform-kiralama" },
-              { label: "Eyüp", href: "/eyup-orumcek-platform-kiralama" },
-              { label: "Eyüpsultan", href: "/eyupsultan-orumcek-platform-kiralama" },
-              { label: "Fatih", href: "/fatih-orumcek-platform-kiralama" },
-              { label: "Gaziosmanpaşa", href: "/gaziosmanpasa-orumcek-platform-kiralama" },
-              { label: "Güngören", href: "/gungoren-orumcek-platform-kiralama" },
-              { label: "Kadıköy", href: "/kadikoy-orumcek-platform-kiralama" },
-              { label: "Kağıthane", href: "/kagithane-orumcek-platform-kiralama" },
-              { label: "Kartal", href: "/kartal-orumcek-platform-kiralama" },
-              { label: "Küçükçekmece", href: "/kucukcekmece-orumcek-platform-kiralama" },
-              { label: "Maltepe", href: "/maltepe-orumcek-platform-kiralama" },
-              { label: "Pendik", href: "/pendik-orumcek-platform-kiralama" },
-              { label: "Sancaktepe", href: "/sancaktepe-orumcek-platform-kiralama" },
-              { label: "Sarıyer", href: "/sariyer-orumcek-platform-kiralama" },
-              { label: "Silivri", href: "/silivri-orumcek-platform-kiralama" },
-              { label: "Şile", href: "/sile-orumcek-platform-kiralama" },
-              { label: "Şişli", href: "/sisli-orumcek-platform-kiralama" },
-              { label: "Sultanbeyli", href: "/sultanbeyli-orumcek-platform-kiralama" },
-              { label: "Sultangazi", href: "/sultangazi-orumcek-platform-kiralama" },
-              { label: "Tuzla", href: "/tuzla-orumcek-platform-kiralama" },
-              { label: "Ümraniye", href: "/umraniye-orumcek-platform-kiralama" },
-              { label: "Üsküdar", href: "/uskudar-orumcek-platform-kiralama" },
-              { label: "Zeytinburnu", href: "/zeytinburnu-orumcek-platform-kiralama" },
+              { label: "Adalar" },
+              { label: "Arnavutköy" },
+              { label: "Avcılar" },
+              { label: "Bağcılar" },
+              { label: "Bahçelievler" },
+              { label: "Bakırköy" },
+              { label: "Başakşehir" },
+              { label: "Bayrampaşa" },
+              { label: "Beşiktaş" },
+              { label: "Beykoz" },
+              { label: "Beylikdüzü" },
+              { label: "Beyoğlu" },
+              { label: "Büyükçekmece" },
+              { label: "Çatalca" },
+              { label: "Çekmeköy" },
+              { label: "Esenler" },
+              { label: "Esenyurt" },
+              { label: "Eyüp" },
+              { label: "Eyüpsultan" },
+              { label: "Fatih" },
+              { label: "Gaziosmanpaşa" },
+              { label: "Güngören" },
+              { label: "Kadıköy" },
+              { label: "Kağıthane" },
+              { label: "Kartal" },
+              { label: "Küçükçekmece" },
+              { label: "Maltepe" },
+              { label: "Pendik" },
+              { label: "Sancaktepe" },
+              { label: "Sarıyer" },
+              { label: "Silivri" },
+              { label: "Şile" },
+              { label: "Şişli" },
+              { label: "Sultanbeyli" },
+              { label: "Sultangazi" },
+              { label: "Tuzla" },
+              { label: "Ümraniye" },
+              { label: "Üsküdar" },
+              { label: "Zeytinburnu" },
             ].map((ilce) => (
-              <Link
-                key={ilce.href}
-                href={ilce.href}
+              <div
+                key={ilce.label}
                 className="text-center text-sm text-gray-600 hover:text-yellow-600 hover:underline py-2 px-3 rounded-lg hover:bg-yellow-50 transition"
               >
                 {ilce.label}
-              </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Örümcek Platform Kiralama</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Örümcek platform, dört bağımsız denge ayağını bir örümceğin bacakları gibi açarak kurulan, paletli yürüyüşlü kompakt erişim ekipmanıdır. Gücü zıtlıkları birleştirmesinde: 78-90 cm genişliğiyle standart kapılardan geçer, buna rağmen 15-52 metre çalışma yüksekliğine ulaşabilir. Hiçbir başka platform sınıfı bu darlıkta bu yüksekliği veremez.</p>
+            <p>Bu özellikler onu özel işlerin makinesi yapar: AVM ve otel atriumları, cami ve tarihi yapı iç mekânları, bahçeden ulaşılan villa cepheleri, kilise-katedral restorasyonları ve hassas mermer zeminli lobiler. Paletleri zemine düşük basınç uygular, ayak altı plakalarıyla parke ve mermerde iz bırakmadan çalışır; akülü/elektrikli modlar kapalı alanda emisyonsuz kullanım sağlar.</p>
+            <p>Örümcek platform kiralamada erişim güzergâhı en az iş noktası kadar önemlidir: makinenin geçeceği kapı ölçüleri, varsa merdiven-rampa durumu ve kurulum alanının boyutları keşifte netleştirilir. Deneyimli operatörle birlikte teslim ediyoruz; müze ve ibadethane gibi hassas mekânlarda koruyucu örtüleme dahil çalışma protokolü uyguluyoruz.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Teklif Alın</h2>
@@ -602,7 +603,7 @@ export default function KiralikOrumcekPlatformPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

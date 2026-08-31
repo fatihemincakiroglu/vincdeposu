@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -16,7 +17,6 @@ const telehandlerTurleri = [
     title: "Sabit Telehandler",
     desc: "Şasi üzerinde sabit yapıya sahip, inşaat ve depo alanlarında yük taşıma için tercih edilen klasik model.",
     fiyat: "5.000 – 10.000 TL / gün",
-    href: "/sabit-telehandler",
     ozellikler: ["Stabil yapı", "Yük taşıma", "Depo uyumlu"],
   },
   {
@@ -24,7 +24,6 @@ const telehandlerTurleri = [
     title: "Döner Telehandler",
     desc: "360 derece dönüş kabiliyeti sayesinde sabit konumdan geniş çalışma alanına erişim sağlayan üst düzey model.",
     fiyat: "8.000 – 15.000 TL / gün",
-    href: "/doner-telehandler",
     ozellikler: ["360° dönüş", "Geniş erişim", "Üstün esneklik"],
   },
   {
@@ -32,7 +31,6 @@ const telehandlerTurleri = [
     title: "Yüksek Erişimli Telehandler",
     desc: "Uzun bom yapısı ile yüksek katlı yapılarda ve geniş şantiyelerde malzeme taşıma işlemleri için idealdir.",
     fiyat: "Teklif alınız",
-    href: "/yuksek-erisimli-telehandler",
     ozellikler: ["Uzun bom", "Yüksek erişim", "Şantiye uyumlu"],
   },
   {
@@ -40,7 +38,6 @@ const telehandlerTurleri = [
     title: "Tarım Tipi Telehandler",
     desc: "Çiftlik ve tarım arazilerinde balya, yem ve malzeme taşımada kullanılan kompakt ve dayanıklı model.",
     fiyat: "4.500 – 9.000 TL / gün",
-    href: "/tarim-tipi-telehandler",
     ozellikler: ["Arazi uyumlu", "Balya taşıma", "Dayanıklı yapı"],
   },
   {
@@ -48,7 +45,6 @@ const telehandlerTurleri = [
     title: "Yüksek Kapasiteli Telehandler",
     desc: "Ağır yük taşıma ve istif işlemlerinde kullanılan, büyük kaldırma kapasitesine sahip güçlü model.",
     fiyat: "Teklif alınız",
-    href: "/yuksek-kapasiteli-telehandler",
     ozellikler: ["Ağır yük", "Yüksek kapasite", "İstif işlemi"],
   },
   {
@@ -56,7 +52,6 @@ const telehandlerTurleri = [
     title: "Kompakt Telehandler",
     desc: "Dar alanlarda ve sınırlı şantiye sahalarında manevra kolaylığı sunan küçük boyutlu telehandler.",
     fiyat: "4.000 – 8.000 TL / gün",
-    href: "/kompakt-telehandler",
     ozellikler: ["Dar alan", "Kolay manevra", "Küçük boyut"],
   },
 ];
@@ -133,7 +128,7 @@ export default function KiralikTelehandlerPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              📦 Telehandler Kiralama Rehberi 2026
+              Telehandler Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Telehandler Kiralama<br />{" "}
@@ -148,14 +143,13 @@ export default function KiralikTelehandlerPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#telehandler-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Telehandler Türlerini İncele ↓
-              </a>
+                Telehandler Türlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -219,7 +213,7 @@ export default function KiralikTelehandlerPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -242,15 +236,15 @@ export default function KiralikTelehandlerPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📦 Telehandler</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Telehandler</h3>
               <p className="text-gray-500 text-sm">Teleskopik kol ile hem yükseğe hem uzağa yük taşıma imkanı sunar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🚛 Forklift</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Forklift</h3>
               <p className="text-gray-500 text-sm">Düz zeminlerde sınırlı yükseklikte yük taşıma için idealdir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🦾 Eklemli Platform</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Eklemli Platform</h3>
               <p className="text-gray-500 text-sm">Personel erişimi ve yükseklik çalışmaları için tasarlanmıştır.</p>
             </div>
           </div>
@@ -270,11 +264,11 @@ export default function KiralikTelehandlerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {telehandlerTurleri.map((v) => (
               <div
-                key={v.href}
+                key={v.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -282,7 +276,7 @@ export default function KiralikTelehandlerPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -291,12 +285,10 @@ export default function KiralikTelehandlerPage() {
                       <div className="text-xs text-gray-400">Fiyat</div>
                       <div className="text-gray-800 font-bold text-sm">{v.fiyat}</div>
                     </div>
-                    <Link
-                      href={v.href}
+                    <div
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </div>
                   </div>
                 </div>
               </div>
@@ -306,7 +298,7 @@ export default function KiralikTelehandlerPage() {
           {/* Döner ve Yüksek Kapasiteli Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🔄 Döner Telehandler Kiralama – 360 Derece Dönüş Kabiliyetiyle Üstün Esneklik</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Döner Telehandler Kiralama – 360 Derece Dönüş Kabiliyetiyle Üstün Esneklik</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Döner telehandlerler, gövdenin sabit kalmasına gerek olmadan kabin ve bom kısmının 360
                 derece dönebilmesi sayesinde tek bir konumdan geniş bir çalışma alanına erişim sağlar.
@@ -315,7 +307,7 @@ export default function KiralikTelehandlerPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">⚖️ Yüksek Kapasiteli Telehandler Kiralama – Ağır Yük Taşıma ve İstif İşlemleri İçin</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Yüksek Kapasiteli Telehandler Kiralama – Ağır Yük Taşıma ve İstif İşlemleri İçin</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Yüksek kapasiteli telehandlerler, ağır inşaat malzemelerinin ve büyük paletlerin güvenli
                 şekilde taşınması ve istiflenmesi için tasarlanmıştır. Geniş kaldırma kapasitesi sayesinde
@@ -337,7 +329,7 @@ export default function KiralikTelehandlerPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -349,7 +341,7 @@ export default function KiralikTelehandlerPage() {
           {/* İnşaat / Tarım Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ İnşaat ve Şantiye Alanlarında Telehandler Kullanımı</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">İnşaat ve Şantiye Alanlarında Telehandler Kullanımı</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Şantiyelerde tuğla, blok, çimento torbası ve diğer inşaat malzemelerinin yüksek katlara
                 taşınmasında telehandler, vinç kurmaya gerek kalmadan hızlı ve verimli bir çözüm sunar.
@@ -357,7 +349,7 @@ export default function KiralikTelehandlerPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🌾 Tarım ve Çiftlik Çalışmalarında Telehandler</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Tarım ve Çiftlik Çalışmalarında Telehandler</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Çiftlik ve tarım arazilerinde balya taşıma, yem dağıtımı ve hasat ürünlerinin
                 depolanmasında telehandler geniş kullanım alanı bulur. Arazi tipi modeller, yumuşak ve
@@ -383,7 +375,7 @@ export default function KiralikTelehandlerPage() {
               { icon: "👷", title: "Operatör Desteği", desc: "Sertifikalı operatör hizmeti ile güvenli ve verimli çalışma sağlanır." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -403,15 +395,15 @@ export default function KiralikTelehandlerPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚖️ Yük Kapasitesi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Yük Kapasitesi</h3>
               <p className="text-gray-500 text-sm">Taşınacak malzemenin ağırlığına göre uygun kapasitedeki model seçilir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📏 Erişim Yüksekliği</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Erişim Yüksekliği</h3>
               <p className="text-gray-500 text-sm">Malzemenin ulaşması gereken maksimum yüksekliğe göre bom uzunluğu belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🧰 Ekipman İhtiyacı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Ekipman İhtiyacı</h3>
               <p className="text-gray-500 text-sm">Çalışmanın türüne göre palet çatalı, kova ya da man basket gibi aparatlar seçilir.</p>
             </div>
           </div>
@@ -475,7 +467,7 @@ export default function KiralikTelehandlerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {ekipmanlar.map((e) => (
               <div key={e.title} className="flex gap-4 items-start bg-white/70 rounded-xl p-5">
-                <div className="text-3xl shrink-0">{e.icon}</div>
+                <VincIcon name={e.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{e.title}</h3>
                   <p className="text-gray-700 text-sm">{e.desc}</p>
@@ -496,20 +488,31 @@ export default function KiralikTelehandlerPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Telehandler Kiralama</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Telehandler (teleskopik yükleyici), forkliftin kaldırma yeteneğini teleskopik bomun uzanma gücüyle birleştiren çok amaçlı şantiye makinesidir. Standart bir forklift yükü yalnızca yukarı kaldırırken, telehandler ileri uzanarak 7-17 metre yüksekliğe ve engellerin ötesine palet bırakabilir: iskele üzerine tuğla, çatı katına malzeme, kamyon kasasının uzak köşesine yük yerleştirmek onun işidir.</p>
+            <p>Dört teker çekiş ve arazi lastikleriyle çamurlu şantiye zemininde rahat hareket eder; yengeç yürüyüş modu dar alanlarda manevrayı kolaylaştırır. Ataşman çeşitliliği makineyi çok fonksiyonlu kılar: çatal, kova, jib kancası ve insan sepeti aparatlarıyla aynı telehandler yükleyici, vinç ve platform görevi üstlenebilir. Döner kuleli (roto) modeller 360 derece dönüşle sabit vinç gibi çalışır.</p>
+            <p>Kiralamada işin yüksekliği, taşınacak maksimum yük ve arazi koşullarını konuşarak doğru sınıfı belirliyoruz; inşaat firmalarına dönem boyu, tarımsal işletmelere hasat sezonu paketleri sunuyoruz. Tüm makineler bakımlı, muayene raporlu ve isteğe göre operatörlü teslim edilir.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Teklif Alın</h2>
@@ -521,7 +524,7 @@ export default function KiralikTelehandlerPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

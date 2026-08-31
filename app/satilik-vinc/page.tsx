@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -16,7 +17,6 @@ const vincTurleri = [
     title: "Mobil Vinç Satışları",
     desc: "Her zemine uygun, farklı tonaj seçenekleriyle en geniş satış hacmine sahip vinç kategorisi.",
     fiyat: "Teklif alınız",
-    href: "/satilik-vinc/mobil-vinc",
     ozellikler: ["Geniş tonaj aralığı", "Hızlı sevkiyat", "Marka çeşitliliği"],
   },
   {
@@ -24,7 +24,6 @@ const vincTurleri = [
     title: "Kule Vinç Satışları",
     desc: "İnşaat projeleri için sabit ve tırmanmalı modelleriyle uzun vadeli yatırım çözümü.",
     fiyat: "Teklif alınız",
-    href: "/satilik-vinc/kule-vinc",
     ozellikler: ["Sabit & tırmanmalı", "Yüksek kanca yükü", "B2B proje uyumu"],
   },
   {
@@ -32,7 +31,6 @@ const vincTurleri = [
     title: "Köprülü Vinç Satışları",
     desc: "Fabrika ve depo içi taşımacılıkta yüksek kapasiteli, raylı sistemle çalışan endüstriyel çözüm.",
     fiyat: "Teklif alınız",
-    href: "/satilik-vinc/koprulu-vinc",
     ozellikler: ["Endüstriyel kapasite", "Raylı sistem", "Sürekli operasyon"],
   },
   {
@@ -40,22 +38,21 @@ const vincTurleri = [
     title: "Portal (Gantry) Vinç Satışları",
     desc: "Açık alan kaldırma işlerinde tersane, liman ve lojistik sektörüne yönelik güçlü model.",
     fiyat: "Teklif alınız",
-    href: "/satilik-vinc/portal-vinc",
     ozellikler: ["Açık alan kullanımı", "Yüksek taşıma kapasitesi", "Liman & tersane uyumu"],
   },
 ];
 
 const markalar = [
-  { icon: "🇩🇪", title: "Liebherr Satılık Vinç", desc: "Almanya menşeli, yüksek dayanıklılık ve geniş model yelpazesiyle bilinen marka.", href: "/satilik-vinc/liebherr" },
-  { icon: "🇯🇵", title: "Tadano Satılık Vinç", desc: "Japon mühendisliğiyle üretilen, hassas kontrol sistemlerine sahip mobil vinç modelleri.", href: "/satilik-vinc/tadano" },
-  { icon: "🇺🇸", title: "Grove Satılık Vinç", desc: "Kompakt yapısı ve manevra kabiliyetiyle şehir içi projelerde tercih edilen marka.", href: "/satilik-vinc/grove" },
-  { icon: "🇺🇸", title: "Terex Satılık Vinç", desc: "Ağır tonajlı projelerde dayanıklılığı ve geniş yedek parça desteğiyle öne çıkan marka.", href: "/satilik-vinc/terex" },
+  { icon: "🇩🇪", title: "Liebherr Satılık Vinç", desc: "Almanya menşeli, yüksek dayanıklılık ve geniş model yelpazesiyle bilinen marka." },
+  { icon: "🇯🇵", title: "Tadano Satılık Vinç", desc: "Japon mühendisliğiyle üretilen, hassas kontrol sistemlerine sahip mobil vinç modelleri." },
+  { icon: "🇺🇸", title: "Grove Satılık Vinç", desc: "Kompakt yapısı ve manevra kabiliyetiyle şehir içi projelerde tercih edilen marka." },
+  { icon: "🇺🇸", title: "Terex Satılık Vinç", desc: "Ağır tonajlı projelerde dayanıklılığı ve geniş yedek parça desteğiyle öne çıkan marka." },
 ];
 
 const kapasiteler = [
-  { icon: "⚖️", title: "25 Ton Satılık Vinç", desc: "Şehir içi ve orta ölçekli inşaat projeleri için ekonomik ve pratik seçenek.", href: "/satilik-vinc/25-ton" },
-  { icon: "⚖️", title: "50 Ton Satılık Vinç", desc: "Endüstriyel tesis ve büyük inşaat sahalarında dengeli kapasite-maliyet oranı sunar.", href: "/satilik-vinc/50-ton" },
-  { icon: "⚖️", title: "100 Ton ve Üzeri Satılık Vinç", desc: "Enerji, petrokimya ve ağır sanayi projelerinde maksimum kaldırma gücü sağlar.", href: "/satilik-vinc/100-ton-uzeri" },
+  { icon: "⚖️", title: "25 Ton Satılık Vinç", desc: "Şehir içi ve orta ölçekli inşaat projeleri için ekonomik ve pratik seçenek." },
+  { icon: "⚖️", title: "50 Ton Satılık Vinç", desc: "Endüstriyel tesis ve büyük inşaat sahalarında dengeli kapasite-maliyet oranı sunar." },
+  { icon: "⚖️", title: "100 Ton ve Üzeri Satılık Vinç", desc: "Enerji, petrokimya ve ağır sanayi projelerinde maksimum kaldırma gücü sağlar." },
 ];
 
 const fiyatTablosu = [
@@ -80,10 +77,10 @@ const dikkatEdilmesiGerekenler = [
 ];
 
 const ikinciElModeller = [
-  { icon: "🏗️", title: "İkinci El Mobil Vinç", desc: "Farklı tonaj seçenekleriyle en çok aranan ikinci el kategorisi.", href: "/satilik-vinc/ikinci-el/mobil-vinc" },
-  { icon: "🏢", title: "İkinci El Kule Vinç", desc: "Uzun vadeli inşaat projeleri için ekonomik yatırım seçeneği.", href: "/satilik-vinc/ikinci-el/kule-vinc" },
-  { icon: "🦾", title: "İkinci El Paletli Vinç", desc: "Zorlu arazi koşullarına uygun, muayeneli ikinci el modeller.", href: "/satilik-vinc/ikinci-el/paletli-vinc" },
-  { icon: "🚛", title: "İkinci El Kamyon Üstü Vinç", desc: "Nakliye ve kaldırma işini bir arada yapan ekonomik çözüm.", href: "/satilik-vinc/ikinci-el/kamyon-ustu-vinc" },
+  { icon: "🏗️", title: "İkinci El Mobil Vinç", desc: "Farklı tonaj seçenekleriyle en çok aranan ikinci el kategorisi." },
+  { icon: "🏢", title: "İkinci El Kule Vinç", desc: "Uzun vadeli inşaat projeleri için ekonomik yatırım seçeneği." },
+  { icon: "🦾", title: "İkinci El Paletli Vinç", desc: "Zorlu arazi koşullarına uygun, muayeneli ikinci el modeller." },
+  { icon: "🚛", title: "İkinci El Kamyon Üstü Vinç", desc: "Nakliye ve kaldırma işini bir arada yapan ekonomik çözüm." },
 ];
 
 const sss = [
@@ -122,7 +119,7 @@ export default function SatilikVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🏗️ Satılık Vinç Rehberi 2026
+              Satılık Vinç Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Satılık Vinç<br />{" "}
@@ -137,14 +134,13 @@ export default function SatilikVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#vinc-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Vinç Türlerini İncele ↓
-              </a>
+                Vinç Türlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -179,7 +175,7 @@ export default function SatilikVincPage() {
             { href: "#sss", label: "SSS" },
           ].map((l) => (
             <a
-              key={l.href}
+              key={l.label}
               href={l.href}
               className="whitespace-nowrap px-4 py-2 rounded-full bg-gray-100 hover:bg-yellow-100 text-gray-700 font-medium transition"
             >
@@ -226,7 +222,7 @@ export default function SatilikVincPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -245,11 +241,11 @@ export default function SatilikVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {vincTurleri.map((v) => (
               <div
-                key={v.href}
+                key={v.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-lg font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -257,7 +253,7 @@ export default function SatilikVincPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -266,12 +262,10 @@ export default function SatilikVincPage() {
                       <div className="text-xs text-gray-400">Fiyat</div>
                       <div className="text-gray-800 font-bold text-sm">{v.fiyat}</div>
                     </div>
-                    <Link
-                      href={v.href}
+                    <div
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </div>
                   </div>
                 </div>
               </div>
@@ -290,15 +284,14 @@ export default function SatilikVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {markalar.map((m) => (
-              <Link
-                key={m.href}
-                href={m.href}
+              <div
+                key={m.title}
                 className="flex flex-col gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 hover:border-yellow-300 border border-transparent transition group"
               >
-                <div className="text-4xl">{m.icon}</div>
+                <VincIcon name={m.icon} className="w-10 h-10" />
                 <h3 className="font-bold text-gray-900 group-hover:text-yellow-700">{m.title}</h3>
                 <p className="text-gray-500 text-sm">{m.desc}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -314,15 +307,14 @@ export default function SatilikVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {kapasiteler.map((k) => (
-              <Link
-                key={k.href}
-                href={k.href}
+              <div
+                key={k.title}
                 className="p-6 bg-white border border-gray-100 rounded-2xl hover:border-yellow-300 hover:shadow-lg transition group"
               >
-                <div className="text-3xl mb-3">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2 group-hover:text-yellow-700">{k.title}</h3>
                 <p className="text-gray-500 text-sm">{k.desc}</p>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -352,7 +344,7 @@ export default function SatilikVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {avantajlar.map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -375,16 +367,15 @@ export default function SatilikVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ikinciElModeller.map((m) => (
-              <Link
-                key={m.href}
-                href={m.href}
+              <div
+                key={m.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group p-6 flex flex-col gap-3"
               >
-                <div className="text-4xl">{m.icon}</div>
+                <VincIcon name={m.icon} className="w-10 h-10" />
                 <h3 className="font-bold text-gray-900 group-hover:text-yellow-700">{m.title}</h3>
                 <p className="text-gray-500 text-sm">{m.desc}</p>
-                <span className="text-yellow-600 font-semibold text-sm mt-auto">İncele →</span>
-              </Link>
+                <span className="text-yellow-600 font-semibold text-sm mt-auto">İncele </span>
+              </div>
             ))}
           </div>
         </div>
@@ -400,7 +391,7 @@ export default function SatilikVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {dikkatEdilmesiGerekenler.map((d) => (
               <div key={d.title} className="p-6 border border-gray-100 rounded-2xl">
-                <div className="text-3xl mb-3">{d.icon}</div>
+                <VincIcon name={d.icon} className="w-8 h-8 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">{d.title}</h3>
                 <p className="text-gray-500 text-sm">{d.desc}</p>
               </div>
@@ -430,7 +421,6 @@ export default function SatilikVincPage() {
                 "Şeffaf fiyatlandırma, sürpriz maliyet yok",
               ].map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -449,20 +439,31 @@ export default function SatilikVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Satılık Vinç Seçenekleri Hakkında</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Vinç satın almak, düzenli kaldırma ihtiyacı olan işletmeler için kiralamanın matematiğini değiştirir: ayda belirli günün üzerinde vinç kullanan bir firma için mülkiyet, orta vadede daha ekonomik hale gelir. Satış birimimiz sıfır ve ikinci el seçenekleri tek çatıda sunar; ihtiyacınıza kiralama mı satın alma mı uyduğunu, kullanım sıklığınız üzerinden birlikte hesaplarız.</p>
+            <p>İkinci el vinçte güven, ekspertizle kurulur: satışa aldığımız her makine motor-hidrolik testlerinden, halat-kanca kontrollerinden ve saat/kilometre doğrulamasından geçer; bakım geçmişi belgelenir, bilinen kusurlar rapora yazılır. Uluslararası markaların Türkiye&apos;de servis ve parça bulunabilirliği de danışmanlığımızın parçasıdır — ucuza alınan ama parçası aylarca beklenen makine, pahalı makinedir.</p>
+            <p>Satış sonrası ilişkimiz teslimatla bitmez: nakliye ve sahaya kurulum, operatör eğitimi, ilk periyodik muayene ve bakım sözleşmesi paketin doğal devamıdır. Takas modeliyle mevcut makinenizi yenisiyle değiştirebilir, filonuzu büyütürken finansman seçeneklerinden yararlanabilirsiniz. Aradığınız sınıf envanterimizde yoksa tedarik ağımız üzerinden bulup ekspertizini yaparak önünüze getiriyoruz.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Aradığınız Vinci Bulalım</h2>
@@ -474,7 +475,7 @@ export default function SatilikVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

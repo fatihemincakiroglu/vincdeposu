@@ -197,8 +197,7 @@ export default function GizlilikPolitikasiPage() {
 
           <div className="text-center pt-4">
             <Link href="/iletisim" className="text-yellow-600 font-semibold hover:underline">
-              Sorularınız mı var? Bizimle iletişime geçin →
-            </Link>
+              Sorularınız mı var? Bizimle iletişime geçin             </Link>
           </div>
         </div>
       </section>

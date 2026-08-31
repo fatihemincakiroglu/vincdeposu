@@ -76,14 +76,13 @@ export default function IlceGrid({
             }}
           />
           <div className="relative text-center">
-            <div className="text-7xl mb-4">🗺️</div>
-            <div className="text-white text-2xl font-black mb-2">{baslik}</div>
+                        <div className="text-white text-2xl font-black mb-2">{baslik}</div>
             <div className="text-gray-400">{altBaslik}</div>
           </div>
         </div>
 
-        <IlceGrubu etiket="🌉 Avrupa Yakası" ilceler={avrupaYakasi} aktifSlug={aktifSlug} />
-        <IlceGrubu etiket="🌉 Anadolu Yakası" ilceler={anadoluYakasi} aktifSlug={aktifSlug} />
+        <IlceGrubu etiket="Avrupa Yakası" ilceler={avrupaYakasi} aktifSlug={aktifSlug} />
+        <IlceGrubu etiket="Anadolu Yakası" ilceler={anadoluYakasi} aktifSlug={aktifSlug} />
       </div>
     </section>
   );

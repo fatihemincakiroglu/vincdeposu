@@ -10,7 +10,14 @@ const ilceMenuOgeleri = tumIlceler.map((ilce) => ({
 
 const navLinks = [
   { label: "Kiralık Vinç", href: "/kiralik-vinc" },
-  { label: "Kiralık Manlift", href: "/kiralik-manlift" },
+  {
+    label: "Kiralık Manlift",
+    href: "/kiralik-manlift",
+    children: [
+      { label: "İstanbul", href: "/istanbul-kiralik-manlift" },
+      ...tumIlceler.map((ilce) => ({ label: ilce.ad, href: `/${ilce.slug}-kiralik-manlift` })),
+    ],
+  },
   {
     label: "Hizmetler",
     href: "/hizmetler",
@@ -115,7 +122,7 @@ export default function Header() {
           href="tel:05323039089"
           className="hidden xl:flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg transition text-sm"
         >
-          📞 Hemen Ara
+          Hemen Ara
         </a>
 
         {/* Mobil hamburger */}
@@ -170,7 +177,7 @@ export default function Header() {
               href="tel:05323039089"
               className="block text-center bg-yellow-400 text-black font-bold py-3 rounded-lg"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
           </div>
         </div>

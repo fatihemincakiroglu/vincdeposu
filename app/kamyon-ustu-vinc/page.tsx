@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -16,7 +17,6 @@ const kamyonUstuVincTurleri = [
     title: "Hidrolik Kamyon Üstü Vinç",
     desc: "Kamyon şasisi üzerine monte edilmiş hidrolik sistemli vinç; yükleme, taşıma ve boşaltma işlemlerini tek araçla gerçekleştirir.",
     fiyat: "5.000 – 10.000 TL / gün",
-    href: "/hidrolik-kamyon-ustu-vinc",
     ozellikler: ["Hidrolik sistem", "Hızlı montaj", "Çok amaçlı"],
   },
   {
@@ -24,7 +24,6 @@ const kamyonUstuVincTurleri = [
     title: "Operatörlü Kamyon Üstü Vinç",
     desc: "Sertifikalı operatör eşliğinde güvenli ve verimli yükleme-taşıma operasyonu sunan tam hizmet seçeneği.",
     fiyat: "6.500 – 12.000 TL / gün",
-    href: "/operatorlu-kamyon-ustu-vinc",
     ozellikler: ["Sertifikalı operatör", "Güvenli çalışma", "Verimli operasyon"],
   },
   {
@@ -32,7 +31,6 @@ const kamyonUstuVincTurleri = [
     title: "İnşaat Malzemesi Taşıma Vinci",
     desc: "Demir, beton blok ve ağır inşaat malzemelerinin yüklenmesi ve taşınmasına özel yapılandırılmış kamyon üstü vinç.",
     fiyat: "5.500 – 11.000 TL / gün",
-    href: "/insaat-malzemesi-kamyon-ustu-vinc",
     ozellikler: ["Ağır yük", "İnşaat uyumlu", "Geniş erişim"],
   },
   {
@@ -40,7 +38,6 @@ const kamyonUstuVincTurleri = [
     title: "Lojistik & Nakliye Tipi Vinç",
     desc: "Lojistik ve nakliye sektöründe yük yükleme-boşaltma işlemlerini hızlandıran, vinç entegre kamyon çözümü.",
     fiyat: "4.500 – 9.000 TL / gün",
-    href: "/lojistik-kamyon-ustu-vinc",
     ozellikler: ["Hızlı yükleme", "Lojistik uyumlu", "Esnek kullanım"],
   },
   {
@@ -48,7 +45,6 @@ const kamyonUstuVincTurleri = [
     title: "Sanayi & Fabrika Tipi Vinç",
     desc: "Fabrika ve sanayi tesislerinde ağır ekipman ve makine nakliyesinde kullanılan yüksek kapasiteli kamyon üstü vinç.",
     fiyat: "Teklif alınız",
-    href: "/sanayi-kamyon-ustu-vinc",
     ozellikler: ["Yüksek kapasite", "Sanayi uyumlu", "Güvenli taşıma"],
   },
   {
@@ -56,7 +52,6 @@ const kamyonUstuVincTurleri = [
     title: "Özel Proje & Uzun Dönem Kiralama",
     desc: "Büyük ölçekli projelere ve uzun süreli ihtiyaçlara özel fiyatlandırma ile esnek kamyon üstü vinç kiralama.",
     fiyat: "Teklif alınız",
-    href: "/ozel-proje-kamyon-ustu-vinc",
     ozellikler: ["Uzun dönem", "Özel fiyat", "Esnek süre"],
   },
 ];
@@ -138,7 +133,7 @@ export default function KiralikKamyonUstuVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🚛 Kamyon Üstü Vinç Kiralama Rehberi 2026
+              Kamyon Üstü Vinç Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Kamyon Üstü Vinç Kiralama<br />{" "}
@@ -153,14 +148,13 @@ export default function KiralikKamyonUstuVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#kamyon-ustu-vinc-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Kamyon Üstü Vinç Türlerini İncele ↓
-              </a>
+                Kamyon Üstü Vinç Türlerini İncele               </a>
             </div>
           </div>
         </div>
@@ -224,7 +218,7 @@ export default function KiralikKamyonUstuVincPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -247,15 +241,15 @@ export default function KiralikKamyonUstuVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🚛 Kamyon Üstü Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Kamyon Üstü Vinç</h3>
               <p className="text-gray-500 text-sm">Kaldırma ve taşıma işlemlerini tek araçta birleştirir; lojistik maliyetini düşürür.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏗️ Mobil Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Mobil Vinç</h3>
               <p className="text-gray-500 text-sm">Ağır ve hassas kaldırma operasyonlarına odaklanır; taşıma için ayrı araç gerektirir.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🦾 Sabit Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Sabit Vinç</h3>
               <p className="text-gray-500 text-sm">Belirli bir konuma sabit olarak monte edilir; mobilite ve taşıma imkânı sunmaz.</p>
             </div>
           </div>
@@ -275,11 +269,11 @@ export default function KiralikKamyonUstuVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {kamyonUstuVincTurleri.map((v) => (
               <div
-                key={v.href}
+                key={v.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -287,7 +281,7 @@ export default function KiralikKamyonUstuVincPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -296,12 +290,10 @@ export default function KiralikKamyonUstuVincPage() {
                       <div className="text-xs text-gray-400">Fiyat</div>
                       <div className="text-gray-800 font-bold text-sm">{v.fiyat}</div>
                     </div>
-                    <Link
-                      href={v.href}
+                    <div
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </div>
                   </div>
                 </div>
               </div>
@@ -311,7 +303,7 @@ export default function KiralikKamyonUstuVincPage() {
           {/* Hidrolik ve Operatörlü Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">💧 Hidrolik Kamyon Üstü Vinç Kiralama</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Hidrolik Kamyon Üstü Vinç Kiralama</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Hidrolik sistemli kamyon üstü vinçler, yüksek kaldırma kapasitesi ve hassas kontrol
                 imkânı sayesinde ağır yük operasyonlarında üstün performans sunar. Hızlı montaj ve
@@ -319,7 +311,7 @@ export default function KiralikKamyonUstuVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">👷 Operatörlü Kamyon Üstü Vinç Kiralama</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Operatörlü Kamyon Üstü Vinç Kiralama</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Sertifikalı operatör eşliğinde sunulan kamyon üstü vinç kiralama hizmeti; iş güvenliği,
                 operasyon hızı ve mevzuat uyumluluğu açısından büyük avantaj sağlar. Tüm sorumluluk
@@ -341,7 +333,7 @@ export default function KiralikKamyonUstuVincPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -353,7 +345,7 @@ export default function KiralikKamyonUstuVincPage() {
           {/* Nakliye / İnşaat Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🚚 Nakliye ve Lojistik Sektöründe Kamyon Üstü Vinç</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Nakliye ve Lojistik Sektöründe Kamyon Üstü Vinç</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Nakliye ve lojistik süreçlerinde kamyon üstü vinç, depo ve aktarma noktalarında ayrı
                 bir forklift ya da kaldırma ekipmanı gerektirmeden yükleme-boşaltma işlemlerini
@@ -361,7 +353,7 @@ export default function KiralikKamyonUstuVincPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏗️ İnşaat Malzemesi ve Demir Taşımacılığında Kamyon Üstü Vinç</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">İnşaat Malzemesi ve Demir Taşımacılığında Kamyon Üstü Vinç</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 İnşaat sahalarında demir, çimento blok ve prefabrik elemanların taşınmasında kamyon
                 üstü vinç, hem nakliye hem kaldırma işlevini bir arada karşılar. İskele kurma veya
@@ -387,7 +379,7 @@ export default function KiralikKamyonUstuVincPage() {
               { icon: "👷", title: "Operatör Desteği", desc: "Sertifikalı operatör hizmeti ile güvenli ve verimli çalışma sağlanır." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -407,15 +399,15 @@ export default function KiralikKamyonUstuVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚖️ Yük Tonajı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Yük Tonajı</h3>
               <p className="text-gray-500 text-sm">Kaldırılacak ve taşınacak yükün toplam ağırlığına göre doğru tonaj belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📏 Erişim Mesafesi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Erişim Mesafesi</h3>
               <p className="text-gray-500 text-sm">Vincin ulaşması gereken yatay ve dikey mesafeye göre bom uzunluğu seçilir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🪨 Zemin ve Saha Koşulları</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Zemin ve Saha Koşulları</h3>
               <p className="text-gray-500 text-sm">Çalışma sahasının zemin yapısı ve araç erişim koşullarına göre uygun model belirlenir.</p>
             </div>
           </div>
@@ -485,7 +477,6 @@ export default function KiralikKamyonUstuVincPage() {
             <div className="space-y-3">
               {guvenlikkurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -504,20 +495,31 @@ export default function KiralikKamyonUstuVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Kamyon Üstü (Hiyap) Vinç Kiralama</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Kamyon üstü vinç — sahadaki yaygın adıyla hiyap — taşıma ve kaldırmayı tek araçta birleştirir: kasasına yüklediği malzemeyi gideceği yere götürür ve kendi vinciyle indirir. Ayrı bir nakliye aracı ve ayrı bir vinç kiralamak yerine tek seferde iki işi çözmek, özellikle şehir içi kısa mesafeli işlerde hem zamandan hem maliyetten ciddi tasarruf sağlar.</p>
+            <p>Tipik kullanım senaryoları; konteyner ve prefabrik ofis taşıma, jeneratör ve trafo yerleştirme, iş makinesi transferi, mermer-granit blok taşıma ve şantiyeler arası malzeme aktarımıdır. Kapasite ton-metre cinsinden ifade edilir: 25 ton-metrelik bir hiyap, 5 metre mesafede 5 ton, 10 metre mesafede yaklaşık 2,5 ton kaldırır. Bu yüzden teklif aşamasında yükün ağırlığıyla birlikte aracın yanaşabileceği mesafeyi de konuşuruz.</p>
+            <p>Filomuzdaki hiyap araçları farklı kasa boyları ve bom uzunluklarıyla çeşitlendirilmiştir; uzun malzeme (demir, profil, kalas) için açık kasa, hassas yükler için tenteli seçenekler mevcuttur. Yükleme ve boşaltma noktalarının her ikisinde de araç yanaşma imkânını önceden teyit etmek, iş günü sürprizlerini ortadan kaldırır. İstanbul içi işlerde çoğunlukla saatlik ve günlük, düzenli sevkiyatı olan firmalar için haftalık ve aylık anlaşmalar yapıyoruz.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Teklif Alın</h2>
@@ -529,7 +531,7 @@ export default function KiralikKamyonUstuVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

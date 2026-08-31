@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -58,6 +59,54 @@ const fiyatTablosu = [
   { tur: "Sepetli Platform", gunluk: "5.000 – 30.000 TL", aylik: "120.000 – 280.000 TL", saatlik: "1.500 – 3.000 TL" },
 ];
 
+const turFiyatlari = [
+  {
+    tur: "Makaslı Manlift",
+    tanim:
+      "Geniş sepetiyle ekip çalışmasına uygun, dikey yükselen sınıf. Akülü modeller kapalı alanların, dizel modeller şantiye dış sahalarının standardıdır.",
+    varyantlar: [
+      { ad: "Elektrikli (Akülü)", gunluk: "4.000 TL", haftalik: "22.000 TL", aylik: "90.000 TL", yillik: "850.000 TL" },
+      { ad: "Dizel (Arazi Tipi)", gunluk: "8.000 TL", haftalik: "45.000 TL", aylik: "140.000 TL", yillik: "1.300.000 TL" },
+    ],
+  },
+  {
+    tur: "Eklemli Manlift",
+    tanim:
+      "Mafsallı bomuyla engellerin üzerinden aşarak çalışır; fabrika içi yüksek bakımlar ve cephe işlerinin en esnek çözümüdür.",
+    varyantlar: [
+      { ad: "Elektrikli (Akülü)", gunluk: "7.000 TL", haftalik: "38.000 TL", aylik: "150.000 TL", yillik: "1.400.000 TL" },
+      { ad: "Dizel (Arazi Tipi)", gunluk: "12.000 TL", haftalik: "65.000 TL", aylik: "220.000 TL", yillik: "2.000.000 TL" },
+    ],
+  },
+  {
+    tur: "Dikey Manlift",
+    tanim:
+      "Tek kişilik dar şasili sınıf; depo rafları, mağaza içi ve asansörle kat değiştirme gereken işlerde pratik çözümdür.",
+    varyantlar: [
+      { ad: "Elektrikli (Akülü)", gunluk: "3.500 TL", haftalik: "19.000 TL", aylik: "75.000 TL", yillik: "700.000 TL" },
+    ],
+  },
+  {
+    tur: "Teleskopik Manlift",
+    tanim:
+      "Düz bomuyla maksimum yükseklik ve yatay erişim sunar; yüksek cephe, çelik konstrüksiyon ve endüstriyel dış saha işlerinde kullanılır.",
+    varyantlar: [
+      { ad: "Dizel (Arazi Tipi)", gunluk: "15.000 TL", haftalik: "85.000 TL", aylik: "280.000 TL", yillik: "2.600.000 TL" },
+    ],
+  },
+];
+
+const teknikOlculer = [
+  { sinif: "Akülü Makaslı 6 m", calisma: "7,8 m", kapasite: "230 kg", genislik: "0,76 m", agirlik: "≈ 1.350 kg" },
+  { sinif: "Akülü Makaslı 8 m", calisma: "10,1 m", kapasite: "250 kg", genislik: "0,81 m", agirlik: "≈ 1.950 kg" },
+  { sinif: "Akülü Makaslı 10 m", calisma: "12,0 m", kapasite: "320 kg", genislik: "1,15 m", agirlik: "≈ 2.600 kg" },
+  { sinif: "Akülü Makaslı 12 m", calisma: "14,0 m", kapasite: "320 kg", genislik: "1,15 m", agirlik: "≈ 2.950 kg" },
+  { sinif: "Dizel Makaslı 12–18 m", calisma: "14 – 20 m", kapasite: "450 – 680 kg", genislik: "1,80 – 2,30 m", agirlik: "≈ 6 – 9 ton" },
+  { sinif: "Akülü Eklemli 12–16 m", calisma: "14 – 18 m", kapasite: "200 – 230 kg", genislik: "1,20 – 1,50 m", agirlik: "≈ 6 – 7 ton" },
+  { sinif: "Dizel Eklemli 16–43 m", calisma: "18 – 45 m", kapasite: "230 – 300 kg", genislik: "2,30 – 2,50 m", agirlik: "≈ 7 – 16 ton" },
+  { sinif: "Teleskopik 20–43 m", calisma: "22 – 45 m", kapasite: "230 – 340 kg", genislik: "2,40 – 2,50 m", agirlik: "≈ 10 – 18 ton" },
+];
+
 const kullanimAlanlari = [
   { icon: "🏗️", baslik: "İnşaat & Şantiye", aciklama: "Bina cephe çalışmaları, montaj ve yüksek nokta erişimi" },
   { icon: "🏭", baslik: "Endüstriyel Tesis", aciklama: "Fabrika içi makine montajı, bakım ve onarım işleri" },
@@ -101,6 +150,18 @@ const sorular = [
     soru: "Manlift bakımları kim tarafından yapılır?",
     cevap: "Kiralama firması tüm bakım ve onarım işlemlerini üstlenir. Siz sadece güvenle çalışırsınız.",
   },
+  {
+    soru: "Akülü ve dizel manlift arasında fiyat farkı neden var?",
+    cevap: "Dizel modeller daha büyük şasili, arazi lastikli ve yüksek kapasiteli makinelerdir; satın alma ve bakım maliyetleri akülü sınıfın üzerindedir. Kapalı alan işi için akülü model hem yeterli hem de belirgin şekilde ekonomiktir.",
+  },
+  {
+    soru: "Manlift kiralama fiyatına nakliye dahil mi?",
+    cevap: "Makineler çekiciyle taşındığı için nakliye, mesafeye göre ayrıca hesaplanır ve teklifte açıkça belirtilir. Aynı bölgede birden fazla makine kiralamalarında sevkiyat maliyeti paylaştırılarak düşürülebilir.",
+  },
+  {
+    soru: "Yıllık kiralamada bakım kime ait?",
+    cevap: "Uzun dönem sözleşmelerde periyodik bakım, arıza müdahalesi ve yasal muayene takibi tarafımıza aittir; arıza durumunda aynı gün ikame makine yönlendirilir. Bu kapsam sözleşmede kalem kalem yazılır.",
+  },
 ];
 
 const ilceler = [
@@ -121,12 +182,12 @@ function ilceToSlug(ilce: string) {
 }
 
 const ilgiliUrunler = [
-  { title: "Kiralık Vinç", href: "/kiralik-vinc", icon: "🏗️" },
-  { title: "Forklift Kiralama", href: "/forklift-kiralama", icon: "🚜" },
-  { title: "Telehandler", href: "/telehandler-kiralama", icon: "🦺" },
-  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "🚛" },
-  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "🔧" },
-  { title: "Operatörlü Hizmet", href: "/operatorlu-vinc-hizmeti", icon: "👷" },
+  { title: "Kiralık Vinç", href: "/kiralik-vinc", icon: "kanca" },
+  { title: "Forklift Kiralama", href: "/forklift-kiralama", icon: "forklift" },
+  { title: "Telehandler", href: "/telehandler-kiralama", icon: "telehandler" },
+  { title: "Sepetli Vinç", href: "/sepetli-vinc", icon: "sepetli" },
+  { title: "Mobil Vinç", href: "/mobil-vinc", icon: "mobil" },
+  { title: "Operatörlü Hizmet", href: "/operatorlu-vinc-hizmeti", icon: "operator" },
 ];
 
 const galeri = [
@@ -221,7 +282,7 @@ export default function KiralikManliftPage() {
                   href="tel:05323039089"
                   className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-8 py-4 rounded-xl text-lg transition text-center"
                 >
-                  📞 0532 303 90 89
+                  0532 303 90 89
                 </a>
                 <a
                   href="#fiyatlar"
@@ -273,7 +334,7 @@ export default function KiralikManliftPage() {
                 <div className={`h-2 bg-gradient-to-r ${m.renk}`} />
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="text-5xl">{m.icon}</div>
+                    <VincIcon name={m.icon} className="w-12 h-12" />
                     <span className="text-xs font-bold text-gray-400 bg-gray-50 px-3 py-1 rounded-full">
                       {m.fiyat}
                     </span>
@@ -290,8 +351,7 @@ export default function KiralikManliftPage() {
                     ))}
                   </div>
                   <div className="mt-6 flex items-center text-yellow-600 font-bold text-sm group-hover:gap-3 transition-all">
-                    Detaylı İncele <span className="ml-2">→</span>
-                  </div>
+                    Detaylı İncele </div>
                 </div>
               </Link>
             ))}
@@ -340,7 +400,7 @@ export default function KiralikManliftPage() {
                 key={k.baslik}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-yellow-400/50 hover:bg-white/10 transition"
               >
-                <div className="text-4xl mb-4">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 mb-4" />
                 <h3 className="text-lg font-black mb-2">{k.baslik}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{k.aciklama}</p>
               </div>
@@ -354,7 +414,7 @@ export default function KiralikManliftPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Güncel Fiyatlar</span>
-            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Kiralık Manlift Fiyatları 2025</h2>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Kiralık Manlift Fiyatları 2026</h2>
             <p className="text-gray-500 text-lg">
               Fiyatlar platform türü, yükseklik ve kiralama süresine göre değişmektedir.
             </p>
@@ -419,9 +479,100 @@ export default function KiralikManliftPage() {
               href="tel:05323039089"
               className="bg-gray-900 hover:bg-gray-800 text-white font-black px-8 py-4 rounded-xl text-lg transition whitespace-nowrap"
             >
-              📞 Hemen Ara
+              Hemen Ara
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ── TÜR VE YAKIT BAZLI FİYATLAR ── */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-6">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Detaylı Fiyatlandırma</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">
+              Platform Türü ve Yakıt Tipine Göre Manlift Kiralama Fiyatları
+            </h2>
+            <p className="text-gray-500 max-w-3xl mx-auto">
+              Manlift fiyatını üç değişken belirler: platform türü, yakıt tipi (akülü / dizel) ve kiralama süresi.
+              Aşağıdaki rakamlar her sınıfın en küçük modelinin başlangıç fiyatlarıdır; yükseklik arttıkça fiyat
+              yükselir, süre uzadıkça birim maliyet düşer.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {turFiyatlari.map((k) => (
+              <div key={k.tur} className="bg-white border border-gray-100 rounded-2xl p-7">
+                <h3 className="font-black text-gray-900 text-xl mb-2">{k.tur} Kiralama Fiyatları</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-5">{k.tanim}</p>
+                {k.varyantlar.map((v) => (
+                  <div key={v.ad} className="mb-4 last:mb-0">
+                    <div className="font-bold text-gray-800 text-sm mb-2">{v.ad}</div>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+                      {[
+                        { l: "Günlük", d: v.gunluk },
+                        { l: "Haftalık", d: v.haftalik },
+                        { l: "Aylık", d: v.aylik },
+                        { l: "Yıllık", d: v.yillik },
+                      ].map((h) => (
+                        <div key={h.l} className="bg-gray-50 rounded-xl py-2.5 px-1">
+                          <div className="text-[11px] text-gray-400 uppercase tracking-wide">{h.l}</div>
+                          <div className="text-sm font-bold text-yellow-600 whitespace-nowrap">{h.d}</div>
+                          <div className="text-[10px] text-gray-400">&apos;den itibaren</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-400 text-sm text-center mt-6">
+            Fiyatlara KDV ve nakliye (çekici) hizmeti dahil değildir; sevkiyat bedeli mesafeye göre teklifte ayrıca
+            belirtilir. Örümcek platform fiyatları erişim koşullarına göre proje bazlı hesaplanır.
+          </p>
+        </div>
+      </section>
+
+      {/* ── TEKNİK ÖLÇÜLER ── */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="text-yellow-500 font-bold text-sm uppercase tracking-widest">Teknik Bilgi</span>
+            <h2 className="text-4xl font-black text-gray-900 mt-2 mb-4">Manlift Sınıflarına Göre Teknik Ölçüler</h2>
+            <p className="text-gray-500 max-w-3xl mx-auto">
+              Doğru makine seçiminde çalışma yüksekliği kadar geçiş genişliği ve zemin taşıma kapasitesi de
+              belirleyicidir: makinenin gireceği kapı ölçüsünü ve çalışılacak zeminin durumunu mutlaka birlikte
+              değerlendirin.
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-gray-50 text-gray-600">
+                  <th className="text-left px-4 py-3 font-semibold">Makine Sınıfı</th>
+                  <th className="text-center px-4 py-3 font-semibold">Çalışma Yüksekliği</th>
+                  <th className="text-center px-4 py-3 font-semibold">Sepet Kapasitesi</th>
+                  <th className="text-center px-4 py-3 font-semibold">Genişlik</th>
+                  <th className="text-center px-4 py-3 font-semibold">Makine Ağırlığı</th>
+                </tr>
+              </thead>
+              <tbody>
+                {teknikOlculer.map((o) => (
+                  <tr key={o.sinif} className="border-t border-gray-100 hover:bg-yellow-50/40 transition">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">{o.sinif}</td>
+                    <td className="px-4 py-3 text-center text-gray-600 whitespace-nowrap">{o.calisma}</td>
+                    <td className="px-4 py-3 text-center text-gray-600 whitespace-nowrap">{o.kapasite}</td>
+                    <td className="px-4 py-3 text-center text-gray-600 whitespace-nowrap">{o.genislik}</td>
+                    <td className="px-4 py-3 text-center text-gray-600 whitespace-nowrap">{o.agirlik}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-gray-400 text-sm mt-4 text-center">
+            Değerler sınıf ortalamalarıdır; kesin ölçüler yönlendirilecek makinenin marka ve modeline göre teslimat
+            öncesinde paylaşılır. Akülü makaslı 6 – 8 m modeller standart 80 cm kapıdan geçebilir.
+          </p>
         </div>
       </section>
 
@@ -523,7 +674,7 @@ export default function KiralikManliftPage() {
           <div className="grid gap-4">
             {sorular.map((s, i) => (
               <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <h3 className="font-black text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-black text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-500 leading-relaxed">{s.cevap}</p>
               </div>
             ))}
@@ -541,11 +692,11 @@ export default function KiralikManliftPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
             {ilgiliUrunler.map((u) => (
               <Link
-                key={u.href}
+                key={u.title}
                 href={u.href}
                 className="group bg-gray-50 hover:bg-yellow-400 border border-gray-100 hover:border-yellow-400 rounded-2xl p-5 text-center transition"
               >
-                <div className="text-3xl mb-2">{u.icon}</div>
+                <VincIcon name={u.icon} className="w-8 h-8 mb-2" />
                 <div className="text-sm font-bold text-gray-700 group-hover:text-black">{u.title}</div>
               </Link>
             ))}
@@ -564,7 +715,7 @@ export default function KiralikManliftPage() {
             {ilceler.map((ilce) => (
               <Link
                 key={ilce}
-                href={`/${ilceToSlug(ilce)}-vinc-kiralama`}
+                href={`/${ilceToSlug(ilce)}-kiralik-manlift`}
                 className="text-center text-sm font-medium text-gray-600 py-2 px-2 rounded-lg border border-transparent hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-100 transition"
               >
                 {ilce}
@@ -575,9 +726,21 @@ export default function KiralikManliftPage() {
       </section>
 
       {/* ── SON CTA ── */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Kiralık Manlift Rehberi</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Manlift, personeli yüksekteki çalışma noktasına güvenle ulaştıran motorlu erişim platformlarının genel adıdır; makaslı, eklemli, teleskopik ve örümcek tipleriyle bir ailedir. Merdiven ve iskelenin yerini alan bu makineler, kurulum beklemeden dakikalar içinde çalışmaya başlar ve iş bittiğinde iz bırakmadan ayrılır — bu yüzden bakım, montaj ve tadilat işlerinin standardı haline gelmişlerdir.</p>
+            <p>Tip seçimi işin geometrisine bakar: geniş tavan alanında ekip çalışacaksa makaslı, engel aşarak noktaya ulaşılacaksa eklemli, maksimum yükseklik gerekiyorsa teleskopik, dar kapıdan geçip yükselecekse örümcek platform doğru cevaptır. İç mekânda akülü, dış sahada dizel modeller kullanılır; yükseklikler 6 metreden 52 metreye uzanır.</p>
+            <p>Kiralamada makineler periyodik kontrolden geçmiş, sepet kumandaları ve acil indirme sistemleri test edilmiş halde teslim edilir; kullanıcı personelinize teslimat sırasında uygulamalı kullanım brifingi veriyoruz. Günlükten aylığa esnek süreler, şantiye teslimi ve arızada aynı gün ikame makine hizmetin standartlarıdır. Hangi tip ve yüksekliğin işinize uyduğundan emin değilseniz iş fotoğrafıyla bize ulaşın; doğru makineyi birlikte seçelim.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4 bg-gray-950 text-white text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="text-6xl mb-6">🏗️</div>
+          <div className="text-6xl mb-6"></div>
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Hemen Teklif Alın</h2>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
             25 yıllık tecrübemiz ve geniş filo kapasitemizle en uygun manlift çözümünü
@@ -588,7 +751,7 @@ export default function KiralikManliftPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-300 text-black font-black px-10 py-5 rounded-xl text-xl transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

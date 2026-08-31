@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import VincIcon from "@/components/VincIcon";
 
 export const metadata: Metadata = {
   alternates: {
@@ -16,7 +17,6 @@ const ahtapotVincTurleri = [
     title: "Kompakt Ahtapot Vinç",
     desc: "Dar ve sınırlı alanlarda mükemmel manevra kabiliyeti sunan, bina içi ve kapalı mekân çalışmalarına özel model.",
     fiyat: "5.000 – 9.000 TL / gün",
-    href: "/kompakt-ahtapot-vinc",
     ozellikler: ["Dar alan", "Kompakt yapı", "Bina içi"],
   },
   {
@@ -24,7 +24,6 @@ const ahtapotVincTurleri = [
     title: "Yüksek Kapasiteli Ahtapot Vinç",
     desc: "Ağır ekipman, cam paneli ve endüstriyel bileşenlerin güvenli taşınmasında tercih edilen yüksek kaldırma kapasiteli model.",
     fiyat: "8.000 – 14.000 TL / gün",
-    href: "/yuksek-kapasiteli-ahtapot-vinc",
     ozellikler: ["Yüksek kapasite", "Ağır yük", "Endüstriyel"],
   },
   {
@@ -32,7 +31,6 @@ const ahtapotVincTurleri = [
     title: "Cam ve Panel Taşıma Ahtapot Vinç",
     desc: "Vantuz aparatlarıyla büyük cam ve cephe panellerini hassas şekilde taşıyıp yerine yerleştiren özel donanımlı model.",
     fiyat: "7.000 – 12.000 TL / gün",
-    href: "/cam-panel-ahtapot-vinc",
     ozellikler: ["Vantuz aparatı", "Hassas yerleştirme", "Cam uyumlu"],
   },
   {
@@ -40,7 +38,6 @@ const ahtapotVincTurleri = [
     title: "Bina İçi Ahtapot Vinç",
     desc: "Düşük tavan yüksekliği ve dar koridorlarda çalışabilen, iç mekân montaj ve taşıma projelerine özel tasarlanmış model.",
     fiyat: "6.000 – 10.000 TL / gün",
-    href: "/bina-ici-ahtapot-vinc",
     ozellikler: ["Alçak tavan", "Dar koridor", "İç mekân"],
   },
   {
@@ -48,7 +45,6 @@ const ahtapotVincTurleri = [
     title: "Sanayi Tipi Ahtapot Vinç",
     desc: "Fabrika ve tesis içi makine montajı, büyük ekipman yerleştirme ve ağır yük taşımada güvenle kullanılan endüstriyel model.",
     fiyat: "Teklif alınız",
-    href: "/sanayi-ahtapot-vinc",
     ozellikler: ["Makine montajı", "Fabrika içi", "Endüstriyel"],
   },
   {
@@ -56,7 +52,6 @@ const ahtapotVincTurleri = [
     title: "Elektrikli Ahtapot Vinç",
     desc: "Gürültüsüz ve emisyonsuz çalışan elektrikli modeli; hastane, ofis ve kapalı alanlar için tercih edilen çevre dostu seçenek.",
     fiyat: "5.500 – 9.500 TL / gün",
-    href: "/elektrikli-ahtapot-vinc",
     ozellikler: ["Sessiz çalışma", "Sıfır emisyon", "Kapalı alan"],
   },
 ];
@@ -133,7 +128,7 @@ export default function KiralikAhtapotVincPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              🐙 Ahtapot Vinç Kiralama Rehberi 2026
+              Ahtapot Vinç Kiralama Rehberi 2026
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Ahtapot Vinç Kiralama<br />{" "}
@@ -148,14 +143,13 @@ export default function KiralikAhtapotVincPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 Hemen Teklif Al
+                Hemen Teklif Al
               </a>
               <a
                 href="#ahtapot-vinc-turleri"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Ahtapot Vinç Modellerini İncele ↓
-              </a>
+                Ahtapot Vinç Modellerini İncele               </a>
             </div>
           </div>
         </div>
@@ -219,7 +213,7 @@ export default function KiralikAhtapotVincPage() {
               href="tel:05323039089"
               className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 Özel Fiyat Teklifi Alın
+              Özel Fiyat Teklifi Alın
             </a>
           </div>
         </div>
@@ -241,15 +235,15 @@ export default function KiralikAhtapotVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🐙 Ahtapot Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Ahtapot Vinç</h3>
               <p className="text-gray-500 text-sm">Kompakt yapısı ve çok yönlü hareketi ile dar alanlarda ve bina içlerinde üstün performans sunar.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🏗️ Mobil Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Mobil Vinç</h3>
               <p className="text-gray-500 text-sm">Açık sahalar ve geniş alanlarda yüksek kaldırma kapasitesiyle çalışmak için tasarlanmıştır.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🕷️ Örümcek Vinç</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Örümcek Vinç</h3>
               <p className="text-gray-500 text-sm">Engebeli ve eğimli zeminlerde stabilite sağlayan paletli yapısıyla öne çıkar.</p>
             </div>
           </div>
@@ -269,11 +263,11 @@ export default function KiralikAhtapotVincPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ahtapotVincTurleri.map((v) => (
               <div
-                key={v.href}
+                key={v.title}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow-300 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 text-center">
-                  <div className="text-6xl mb-3">{v.icon}</div>
+                  <VincIcon name={v.icon} className="w-14 h-14 mb-3" />
                   <h3 className="text-white text-xl font-bold">{v.title}</h3>
                 </div>
                 <div className="p-6">
@@ -281,7 +275,7 @@ export default function KiralikAhtapotVincPage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {v.ozellikler.map((o) => (
                       <span key={o} className="bg-yellow-50 text-yellow-700 text-xs font-medium px-3 py-1 rounded-full border border-yellow-200">
-                        ✓ {o}
+                        {o}
                       </span>
                     ))}
                   </div>
@@ -290,12 +284,10 @@ export default function KiralikAhtapotVincPage() {
                       <div className="text-xs text-gray-400">Fiyat</div>
                       <div className="text-gray-800 font-bold text-sm">{v.fiyat}</div>
                     </div>
-                    <Link
-                      href={v.href}
+                    <div
                       className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg text-sm transition"
                     >
-                      İncele →
-                    </Link>
+                      İncele                     </div>
                   </div>
                 </div>
               </div>
@@ -305,7 +297,7 @@ export default function KiralikAhtapotVincPage() {
           {/* Kompakt ve Yüksek Kapasiteli Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🐙 Küçük ve Kompakt Ahtapot Vinç Kiralama</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Küçük ve Kompakt Ahtapot Vinç Kiralama</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Küçük ve kompakt ahtapot vinçler, standart kapı genişliğinden geçebilen dar gövdeleri
                 sayesinde alçak tavanlı depolar, ofis katları ve dar koridor gibi mekânlarda rahatlıkla
@@ -313,7 +305,7 @@ export default function KiralikAhtapotVincPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏋️ Yüksek Kapasiteli Ahtapot Vinç Kiralama</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Yüksek Kapasiteli Ahtapot Vinç Kiralama</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Yüksek kapasiteli ahtapot vinçler, 6 ila 10 ton arasındaki ağır ekipman, makine ve
                 büyük cam panellerinin taşınmasında güvenle kullanılır. Fabrika ve tesis içi montaj
@@ -335,7 +327,7 @@ export default function KiralikAhtapotVincPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {kullanımAlanlari.map((k) => (
               <div key={k.title} className="flex gap-4 p-6 bg-gray-50 rounded-2xl hover:bg-yellow-50 transition group">
-                <div className="text-4xl shrink-0">{k.icon}</div>
+                <VincIcon name={k.icon} className="w-10 h-10 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 group-hover:text-yellow-700">{k.title}</h3>
                   <p className="text-gray-500 text-sm">{k.desc}</p>
@@ -347,7 +339,7 @@ export default function KiralikAhtapotVincPage() {
           {/* Dar Alan / Cam Alt Bölümler */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏢 Dar Alan ve Bina İçi Çalışmalarda Ahtapot Vinç</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Dar Alan ve Bina İçi Çalışmalarda Ahtapot Vinç</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Ahtapot vinçler, standart vinçlerin giremeyeceği kapalı alanlarda, dar koridorlarda
                 ve alçak tavanlı mekânlarda güvenle çalışabilir. Hastane, otel, AVM ve ofis binası
@@ -355,7 +347,7 @@ export default function KiralikAhtapotVincPage() {
               </p>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🪟 Cam, Panel ve Ağır Ekipman Taşımada Ahtapot Vinç</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Cam, Panel ve Ağır Ekipman Taşımada Ahtapot Vinç</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Özel vantuz aparatları ile büyük cam, cephe paneli ve ayna taşıma işlerinde ahtapot
                 vinç hassas konumlandırma sağlar. Kırılma riski yüksek malzemeleri güvenle taşır ve
@@ -381,7 +373,7 @@ export default function KiralikAhtapotVincPage() {
               { icon: "👷", title: "Operatör Desteği", desc: "Sertifikalı operatör hizmeti ile güvenli ve verimli çalışma sağlanır." },
             ].map((a) => (
               <div key={a.title} className="flex gap-4 p-6 bg-white rounded-2xl border border-gray-100">
-                <div className="text-3xl shrink-0">{a.icon}</div>
+                <VincIcon name={a.icon} className="w-8 h-8 shrink-0" />
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">{a.title}</h3>
                   <p className="text-gray-500 text-sm">{a.desc}</p>
@@ -401,15 +393,15 @@ export default function KiralikAhtapotVincPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">⚖️ Yük Kapasitesi</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Yük Kapasitesi</h3>
               <p className="text-gray-500 text-sm">Taşınacak yükün ağırlığı ve boyutlarına göre doğru kapasite belirlenir.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">📐 Çalışma Alanı Ölçüsü</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Çalışma Alanı Ölçüsü</h3>
               <p className="text-gray-500 text-sm">Koridor genişliği, tavan yüksekliği ve zemin tipi model seçimini doğrudan etkiler.</p>
             </div>
             <div className="p-6 border border-gray-100 rounded-2xl">
-              <h3 className="font-bold text-gray-900 mb-2">🔩 Aparat İhtiyacı</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Aparat İhtiyacı</h3>
               <p className="text-gray-500 text-sm">Cam, panel veya özel ekipman taşımak için vantuz ya da özel bağlantı aparatı gerekebilir.</p>
             </div>
           </div>
@@ -479,7 +471,6 @@ export default function KiralikAhtapotVincPage() {
             <div className="space-y-3">
               {guvenlikKurallari.map((kural) => (
                 <div key={kural} className="flex gap-3 items-start bg-white/60 rounded-xl p-4">
-                  <span className="text-green-600 font-bold text-lg shrink-0">✓</span>
                   <p className="text-gray-800 text-sm">{kural}</p>
                 </div>
               ))}
@@ -498,20 +489,31 @@ export default function KiralikAhtapotVincPage() {
           <div className="space-y-4">
             {sss.map((s, i) => (
               <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 hover:border-yellow-300 transition">
-                <h3 className="font-bold text-gray-900 mb-2">❓ {s.soru}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">{s.soru}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{s.cevap}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link href="/sik-sorulan-sorular" className="text-yellow-600 font-semibold hover:underline">
-              Tüm soruları görüntüle →
-            </Link>
+              Tüm soruları görüntüle             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Detaylı Bilgi */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-black text-gray-900 mb-6">Ahtapot Vinç Nedir, Hangi İşlerde Kullanılır?</h2>
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            <p>Ahtapot vinç, eklemli bomunun engellerin üzerinden ve arasından kıvrılarak geçebilmesi sayesinde adını alan kompakt vinç sınıfıdır. Klasik teleskopik bomlu vinçler düz bir hat üzerinde uzanırken, ahtapot vincin çok parçalı kolu balkon çıkıntısının üstünden, ağaç dallarının arasından veya çatı saçağının altından dolanarak yüke ulaşabilir. İstanbul&apos;un dar sokaklı mahallelerinde ve bahçeli sitelerde bu esneklik çoğu zaman işin yapılabilir olup olmamasını belirler.</p>
+            <p>En yoğun kullanım alanları cam ve panel montajı, çatı malzemesi çekme, klima dış ünitesi taşıma ve ev-ofis taşımacılığında mobilya kaldırma işleridir. Vakumlu cam tutucu, palet çatalı ve kanca gibi farklı uç aparatlarıyla aynı makine birden fazla iş tipine uyarlanır. Kompakt şasisi sayesinde standart bir otoparka sığar, çoğu modelde ayak açma genişliği dar sokaklara göre ayarlanabilir.</p>
+            <p>Ahtapot vinç kiralarken bize sokak genişliğini, varsa fotoğrafını ve yükün ağırlığıyla ulaşılacak noktayı iletmeniz yeterli. Ekleme bom yapısı gereği kapasite, uzanma şekline göre değişkenlik gösterir; bu yüzden keşif ya da fotoğraf üzerinden ön değerlendirme yapıp doğru modeli yönlendiriyoruz. Bina yönetimi izinleri ve kaldırım işgali gereken işlerde evrak sürecinde destek oluyoruz.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-gray-900 text-white text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl font-black mb-4">Projeniz İçin Teklif Alın</h2>
@@ -523,7 +525,7 @@ export default function KiralikAhtapotVincPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <Link
               href="/iletisim"

@@ -42,7 +42,7 @@ export default function IletisimPage() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 border border-yellow-400/30 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              📞 7/24 Hizmetinizdeyiz
+              7/24 Hizmetinizdeyiz
             </div>
             <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
               Bize<br />{" "}
@@ -57,14 +57,13 @@ export default function IletisimPage() {
                 href="tel:05323039089"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                📞 0532 303 90 89
+                0532 303 90 89
               </a>
               <a
                 href="#iletisim-formu"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
               >
-                Mesaj Gönder ↓
-              </a>
+                Mesaj Gönder               </a>
             </div>
           </div>
         </div>
@@ -77,8 +76,7 @@ export default function IletisimPage() {
               className="flex items-center gap-4 px-8 py-6 hover:bg-white/5 transition group"
             >
               <div className="w-12 h-12 rounded-xl bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xl shrink-0">
-                📞
-              </div>
+                              </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Telefon</div>
                 <div className="font-bold text-white text-lg leading-tight">0532 303 90 89</div>
@@ -90,8 +88,7 @@ export default function IletisimPage() {
               className="flex items-center gap-4 px-8 py-6 hover:bg-white/5 transition group"
             >
               <div className="w-12 h-12 rounded-xl bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xl shrink-0">
-                ✉️
-              </div>
+                              </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">E-posta</div>
                 <div className="font-bold text-white text-lg leading-tight">info@vincdeposu.com.tr</div>
@@ -100,8 +97,7 @@ export default function IletisimPage() {
             </a>
             <div className="flex items-center gap-4 px-8 py-6">
               <div className="w-12 h-12 rounded-xl bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center text-xl shrink-0">
-                📍
-              </div>
+                              </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Adres</div>
                 <div className="font-bold text-white text-lg leading-tight">Express Vinç Hizmetleri</div>
@@ -134,21 +130,21 @@ export default function IletisimPage() {
             {/* İletişim Kartı */}
             <div className="border border-gray-100 rounded-2xl overflow-hidden">
               <div className="flex items-center gap-4 p-5 border-b border-gray-100">
-                <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0">📞</div>
+                <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0"></div>
                 <div>
                   <div className="font-bold text-gray-900 text-sm">0532 303 90 89</div>
                   <div className="text-gray-500 text-xs">Acil ve genel talepler</div>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-5 border-b border-gray-100">
-                <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0">✉️</div>
+                <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0"></div>
                 <div>
                   <div className="font-bold text-gray-900 text-sm">info@vincdeposu.com.tr</div>
                   <div className="text-gray-500 text-xs">E-posta ile iletişim</div>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-5">
-                <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0">📍</div>
+                <div className="w-9 h-9 rounded-lg bg-yellow-400/20 flex items-center justify-center text-base shrink-0"></div>
                 <div>
                   <div className="font-bold text-gray-900 text-sm">Express Vinç Hizmetleri ve Nak. Ltd. Şti.</div>
                   <div className="text-gray-500 text-xs">İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, 34490 Başakşehir/İstanbul</div>
@@ -191,7 +187,7 @@ export default function IletisimPage() {
                 className="w-full h-52 grayscale brightness-75 contrast-110 border-none block"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/90 to-transparent px-4 py-3 text-white text-sm font-semibold flex items-center gap-2">
-                <span>📍</span> İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, Başakşehir/İstanbul
+                İkitelli OSB, Giyim Sanatkarları İş ve Ticaret Merkezi D:4.Ada A Blok Kat:1 D:112, Başakşehir/İstanbul
               </div>
             </div>
           </div>
@@ -206,8 +202,7 @@ export default function IletisimPage() {
                 {submitted ? (
                   <div className="text-center py-16 px-4">
                     <div className="w-20 h-20 rounded-full bg-green-50 border border-green-200 flex items-center justify-center text-4xl mx-auto mb-6">
-                      ✅
-                    </div>
+                                          </div>
                     <h3 className="text-3xl font-black text-gray-900 mb-3">Mesajınız Alındı!</h3>
                     <p className="text-gray-500 text-base leading-relaxed max-w-sm mx-auto mb-8">
                       Talebiniz başarıyla iletildi. Ekibimiz en kısa sürede sizinle
@@ -388,13 +383,13 @@ export default function IletisimPage() {
               href="tel:05323039089"
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              📞 0532 303 90 89
+              0532 303 90 89
             </a>
             <a
               href="mailto:info@vincdeposu.com.tr"
               className="border-2 border-gray-600 hover:border-white text-white font-bold px-8 py-4 rounded-xl text-lg transition"
             >
-              ✉️ E-posta Gönder
+              E-posta Gönder
             </a>
           </div>
         </div>
