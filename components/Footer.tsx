@@ -179,12 +179,12 @@ export default function Footer() {
       {/* Alt bar */}
       <div className="border-t border-gray-800 py-4 px-4 text-center text-sm text-gray-500">
         <a
-          href="https://fatihemincakiroglu.com/"
+          href="https://fatihemincakiroglu.com/geo-uzmani"
           target="_blank"
           rel="noopener noreferrer nofollow"
           className="hover:text-yellow-400 transition"
         >
-          Fatih Emin Çakıroğlu
+          GEO Uzmanı
         </a>{" "}
         © {new Date().getFullYear()} Vinç Deposu. Tüm hakları saklıdır.
       </div>
