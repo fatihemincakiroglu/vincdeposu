@@ -181,7 +181,6 @@ export default function Footer() {
         <a
           href="https://fatihemincakiroglu.com/geo-uzmani"
           target="_blank"
-          rel="noopener noreferrer nofollow"
           className="hover:text-yellow-400 transition"
         >
           GEO Uzmanı

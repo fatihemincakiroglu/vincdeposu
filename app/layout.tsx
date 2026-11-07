@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   verification: {
     google: "ShIL8OkYLkQs5Z_t3PVjpnP6jtlsh-yR3Nn8uSbdAlM",
   },
-  authors: [{ name: "Fatih Emin Çakıroğlu" }],
-  creator: "Fatih Emin Çakıroğlu",
-  publisher: "Fatih Emin Çakıroğlu",
+  authors: [{ name: "GEO Uzmanı", url: "https://fatihemincakiroglu.com/geo-uzmani" }],
+  creator: "GEO Uzmanı",
+  publisher: "GEO Uzmanı",
   openGraph: {
     type: "website",
     locale: "tr_TR",
